@@ -11,6 +11,7 @@ Te invitamos a recorrer nuestro sitio, lo diseñamos junto a los mejores program
 **Participantes:**
 
 _**Joaquín Braconi**_:
+Tengo 23 años, soy de Rosario. Estudié 4 años de abogacía pero no pude terminar la carrera y ahora decidí entrar en el mundo de la tecnología que es algo que me interesa desde chico. Soy apasionado del Futsal e hincha de San Lorenzo, en mi tiempo libre me gusta jugar videojuegos y realizar actividad física.
 
 _***Martin Escalante***_:
 Estudiante de la licenciatura en Sistemas en la Universidad Nacional de Lanús, cursando el segundo año de la carrera. Apasionado de la tecnología desde pequeño, decidí en caminar mis estudios en este mundo IT. Me gusta el front-End como el back-End, pero se me facilita mucho la parte del diseño y las funcionalidades. Me gusta jugar a la pelota, hincha de Boca

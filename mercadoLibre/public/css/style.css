@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+*{
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: #EAC926;
+    
+}
+
+header img{
+    width: 300px;
+    height: auto;
+}
+
+header .burger-menu{
+    text-align: center;
+}
+
+header .burger-menu i{
+    background-color: #1259c3;;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+header ul{
+    margin: 0 auto;
+    padding: 0;
+}
+header ul li{
+    list-style: none;
+}
+h2{
+    font-size: 24px;
+
+}
+
+.search i{
+    background-color: #ebebeb;
+    color: #666;
+}
+input{
+    width: 160px;
+}
+
+ul li .icon{
+    font-size: 20px;
+}
+
+.fotter{
+    text-align: center;
+}
+
+.fotter .items{
+    width: 80%;
+    padding: 20px;
+}
+
+.items .iconos{
+    font-size: 2em;
+    color: #1259c3;
+    padding: 10px;
+}
+

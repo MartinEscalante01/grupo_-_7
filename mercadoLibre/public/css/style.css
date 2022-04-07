@@ -3,11 +3,15 @@
 *{
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    
 }
+
 
 header{
     background-color: #EAC926;
-    
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 header img{
@@ -64,3 +68,82 @@ ul li .icon{
     padding: 10px;
 }
 
+main{
+    text-align: center;
+    width: 90%;
+    background-color: #ebebeb;
+    margin: 0 auto;
+}
+
+main section{
+    margin-bottom: 10px;
+}
+section div{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+section img{
+    width: 100%;
+}
+
+main section div{
+    float: left;
+    text-align: left;
+    padding: 10px;
+}
+
+.descripcion{
+    width: 100%;
+    height: auto;
+    border-top: 1px solid #ebebeb;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+section .descripcion i{
+    padding: 10px;
+    color: green;
+    border: 1px solid green;
+    border-radius: 30px;
+    font-size: 20px;
+    
+}
+
+.descripcion :nth-child(3){
+    color: rgb(34, 170, 34);
+    margin-bottom: 10px;
+    
+}
+
+footer{
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+
+
+@media(max-width:361px) {
+    
+    header ul{
+        display: none;
+    }
+    /*tablet*/
+}
+
+@media(min-width:361px) {
+    
+    header .burger-menu{
+        display: none;
+    }
+    /*tablet*/
+}
+
+@media (min-width:769px){
+   
+    header .burger-menu{
+        display: none;
+    }
+    /*desktop*/
+}

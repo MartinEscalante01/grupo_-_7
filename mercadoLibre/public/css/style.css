@@ -41,6 +41,11 @@ h2{
 
 }
 
+.search{
+    display: flex;
+    flex-direction: row;
+}
+
 .search i{
     background-color: #ebebeb;
     color: #666;

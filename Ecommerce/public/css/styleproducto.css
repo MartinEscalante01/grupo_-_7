@@ -37,3 +37,44 @@ header{
 }
 
 
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: ;
+    background-color: black;
+    color: white;
+    font-size: 6px;
+}
+
+.column1{
+    justify-content: flex-start;
+}
+
+.column2{
+    justify-content: center;
+}
+
+.column3{
+    margin-left: 40px;
+}
+
+.search i{
+    align-self: flex-end;
+    font-size: 10px;
+}
+
+main{
+    background-color: #a19797;
+    color: black;
+}
+
+main .imagen{
+    width: 50vw;
+    display: flex;
+    border: solid 1px black;
+}
+
+main nav{
+    font-size: 5px;
+    margin-top: 5px;
+}

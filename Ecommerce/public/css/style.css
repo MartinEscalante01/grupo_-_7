@@ -1,21 +1,27 @@
-*{
-    margin: 0px auto;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap');
+
+:root{
+    --titulos-color: #333333;
+    --tamanio-titulos: 30px;
+    --titulo-family:'Open Sans', sans-serif;
 }
 
-.header-banner{
-    background-color: #a19797;
-    color: white;
-    font-size: 5px;
-    border: 1px solid #a19797;
-    text-align: end;
+
+*{
+    margin: 0px;
+    box-sizing: border-box;
 }
+
 
 header{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0.4rem;
+    justify-content: space-between;
     flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 0.3rem;
 }
 
 .logo{
@@ -43,4 +49,128 @@ header{
     padding: 5px;
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.6rem;
+    box-sizing: border-box;
+    
+}
+main .carrito{
+    width: 100%;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    line-height: 22px;
+}
+.carrito h1{
+    font-family: var(--titulo-family);
+    font-size: var(--tamanio-titulos);
+    color: var(--titulos-color);
+    margin-bottom: 10px;
 
+}
+
+main .informacion{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    height: auto;
+}
+
+.informacion .descripcion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    width: 100%;
+    border-top: 1px solid #767677;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.descripcion .img{
+    width: 41.6666666667%;
+    text-align: -webkit-match-parent;
+}
+    
+
+
+.img img{
+    width: 100%;
+}
+
+.descripcion .info{
+    width: 40%;
+}
+
+.descripcion .info h1{ 
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--titulos);
+}
+
+.info p{
+    line-height: 25px;
+}
+
+.info p:nth-child(2){
+    font-size: 15px;
+    color: rgb(117, 117, 117);
+}
+.info p:nth-child(3){
+    font-size: 15px;
+    color: rgb(117, 117, 117);
+}
+
+.info button{
+    margin-top: 10px;
+}
+
+.resumen{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0%;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.resumen div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    line-height: 28px;
+}
+
+.resumen div:nth-child(5){
+    border-top: 1px solid black;
+}
+
+.resumen div:nth-child(6){
+    width: 90%;
+    flex-direction: column;
+    align-self: center;
+}
+.resumen div:nth-child(6) button{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+.pagos{
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.pagos .tarjetas{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tarjetas i{
+    font-size: 25px;
+}

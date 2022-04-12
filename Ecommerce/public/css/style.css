@@ -1,6 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cambay&display=swap');
 :root{
     --titulos-color: #333333;
     --tamanio-titulos: 30px;
@@ -13,7 +21,9 @@
     box-sizing: border-box;
 }
 
-
+@media screen {
+    
+}
 header{
     display: flex;
     flex-direction: row;
@@ -22,6 +32,7 @@ header{
     flex-wrap: wrap;
     box-sizing: border-box;
     padding: 0.3rem;
+    
 }
 
 .logo{
@@ -32,6 +43,7 @@ header{
 
 .logo i{
     font-size: 28px;
+    color: #4a9798;
 }
 
 .img{
@@ -47,6 +59,7 @@ header{
 .login .icon-login{
     font-size: 28px;
     padding: 5px;
+    color: #4a9798;
 }
 
 main{
@@ -61,13 +74,24 @@ main .carrito{
     width: 100%;
     align-items: flex-start;
     margin-bottom: 10px;
-    line-height: 22px;
+    line-height: 25px;
+    margin-top: 10px;
+}
+
+.carrito p:nth-child(2){
+    font-size: 18px;
+    font-family: 'Roboto Mono', monospace;
+}
+.carrito p:nth-child(3){
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
 }
 .carrito h1{
     font-family: var(--titulo-family);
     font-size: var(--tamanio-titulos);
     color: var(--titulos-color);
     margin-bottom: 10px;
+    font-family: 'Ubuntu', sans-serif;
 
 }
 
@@ -108,10 +132,12 @@ main .informacion{
     font-size: 18px;
     margin-bottom: 10px;
     color: var(--titulos);
+    font-family: 'Montserrat', sans-serif;
 }
 
 .info p{
     line-height: 25px;
+    font-family: 'Chivo', sans-serif;
 }
 
 .info p:nth-child(2){
@@ -122,9 +148,22 @@ main .informacion{
     font-size: 15px;
     color: rgb(117, 117, 117);
 }
+.info p:nth-child(4){
+    margin-top: 10px;
+    font-size: 20px;
+    font-family: 'Cambay', sans-serif;
+    font-weight: 400;
+    
+}
 
 .info button{
     margin-top: 10px;
+    color: #ffffff;
+    background-color: #F65446;
+    border: 1px solid #F65446;
+    padding: 5px 25px;
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
 }
 
 .resumen{
@@ -137,11 +176,17 @@ main .informacion{
     padding: 1rem;
 }
 
+.resumen h1{
+    margin-bottom: 20px;
+    font-family: 'Karla', sans-serif;
+}
+
 .resumen div{
     display: flex;
     justify-content: space-between;
     width: 100%;
     line-height: 28px;
+   font-family: 'Montserrat', sans-serif;;
 }
 
 .resumen div:nth-child(5){
@@ -162,15 +207,59 @@ main .informacion{
 .pagos{
     display:flex;
     flex-direction: column;
-    
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .pagos .tarjetas{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    
+    width: 100%;
 }
 
-.tarjetas i{
-    font-size: 25px;
+.tarjetas img{
+    /* font-size: 30px; */
+    width: 100%;
+}
+
+footer{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: #363738;
+    flex-direction: column;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+footer ul li{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+footer ul li a{
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+}
+
+footer div:nth-child(2){
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

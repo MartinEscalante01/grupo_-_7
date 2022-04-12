@@ -1,42 +1,97 @@
-
-.nav {
+/* Esta es la barra de navegacion */
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
     background-color: #fec303;
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    height: 100px
+    height: 50px;
+    
 }
 
-.enlaces{
+.menu {
+    width: 17%;
+    text-align: center;
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
+    padding: 1px 10px;
 }
-
 
 .logo {
-    width: 136px;
-    height: 54;
-    position: absolute;
-    top: 2%
+    width: 80px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 
+
+.login{
+    width: 17%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+
+}
+
+.barraEnvio {
+    height: 20px;
+    border:solid 1.5px lightgrey;
+    text-align: center
+}
+
+
+/* Este es el copete */
 .copete {
-    background-color: rgb(0, 0, 82);
-    height: 100px;
-    color: whitesmoke;
+    background-color: coral;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     box-sizing: border-box;
-    padding: 20px 0px 0px 20px;
+    
+}
+
+.paraQuien{
+    padding-top: 15px;
+    height: 40px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.glassHome {
+    display: flex;
+    justify-content: space-around;
 
 }
 
-.txtCopete1 {
-    font-size: 10px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;  
+.adiWoman {
+    display: flex;
+    height: 140px;
+    width: 140px;
 }
 
-.txtCopete2 {
-    font-size: 10px;
+.nikeMan {
+    display: flex;
+    height: 140px;
+    width: 140px;
+}
+
+.adiKid {
+    display: flex;
+    height: 140px;
+    width: 140px;
+}
+
+.ofertas{
+    padding-top: 15px;
+    height: 40px;
+    font-style: italic;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;  
+    color: red;
 }

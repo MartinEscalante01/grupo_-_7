@@ -1,0 +1,131 @@
+/* Esta es la barra de navegacion */
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background-color: #fec303;
+    height: 50px;
+    position: fixed;
+    top: 0 ;
+    width: 96.5%;
+   
+}
+
+.menu {
+    width: 17%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1px 10px;
+}
+
+.logo {
+    width: 80px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.login{
+    width: 17%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+
+}
+
+.barraEnvio {
+    margin-top: 50px ;
+    height: 20px;
+    border:solid 1.5px lightgrey;
+    text-align: center;
+    
+}
+
+
+/* Este es el copete */
+.copete {
+    background-color: coral;
+    height: 75px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: whitesmoke;
+    
+}
+
+#extra20 {
+    width: 90px;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+#guantes {
+    font-size:15px ; 
+    width: 150px;
+    font-weight: bold;
+}
+
+
+.paraQuien{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Este es el glass */
+
+.glassHome {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.adiWoman {
+    display: flex;
+    height: 140px;
+    width: 140px;
+    border-radius:15px;
+}
+
+.nikeMan {
+    display: flex;
+    height: 140px;
+    width: 140px;
+    border-radius:15px;
+}
+
+.adiKid {
+    display: flex;
+    height: 140px;
+    width: 140px;
+    border-radius:15px;
+}
+h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    font-style: italic;
+    font-weight: bold;
+    color: tomato;
+}
+.ofertas{
+    display: flex;
+    justify-content: space-around;
+}
+
+.imgOferta {
+    display: flex;
+    height: 110px;
+    width: 110px;
+}

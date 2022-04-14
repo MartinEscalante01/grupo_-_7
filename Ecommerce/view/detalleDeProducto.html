@@ -6,48 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styleproducto.css">
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="https://kit.fontawesome.com/1aec321a0b.js" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <title>Pagina Web Detalle de Producto</title>
 </head>
 <body>
-    <section class="header-banner">
-        <b>Registrarse/Iniciar Sesion</b>
-    </section>
-    <header>
+    <header> 
+        <div class="menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        
         <div class="logo">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-solid fa-heart"></i>
+        <img src="img/mob-logo.svg"  >
         </div>
-        <div class="img">
-            <img src="img/mob-logo.svg" alt="">
-        </div>
+
         <div class="login">
-            <i class="fas fa-regular fa-user icon-login"></i>
-            <i class="fas fa-solid fa-cart-arrow-down"></i>
+            <i class="fas fa-solid fa-magnifying-glass"></i>
+            <i class="fas fa-solid fa-user"></i>
+            <a href="carrito.html"><i class="fa-solid fa-bag-shopping"></i></a>
         </div>
     </header>
-    <hr>
-<main>
-        <section>
+
+<main id="maincontent">
+    <section>
             <div>
                 <nav>
-                <ul class="breadcrumb">
-                    <li><a href="/home">Home</a></li>
-                    <li><a href="#">Indumentaria</a></li>
-                    <li>Buzos</li>
-                  </ul> 
-                <article>
-                    <img class= "imagen" src="../img/buzo.jpg" alt="Buzo Boca Juniors">
-                </article>
+                    <ul class="breadcrumb">
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="#">Indumentaria</a></li>
+                        <li>Buzos</li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
                 <div>
-                    <h1>Buzo Adidas Boca Juniors</h1><br>
-                    <span>$10,999</span>
+                    <img class= "imagen" src="../img/camisetaCABJ.jpg" alt="Camiseta Boca Juniors">
+                </div>
+                <div>
+                    <h1>CAMISETA TITULAR OFICIAL BOCA JUNIORS 21/22</h1><br>
+                </div>
+                <div class="columnprices">
+                    <span class="prices">
+                        <span>$7.699,00</span>
+                        <span class="saving"> 30% OFF </span>
+                        <span class="oldprice">$10.999,00</span>
+                    </span>
                 </div>
                 <hr class="separador">
             </div>
-            <div>
-                <h4>TALLE</h4><br>
+            <div class="column-size">
+                <div><h6>TALLE</h6></div>
+                <br>
+                <div>
+                    <ul class="atributos">
+                        <li class="atributos-sizes">XS</li>
+                        <li class="atributos-sizes">S</li>
+                        <li class="atributos-sizes">M</li>
+                        <li class="atributos-sizes">L</li>
+                        <li class="atributos-sizes">XL</li>
+                    </ul>
+                </div>
             </div>
+            <hr class="separador">
+            <div></div>
+            <hr class="separador">
             <div >
                 <h4>Descripcion</h4>
                 <p>Género: Hombre</p>
@@ -62,34 +84,21 @@
                 <p>Origen: Importado</p>
                 <p>Marca: adidas</p>
             </div>
-        </section>
+    </section>
 </main>
 <hr>
 <footer>
-<section class="footer">
-    <div class="column1"> 
-        <p>Métodos de Pago</p>
-        <p>Términos y Condiciones</p>
-        <p>Tiendas</p>
-        <i class="fas fa-solid fa-location-arrow"></i>
-        <p>Ver todas las Tiendas</p>
+    <div>
+        <ul>
+            <li><a href="">Aviso de privacidad</a></li>
+            <li><a href="">Terminos Y Condiciones</a></li>
+            <li><a href="">Nuestros Datos</a></li>
+        </ul>
     </div>
-    <div class="colum2">
-        <p>Ayuda</p>
-        <p>Cambios y Devoluciones</p>
-        <p>Seguimientos de Pedidos</p>
-        <p>Trabja con Nosotros</p>
+    <div>
+        <p>© 2022 Sportix Argentina</p>
     </div>
-    <div class="colum3">
-        <p>NEWSLETTER</p>
-        <p>Suscribite y recibe correos personalizados con tus intereses</p>
-        <p>Tiendas</p>
-        <div>
-            <input type="text" width="200px" placeholder="email@email.com" >
-            <div class="search">
-                <a href=""><i class='bx bx-search-alt-2'></i></a>
-        </div>
-    </div>
-</section>
+</footer>
+
 </body>
 </html>

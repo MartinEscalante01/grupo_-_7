@@ -1,3 +1,11 @@
+body {
+    background-color: whitesmoke;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* Esta es la barra de navegacion */
 header{
     display: flex;
@@ -10,7 +18,7 @@ header{
     height: 50px;
     position: fixed;
     top: 0 ;
-    width: 96.5%;
+    width: 100%;
    
 }
 
@@ -31,7 +39,7 @@ header{
 
 
 .login{
-    width: 17%;
+    width: 19%;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -128,4 +136,17 @@ h3 {
     display: flex;
     height: 110px;
     width: 110px;
+    border-radius: 60px;
+}
+
+footer {
+    background-color: black;
+    color: whitesmoke;
+   
+    
+}
+
+.footer {
+    font-size: 10px;
+
 }

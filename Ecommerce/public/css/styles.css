@@ -1,10 +1,27 @@
-body {
-    background-color: whitesmoke;
-}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cambay&display=swap');
+
+
+
 * {
+    font-family: OpenSans, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+a {
+    color: black;
+    text-decoration: none;
 }
 /* Esta es la barra de navegacion */
 header{
@@ -18,12 +35,12 @@ header{
     height: 50px;
     position: fixed;
     top: 0 ;
-    width: 100%;
+    width: 100vw;
    
 }
 
 .menu {
-    width: 17%;
+    width: 17vw;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -39,7 +56,7 @@ header{
 
 
 .login{
-    width: 19%;
+    width: 19vw;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -52,13 +69,14 @@ header{
     height: 20px;
     border:solid 1.5px lightgrey;
     text-align: center;
-    
+    font-size: 12px;
+    padding: 3px;
 }
 
 
 /* Este es el copete */
 .copete {
-    background-color: coral;
+    background-color: rgb(217, 48, 59);
     height: 75px;
     display: flex;
     justify-content: space-around;
@@ -84,8 +102,8 @@ header{
 .paraQuien{
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 40px;
+    font-size: 15px;
+    padding: 20px 10px 10px;
     font-style: italic;
     font-weight: bold;
 }
@@ -95,7 +113,7 @@ header{
 .glassHome {
     display: flex;
     justify-content: space-around;
-
+    
 }
 
 .adiWoman {
@@ -103,13 +121,16 @@ header{
     height: 140px;
     width: 140px;
     border-radius:15px;
+    box-shadow: 3px 3px 10px darkgray;
 }
+
 
 .nikeMan {
     display: flex;
     height: 140px;
     width: 140px;
     border-radius:15px;
+    box-shadow: 3px 3px 10px darkgray;
 }
 
 .adiKid {
@@ -117,12 +138,13 @@ header{
     height: 140px;
     width: 140px;
     border-radius:15px;
+    box-shadow: 3px 3px 10px darkgray;
 }
 h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 40px;
+    padding: 20px;
     font-style: italic;
     font-weight: bold;
     color: tomato;
@@ -137,16 +159,94 @@ h3 {
     height: 110px;
     width: 110px;
     border-radius: 60px;
+    box-shadow: 1px 5px 8px lightslategrey
+    
+}
+.historias {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    text-align: justify;
+    padding-top: 20px;
+    flex-direction: row;
+       
+}
+.historiasTxt {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+    background-color: rgb(228, 231, 225);
+    font-size: 9px;
+    line-height : 12px;
+    width: 50vw;
+    padding: 10px;
+  
 }
 
-footer {
-    background-color: black;
-    color: whitesmoke;
-   
+.historiasTxt h2{
+    display: flex;
+    font-size: 10px;
+    padding-bottom: 10px;
+}
+
+.novedad {
+    display: flex;
+    background-color: white;
+    width: 50vw;
+    padding: 0 10px;
+    font-size: 9px;
+    line-height: 12px;
+    
     
 }
 
-.footer {
-    font-size: 10px;
+.novedad h2{
+    display: flex;
+    font-size: 11px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.imgNovedad {
+    height: 50%;
+    width: 100%;
+}
+
+/* Este es el footer */
+
+footer ul{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+    background-color: gray;
+}
+
+footer ul li{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+footer ul li a{
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+}
+
+.footFixed {
+    height: 10px;
+    position: fixed;
+    bottom: 0 ;
+    width: 100vw;
+    background-color:  #fec303;
+    font-size: 8px
 
 }

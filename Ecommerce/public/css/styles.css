@@ -158,10 +158,45 @@ h3 {
     display: flex;
     height: 110px;
     width: 110px;
-    border-radius: 60px;
-    box-shadow: 1px 5px 8px lightslategrey
+    border-radius: 60px;   
+}
+.boxOfertas{
+    box-shadow: 1px 5px 8px lightslategrey   
+}
+
+.prices{
+    font-size: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+    padding: 10px;
+    line-height: 1.5;
+}
+
+.saving{
+    font-size: 8px;
+    font-weight: 900;
+    color: #ed3237;
     
 }
+
+.oldprice{
+    font-size: 8px;
+    color: #999;
+    text-decoration: line-through;
+    
+}
+
+.separador{
+    margin: 40px 20px 20px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    width: 50%;
+    position: relative;
+    left: 20%;
+}
+
 .historias {
     display: flex;
     justify-content: space-around;

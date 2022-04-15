@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styleproducto.css">
+    <link rel="stylesheet" href="css/productDetail.css">
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
     <script src="https://kit.fontawesome.com/1aec321a0b.js" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <title>Pagina Web Detalle de Producto</title>
+    <title>Detalle de Producto</title>
 </head>
 <body>
     <header> 
@@ -48,8 +48,8 @@
                 <div class="columnprices">
                     <span class="prices">
                         <span>$7.699,00</span>
-                        <span class="saving"> 30% OFF </span>
                         <span class="oldprice">$10.999,00</span>
+                        <span class="saving"> 30% OFF </span>
                     </span>
                 </div>
                 <hr class="separador">
@@ -68,21 +68,45 @@
                 </div>
             </div>
             <hr class="separador">
-            <div></div>
+            <div class="agregar">
+                <div class="quantity">
+                    <input type="number" min="1" value="1">
+                </div>
+                <div>
+                    <button class="comprar">Agregar al Carrito</button>
+                    <i class="fas fa-light fa-heart-circle-plus"></i>
+                </div>
+            </div>
             <hr class="separador">
-            <div >
-                <h4>Descripcion</h4>
-                <p>Género: Hombre</p>
-                <p>Adecuado para: Entrenamiento.</p>
-                <p>Material: Poliéster reciclado.</p>
-                <p>Capucha: Sin Capucha</p>
-                <p>Abertura: Con Cierre</p>
-                <p>Cuello: Alto</p>
-                <p>Bolsillo: Sin Bolsillo</p>
-                <p>Estilo: Con Logo</p>
-                <p>Garantía: Contra defecto de fabricación.</p>
-                <p>Origen: Importado</p>
-                <p>Marca: adidas</p>
+            <div class="descripcion">
+                <h4>DESCRIPCION</h4>
+                <br>
+                <p>La camiseta adidas de Boca Juniors edición Visitante 2021 se inspira en el diseño retro de los 80's. Su tejido suave absorbe el sudor para mantenerte cómodo y seguro en el gimnasio o alentando en La Bombonera. Lucí el escudo tejido del Xeneixe que demuestra tu amor por los colores.</p>
+                <br>
+                <ul>
+                    <li>Género: Hombre</li>
+                    <li>Adecuado para: Entrenamiento.</li>
+                    <li>Material: Poliéster reciclado.</li>
+                    <li>Cuello: Redondo</li>
+                    <li>Manga: Corta</li>
+                    <li>Calce: Regular</li>
+                    <li>Equipo: Boca Juniors</li>
+                    <li>Escudo: Bordado</li>
+                    <li>Garantía: Contra defecto de fabricación.</li>
+                    <li>Origen: Nacional</li>
+                    <li>Marca: Adidas</li>
+                </ul>
+
+            </div>
+            <div>
+                <h4>RECOMENDADO PARA VOS</h4>
+                <div class="recomendaciones">
+                    <div>
+                        <img class= "imagenesrecom" src="../img/buzo.jpg" alt="Buzo Recomendacion">
+                        <img class= "imagenesrecom"src="../img/barcaAlt.jpg" alt="Remera Barcelona Recomendacion">
+                        <img class= "imagenesrecom"src="../img/chandalJuve.jpg" alt="Recomendacion">
+                    </div>    
+                </div>
             </div>
     </section>
 </main>

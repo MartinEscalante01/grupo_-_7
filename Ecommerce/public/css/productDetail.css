@@ -62,10 +62,6 @@ header{
     font-size: 15px;
 }
 
-
-
-
-
 /* Categorias */
 ul.breadcrumb {
     padding: 2px;
@@ -111,9 +107,13 @@ div h1{
 }
 
 .saving{
-    font-size: 10px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 900;
     color: #ed3237;
+    position: relative;
+    bottom: 25px;
+    right: 165px;
+
 }
 
 .prices{
@@ -163,17 +163,53 @@ div h1{
     align-items: center;
 }
 
-/* Descripcion */
-div p{
-    font-size: 0.7rem;
+/* Comprar */
+.agregar{
+    display: flex;
+    margin: 10px;
+    box-sizing: border-box;
+}
 
+.quantity{
+    max-width: 145px;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.comprar{
+    color: #ffffff;
+    background-color: #ed3237;
+    border: 1px solid #ed3237;
+    padding: 5px 25px;
+    width: 100%;
+    
+}
+
+div i{
+    margin: 10px;
 }
 
 
+/* Descripcion */
+.descripcion{
+    font-size: 0.7rem;
+    margin-bottom: 60px;
+}
 
 
+/* Recomendaciones */
+.recomendaciones{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 10px;
+}
 
-
+.imagenesrecom{
+    width: 30%;
+    justify-content: space-around;
+}
 
 
 

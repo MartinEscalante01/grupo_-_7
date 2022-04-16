@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;    
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* Encabezado */
+header{
+    background-color: #EAC926;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+div.encabezado{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+header div.encabezado p{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+header div.logo{
+    padding: 10px;
+    width: 50%;
+}
+
+header img{
+    width: 65vw;
+    height: 10vh;
+}
+
+header ul{
+    margin: 0 auto;
+    padding: 0;
+}
+header ul li{
+    list-style: none;
+}
+
+header nav{
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+header ul li{
+    list-style-type: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+
+
+
+div.burger-menu{
+    text-align: center;
+}
+
+div.burger-menu i{
+    background-color: #03264C;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 40px;
+}
+
+/* BANNER */
+section.banner img{
+    width: 100%;
+}
+
+/* MAIN BODY */
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+
+h2{
+    font-size: 24px;
+}
+
+p{
+    font-size: 12px;
+}
+
+
+/* Ultimas Visitas */
+.ultima-visita{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.descripcion{
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    box-sizing: border-box;
+    position: relative;
+    padding: 10px;
+}
+
+.precio{
+    font-size: 18px;
+    width: 30%;
+}
+
+.descuentos{
+    width: 70%;
+    font-size: 16px;
+}
+
+.descripciones{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3,
+.description{
+    color: #666;
+}
+
+.description{
+    display: none;
+    margin-top: 20px;
+}
+
+section.banner img{
+    width: 100%;
+}
+
+
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: #39b54a;
+}
+
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+
+/* FOOTER BODY */
+footer{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.fotter{
+    text-align: center;
+}
+
+.fotter .items{
+    width: 80%;
+    padding: 20px;
+}
+
+.items .iconos{
+    font-size: 2em;
+    color: #1259c3;
+    padding: 10px;
+}
+
+/* TABLETS */
+@media (min-width: 361px){
+    main section article .description{
+        display: block;
+    }
+
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    main section div.productos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    main section div.productos article{
+        width: 45%;
+    }
+
+    .price,
+    .discount{
+        width: 50%;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 769px){
+    main section div.productos article{
+        width: 22%;
+    }
+}

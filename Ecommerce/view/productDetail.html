@@ -15,16 +15,25 @@
         <div class="menu">
             <i class="fa-solid fa-bars"></i>
         </div>
-        
+            <a href="">
         <div class="logo">
-        <img src="img/mob-logo.svg"  >
-        </div>
+            <img src="img/mob-logo.svg">
+        </div></a>
 
         <div class="login">
-            <i class="fas fa-solid fa-magnifying-glass"></i>
-            <i class="fas fa-solid fa-user"></i>
+            <a href=""><i class="fas fa-solid fa-magnifying-glass"></i></a>
+            <a href=""><i class="fas fa-solid fa-user"></i></a>
             <a href="carrito.html"><i class="fa-solid fa-bag-shopping"></i></a>
         </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="">Adultos</a></li>
+                <li><a href="">Niños</a></li>
+                <li><a href="">Marcas</a></li>
+                <li><a href="">Colecciones</a></li>
+                <li><a href="">Ofertas</a></li>
+            </ul>
+        </nav>
     </header>
 
 <main id="maincontent">
@@ -38,10 +47,13 @@
                     </ul>
                 </nav>
             </div>
+    </section>
+    <section class="detail"> 
             <div>
                 <div>
                     <img class= "imagen" src="../img/camisetaCABJ.jpg" alt="Camiseta Boca Juniors">
                 </div>
+        <div>
                 <div>
                     <h1>CAMISETA TITULAR OFICIAL BOCA JUNIORS 21/22</h1><br>
                 </div>
@@ -70,13 +82,16 @@
             <hr class="separador">
             <div class="agregar">
                 <div class="quantity">
-                    <input type="number" min="1" value="1">
+                    <input class="input-qty" type="number" min="1" value="1">
                 </div>
-                <div>
+                <div class="container-comprar">
                     <button class="comprar">Agregar al Carrito</button>
                     <i class="fas fa-light fa-heart-circle-plus"></i>
                 </div>
             </div>
+        </div>
+    </section>
+    <section>
             <hr class="separador">
             <div class="descripcion">
                 <h4>DESCRIPCION</h4>
@@ -96,17 +111,38 @@
                     <li>Origen: Nacional</li>
                     <li>Marca: Adidas</li>
                 </ul>
-
             </div>
+    </section>
+    <section>
             <div>
-                <h4>RECOMENDADO PARA VOS</h4>
-                <div class="recomendaciones">
-                    <div>
-                        <img class= "imagenesrecom" src="../img/buzo.jpg" alt="Buzo Recomendacion">
-                        <img class= "imagenesrecom"src="../img/barcaAlt.jpg" alt="Remera Barcelona Recomendacion">
-                        <img class= "imagenesrecom"src="../img/chandalJuve.jpg" alt="Recomendacion">
-                    </div>    
-                </div>
+                <section class="Container-Opps">  
+                    <h3>RECOMENDANDO PARA VOS</h3>
+                    <section class="Opps">
+                       <div class="boxOpps">
+                            <a href=""><img src="img/barcaAlt.jpg" class="imgOferta"></a> 
+                            <span class="newPrice">
+                            <div>$7.699,00</div>
+                            <span class="priorPrice">$10.999,00</span>
+                            <span class="discuount"> 30% OFF </span>
+                            </span>
+                   </div>
+                       <div class="boxOpps">
+                           <a href=""><img src="img/chandalJuve.jpg" class="imgOferta"></a>
+                           <span class="newPrice">
+                           <div>$7.699,00</div>
+                           <span class="priorPrice">$10.999,00</span>
+                           <span class="discuount"> 30% OFF </span>
+                       </div>
+               
+                       <div class="boxOpps">
+                           <a href=""><img src="img/botAdiNino.jpg" class="imgOferta"></a>
+                           <span class="newPrice">
+                           <div>$7.699,00</div>
+                           <span class="priorPrice">$10.999,00</span>
+                           <span class="discuount"> 30% OFF </span>
+                       </div>
+                   </section> 
+                </section>  
             </div>
     </section>
 </main>

@@ -1,5 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cambay&display=swap');
+:root{
+    --titulos-color: #333333;
+    --tamanio-titulos: 30px;
+    --titulo-family:'Open Sans', sans-serif;
+}
+
 *{
     margin: 0px;
+    box-sizing: border-box;
 }
 
 /* Esta es la barra de categorias */
@@ -18,37 +36,44 @@ header{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    box-sizing: border-box;
     background-color: #fec303;
     height: 50px;
-    top: 0 ;
-    width: 100%;
+    width: 100vw;
    
 }
 
 .menu {
-    width: 17%;
-    text-align: center;
+    width: 17vw;
     display: flex;
-    justify-content: space-between;
     padding: 1px 10px;
 }
 
 .logo {
     width: 80px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
 }
 
 
 .login{
-    width: 17%;
-    text-align: center;
+    width: 30vw;
     display: flex;
     justify-content: space-between;
-    padding: 0px 10px;
+}
 
+.nav{
+    box-sizing: border-box;
+    padding-right: 40px;
+}
+.nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    
+}
+
+.nav ul li a{
+    margin-right: 10px;
+    margin-left: 10px;
+    text-decoration: none;
 }
 
 /* Main Content */
@@ -56,7 +81,6 @@ header{
 #maincontent{
     background: #fff;
     padding-bottom: 30px;
-    display: flex;
     box-sizing: border-box;
     margin: 10px;
     font-size: 15px;
@@ -166,29 +190,45 @@ div h1{
 /* Comprar */
 .agregar{
     display: flex;
-    margin: 10px;
-    box-sizing: border-box;
+    margin: 25px 20px;
+    justify-content: space-between;
 }
 
 .quantity{
-    max-width: 145px;
     display: flex;
-    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    max-height: 44px;
+}
+
+.input-qty{
+    width: 100px;
+    text-align: center;
+    display: flex;
+}
+
+.container-comprar{
+    height: 45px;
 }
 
 .comprar{
+    display: flex;
     color: #ffffff;
     background-color: #ed3237;
     border: 1px solid #ed3237;
     padding: 5px 25px;
-    width: 100%;
-    
+    width: 90%;
+    text-transform: uppercase;
 }
 
-div i{
-    margin: 10px;
+.fa-light{
+    display: flex;
+    width: 10px;
+    font-size: 20px;
+    position: relative;
+    bottom: 31px;
+    left: 170px;
+  }
 }
-
 
 /* Descripcion */
 .descripcion{
@@ -197,27 +237,49 @@ div i{
 }
 
 
-/* Recomendaciones */
-.recomendaciones{
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 100%;
-    max-height: 100%;
-    margin: 10px;
+/* Oportunidades */
+.Container-Opps{
+    margin-top: 40px;
 }
 
-.imagenesrecom{
-    width: 30%;
+.Opps{
+    display: flex;
     justify-content: space-around;
 }
 
+.imgOferta {
+    display: flex;
+    height: 110px;
+    width: 110px;
+    border-radius: 60px;   
+}
+.boxOpps{
+    box-shadow: 1px 5px 8px lightslategrey   
+}
 
+.newPrice{
+    font-size: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+    padding: 10px;
+    line-height: 1.5;
+}
 
+.discuount{
+    font-size: 8px;
+    font-weight: 900;
+    color: #ed3237;
+    
+}
 
-
-
-
-
+.priorPrice{
+    font-size: 8px;
+    color: #999;
+    text-decoration: line-through;
+    
+}
 
 main nav{
     font-size: 5px;
@@ -264,4 +326,62 @@ footer ul li a{
 footer div:nth-child(2){
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+/*Mobile*/
+@media(max-width:361px) {
+    header .menu{
+        display: none;
+    }
+
+    header .nav{
+        display: none;
+    } 
+}
+
+/*Tablet*/
+@media(min-width:361px) {
+    header .menu{
+        display: none;
+    }
+
+    
+}
+
+/*Desktop*/
+@media (min-width:769px){
+    header .menu{
+        display: none;
+    }
+
+    main section .detail{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    main div .column-size{
+        display: flex;
+        flex-direction: row;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

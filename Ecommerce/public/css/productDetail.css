@@ -356,7 +356,6 @@ footer div:nth-child(2){
 
     main section .detail{
         display: flex;
-        flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-between;
     }
@@ -371,7 +370,9 @@ footer div:nth-child(2){
         flex-direction: row;
     }
 
-
+    .comprar{
+        padding: 5px 40px;
+    }
 
 
 

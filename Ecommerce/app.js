@@ -8,8 +8,8 @@ app.get('/home',(req,res)=>{
     res.sendFile(path.join(__dirname,'view/index.html'))
 })
 
-app.get('/carritoDeCompras',(req,res)=>{
-    res.sendFile(path.join(__dirname,'view/carrito.html'))
+app.get('/productCart',(req,res)=>{
+    res.sendFile(path.join(__dirname,'view/productCart.html'))
 })
 
 app.get('/productDetail',(req,res)=>{

@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
 rel="stylesheet" />
+
 <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
 <title>HOME MERCADO LIEBRE</title>
@@ -18,14 +19,16 @@ rel="stylesheet" />
             <div class="logo"> 
                 <img src="../images/logo-mercado-liebre.svg" alt="">
             </div>
-            <input type="text" width="800px" placeholder="Buscar productos, marcas" >
-            <div class="search">
-                <a href=""><i class='bx bx-search-alt-2'></i></a>
+            <div class="form" action="#" method="GET">
+                <div class="input">Buscar productos, marcas y más</div>
+                <div class="submit"><i class="fa fa-search"></i></div>
             </div>
+            <div class="text">
+                <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
             </div>
-            <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
         </div>
-        <nav>
+
+        <nav class="category">
             <ul>
                 <li><a href="#">Ofertas</a></li>
                 <li><a href="#">Tiendas Oficiales</a></li>
@@ -34,9 +37,9 @@ rel="stylesheet" />
             </ul>
             <br>
             <ul>
-                <li><a href="">Crea tu cuenta <i class=" fas fa-thin fa-id-card"></i></a></li>
-                <li><a href="">Ingresa <i class="fas fa-duotone fa-right-to-bracket"></i></a></li>
-                <li><a href="#">Mis Compras <i class="fas-solid fas-bag-shopping"></i></a></li>
+                <li><a href="/register">Crea tu cuenta <i class=" fas fa-thin fa-id-card"></i></a></li>
+                <li><a href="/login">Ingresa <i class="fa fa-duotone fa-right-to-bracket"></i></a></li>
+                <li><a href="#">Mis Compras <i class="fas fas-solid fas-bag-shopping"></i></a></li>
                 
             </ul>
         </nav>  

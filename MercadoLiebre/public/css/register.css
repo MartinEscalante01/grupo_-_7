@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.banner{
+    display: none;
+}
+
+.forms-desing{
+    margin: 20px;
+    line-height: 40px;
+    font-size: 15px;
+    width: 100%;
+
+}
+
+.bar-info{
+    border: none;
+    padding: 5px;
+    width: 80%;
+    border-radius: 6px;
+    color: #979797;
+}
+
+main section.forms-desing form h4{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+main section.forms-desing form ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+#Opcion1, #Opcion2, #Opcion3, #Opcion4, #Opcion5{
+    margin-right: 20px;
+}
+
+main section.forms-desing form ul.checkbox-intereses{
+    display: block;
+
+}

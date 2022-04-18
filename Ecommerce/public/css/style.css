@@ -41,7 +41,7 @@
         flex-wrap: wrap;
         box-sizing: border-box;
         padding: 0.3rem;
-        
+        background-color: rgb(254,195,3);
         
     }
     
@@ -52,12 +52,14 @@
     }
     
     .logo i{
-        font-size: 180%;
-        color: #62b4b5;
+        font-size: 20px;
+        float: left;
+        color: #000000;
+        margin-left: 30px;
     }
     
     .img-mobile{
-        width: 20%;
+        width: 15%;
         text-align: center;
     }
     .login{
@@ -65,11 +67,16 @@
         text-align: center;
     
     }
+    .login i{
+        float: right;
+        margin-right: 15px;
+        font-size: 20px;
+    }
     
     .login .icon-login{
-        font-size: 180%;
-        padding: 5px;
-        color: #4a9798;
+        font-size: 20px;
+        
+        color: #000000;
     }
     
     main{
@@ -102,6 +109,7 @@
         color: var(--titulos-color);
         margin-bottom: 10px;
         font-family: 'Ubuntu', sans-serif;
+        font-size: 35px;
     
     }
     
@@ -178,6 +186,12 @@
         padding: 5px 25px;
         border-radius: 10px;
         font-family: 'Lato', sans-serif;
+    }
+
+    .info button:hover{
+        background-color: transparent;
+        border: 1px solid black;
+        color: black;
     }
     
     .resumen{
@@ -405,7 +419,7 @@
     }
 
     .img-desktop{
-        width: 10%;
+        width: 7%;
     }
     .img-desktop img{
         width: 100%;
@@ -459,6 +473,8 @@
 
     main .carrito{
         width: 40%;
+        line-height: 30px;
+        margin-top: 30px;
     }
 
     main .informacion{

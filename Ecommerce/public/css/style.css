@@ -42,6 +42,7 @@
         box-sizing: border-box;
         padding: 0.3rem;
         
+        
     }
     
     .logo{
@@ -272,7 +273,6 @@
     footer ul{
         display: flex;
         flex-direction: row;
-        width: 100vw;
         list-style: none;
         margin: 0px;
         padding: 0px;
@@ -374,18 +374,25 @@
     }
     header{
         display: flex;
-        width: 100vw;
         flex-direction: column;
-        padding: 0.6rem;
         box-sizing: border-box;
-
+        margin: 0px;
+        padding: 0px;
     }
+
 
     header .login-dektop{
         display: flex;
         width: 100%;
         justify-content: end;
-        margin-right: 10px;
+        background-color: black;
+    }
+
+    .login-dektop button{
+        font-family: 'Roboto', sans-serif;
+        border: 1px solid black;
+        font-size: 15px;
+        padding: 5px 12px;
     }
 
     header .desktop{
@@ -394,6 +401,7 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        background-color: rgb(254,195,3);
     }
 
     .img-desktop{
@@ -404,7 +412,7 @@
     }
     .nav{
         box-sizing: border-box;
-        padding-right: 40px;
+        width: 40%;
     }
     .nav ul{
         display: flex;
@@ -417,6 +425,18 @@
         margin-right: 10px;
         margin-left: 10px;
         text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        color: black;
+    }
+    .nav ul li a:hover{
+        text-decoration:revert;
+    }
+    .search{
+        display: flex;
+        width: 25%;
+        justify-content: space-evenly;
     }
 
     .search input {
@@ -429,7 +449,7 @@
     }
     .iconos-desktop{
         font-size: 20px;
-        margin-right: 20px;
+        
     }
 
     main{

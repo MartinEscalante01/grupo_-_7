@@ -20,6 +20,9 @@ app.get('/formulario',(req,res)=>{
     res.sendFile(path.join(__dirname,'view/index.html'))
 })
 
+app.get('/login',(req,res)=>{
+    res.sendFile(path.join(__dirname,'view/login.html'))
+})
 
 app.listen(3030, (req, res)=>{
     console.log("levantando el servidor")

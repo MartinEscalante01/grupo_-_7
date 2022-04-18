@@ -1,13 +1,13 @@
 const express = require('express');
 const path = require('path');
-const { send } = require('process');
+
 
 const app = express();
 
 app.use(express.static('public'))
 
 app.get('/mercadoLiebre',(req,res) =>{
-    res.sendFile(path.join(__dirname,'../src/views/html/home.html'))
+    res.sendFile(path.join(__dirname,'views/html/home.html'))
 });
 
 app.listen(3000, () =>{

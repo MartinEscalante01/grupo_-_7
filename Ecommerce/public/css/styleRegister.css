@@ -1,0 +1,245 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cambay&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    
+    
+}
+
+.login-dektop{
+    display: none;
+}
+
+.desktop {
+    display: none;
+}
+
+@media (min-width:360px) {
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        padding: 0.3rem;
+        background-color: rgb(254,195,3);
+        
+    }
+    
+    .logo{
+        width: 30%;
+        text-align: center;
+        
+    }
+    
+    .logo i{
+        font-size: 20px;
+        float: left;
+        color: #000000;
+        margin-left: 30px;
+    }
+    
+    .img-mobile{
+        width: 15%;
+        text-align: center;
+    }
+    .login{
+        width: 30%;
+        text-align: center;
+    
+    }
+    .login i{
+        float: right;
+        margin-right: 15px;
+        font-size: 20px;
+    }
+    
+    .login .icon-login{
+        font-size: 20px;
+        
+        color: #000000;
+    }
+
+}
+
+
+@media (min-width:768px) {
+    header .img-mobile{
+        width: 15%;
+    }
+    
+    .logo{
+        text-align: inherit !important;
+    }
+    .logo i{
+        margin-left: 20px;
+        text-align: none !important
+    }
+
+    .login{
+        text-align: end;
+
+    }
+
+    .login i:nth-child(2){
+        margin-right: 20px;
+    }
+}
+
+@media (min-width:1024px){
+    .logo{
+        display: none;
+    }
+    .img-mobile{
+        display: none;
+    }
+
+    .login{
+        display: none;
+    }
+
+    .login-dektop button {
+        font-size: 10px;
+        background-color: black;
+        padding: 5px 10px;
+        color: white;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    }
+
+
+    header .login-dektop{
+        display: flex;
+        width: 100%;
+        justify-content: end;
+        background-color: black;
+    }
+
+    .login-dektop button{
+        font-family: 'Roboto', sans-serif;
+        border: 1px solid black;
+        font-size: 15px;
+        padding: 5px 12px;
+    }
+
+    header .desktop{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: rgb(254,195,3);
+    }
+
+    .img-desktop{
+        width: 7%;
+    }
+    .img-desktop img{
+        width: 100%;
+    }
+    .nav{
+        box-sizing: border-box;
+        width: 40%;
+    }
+    .nav ul{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        
+    }
+
+    .nav ul li a{
+        margin-right: 10px;
+        margin-left: 10px;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        color: black;
+    }
+    .nav ul li a:hover{
+        text-decoration:revert;
+    }
+    .search{
+        display: flex;
+        width: 25%;
+        justify-content: space-evenly;
+    }
+
+    .search input {
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        width: 160px;
+        height: 30px;
+    }
+    .iconos-desktop{
+        font-size: 20px;
+        
+    }
+}
+
+form{
+    width: 100%;
+    padding: 30px;
+}
+
+.controls{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #8c8c8e;
+    font-size: 18px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+main section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.todo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.acceder{
+    display: flex;
+    padding: 20px 30px;
+    border: 1px solid black;
+    margin: 5px;
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.acuerdos{
+    display: flex;
+    flex-direction: column;
+}

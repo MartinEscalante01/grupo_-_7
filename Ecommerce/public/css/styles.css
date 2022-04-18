@@ -24,63 +24,65 @@ a {
     text-decoration: none;
 }
 
-@media (min-width: 768px) {
-     
-    main {
-        font-size: 20px
-    }
-    
-    h2{
-        font-size: 50px 
-       
-    }
-    p {
-        font-size: 15px;
-        line-height: 1.5;
-    }
-    
-}
+/*Mobile*/
+
 
 /* Esta es la barra de navegacion */
+.header-banner{
+    background-color: #a19797;
+    color: white;
+    font-size: 5px;
+    border: 1px solid #a19797;
+    text-align: end;
+}
+
+/* Encabezado */
 header{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    box-sizing: border-box;
     background-color: #fec303;
     height: 50px;
-    position: fixed;
-    top: 0 ;
     width: 100%;
+    position: fixed;
+    top: 0;
     z-index: 10;
-   
 }
 
 .menu {
-    width: 17vw;
-    text-align: center;
+    width: 15vw;
     display: flex;
-    justify-content: space-between;
-    padding: 1px 10px;
+    padding: 0 10px
 }
 
 .logo {
     width: 80px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
 }
 
 
 .login{
-    width: 19vw;
-    text-align: center;
+    width: 18%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav{
+    box-sizing: border-box;
+}
+
+.nav ul{
     display: flex;
     justify-content: space-between;
-    padding: 0px 10px;
+    list-style: none;
+    
+}
 
+.nav ul li a{
+    margin-right: 10px;
+    margin-left: 10px;
+    text-decoration: none;
 }
 
 .barraEnvio {
@@ -88,15 +90,15 @@ header{
     height: 3vh;
     border:solid 1.5px lightgrey;
     text-align: center;
-    font-size: 0.8rem;
-    padding: 3px;
+    font-size: 12px;
+    padding: 4px;
 }
 
 
 /* Este es el copete */
 .copete {
     background-color: rgb(217, 48, 59);
-    height: 10vh;
+    height: 8vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -136,42 +138,29 @@ header{
 
 .adiWoman {
     display: flex;
-    height: 20vh;
-    width: 28vw;
+    height: 24vh;
+    width: 30vw;
     border-radius:15px;
     box-shadow: 3px 3px 10px darkgray;
-}
-
-.adiWoman:hover {
-    transition: transform .5s ease;
-    transform: scale(1.05);
 }
 
 .nikeMan {
     display: flex;
-    height: 20vh;
-    width: 28vw;
+    height: 24vh;
+    width: 30vw;
     border-radius:15px;
     box-shadow: 3px 3px 10px darkgray;
 }
 
-.nikeMan:hover {
-    transition: transform .5s ease;
-    transform: scale(1.05);
-}
 
 .adiKid {
     display: flex;
-    height: 20vh;
-    width: 28vw;
+    height: 24vh;
+    width: 30vw;
     border-radius:15px;
     box-shadow: 3px 3px 10px darkgray;
 }
 
-.adiKid:hover {
-    transition: transform .5s ease;
-    transform: scale(1.05);
-}
 
 h3 {
     display: flex;
@@ -181,7 +170,9 @@ h3 {
     font-style: italic;
     font-weight: bold;
     color: tomato;
+    
 }
+
 .ofertas{
     display: flex;
     justify-content: space-around;
@@ -193,13 +184,9 @@ h3 {
     width: 20vw;
 }
 
-.boxOfertas:hover {
-  transition: transform .5s ease;
-  transform: scale(1.2);
-}
 
 .boxOfertas{
-    box-shadow: 1px 5px 8px lightslategrey   
+    box-shadow: 1px 5px 8px lightslategrey;   
 }
 
 .prices{
@@ -215,15 +202,13 @@ h3 {
 .saving{
     font-size: 8px;
     font-weight: 900;
-    color: #ed3237;
-    
+    color: #ed3237;   
 }
 
 .oldprice{
     font-size: 8px;
     color: #999;
     text-decoration: line-through;
-    
 }
 
 .separador{
@@ -253,6 +238,7 @@ h3 {
     font-size: 9px;
     line-height : 12px;
     width: 50vw;
+    height: 43vh;
     padding: 10px;
   
 }
@@ -267,11 +253,13 @@ h3 {
     display: flex;
     background-color: white;
     width: 50vw;
+    height: 43vh;
     padding: 0 10px;
+}
+
+.novedadTxt {
     font-size: 9px;
     line-height: 12px;
-    
-    
 }
 
 .novedad h2{
@@ -320,6 +308,202 @@ footer ul li a{
     bottom: 0 ;
     width: 100vw;
     background-color:  #fec303;
-    font-size: 8px
+    font-size: 8px;
+    z-index: 10;
 
 }
+
+/*Mobile*/
+@media (min-width:360px) {
+    header .nav{
+        display: none;
+    } 
+}
+
+/*Terminado mobile*/
+
+/* Tablet */
+@media (min-width:768px) {
+    header .menu{
+        display: none;
+    }
+    
+    header .nav{
+        display: flex
+    }
+    
+    .logo {
+    width: 80px;
+    position: relative;
+    left: 10px
+    }
+
+
+    .login{
+    width: 15%;
+    }
+
+    
+    .barraEnvio {
+    font-size: 18px;
+    padding: 8px;
+    }
+    
+    .copete{
+        padding: 0 70px
+    }
+
+    #guantes {
+    font-size: 14px; 
+    width: 150px;
+    font-weight: bold;
+    line-height: 20px
+    }
+    
+    .paraQuien{
+    font-size: 20px;
+    padding: 30px 10px 30px;
+    }
+    
+    h3 {
+    font-size: 30px
+    }
+
+    .prices{
+    font-size: 15px;
+    }
+
+    .saving{
+    font-size: 12px;     
+    }
+
+    .oldprice{
+    font-size: 12px;   
+    }
+
+
+    .historiasTxt {
+    font-size: 14px;
+    line-height : 20px;
+    height: 31vh;    
+    }
+    
+    .historiasTxt h2{
+    font-size: 15px;
+        
+    }
+    
+    .novedad {
+    padding: 0 10px;
+    height: 31vh; 
+    }
+    
+    .novedadTxt{
+    font-size: 14px;
+    line-height: 20px;
+    
+    }
+
+    .novedad h2{ 
+    font-size: 15px;
+    }
+
+    .imgNovedad {
+    height: 50%;
+    width: 100%;
+    }
+   
+}
+/* Terminado Tablet */
+
+/* Desktop */
+@media (min-width:1024px){
+    header .menu{
+        display: none;
+    }
+    .barraEnvio {
+    font-size: 18px;
+    padding: 7px;
+    height: 3.7vh
+    }
+    
+    .adiWoman {
+    height: 30vh;
+    width: 30vw;
+    }
+
+    .nikeMan {
+    height: 30vh;
+    width: 30vw;
+    border-radius:15px;
+    box-shadow: 3px 3px 10px darkgray;
+    }
+
+
+    .adiKid {
+    height: 30vh;
+    width: 30vw;
+    
+    }
+    
+    .adiWoman:hover {
+    transition: transform .5s ease;
+    transform: scale(1.05);
+    }
+    
+    .nikeMan:hover {
+    transition: transform .5s ease;
+    transform: scale(1.05);
+    }
+
+    .adiKid:hover {
+    transition: transform .5s ease;
+    transform: scale(1.05);
+    }
+    
+    .boxOfertas:hover {
+    transition: transform .5s ease;
+    transform: scale(1.1);
+    }
+    
+    .imgOferta {
+    
+    height: 18vh;
+    width: 15vw;
+    }
+
+    
+    .historiasTxt {
+    font-size: 15px;
+    line-height : 30px;
+    height: 41vh;    
+    }
+    
+    .historiasTxt h2{
+    font-size: 20px;
+        
+    }
+    
+    .novedad {
+    padding: 0 10px;
+    height: 41vh; 
+    }
+    
+    .novedadTxt{
+    font-size: 15px;
+    line-height: 30px;
+    
+    }
+
+    .novedad h2{ 
+    font-size: 20px;
+    }
+
+    .imgNovedad {
+    height: 50%;
+    width: 100%;
+    }
+   
+}
+
+/* Terminado Desktop */

@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .diseño-form {
+    width: 70%;
+    padding: 30px;
+    margin: auto;
+    margin-top: 23px;
+    margin-bottom: 30px;
+  }
+  
+  .diseño-form h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .diseño-form p {
+    text-align: center;
+    font-size: 20px;
+    line-height: 38px;
+  }
+  
+  .diseño-form a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  
+  .diseño-form a:hover {
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  .selector {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 18px;
+    color: #7d7c7c;
+  }
+  
+
+  
+  .diseño-form .send {
+    width: 100%;
+    background: blue;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+  }
+
+  .banner{
+      display: none;
+  }

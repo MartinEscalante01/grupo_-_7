@@ -23,6 +23,9 @@ app.get('/register',(req,res)=>{
     res.sendFile(path.join(__dirname,'view/register.html'))
 })
 
+app.get('/login',(req,res)=>{
+    res.sendFile(path.join(__dirname,'view/login.html'))
+})
 
 app.listen(3030, (req, res)=>{
     console.log("levantando el servidor")

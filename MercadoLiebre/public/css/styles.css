@@ -16,8 +16,8 @@ header{
 }
 
 div.encabezado{
-    display: flex;
     padding: 5%;
+    display: flex;
 }
 
 header div.encabezado p{
@@ -32,13 +32,10 @@ header div.logo{
 }
 
 header img{
-    display: flex;
     width: 50%;
 }
 
 header .form .input{
-    display: flex;
-    width: 50%;
     background-color: #FFF;
     border: 1px solid #000;
     outline: none;
@@ -47,7 +44,6 @@ header .form .input{
 }
 
 header .form .submit{
-    display: flex;
     background-color: #FFF;
     border: 1px solid #000;
     color: #666;
@@ -222,6 +218,10 @@ footer{
 /* MOBILE */
 @media (min-width: 361px){
     header nav{
+        display: none;
+    }
+
+    .category{
         display: none;
     }
 

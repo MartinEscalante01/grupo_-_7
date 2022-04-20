@@ -355,7 +355,11 @@ footer div:nth-child(2){
 @media (min-width:360px) {
     header .nav{
         display: none;
-    } 
+    }
+    
+    header .search{
+        display: none;
+    }
 }
 
 /*Terminado mobile*/
@@ -368,7 +372,22 @@ footer div:nth-child(2){
     
     header .nav{
         display: flex
-    } 
+    }
+
+    header .search{
+        display: flex;
+    }
+
+    i.fa.fa-search{
+        display: none;
+    }
+
+    .login {
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+    }
+
     
     div.descripcion-producto{
         text-align: center;
@@ -448,6 +467,8 @@ footer div:nth-child(2){
         bottom: -3px;
         left: -12px;
       }
+
+    
 }
 /* Terminado Tablet */
 
@@ -544,6 +565,19 @@ footer div:nth-child(2){
         font-size: 15px;
     }
 
+    header .search{
+        display: flex;
+    }
+
+    i.fa.fa-search{
+        display: none;
+    }
+
+    .login {
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+    }
 
 }
 /* Terminado Desktop */

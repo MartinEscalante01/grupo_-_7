@@ -72,6 +72,57 @@
         
         color: #000000;
     }
+    form{
+        width: 100%;
+        padding: 30px;
+    }
+    
+    .controls{
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        border: 1px solid #8c8c8e;
+        font-size: 18px;
+    }
+    
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    main section{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .todo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .acceder{
+        display: flex;
+        padding: 20px 30px;
+        border: 1px solid black;
+        margin: 5px;
+        width: 90%;
+        text-align: center;
+        justify-content: center;
+        border-style: dotted
+        
+    }
+    
+    .acuerdos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .acuerdos div:nth-child(1){
+        width: 70%;
+    }
 
 }
 
@@ -96,6 +147,57 @@
 
     .login i:nth-child(2){
         margin-right: 20px;
+    }
+    form{
+        width: 100%;
+        padding: 30px;
+    }
+    
+    .controls{
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        border: 1px solid #8c8c8e;
+        font-size: 18px;
+    }
+    
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    main section{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .todo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .acceder{
+        display: flex;
+        padding: 20px 30px;
+        border: 1px solid black;
+        margin: 5px;
+        width: 90%;
+        text-align: center;
+        justify-content: center;
+        border-style: dotted
+        
+    }
+    
+    .acuerdos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .acuerdos div:nth-child(1){
+        width: 70%;
     }
 }
 
@@ -196,50 +298,69 @@
         font-size: 20px;
         
     }
-}
-
-form{
-    width: 100%;
-    padding: 30px;
-}
-
-.controls{
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border: 1px solid #8c8c8e;
-    font-size: 18px;
-}
-
-main{
-    display: flex;
-    flex-direction: column;
-}
-
-main section{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-.todo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.acceder{
-    display: flex;
-    padding: 20px 30px;
-    border: 1px solid black;
-    margin: 5px;
-    width: 90%;
-    text-align: center;
-    justify-content: center;
+    form{
+        width: 100%;
+        padding: 30px;
+    }
     
+    .controls{
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        border: 1px solid #8c8c8e;
+        font-size: 18px;
+    }
+    
+    main{
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    
+    main section{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+
+    .formulario{
+        width: 60%;
+    }
+    form{
+        width: 80%;
+    }
+
+    .todo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .acceder{
+        display: flex;
+        padding: 20px 30px;
+        border: 1px solid black;
+        margin-top: 30px;
+        width: 25%;
+        text-align: center;
+        justify-content: center;
+        border-style: dotted;
+        align-self: flex-start;
+        margin-right: 100px;
+    }
+    
+    .acuerdos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .acuerdos div:nth-child(1){
+        width: 25%;
+    }
 }
 
-.acuerdos{
-    display: flex;
-    flex-direction: column;
-}

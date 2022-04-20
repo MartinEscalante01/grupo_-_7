@@ -15,7 +15,7 @@ app.get('/register',(req,res) =>{
 });
 
 app.get('/login',(req,res) =>{
-    res.sendFile(path.join(__dirname,'views/html/login.html'))
+    res.sendFile(path.join(__dirname,'/views/html/login.html'))
 });
 
 app.listen(3000, () =>{

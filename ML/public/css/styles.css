@@ -10,48 +10,80 @@
 
 /* Encabezado */
 header{
-    background-color: #EAC926;
-    padding: 0px;
-    box-sizing: border-box;
+    background-color: #eac926;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    width: 100%;
+    z-index: 9999;
 }
 
 div.encabezado{
-    padding: 5%;
     display: flex;
+    flex-wrap: wrap;
 }
 
-header div.encabezado p{
-    width: 100%;
+.title{
+    font-weight: 400;
+    font-size: 14px;
     text-align: center;
-    margin-top: 10px;
 }
 
 header div.logo{
     padding: 10px;
-    width: 50%;
 }
 
-header img{
-    width: 50%;
+header img, header .search{
+    width: 100%;
 }
 
-header .form .input{
-    background-color: #FFF;
-    border: 1px solid #000;
+.search {
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+.search input {
+    display: block;
+    border: 0 rgba(197, 194, 194, 0.178);
+    color: #333;
+    font-size: 16px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 6px 6px 6px 6px;
+    height: 36px;
     outline: none;
-    color: #666;
-    padding: 2px;
+    font-weight: 500;
+    width: 90%;
+    box-shadow: 0px 2px 5px 2px rgb(158 154 154 / 40%);
+    -webkit-box-shadow: 0px 2px 5px 2px rgb(158 154 154 / 40%);
+    -moz-box-shadow: 0px 2px 5px 2px rgba(158, 154, 154, 0.4);
 }
 
-header .form .submit{
-    background-color: #FFF;
-    border: 1px solid #000;
-    color: #666;
-    width: 6%;
+.search a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 40px;
+    height: 32px;
+    text-decoration: none;
     position: relative;
-    bottom: 23px;
-    left: 250px;
-    height: 20px;
+    left: -40px;
+    background-color: transparent;
+}
+
+.search i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #666666;
+    text-decoration: none;
 }
 
 .text{
@@ -78,12 +110,6 @@ header ul li{
 header ul li a{
     text-decoration: none;
     color: #000;
-}
-
-header nav{
-    display: flex;
-    font-size: 12px;
-    margin-left: 20px;
 }
 
 div.burger-menu{
@@ -126,22 +152,42 @@ p{
     font-size: 12px;
 }
 
+/* MAIN */
+main section {
+    width: 90%;
+    display: block;
+    margin: auto;
+    background-color: #ebebeb;
+    background-color: white;
+    padding-bottom: 20px;
+    /*box-shadow: 0px 0px 5px rgba(100, 100, 100,0.10);*/
+    margin-bottom: 50px;
+  }
 
-/* Ultimas Visitas */
-.ultima-visita{
-    display: flex;
-    flex-wrap: wrap;
+
+main section article{
+    width: 90%;
+    display: block;
+    margin: 60px auto;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 0px 20px 10px rgb(100 100 100 / 10%);
+    position: relative;
 }
 
-.descripcion{
-    width: 100%;
-    border-top: 1px solid #ebebeb;
+
+main section h3{
+    margin-left: 5%;
+    padding-top: 26px;
+    font-weight: 600;
+    display: block;
+    font-size: 1.4em;
+}
+
+/* Ultimas Visitas - Ofertas */
+.ultima-visita, .ofertas{
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
-    box-sizing: border-box;
-    position: relative;
-    padding: 10px;
 }
 
 .precio{
@@ -152,23 +198,18 @@ p{
 .descuentos{
     width: 70%;
     font-size: 16px;
+    padding: 20px;
 }
 
-.descripciones{
-    font-size: 16px;
-    font-weight: normal;
+.descripciones {
+    width: 90%;
     display: none;
-    margin-top: 20px;
-}
-
-
-main section article{
-    background-color: #fff;    
-    margin: 10px 0px;
 }
 
 main section article img{
-    width: 100%;
+    width: 90%;
+    display: block;
+    margin: auto;
 }
 
 main section article i,
@@ -190,23 +231,77 @@ main section article i{
     top: -15px;
 }
 
-main section h2{
-    margin: 20px 0px;
+article div.descripcion{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 20px 30px;
+    color: #666666;
+    font-weight: 700;
+    height: 160px;
 }
+
+/* ORGANIZANDO ELEMENTOS */
+article:hover .descripciones{
+    display: flex;
+    transition: 1s;
+}
+
+i.fas.fa-truck:hover {
+    animation: rotate-center 2s infinite; 
+    animation-direction: alternate; 
+  }
+  
+  @keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+  }
+  
+  .fotter i:hover {
+    color: #6670fc;
+  }
 
 /* FOOTER BODY */
 footer{
+    top: 220px;
     width: 100%;
-    box-sizing: border-box;
+    height: fit-content;
+    box-sizing: content-box;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
 }
 
 .fotter{
-    text-align: -moz-center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 20px;
+    justify-content: center;
 }
 
 .fotter .items{
-    width: 80%;
-    padding: 20px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border-radius: 6px;
 }
 
 .items .iconos{
@@ -216,16 +311,16 @@ footer{
 }
 
 /* MOBILE */
-@media (min-width: 361px){
+@media (min-width: 360px){
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    
     header nav{
         display: none;
     }
 
     .category{
-        display: none;
-    }
-
-    .descripciones{
         display: none;
     }
 
@@ -236,29 +331,50 @@ footer{
         justify-content: space-between;
         align-items: flex-start;
     }
-    
-    main section div.productos article{
-        width: 45%;
-    }
 
-    .precio,
-    .descuento{
-        width: 50%;
-    }
 }
 
-/* DESKTOP */
+/* TABLET */
 @media (min-width: 769px){
-    header nav{
-        display: block;
+
+    .encabezado{
+    display: flex;
+      justify-content: space-around;
+    }
+
+    .search {
+    width: 50%;
+    margin-left: 30px;
+    }
+    
+    .search i {
+    margin-left: 0px;
+    }
+
+    .category{ 
+    display: flex;
+    justify-content: space-between;
+    }
+
+    .category ul {
+    display: flex;
+    }
+
+    .category li {
+    padding: 0 6px;
+    }
+
+    main section {
+    width: 98%;
+    }
+
+    .title{
+        max-width: 350px;
+        text-align: right;
     }
     
     div.burger-menu{
         display: none;
-    }
-
-    .descripciones{
-        display: block;
     }
 
     .text{
@@ -271,33 +387,87 @@ footer{
     }
 
     main section div.productos article{
-        width: 22%;
+        width: 40%;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     main section article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 
-    header .form .input{
-        display: flex;
-        width: 40%;
-        background-color: #FFF;
-        border: 1px solid #000;
-        outline: none;
-        color: #666;
-        padding: 2px;
-    }
-    
-    header .form .submit{
-        display: flex;
-        background-color: #FFF;
-        border: 1px solid #000;
-        color: #666;
-        width: 3%;
-        position: relative;
-        bottom: 23px;
-        left: 285px;
-        height: 20px;
-    }
 
+}
+
+/* DESKTOP */
+@media (min-width: 1200px) {
+.encabezado,
+.category {
+    max-width: 90%;
+    margin: auto;
+}
+
+main {
+    top: 146px;
+}
+
+header img {
+    width: 250px;
+}
+
+.title {
+    max-width: none;
+    margin: 0;
+    font-size: 16px;
+}
+
+.encabezado {
+    align-items: center;
+}
+
+.category {
+    margin-top: 10px;
+}
+
+.category li {
+    margin: 0 12px;
+}
+
+.category a {
+    font-size: 18px;
+}
+
+main section {
+    width: 98%;
+}
+
+main section div.productos article{
+    display: flex;
+    width: 20%;
+}
+
+.main section article i {
+    color: #39b54a;
+    width: fit-content;
+    padding: 10px;
+    border: 1px solid #39b54a;
+    border-radius: 50%;
+    position: relative;
+    top: 22px;
+    left: 80%;
+    z-index: 9998;
+}
+
+footer {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.fotter {
+    flex-direction: row;
+}
+
+.fotter div {
+    width: 30%;
+}  
 }

@@ -19,6 +19,9 @@ app.get('/productDetail',(req,res)=>{
 app.get('/formulario',(req,res)=>{
     res.sendFile(path.join(__dirname,'view/index.html'))
 })
+app.get('/register',(req,res)=>{
+    res.sendFile(path.join(__dirname,'view/register.html'))
+})
 
 app.get('/login',(req,res)=>{
     res.sendFile(path.join(__dirname,'view/login.html'))

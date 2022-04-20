@@ -7,15 +7,15 @@ const app = express();
 app.use(express.static('public'))
 
 app.get('/mercadoLiebre',(req,res) =>{
-    res.sendFile(path.join(__dirname,'../src/views/html/home.html'))
+    res.sendFile(path.join(__dirname,'/views/html/home.html'))
 });
 
 app.get('/register',(req,res) =>{
-    res.sendFile(path.join(__dirname,'../src/views/html/register.html'))
+    res.sendFile(path.join(__dirname,'/views/html/register.html'))
 });
 
 app.get('/login',(req,res) =>{
-    res.sendFile(path.join(__dirname,'../src/views/html/login.html'))
+    res.sendFile(path.join(__dirname,'views/html/login.html'))
 });
 
 app.listen(3000, () =>{

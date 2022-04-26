@@ -21,6 +21,23 @@
 }
 
 /* Esta es la barra de categorias */
+header div.login-dektop {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    background-color: black;
+}
+
+.login-dektop button, header div span{
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid black;
+    color: white;
+    font-size: 12px;
+    background-color: black;
+    padding: 0px 2px;
+    font-style: italic;
+}
+
 .header-banner{
     background-color: #a19797;
     color: white;
@@ -37,15 +54,21 @@ header{
     justify-content: space-around;
     flex-wrap: wrap;
     background-color: #fec303;
-    height: 50px;
+    height: auto;
     width: 100%;
-   position: fixed;
-   top: 0;
+    top: 0;
+}
+
+header div{
+    justify-content: space-evenly;
+    display: flex;
+    margin: auto;
+    width: 100%;
 }
 
 .menu {
-    width: 17vw;
     display: flex;
+    justify-content: flex-start;
     padding: 1px 10px;
 }
 
@@ -54,10 +77,34 @@ header{
 }
 
 
-.login{
-    width: 25%;
+.search{
     display: flex;
+    width: 25%;
     justify-content: space-between;
+}
+
+div.search input{
+    position: relative;
+    right: 25px;
+    display: flex;
+    border-radius: 10px;
+    font-size: 14px;
+    color: rgba(134, 131, 131, 0.916);
+    text-align: center;
+    width: 27vw;
+}
+
+div.search i{
+    position: absolute;
+    right: 88px;
+    top: 19px;
+    font-size: 14px;
+    opacity: 40%;
+    color: #4a4d53fd;
+}
+
+div.searchmobile i{
+    color: black;
 }
 
 .nav{
@@ -90,7 +137,7 @@ header{
 /* Categorias */
 main nav {
     font-size: 5px;
-    margin-top: 60px;
+    margin-top: 5px;
   }
 
 ul.breadcrumb {
@@ -194,6 +241,11 @@ div h1{
     align-items: center;
 }
 
+.atributos-sizes:active {
+    background-color: black;
+    color: white;
+}
+
 /* Comprar */
 .agregar{
     display: flex;
@@ -244,9 +296,6 @@ div.descripcion-producto{
 
 }
 
-main section div ul{
-    list-style: none;
-}
 
 /* Oportunidades */
 .Container-Opps{
@@ -366,6 +415,8 @@ footer div:nth-child(2){
 
 /* Tablet */
 @media (min-width:768px) {
+
+/* ENCABEZADO */
     header .menu{
         display: none;
     }
@@ -375,7 +426,43 @@ footer div:nth-child(2){
     }
 
     header .search{
+        height: fit-content;
         display: flex;
+        margin: 15px 0px 0px 0px;
+    }
+
+    header form.search input{
+        padding-top: 5px;
+        padding-bottom: 7px;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+        background-color: #fff;
+        border: none;
+        color: #333;
+        font-size: 16px;
+        border-radius: 10px;
+        height: 100%;
+        margin: 0;
+        font-family: cursive;
+    }
+
+    div.logo{
+        display: flex;
+        width: 14vw;
+        position: relative;
+        top: 10px;
+        right: 135px;
+    }
+
+    button.nav-search {
+        padding-top: 5px;
+        padding-bottom: 7px;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+        background-color: #fff;
+        border: none;
+        color: #333;
+        border-radius: 10px;
+        margin: 0;
+        font-family: cursive;
     }
 
     i.fa.fa-search{
@@ -468,6 +555,9 @@ footer div:nth-child(2){
         left: -12px;
       }
 
+    div.searchmobile{
+        display: none;
+    }
     
 }
 /* Terminado Tablet */
@@ -579,5 +669,16 @@ footer div:nth-child(2){
         justify-content: space-around;
     }
 
+    div.searchmobile{
+        display: none;
+    }
+
+    div.search i {
+        right: 140px;
+    }
+
+
+    
+    
 }
 /* Terminado Desktop */

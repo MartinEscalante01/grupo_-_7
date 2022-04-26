@@ -28,13 +28,6 @@ a {
 
 
 /* Esta es la barra de navegacion */
-.header-banner{
-    background-color: #a19797;
-    color: white;
-    font-size: 5px;
-    border: 1px solid #a19797;
-    text-align: end;
-}
 
 /* Encabezado */
 header{

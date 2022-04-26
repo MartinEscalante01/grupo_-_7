@@ -28,13 +28,6 @@ a {
 
 
 /* Esta es la barra de navegacion */
-.header-banner{
-    background-color: #a19797;
-    color: white;
-    font-size: 5px;
-    border: 1px solid #a19797;
-    text-align: end;
-}
 
 /* Encabezado */
 header{
@@ -87,7 +80,7 @@ header{
 
 .barraEnvio {
     margin-top: 50px ;
-    height: 3vh;
+    height: 2.5vh;
     border:solid 1.5px lightgrey;
     text-align: center;
     font-size: 12px;
@@ -96,29 +89,17 @@ header{
 
 
 /* Este es el copete */
-.copete {
-    background-color: rgb(217, 48, 59);
-    height: 8vh;
+.fondoCopete {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: whitesmoke;
-    
+    justify-content: center;
+    background-color: rgb(35,153,152);
 }
 
-#extra20 {
-    
-    font-weight: bold;
-    font-size: 2rem;
-    text-align: center;
-}
 
-#guantes {
-    font-size: 0.80rem ; 
-    width: 150px;
-    font-weight: bold;
+.copete {
+    height: 8vh;
+    width: 100vw;
 }
-
 
 .paraQuien{
     display: flex;
@@ -317,7 +298,8 @@ footer ul li a{
 @media (min-width:360px) {
     header .nav{
         display: none;
-    } 
+    }
+    
 }
 
 /*Terminado mobile*/
@@ -346,23 +328,13 @@ footer ul li a{
     
     .barraEnvio {
     font-size: 18px;
-    padding: 8px;
+    padding: 5px;
+    height: 3.2vh
     }
     
-    .copete{
-        padding: 0 70px
-    }
-
-    #guantes {
-    font-size: 14px; 
-    width: 150px;
-    font-weight: bold;
-    line-height: 20px
-    }
-    
-    .paraQuien{
-    font-size: 20px;
-    padding: 30px 10px 30px;
+    .copete {
+    height: 8vh;
+    width: 90vw;
     }
     
     h3 {
@@ -421,30 +393,36 @@ footer ul li a{
     header .menu{
         display: none;
     }
+    
+    .copete {
+    height: 12vh;
+    width: 60vw;
+     }
+    
     .barraEnvio {
     font-size: 18px;
     padding: 7px;
-    height: 3.7vh
+    height: 4vh
+    }
+    
+    .glassHome{
+        padding: 10px
     }
     
     .adiWoman {
-    height: 30vh;
-    width: 30vw;
+    height: 32vh;
+    width: 23vw;
     }
-
-    .nikeMan {
-    height: 30vh;
-    width: 30vw;
-    border-radius:15px;
-    box-shadow: 3px 3px 10px darkgray;
-    }
-
-
-    .adiKid {
-    height: 30vh;
-    width: 30vw;
     
+    .nikeMan {
+    height: 32vh;
+    width: 23vw;
     }
+    
+    .adiKid {
+    height: 32vh;
+    width: 23vw;
+    }    
     
     .adiWoman:hover {
     transition: transform .5s ease;

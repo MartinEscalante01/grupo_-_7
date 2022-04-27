@@ -81,15 +81,15 @@
         <section>
             <div class="todo">
                 <div class="formulario">
-                    <form action="post">
-                        <input class="controls" type="text" placeholder="Nombre" name="nombre">
-                        <input class="controls"type="text" placeholder="Apellido"  name="apellido">
-                        <input class="controls"type="email" placeholder="Correo Electronico"  name="correo">
-                        <input class="controls"type="password" placeholder="contraseña"  name="correo" >
-                        <input class="controls" type="password" placeholder="constraseña"  name="correo">
-                        <input class="controls" type="date" placeholder="DD-MM-AAAA"  name="nacimiento">
-                        <input class="controls" type="text" name="direccion" placeholder="Direccion">
-                        <input class="controls" type="number" placeholder="Telefono"  name="numero">
+                    <form action="post" id="CreateForm">
+                        <input class="controls" type="text" placeholder="Nombre" name="nombre" required="require">
+                        <input class="controls"type="text" placeholder="Apellido"  name="apellido" required="require">
+                        <input class="controls"type="email" placeholder="Correo Electronico"  name="correo" required="require">
+                        <input class="controls"type="password" placeholder="contraseña"  name="correo" required="require">
+                        <input class="controls" type="password" placeholder="constraseña"  name="correo" required="require">
+                        <input class="controls" type="date" placeholder="DD-MM-AAAA"  name="nacimiento" required="require">
+                        <input class="controls" type="text" name="direccion" placeholder="Direccion" required="require">
+                        <input class="controls" type="number" placeholder="Telefono"  name="numero" required="require">
                     </form>
                 </div>
                 <div class="acceder">
@@ -108,7 +108,7 @@
                   </div>
 
                 <div>
-                    <button>Unirse</button>
+                    <button type="submit" form="CreateForm" >Unirse</button>
                 </div>
                 <span>Ya sos miembro?<a href="">Iniciar Sesion</a></span>
             </div>

@@ -26,8 +26,104 @@
     display: none;
 }
 
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #fec303;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.menu {
+    width: 15vw;
+    display: flex;
+    padding: 0 10px
+}
+
+.logo {
+    width: 80px;
+}
+
+
+.login{
+    width: 18%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav{
+    box-sizing: border-box;
+}
+
+.nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    
+}
+
+.nav ul li a{
+    margin-right: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.barraEnvio {
+    margin-top: 50px ;
+    height: auto;
+    border:solid 1.5px lightgrey;
+    text-align: center;
+    font-size: 12px;
+    padding: 4px;
+}
+
+form{
+    width: 100%;
+    padding: 30px;
+    order: 1;
+}
+
+.controls{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #8c8c8e;
+    font-size: 18px;
+}
+
+
+
+.acuerdos div:nth-child(2) button{
+    font-size: 18px;
+    padding: 5px 40px;
+    background-color: #000000;
+    color: white;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+.acuerdos div:nth-child(2) button:hover{
+    font-size: 18px;
+    padding: 5px 40px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(82, 82, 82);
+}
+.acuerdos span{
+    font-size: 18px;
+}
+.acuerdos span a{
+    color: #000000;
+}
 @media (min-width:360px) {
-    header{
+    /* header{
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -71,20 +167,10 @@
         font-size: 20px;
         
         color: #000000;
-    }
-    form{
-        width: 100%;
-        padding: 30px;
-    }
-    
-    .controls{
-        width: 100%;
-        background-color: rgb(255, 255, 255);
-        padding: 10px;
-        border-radius: 4px;
-        margin-bottom: 16px;
-        border: 1px solid #8c8c8e;
-        font-size: 18px;
+    } */
+
+    header .nav{
+        display: none;
     }
     
     main{
@@ -96,11 +182,14 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+        
+        
     }
     .todo{
         display: flex;
         flex-direction: column;
         align-items: center;
+        order: 0;
     }
     .acceder{
         display: flex;
@@ -110,8 +199,14 @@
         width: 90%;
         text-align: center;
         justify-content: center;
-        border-style: dotted
+        border-style: dotted;
+        order: 1;
+        margin-top: 70px;
         
+        
+    }
+    .formulario{
+        order: 2;
     }
     
     .acuerdos{
@@ -122,13 +217,15 @@
     
     .acuerdos div:nth-child(1){
         width: 70%;
+        font-size: 20px;
+        margin: 10px;
     }
 
 }
 
 
 @media (min-width:768px) {
-    header .img-mobile{
+    /* header .img-mobile{
         width: 15%;
     }
     
@@ -147,12 +244,32 @@
 
     .login i:nth-child(2){
         margin-right: 20px;
+    } */
+    header .menu{
+        display: none;
+    }
+    
+    header .nav{
+        display: flex
+    }
+    
+    .logo {
+    width: 80px;
+    position: relative;
+    left: 10px
+    }
+
+
+    .login{
+    width: 15%;
     }
     form{
         width: 100%;
         padding: 30px;
+       
     }
-    
+
+
     .controls{
         width: 100%;
         background-color: rgb(255, 255, 255);
@@ -177,6 +294,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 60px;
+        
     }
     .acceder{
         display: flex;
@@ -186,8 +305,13 @@
         width: 90%;
         text-align: center;
         justify-content: center;
-        border-style: dotted
+        border-style: dotted;
+        order: 1;
+        margin-top: 20px;
         
+    }
+    .formulario{
+        order: 2;
     }
     
     .acuerdos{
@@ -202,7 +326,7 @@
 }
 
 @media (min-width:1024px){
-    .logo{
+    /* .logo{
         display: none;
     }
     .img-mobile{
@@ -297,6 +421,10 @@
     .iconos-desktop{
         font-size: 20px;
         
+    } */
+
+    header .menu{
+        display: none;
     }
     form{
         width: 100%;
@@ -329,6 +457,7 @@
 
     .formulario{
         width: 60%;
+        order: 1;
     }
     form{
         width: 80%;
@@ -351,16 +480,25 @@
         border-style: dotted;
         align-self: flex-start;
         margin-right: 100px;
+        order: 2;
     }
     
     .acuerdos{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 35px;
+        
     }
     
     .acuerdos div:nth-child(1){
-        width: 25%;
+        font-size: 20px;
+        width: 35%;
+        margin-bottom: 10px;
+        margin-top: 10px;
     }
+    
+
+
 }
 

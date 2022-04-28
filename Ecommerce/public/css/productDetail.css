@@ -107,6 +107,12 @@ div.searchmobile i{
     color: black;
 }
 
+div.searchmobile i:hover {
+    color: blue;
+    transition: transform .1s ease;
+    transform: scale(1.2);
+}
+
 .nav{
     box-sizing: border-box;
     padding-right: 40px;
@@ -115,7 +121,12 @@ div.searchmobile i{
     display: flex;
     justify-content: space-between;
     list-style: none;
-    
+    margin-bottom: 0px;
+    font-family: serif;
+    color: black;
+    text-align: center;
+    position: relative;
+    top: 16px;  
 }
 
 .nav ul li a{
@@ -161,6 +172,10 @@ ul.breadcrumb li a {
     text-decoration: none;
 }
 
+ul.breadcrumb li a:hover{
+color: blue;
+font-style: underline;
+}
 
 /* Contenedor Imagen */
 
@@ -241,7 +256,7 @@ div h1{
     align-items: center;
 }
 
-.atributos-sizes:active {
+.atributos-sizes:hover {
     background-color: black;
     color: white;
 }
@@ -363,42 +378,58 @@ h3 {
 footer{
     display: flex;
     text-align: center;
-    width: 100%;
     text-align: center;
     color: white;
-    background-color: #363738;
     flex-direction: column;
-}
-
-footer ul{
-    display: flex;
-    flex-direction: row;
     width: 100%;
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
+    background-color: #0a141d;
+}
+
+.pie-pagina .grupo-1{
+    width: 100%;
+    margin: auto;
+    display:grid;
+}
+
+.pie-pagina .grupo-1 figure img{
+    width: 30%;
+    margin: 20px;
+}
+.pie-pagina .grupo-1 .box{
+    display: flex;
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 10px;
+    justify-content: space-around;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: contents;
+    text-decoration: none;
+    line-height: 25px;
+    color: #fff;
+    transition: all 300ms ease;
     justify-content: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    flex-wrap: wrap;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: aqua;
+}
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 10px;
 }
 
-footer ul li{
-    margin-left: 10px;
-    margin-right: 10px;
-    text-decoration: none;
-}
 
-footer ul li a{
-    font-size: 12px;
-    color: white;
-    text-decoration: none;
-}
 
-footer div:nth-child(2){
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+
 
 /*Mobile*/
 @media (min-width:360px) {
@@ -426,9 +457,9 @@ footer div:nth-child(2){
     }
 
     header .search{
-        height: fit-content;
         display: flex;
-        margin: 15px 0px 0px 0px;
+        margin: 10px;
+        width: auto;
     }
 
     header form.search input{
@@ -438,19 +469,15 @@ footer div:nth-child(2){
         background-color: #fff;
         border: none;
         color: #333;
-        font-size: 16px;
+        font-size: 0.8em;
         border-radius: 10px;
-        height: 100%;
         margin: 0;
         font-family: cursive;
     }
 
     div.logo{
         display: flex;
-        width: 14vw;
-        position: relative;
-        top: 10px;
-        right: 135px;
+        width: 11vw;
     }
 
     button.nav-search {
@@ -558,6 +585,15 @@ footer div:nth-child(2){
     div.searchmobile{
         display: none;
     }
+
+    div.descripcion-producto ul{
+        list-style: none;
+    }
+
+    .nav:hover{
+        color: blue;
+        font-style: underline ;
+    }
     
 }
 /* Terminado Tablet */
@@ -566,6 +602,17 @@ footer div:nth-child(2){
 @media (min-width:1024px){
     header .menu{
         display: none;
+    }
+
+    header div nav.nav{
+        display: flex;
+        top: 8px;
+        position: relative;
+    }
+
+    header div form.search{
+        margin:20px;
+
     }
 
     main section .detail{
@@ -677,6 +724,9 @@ footer div:nth-child(2){
         right: 140px;
     }
 
+    div.descripcion-producto ul{
+        list-style: none;
+    }
 
     
     

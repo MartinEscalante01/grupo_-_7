@@ -13,9 +13,9 @@ app.get('/home',(req,res)=>{
 //     res.sendFile(path.join(__dirname,'view/productCart.html'))
 // })
 
-app.get('/productDetail',(req,res)=>{
-    res.sendFile(path.join(__dirname,'view/productDetail.html'))
-})
+//app.get('/productDetail',(req,res)=>{
+//    res.sendFile(path.join(__dirname,'view/productDetail.html'))
+//})
 
 app.get('/formulario',(req,res)=>{
     res.sendFile(path.join(__dirname,'view/index.html'))
@@ -36,6 +36,8 @@ app.set('views', __dirname + '/view');
 
 app.use('/register',mainRoutes);
 app.use('/productCart',mainRoutes);
+app.use('/productDetail',mainRoutes);
+
 
 app.listen(3030, (req, res)=>{
     console.log("levantando el servidor")

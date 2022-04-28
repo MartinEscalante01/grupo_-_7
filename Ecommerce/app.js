@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const mainRoutes = require('./routes/mainRoutes')
+const productCart = require('./routes/productCart')
+const productDetail = require('./routes/productDetail')
 
 app.use(express.static('public')); 
 
@@ -35,8 +37,8 @@ app.set('views', __dirname + '/view');
 
 
 app.use('/register',mainRoutes);
-app.use('/productCart',mainRoutes);
-app.use('/productDetail',mainRoutes);
+app.use('/productCart',productCart);
+app.use('/productDetail',productDetail);
 
 
 app.listen(3030, (req, res)=>{

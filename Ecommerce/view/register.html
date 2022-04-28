@@ -7,19 +7,13 @@
     <link rel="stylesheet" href="css/styleRegister.css">
     <script src="https://kit.fontawesome.com/1aec321a0b.js" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-<<<<<<< HEAD
-    <title>Sportix | Register</title>
-=======
-    <title>Registrate</title>
->>>>>>> 520cb451cc576f462825cc2800aa3644a9858248
+    <link rel="icon" type="image/jpg" href="img/mob-logo.svg">
+    <title>Sportix | Registro </title>
+
+
 </head>
 <body>
-    <header>
-        <div class="login-dektop">
-            <button>Registarse </button>
-            <button>Inicio Sesion</button>
-        </div>
-        
+    <!-- <header>
         <div class="desktop">
             <div class="img-desktop">
                 <img src="img/mob-logo.svg" alt="">
@@ -57,21 +51,45 @@
             <i class="fas fa-regular fa-user icon-login"></i>
             <i class="fas fa-regular fa-user icon-login"></i>
         </div>
+    </header> -->
+    <header> 
+        <div class="menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+            <a href="">
+        <div class="logo">
+            <img src="img/mob-logo.svg">
+        </div></a>
+        <nav class="nav">
+            <ul>
+                <li><a href="">Adultos</a></li>
+                <li><a href="">Niños</a></li>
+                <li><a href="">Marcas</a></li>
+                <li><a href="">Colecciones</a></li>
+                <li><a href="">Ofertas</a></li>
+            </ul>
+        </nav>
+        <div class="login">
+            <a href=""><i class="fas fa-solid fa-magnifying-glass"></i></a>
+            <a href=""><i class="fas fa-solid fa-user"></i></a>
+            <a href="carritoDeCompras"><i class="fa-solid fa-bag-shopping"></i></a>
+        </div>
+
     </header>
 
     <main>
         <section>
             <div class="todo">
                 <div class="formulario">
-                    <form action="post">
-                        <input class="controls" type="text" placeholder="Nombre" name="nombre">
-                        <input class="controls"type="text" placeholder="Apellido"  name="apellido">
-                        <input class="controls"type="email" placeholder="Correo Electronico"  name="correo">
-                        <input class="controls"type="password" placeholder="contraseña"  name="correo" >
-                        <input class="controls" type="password" placeholder="constraseña"  name="correo">
-                        <input class="controls" type="date" placeholder="DD-MM-AAAA"  name="nacimiento">
-                        <input class="controls" type="text" name="direccion" placeholder="Direccion">
-                        <input class="controls" type="number" placeholder="Telefono"  name="numero">
+                    <form action="post" id="CreateForm">
+                        <input class="controls" type="text" placeholder="Nombre" name="nombre" required="require">
+                        <input class="controls"type="text" placeholder="Apellido"  name="apellido" required="require">
+                        <input class="controls"type="email" placeholder="Correo Electronico"  name="correo" required="require">
+                        <input class="controls"type="password" placeholder="contraseña"  name="correo" required="require">
+                        <input class="controls" type="password" placeholder="constraseña"  name="correo" required="require">
+                        <input class="controls" type="date" placeholder="DD-MM-AAAA"  name="nacimiento" required="require">
+                        <input class="controls" type="text" name="direccion" placeholder="Direccion" required="require">
+                        <input class="controls" type="number" placeholder="Telefono"  name="numero" required="require">
                     </form>
                 </div>
                 <div class="acceder">
@@ -90,9 +108,9 @@
                   </div>
 
                 <div>
-                    <button>Unirse</button>
+                    <button type="submit" form="CreateForm" >Unirse</button>
                 </div>
-                <a href="">Ya sos miembro?</a>
+                <span>Ya sos miembro?<a href="">Iniciar Sesion</a></span>
             </div>
         </section>
     </main>

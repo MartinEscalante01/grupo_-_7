@@ -18,7 +18,7 @@
         <div class="login-dektop">
             <a href="/register"><button>Registrarse </button></a>
             <span> | </span>
-            <a href="/login"><button>Log in <i class="fas fa-solid fa-user"></i></button></a>
+            <a href="/login"><button>Log in</button></a>
         </div>
         <div>
             <div class="menu">
@@ -29,6 +29,16 @@
                 <img src="img/mob-logo.svg">
                 </div>
             </a>
+                    
+            <nav class="nav">
+                <ul>
+                    <li><a href="">Adultos</a></li>
+                    <li><a href="">Niños</a></li>
+                    <li><a href="">Marcas</a></li>
+                    <li><a href="">Colecciones</a></li>
+                    <li><a href="">Ofertas</a></li>
+                </ul>
+            </nav>
             <form class="search" action= "http://localhost:3030/home/search" method="GET" role="search">
                 <input type="text" name= "searchBar" placeholder="Buscar..">
                 <button type="submit" class="nav-search" tabindex="4"><i class="fas fa-solid fa-magnifying-glass"></i></button>
@@ -38,15 +48,6 @@
                 <a href="#"><i class="fa-solid fa-heart-circle-check"></i></a>
             </div>
         </div>
-        <nav class="nav">
-                <ul>
-                    <li><a href="">Adultos</a></li>
-                    <li><a href="">Niños</a></li>
-                    <li><a href="">Marcas</a></li>
-                    <li><a href="">Colecciones</a></li>
-                    <li><a href="">Ofertas</a></li>
-                </ul>
-        </nav>
     </header>
 
 <main id="maincontent">
@@ -160,16 +161,41 @@
     </section>
 </main>
 <hr>
-<footer>
-    <div>
-        <ul>
-            <li><a href="">Aviso de privacidad</a></li>
-            <li><a href="">Terminos Y Condiciones</a></li>
-            <li><a href="">Nuestros Datos</a></li>
-        </ul>
+<footer class="pie-pagina">
+    <div class="grupo-1">
+        <div>
+            <figure>
+                <a href="#"><img src="img/mob-logo.svg" alt="Main Logo"></a>
+            </figure>
+        </div>
+        <div class="box">
+            <div class="footercolumn1">
+                <p>Metodos de Pago</p>
+                <p>Terminos y Condiciones</p>
+                <p>Tiendas</p>
+            </div>
+            <div class="footercolumn2">
+                <p>Ayuda</p>
+                <p>Cambios y Devoluciones</p>
+                <p>Seguimientos de Pedidos</p>
+                <p>Trabaja con Nosotros</p>
+            </div>
+            <div class="footercolumn2">
+                <p>NEWSLETTER</p>
+            </div>
+        </div>
+        <div>
+            <h6>Seguinos en nuestras redes</h6>
+            <div class="red-social">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
+            </div>
+        </div>
     </div>
-    <div>
-        <p>© 2022 Sportix Argentina</p>
+    <div class="grupo-2">
+        <small>&copy; 2022 <b>Sportix</b> - Todos los Derechos Reservados.</small>
     </div>
 </footer>
 

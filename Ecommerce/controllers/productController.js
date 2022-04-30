@@ -1,15 +1,10 @@
 const controller = {
-    register : (req,res) =>{
-        return res.render('register')
-    },
     productCart : (req,res) => {
-        return res.render('productCart')
+        return res.render('products/productCart')
     },
     productDetail : (req,res) => {
-        return res.render('productDetail')
+        return res.render('products/productDetail')
     }
-
-
 }
 
 module.exports = controller;

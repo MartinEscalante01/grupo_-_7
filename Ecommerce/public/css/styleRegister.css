@@ -26,7 +26,157 @@
     display: none;
 }
 
+/* Esta es la barra de categorias */
+header div.login-dektop {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    background-color: black;
+    align-items: center;
+    padding: 0px;
+}
+
+.login-dektop button, header div span{
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid black;
+    color: white;
+    font-size: 12px;
+    background-color: black;
+    padding: 0px 2px;
+    font-style: italic;
+}
+
+.header-banner{
+    background-color: #a19797;
+    color: white;
+    font-size: 5px;
+    border: 1px solid #a19797;
+    text-align: end;
+}
+
+/* Encabezado */
 header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #fec303;
+    height: auto;
+    width: 100%;
+    top: 0;
+}
+
+header div{
+    justify-content: space-evenly;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    align-items: center;
+    padding: 0px;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1px 10px;
+}
+
+.logo {
+    width: 80px;
+}
+
+
+.search{
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+}
+
+div.search input{
+    position: relative;
+    right: 25px;
+    display: flex;
+    border-radius: 10px;
+    font-size: 14px;
+    color: rgba(134, 131, 131, 0.916);
+    text-align: center;
+    width: 27vw;
+    
+}
+
+div.search i{
+    position: absolute;
+    right: 88px;
+    top: 19px;
+    font-size: 14px;
+    opacity: 40%;
+    color: #4a4d53fd;
+}
+
+div.searchmobile i{
+    color: black;
+}
+
+div.searchmobile i:hover {
+    color: blue;
+    transition: transform .1s ease;
+    transform: scale(1.2);
+}
+
+.nav{
+    box-sizing: border-box;
+    padding-right: 40px;
+}
+.nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-bottom: 0px;
+    font-family: serif;
+    color: black;
+    align-items: center; 
+}
+
+.nav ul li a{
+    margin-right: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+main nav {
+    font-size: 5px;
+    margin-top: 5px;
+  }
+
+ul.breadcrumb {
+    padding: 2px;
+    list-style: none;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+  }
+
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover{
+color: blue;
+font-style: underline;
+}
+
+
+
+/* header{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -81,6 +231,10 @@ header{
     text-align: center;
     font-size: 12px;
     padding: 4px;
+} */
+
+header form{
+    padding: 0px;
 }
 
 form{
@@ -169,7 +323,15 @@ form{
         color: #000000;
     } */
 
+    /* header .nav{
+        display: none;
+    } */
+
     header .nav{
+        display: none;
+    }
+    
+    header .search{
         display: none;
     }
     
@@ -201,7 +363,7 @@ form{
         justify-content: center;
         border-style: dotted;
         order: 1;
-        margin-top: 70px;
+        margin-top: 20px;
         
         
     }
@@ -245,7 +407,7 @@ form{
     .login i:nth-child(2){
         margin-right: 20px;
     } */
-    header .menu{
+    /* header .menu{
         display: none;
     }
     
@@ -262,6 +424,60 @@ form{
 
     .login{
     width: 15%;
+    } */
+
+    header .menu{
+        display: none;
+    }
+    
+    header .nav{
+        display: flex
+    }
+
+    header .search{
+        display: flex;
+        margin: 10px;
+        width: auto;
+    }
+
+    header form.search input{
+        padding-top: 5px;
+        padding-bottom: 7px;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+        background-color: #fff;
+        border: none;
+        color: #333;
+        font-size: 0.8em;
+        border-radius: 10px;
+        margin: 0;
+        font-family: cursive;
+    }
+
+    div.logo{
+        display: flex;
+        width: 11vw;
+    }
+
+    button.nav-search {
+        padding-top: 5px;
+        padding-bottom: 7px;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+        background-color: #fff;
+        border: none;
+        color: #333;
+        border-radius: 10px;
+        margin: 0;
+        font-family: cursive;
+    }
+
+    i.fa.fa-search{
+        display: none;
+    }
+
+    .login {
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
     }
     form{
         width: 100%;
@@ -294,7 +510,7 @@ form{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 60px;
+        
         
     }
     .acceder{
@@ -423,8 +639,17 @@ form{
         
     } */
 
+    /* header .menu{
+        display: none;
+    } */
+
     header .menu{
         display: none;
+    }
+
+    header div form.search{
+        margin:20px;
+
     }
     form{
         width: 100%;
@@ -444,7 +669,7 @@ form{
     main{
         display: flex;
         flex-direction: column;
-        margin-top: 40px;
+        
     }
     
     main section{
@@ -468,6 +693,7 @@ form{
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
+        margin: 10px;
     }
     .acceder{
         display: flex;

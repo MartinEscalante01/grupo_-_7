@@ -4,66 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login.css">
-    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="https://kit.fontawesome.com/1aec321a0b.js" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link rel="icon" type="image/jpg" href="img/mob-logo.svg">
-    <title>Sportix | LOGIN</title>
+    <title>Inicia Sesion</title>
 </head>
-<body>
-    <header>
-        <div class="desktop">
-            <div class="img-desktop">
-                <img src="img/mob-logo.svg" alt="">
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="">Adultos</a></li>
-                    <li><a href="">Niños</a></li>
-                    <li><a href="">Marcas</a></li>
-                    <li><a href="">Colecciones</a></li>
-                    <li><a href="">Ofertas</a></li>
-                </ul>
-            </nav>
-            <div class="search">
-                <div>
-                    <input type="text" placeholder="&#xf00e search">
-                </div>
-                
-                <div class="iconos-desktop">
-           
-                    <i class="fas fa-regular fa-user icon-login"></i>
-                    <i class="fas fa-regular fa-user icon-login"></i>
-                </div>
-            </div>
 
-            
-            
+<body>
+    <header> 
+        <div class="menu">
+            <i class="fa-solid fa-bars"></i>
         </div>
+            <a href="">
         <div class="logo">
-            <i class="fas fa-bars"></i>
-        </div>
-        <div class="img-mobile">
-            <img src="img/mob-logo.svg" alt="">
-        </div>
+            <img src="img/mob-logo.svg">
+        </div></a>
+        <nav class="nav">
+            <ul>
+                <li><a href="">Adultos</a></li>
+                <li><a href="">Niños</a></li>
+                <li><a href="">Marcas</a></li>
+                <li><a href="">Colecciones</a></li>
+                <li><a href="">Ofertas</a></li>
+            </ul>
+        </nav>
         <div class="login">
-           
-            <i class="fas fa-regular fa-user icon-login"></i>
-            <i class="fas fa-regular fa-user icon-login"></i>
+            <a href=""><i class="fas fa-solid fa-magnifying-glass"></i></a>
+            <a href=""><i class="fas fa-solid fa-user"></i></a>
+            <a href="carritoDeCompras"><i class="fa-solid fa-bag-shopping"></i></a>
         </div>
     </header>
+ 
 
     <main>
-        <section class="diseño-form">
-            <h4>Formulario Registro</h4>
-            <input class="selector" type="text" name="nombres" id="nombres" placeholder="Nombre de Usuario">
-            <input class="selector" type="password" name="password" id="password" placeholder="Contraseña">
-            <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
-            <input class="send" type="submit" value="ENVIAR">
-            <p><a href="#">¿Ya tengo Cuenta?</a></p>
-          </section>
+        
+        <form >
+            <div class="diseño-form">
+                <h4 class="textoInicio">
+                    ¿YA TIENES CUENTA?
+                </h4>
+            <div class="selector">
+                <p>Correo electronico</p>
+                <input class="selector-box" type="text" name="nombres" id="nombres" placeholder="Nombre de Usuario" required>
+                <p>Contraseña</p>
+                <input class="selector-box" type="password" name="password" id="password" placeholder="Contraseña" required>
+            </div>
+            </div>
+        </form>
+        <div>
+            <p>Al iniciar sesión, aceptas los <a href="#">Terminos y Condiciones</a>    de Sportix.</p>
+        </div>
+        <input class="send" type="submit" value="INICIA SESION">
     </main>
+
     <footer>
         <div>
             <ul>
@@ -72,7 +66,7 @@
                 <li><a href="">Nuestros Datos</a></li>
             </ul>
         </div>
-        <div>
+        <div class="footFixed">
             <p>© 2022 Sportix Argentina</p>
         </div>
     </footer>

@@ -142,43 +142,100 @@
   }
 
 
-  footer ul{
+  footer{
     display: flex;
-    flex-direction: row;
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    flex-wrap: wrap;
-    background-color: gray;
-    position: absolute;
-    bottom: 0;
-}
-
-footer ul li{
-    margin-left: 10px;
-    margin-right: 10px;
-    text-decoration: none;
-}
-
-footer ul li a{
-    font-size: 12px;
+    text-align: center;
+    text-align: center;
     color: white;
-    text-decoration: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0a141d;
 }
 
-.footFixed {
-    height: auto;
-    position: fixed;
-    bottom: 0 ;
-    width: 100vw;
-    background-color:  #fec303;
-    font-size: 8px;
-    z-index: 10;
+.pie-pagina .grupo-1{
+    width: 100%;
+    margin: auto;
+    display:grid;
+}
 
+.pie-pagina .grupo-1 figure img{
+    width: 30%;
+    margin: 20px;
+}
+.pie-pagina .grupo-1 .box{
+    display: flex;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 10px;
+    justify-content: space-around;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.footercolumn1 p i, .footercolumn3 p i{
+    margin-right: 5px;
+} 
+
+.footercolumn1 p i, .footercolumn3 p i{
+    margin-right: 5px;
+} 
+
+.footercolumn1 p i:hover, .footercolumn3 p i:hover{
+    color: orange;
+} 
+
+.footercolumn4{
+    display: none;
+}
+
+button.nav-email{
+    background-color: #0a141d;
+    color: white;
+    border: none;
+}
+
+form.search input{
+    border-radius: 10px;
+    padding: 4px;
+    margin: 0px;
+    font-size: 15px;
+    font-family: inherit;
+    font-style: italic;
+    color: black;
+}
+
+.redes{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    margin-right: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a{
+    display: contents;
+    text-decoration: none;
+    line-height: 25px;
+    color: #fff;
+    transition: all 300ms ease;
+    justify-content: center;
+}
+
+.red-social a:hover{
+    color: aqua;
+}
+
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 10px;
 }
 
 /* Mobile */

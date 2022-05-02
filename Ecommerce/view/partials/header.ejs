@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/productDetail.css">
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="https://kit.fontawesome.com/1aec321a0b.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+    <link rel="icon" type="image/jpg" href="img/mob-logo.svg">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="login-dektop">
+            <a href="/register"><button>Registrarse </button></a>
+            <span> | </span>
+            <a href="/login"><button>Log in</button></a>
+        </div>
+        <div>
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <a href="/home">
+                <div class="logo">
+                <img src="img/mob-logo.svg">
+                </div>
+            </a>
+                    
+            <nav class="nav">
+                <ul>
+                    <li><a href="">Adultos</a></li>
+                    <li><a href="">Niños</a></li>
+                    <li><a href="">Marcas</a></li>
+                    <li><a href="">Colecciones</a></li>
+                    <li><a href="">Ofertas</a></li>
+                </ul>
+            </nav>
+            <form class="search" action= "http://localhost:3030/home/search" method="GET" role="search">
+                <input type="text" name= "searchBar" placeholder="Buscar..">
+                <button type="submit" class="nav-search" tabindex="4"><i class="fas fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <div class="searchmobile"><a href="#"><i class="fas fa-solid fa-magnifying-glass"></i></a>
+                <a href="/productCart"><i class="fa-solid fa-bag-shopping"></i></a>
+                <a href="#"><i class="fa-solid fa-heart-circle-check"></i></a>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

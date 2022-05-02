@@ -1,58 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link rel="icon" type="image/jpg" href="img/mob-logo.svg">
-    <title>Sportix | Carrito de compras</title>
+    
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="css/productCart.css">
+    <title>Sportix | Carrito de Compras</title>
 </head>
 <body>
-    <!-- <header>
-        <div class="desktop">
-            <div class="img-desktop">
-                <img src="img/mob-logo.svg" alt="">
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="">Adultos</a></li>
-                    <li><a href="">Niños</a></li>
-                    <li><a href="">Marcas</a></li>
-                    <li><a href="">Colecciones</a></li>
-                    <li><a href="">Ofertas</a></li>
-                </ul>
-            </nav>
-            <div class="search">
-                <div>
-                    <input type="text" placeholder="&#xf00e search">
-                </div>
-                
-                <div class="iconos-desktop">
-           
-                    <i class="fas fa-regular fa-user icon-login"></i>
-                    <i class="fas fa-regular fa-user icon-login"></i>
-                </div>
-            </div>
-
-            
-            
-        </div>
-        <div class="logo">
-            <i class="fas fa-bars"></i>
-        </div>
-        <div class="img-mobile">
-            <img src="img/mob-logo.svg" alt="">
-        </div>
-        <div class="login">
-           
-            <i class="fas fa-regular fa-user icon-login"></i>
-            <i class="fas fa-regular fa-user icon-login"></i>
-        </div>
-    </header> -->
-
+    
     <%- include('../partials/header.ejs') %>
 
     <main>
@@ -139,7 +94,7 @@
             
         </section>
     </main>
-    <footer>
+    <!-- <footer>
         <div>
             <ul>
                 <li><a href="">Aviso de privacidad</a></li>
@@ -150,7 +105,8 @@
         <div>
             <p>© 2022 Sportix Argentina</p>
         </div>
-    </footer>
-    
+    </footer> -->
+    <%- include('../partials/footer.ejs') %>
+
 </body>
 </html>

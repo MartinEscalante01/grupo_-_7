@@ -406,6 +406,7 @@ footer{
     margin-top: 20px;
     font-size: 10px;
     justify-content: space-around;
+    align-items: baseline;
 }
 .pie-pagina .grupo-1 .box p{
     color: #efefef;

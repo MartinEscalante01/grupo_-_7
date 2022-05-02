@@ -61,8 +61,6 @@
     color: black;
   }
   
-
-  
   .diseño-form .send {
     width: 100%;
     background: blue;
@@ -72,3 +70,132 @@
     margin: 16px 0;
     font-size: 16px;
   }
+
+  footer{
+    display: flex;
+    text-align: center;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0a141d;
+}
+
+.pie-pagina .grupo-1{
+    width: 100%;
+    margin: auto;
+    display:grid;
+}
+
+.pie-pagina .grupo-1 figure img{
+    width: 30%;
+    margin: 20px;
+}
+.pie-pagina .grupo-1 .box{
+    display: flex;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 10px;
+    justify-content: space-around;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.footercolumn1 p i, .footercolumn3 p i{
+    margin-right: 5px;
+} 
+
+.footercolumn1 p i, .footercolumn3 p i{
+    margin-right: 5px;
+} 
+
+.footercolumn1 p i:hover, .footercolumn3 p i:hover{
+    color: orange;
+} 
+
+.footercolumn4{
+    display: none;
+}
+
+button.nav-email{
+    background-color: #0a141d;
+    color: white;
+    border: none;
+}
+
+form.search input{
+    border-radius: 10px;
+    padding: 4px;
+    margin: 0px;
+    font-size: 15px;
+    font-family: inherit;
+    font-style: italic;
+    color: black;
+}
+
+.redes{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    margin-right: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a{
+    display: contents;
+    text-decoration: none;
+    line-height: 25px;
+    color: #fff;
+    transition: all 300ms ease;
+    justify-content: center;
+}
+
+.red-social a:hover{
+    color: aqua;
+}
+
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 10px;
+}
+
+@media (min-width:768px) {
+  
+
+  .child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.separador{
+    width: 70%;
+}
+
+.footercolumn4{
+    display: block;
+}
+}
+
+@media (min-width:1024px){
+
+
+  .footercolumn4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+.footercolumn4 form{
+  width: 0px;
+}
+}

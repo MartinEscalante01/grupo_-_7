@@ -28,55 +28,127 @@
 .desktop {
     display: none;
 }
+header div.login-dektop {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    background-color: black;
+}
 
+.login-dektop button, header div span{
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid black;
+    color: white;
+    font-size: 12px;
+    background-color: black;
+    padding: 0px 2px;
+    font-style: italic;
+}
+
+.header-banner{
+    background-color: #a19797;
+    color: white;
+    font-size: 5px;
+    border: 1px solid #a19797;
+    text-align: end;
+}
+
+/* Encabezado */
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #fec303;
+    height: auto;
+    width: 100%;
+    top: 0;
+}
+
+header div{
+    justify-content: space-evenly;
+    display: flex;
+    margin: auto;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1px 10px;
+}
+
+.logo {
+    width: 80px;
+}
+
+
+.search{
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+}
+
+div.search input{
+    position: relative;
+    right: 25px;
+    display: flex;
+    border-radius: 10px;
+    font-size: 14px;
+    color: rgba(134, 131, 131, 0.916);
+    text-align: center;
+    width: 27vw;
+}
+
+div.search i{
+    position: absolute;
+    right: 88px;
+    top: 19px;
+    font-size: 14px;
+    opacity: 40%;
+    color: #4a4d53fd;
+}
+
+div.searchmobile i{
+    color: black;
+}
+
+div.searchmobile i:hover {
+    color: blue;
+    transition: transform .1s ease;
+    transform: scale(1.2);
+}
+
+.nav{
+    box-sizing: border-box;
+    padding-right: 40px;
+}
+.nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-bottom: 0px;
+    font-family: serif;
+    color: black;
+    align-items: center; 
+}
+
+.nav ul li a{
+    margin-right: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+}
 
 
 /*Mobile*/
 @media (min-width:360px) {
-    header{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        box-sizing: border-box;
-        padding: 0.3rem;
-        background-color: rgb(254,195,3);
-        
+    header .nav{
+        display: none;
     }
     
-    .logo{
-        width: 30%;
-        text-align: center;
-        
-    }
-    
-    .logo i{
-        font-size: 20px;
-        float: left;
-        color: #000000;
-        margin-left: 30px;
-    }
-    
-    .img-mobile{
-        width: 15%;
-        text-align: center;
-    }
-    .login{
-        width: 30%;
-        text-align: center;
-    
-    }
-    .login i{
-        float: right;
-        margin-right: 15px;
-        font-size: 20px;
-    }
-    
-    .login .icon-login{
-        font-size: 20px;
-        
-        color: #000000;
+    header .search{
+        display: none;
     }
     
     main{
@@ -320,25 +392,58 @@
 
 /* Tablet */
 @media (min-width:768px) {
-    header .img-mobile{
-        width: 15%;
+    header .menu{
+        display: none;
     }
     
-    .logo{
-        text-align: inherit !important;
-    }
-    .logo i{
-        margin-left: 20px;
-        text-align: none !important
+    header .nav{
+        display: flex
     }
 
-    .login{
-        text-align: end;
-
+    header .search{
+        display: flex;
+        margin: 10px;
+        width: auto;
     }
 
-    .login i:nth-child(2){
-        margin-right: 20px;
+    header form.search input{
+        padding-top: 5px;
+        padding-bottom: 7px;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+        background-color: #fff;
+        border: none;
+        color: #333;
+        font-size: 0.8em;
+        border-radius: 10px;
+        margin: 0;
+        font-family: cursive;
+    }
+
+    div.logo{
+        display: flex;
+        width: 11vw;
+    }
+
+    button.nav-search {
+        padding-top: 5px;
+        padding-bottom: 7px;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+        background-color: #fff;
+        border: none;
+        color: #333;
+        border-radius: 10px;
+        margin: 0;
+        font-family: cursive;
+    }
+
+    i.fa.fa-search{
+        display: none;
+    }
+
+    .login {
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
     }
 
     .informacion .descripcion{
@@ -369,101 +474,13 @@
 
 
  @media (min-width:1024px){
-    .logo{
-        display: none;
-    }
-    .img-mobile{
+    header .menu{
         display: none;
     }
 
-    .login{
-        display: none;
-    }
+    header div form.search{
+        margin:20px;
 
-    .login-dektop button {
-        font-size: 10px;
-        background-color: black;
-        padding: 5px 10px;
-        color: white;
-    }
-    header{
-        display: flex;
-        flex-direction: column;
-        box-sizing: border-box;
-        margin: 0px;
-        padding: 0px;
-    }
-
-
-    header .login-dektop{
-        display: flex;
-        width: 100%;
-        justify-content: end;
-        background-color: black;
-    }
-
-    .login-dektop button{
-        font-family: 'Roboto', sans-serif;
-        border: 1px solid black;
-        font-size: 15px;
-        padding: 5px 12px;
-    }
-
-    header .desktop{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        background-color: rgb(254,195,3);
-    }
-
-    .img-desktop{
-        width: 7%;
-    }
-    .img-desktop img{
-        width: 100%;
-    }
-    .nav{
-        box-sizing: border-box;
-        width: 40%;
-    }
-    .nav ul{
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        
-    }
-
-    .nav ul li a{
-        margin-right: 10px;
-        margin-left: 10px;
-        text-decoration: none;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 16px;
-        color: black;
-    }
-    .nav ul li a:hover{
-        text-decoration:revert;
-    }
-    .search{
-        display: flex;
-        width: 25%;
-        justify-content: space-evenly;
-    }
-
-    .search input {
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        width: 160px;
-        height: 30px;
-    }
-    .iconos-desktop{
-        font-size: 20px;
-        
     }
 
     main{

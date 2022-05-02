@@ -30,55 +30,24 @@ a {
 /* Esta es la barra de navegacion */
 
 /* Encabezado */
-header div.login-dektop {
-    display: flex;
-    width: 100%;
-    justify-content: end;
-    background-color: black;
-}
-
-.login-dektop button, header div span{
-    font-family: 'Roboto', sans-serif;
-    border: 1px solid black;
-    color: white;
-    font-size: 12px;
-    background-color: black;
-    padding: 0px 2px;
-    font-style: italic;
-}
-
-.header-banner{
-    background-color: #a19797;
-    color: white;
-    font-size: 5px;
-    border: 1px solid #a19797;
-    text-align: end;
-}
-
-/* Encabezado */
 header{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     background-color: #fec303;
-    height: auto;
+    height: 50px;
     width: 100%;
+    position: fixed;
     top: 0;
-}
-
-header div{
-    justify-content: space-evenly;
-    display: flex;
-    margin: auto;
-    width: 100%;
+    z-index: 10;
 }
 
 .menu {
+    width: 15vw;
     display: flex;
-    justify-content: flex-start;
-    padding: 1px 10px;
+    padding: 0 10px
 }
 
 .logo {
@@ -86,54 +55,21 @@ header div{
 }
 
 
-.search{
+.login{
+    width: 18%;
     display: flex;
-    width: 25%;
-    justify-content: space-between;
-}
-
-div.search input{
-    position: relative;
-    right: 25px;
-    display: flex;
-    border-radius: 10px;
-    font-size: 14px;
-    color: rgba(134, 131, 131, 0.916);
-    text-align: center;
-    width: 27vw;
-}
-
-div.search i{
-    position: absolute;
-    right: 88px;
-    top: 19px;
-    font-size: 14px;
-    opacity: 40%;
-    color: #4a4d53fd;
-}
-
-div.searchmobile i{
-    color: black;
-}
-
-div.searchmobile i:hover {
-    color: blue;
-    transition: transform .1s ease;
-    transform: scale(1.2);
+    justify-content: space-around;
 }
 
 .nav{
     box-sizing: border-box;
-    padding-right: 40px;
 }
+
 .nav ul{
     display: flex;
     justify-content: space-between;
     list-style: none;
-    margin-bottom: 0px;
-    font-family: serif;
-    color: black;
-    align-items: center; 
+    
 }
 
 .nav ul li a{
@@ -142,6 +78,184 @@ div.searchmobile i:hover {
     text-decoration: none;
 }
 
+.barraEnvio {
+    margin-top: 50px ;
+    height: auto;
+    border:solid 1.5px lightgrey;
+    text-align: center;
+    font-size: 12px;
+    padding: 4px;
+}
+
+
+/* Este es el copete */
+.fondoCopete {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(35,153,152);
+}
+
+
+.copete {
+    height: 8vh;
+    width: 100vw;
+}
+
+.paraQuien{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    padding: 20px 10px 10px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Este es el glass */
+
+.glassHome {
+    display: flex;
+    justify-content: space-around;
+}
+
+.adiWoman {
+    display: flex;
+    height: 24vh;
+    width: 30vw;
+    border-radius:15px;
+    box-shadow: 3px 3px 10px darkgray;
+}
+
+.nikeMan {
+    display: flex;
+    height: 24vh;
+    width: 30vw;
+    border-radius:15px;
+    box-shadow: 3px 3px 10px darkgray;
+}
+
+
+.adiKid {
+    display: flex;
+    height: 24vh;
+    width: 30vw;
+    border-radius:15px;
+    box-shadow: 3px 3px 10px darkgray;
+}
+
+
+h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-style: italic;
+    font-weight: bold;
+    color: tomato;
+    
+}
+
+.ofertas{
+    display: flex;
+    justify-content: space-around;
+}
+
+.imgOferta {
+    display: flex;
+    height: 15vh;
+    width: 20vw;
+}
+
+
+.boxOfertas{
+    box-shadow: 1px 5px 8px lightslategrey;   
+}
+
+.prices{
+    font-size: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+    padding: 10px;
+    line-height: 1.5;
+}
+
+.saving{
+    font-size: 8px;
+    font-weight: 900;
+    color: #ed3237;   
+}
+
+.oldprice{
+    font-size: 8px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.separador{
+    margin: 40px 20px 20px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    width: 50%;
+    position: relative;
+    left: 20%;
+}
+
+.historias {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    text-align: justify;
+    padding-top: 20px;
+    flex-direction: row;
+       
+}
+.historiasTxt {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+    background-color: rgb(228, 231, 225);
+    font-size: 9px;
+    line-height : 12px;
+    width: 50vw;
+    height: 43vh;
+    padding: 10px;
+  
+}
+
+.historiasTxt h2{
+    display: flex;
+    font-size: 10px;
+    padding-bottom: 10px;
+}
+
+.novedad {
+    display: flex;
+    background-color: white;
+    width: 50vw;
+    height: 43vh;
+    padding: 0 10px;
+}
+
+.novedadTxt {
+    font-size: 9px;
+    line-height: 12px;
+}
+
+.novedad h2{
+    display: flex;
+    font-size: 11px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.imgNovedad {
+    height: 50%;
+    width: 100%;
+}
+
+/* Este es el footer */
 
 footer ul{
     display: flex;
@@ -182,9 +296,6 @@ footer ul li a{
 /*Mobile*/
 @media (min-width:360px) {
     header .nav{
-        display: none;
-    }
-    header .search{
         display: none;
     }
     

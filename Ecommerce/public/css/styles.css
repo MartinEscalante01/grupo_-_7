@@ -39,7 +39,6 @@ header{
     background-color: #fec303;
     height: 50px;
     width: 100%;
-    position: fixed;
     top: 0;
     z-index: 10;
 }
@@ -79,7 +78,7 @@ header{
 }
 
 .barraEnvio {
-    margin-top: 50px ;
+    
     height: auto;
     border:solid 1.5px lightgrey;
     text-align: center;

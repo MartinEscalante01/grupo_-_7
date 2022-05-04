@@ -696,8 +696,8 @@ form.search input{
         width: 60%;
         font-weight: bold;
         font-style: normal;
-        text-align: start;
-        margin-left: 0px;
+        text-align: center;
+        margin-left: 106px;
     }
 
     main div .column-size{

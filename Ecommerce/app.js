@@ -4,8 +4,9 @@ const mainRouter = require('./routes/index')
 const registerRouter = require('./routes/register')
 const productCart = require('./routes/productCart.js')
 const productDetail = require('./routes/productDetail');
-const loginRouter = require('./routes/login')
-
+const loginRouter = require('./routes/login');
+const productCreate = require('./routes/productCreate');
+const productEdit = require('./routes/productEdit');
 
 app.use(express.static('public')); 
 
@@ -21,6 +22,8 @@ app.use('/login',loginRouter);
 app.use('/register',registerRouter);
 app.use('/productCart',productCart);
 app.use('/productDetail', productDetail);
+app.use('/productCreate', productCreate);
+app.use('/productEdit', productEdit);
 
 app.listen(3030, (req, res)=>{
     console.log("levantando el servidor")

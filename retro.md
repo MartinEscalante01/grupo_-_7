@@ -1,3 +1,26 @@
+# Retrospectiva Sprint 3- Equipo N°7
+
+Nuestras principales conclusiones de la retro del Sprint 3.
+
+## Para destacar:
+
+-   **Principalmente la motivación y ayuda que nos brindamos para poder lograr el resultado.**
+
+## Avances como equipo:
+
+-   **Logramos entregar en tiempo y forma.**
+-   **Conseguimos lograr una sinergia de equipo.**
+-   **De a poco logramos conocernos mas y aprender las habilidades/debilidades de cada uno de nosotros.**
+-   **Mejor organizacion para el cumplimiento de las consignas y division de tareas.**
+
+## Oportunidades para Mejorar:
+
+-   **Leer en profundidad las consignas y entenderlas antes de iniciar a realizarlo.**
+-   **Hacer una reunion inicial para repasar los temas nuevos aprendidos en clase del sprint.**
+-   **Pedir mas ayuda a los profesores/compañeros y no perder tanto tiempo en intentar resolverlo uno mismo.**
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Retrospectiva Sprint 2- Equipo N°7
 
 Nuestras principales conclusiones de la retro del Sprint 2 - HTML + CSS.

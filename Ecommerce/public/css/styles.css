@@ -30,7 +30,7 @@ a {
 /* Esta es la barra de navegacion */
 
 /* Encabezado */
-header{
+/* header{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -75,8 +75,118 @@ header{
     margin-right: 10px;
     margin-left: 10px;
     text-decoration: none;
+} */
+header div.login-dektop {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    background-color: black;
 }
 
+.login-dektop button, header div span{
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid black;
+    color: white;
+    font-size: 12px;
+    background-color: black;
+    padding: 0px 2px;
+    font-style: italic;
+}
+
+.header-banner{
+    background-color: #a19797;
+    color: white;
+    font-size: 5px;
+    border: 1px solid #a19797;
+    text-align: end;
+}
+
+/* Encabezado */
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #fec303;
+    height: auto;
+    width: 100%;
+    top: 0;
+}
+
+header div{
+    justify-content: space-evenly;
+    display: flex;
+    margin: auto;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1px 10px;
+}
+
+.logo {
+    width: 80px;
+}
+
+
+.search{
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+}
+
+div.search input{
+    position: relative;
+    right: 25px;
+    display: flex;
+    border-radius: 10px;
+    font-size: 14px;
+    color: rgba(134, 131, 131, 0.916);
+    text-align: center;
+    width: 27vw;
+}
+
+div.search i{
+    position: absolute;
+    right: 88px;
+    top: 19px;
+    font-size: 14px;
+    opacity: 40%;
+    color: #4a4d53fd;
+}
+
+div.searchmobile i{
+    color: black;
+}
+
+div.searchmobile i:hover {
+    color: blue;
+    transition: transform .1s ease;
+    transform: scale(1.2);
+}
+
+.nav{
+    box-sizing: border-box;
+    padding-right: 40px;
+}
+.nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-bottom: 0px;
+    font-family: serif;
+    color: black;
+    align-items: center; 
+}
+
+.nav ul li a{
+    margin-right: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+}
 .barraEnvio {
     
     height: auto;
@@ -256,45 +366,111 @@ h3 {
 
 /* Este es el footer */
 
-footer ul{
+footer{
     display: flex;
-    flex-direction: row;
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-    justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    flex-wrap: wrap;
-    background-color: gray;
-}
-
-footer ul li{
-    margin-left: 10px;
-    margin-right: 10px;
-    text-decoration: none;
-}
-
-footer ul li a{
-    font-size: 12px;
+    text-align: center;
+    text-align: center;
     color: white;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0a141d;
+}
+
+.pie-pagina .grupo-1{
+    width: 100%;
+    margin: auto;
+    display:grid;
+}
+
+.pie-pagina .grupo-1 figure img{
+    width: 30%;
+    margin: 20px;
+}
+.pie-pagina .grupo-1 .box{
+    display: flex;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 10px;
+    justify-content: space-around;
+    align-items: baseline;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.footercolumn1 p i, .footercolumn3 p i{
+    margin-right: 5px;
+} 
+
+.footercolumn1 p i, .footercolumn3 p i{
+    margin-right: 5px;
+} 
+
+.footercolumn1 p i:hover, .footercolumn3 p i:hover{
+    color: orange;
+} 
+
+.footercolumn4{
+    display: none;
+}
+
+button.nav-email{
+    background-color: #0a141d;
+    color: white;
+    border: none;
+}
+
+form.search input{
+    border-radius: 10px;
+    padding: 4px;
+    margin: 0px;
+    font-size: 15px;
+    font-family: inherit;
+    font-style: italic;
+    color: black;
+}
+
+.redes{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    margin-right: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a{
+    display: contents;
     text-decoration: none;
+    line-height: 25px;
+    color: #fff;
+    transition: all 300ms ease;
+    justify-content: center;
 }
 
-.footFixed {
-    height: 10px;
-    position: fixed;
-    bottom: 0 ;
-    width: 100vw;
-    background-color:  #fec303;
-    font-size: 8px;
-    z-index: 10;
-
+.red-social a:hover{
+    color: aqua;
 }
+
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 10px;
+}
+
 
 /*Mobile*/
 @media (min-width:360px) {
     header .nav{
+        display: none;
+    }
+    
+    header .search{
         display: none;
     }
     
@@ -311,23 +487,51 @@ footer ul li a{
     header .nav{
         display: flex
     }
-    
-    .logo {
-    width: 80px;
-    position: relative;
-    left: 10px
+
+    header .search{
+        display: flex;
+        margin: 10px;
+        width: auto;
     }
 
-
-    .login{
-    width: 15%;
+    header form.search input{
+        padding-top: 5px;
+        padding-bottom: 7px;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+        background-color: #fff;
+        border: none;
+        color: #333;
+        font-size: 0.8em;
+        border-radius: 10px;
+        margin: 0;
+        font-family: cursive;
     }
 
-    
-    .barraEnvio {
-    font-size: 18px;
-    padding: 5px;
-    height: auto;
+    div.logo{
+        display: flex;
+        width: 11vw;
+    }
+
+    button.nav-search {
+        padding-top: 5px;
+        padding-bottom: 7px;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+        background-color: #fff;
+        border: none;
+        color: #333;
+        border-radius: 10px;
+        margin: 0;
+        font-family: cursive;
+    }
+
+    i.fa.fa-search{
+        display: none;
+    }
+
+    .login {
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
     }
     
     .copete {
@@ -382,6 +586,9 @@ footer ul li a{
     height: 50%;
     width: 100%;
     }
+    .footercolumn4{
+        display: block;
+    }
    
 }
 /* Terminado Tablet */
@@ -391,7 +598,32 @@ footer ul li a{
     header .menu{
         display: none;
     }
-    
+
+    header div form.search{
+        margin:20px;
+
+    }
+    header .search{
+        display: flex;
+    }
+
+    i.fa.fa-search{
+        display: none;
+    }
+
+    .login {
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    div.searchmobile{
+        display: none;
+    }
+
+    div.search i {
+        right: 140px;
+    }
     .copete {
     height: 12vh;
     width: 60vw;
@@ -479,6 +711,11 @@ footer ul li a{
     height: 50%;
     width: 100%;
     }
+
+    .footercolumn4{
+        display: block;
+    } 
+    
    
 }
 

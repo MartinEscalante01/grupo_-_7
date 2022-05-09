@@ -284,12 +284,8 @@ div h1{
     display: flex;
 }
 
-.container-comprar{
-    height: 45px;
-}
-
 .comprar{
-    display: flex;
+    display: initial;
     color: #ffffff;
     background-color: #ed3237;
     border: 1px solid #ed3237;
@@ -300,12 +296,16 @@ div h1{
 }
 
 .fa-light{
-    width: 10px;
-    font-size: 20px;
+    width: 16px;
+    font-size: 21px;
     position: relative;
-    bottom: 31px;
-    left: 185px;
+    top: 10px;
   }
+
+.botones-mod{
+    display: block;
+    text-align: center;
+}
 
 /* Descripcion */
 div.descripcion-producto{
@@ -614,23 +614,22 @@ form.search input{
     main section div .container-comprar{
         height: 100%;
         width: 84%;
-        justify-content: space-around;
-        display: flex;
+        display: inline-grid;
+    }
+
+    .fa-light {
+        font-size: 25px;
+        position: relative;
+        bottom: 32px;
+        left: 250px;
+        top: -33px;
     }
 
     .comprar{
         padding: 12px 40px 12px 40px;
         display: block;
-        width: 70%;
+        width: 100%;
     }
-
-    .fa-light {
-        width: 13px;
-        font-size: 35px;
-        position: relative;
-        bottom: -3px;
-        left: -12px;
-      }
 
     div.searchmobile{
         display: none;
@@ -725,11 +724,12 @@ form.search input{
     }
 
     .fa-light {
+        left: 0px;
         width: 13px;
         font-size: 30px;
         position: relative;
-        bottom: -5px;
-        left: -10px;
+        top: 6px;
+        left: 15px;
       }
 
     main section .descripcion{

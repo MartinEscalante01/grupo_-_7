@@ -224,6 +224,7 @@ div.searchmobile i:hover {
 .glassHome {
     display: flex;
     justify-content: space-around;
+
 }
 
 .adiWoman {
@@ -312,11 +313,12 @@ h3 {
 
 .historias {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: row;
     text-align: justify;
     padding-top: 20px;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
        
 }
 .historiasTxt {
@@ -325,10 +327,8 @@ h3 {
     justify-content:flex-start;
     align-items: flex-start;
     background-color: rgb(228, 231, 225);
-    font-size: 9px;
-    line-height : 12px;
-    width: 50vw;
-    height: 43vh;
+    font-size: 15px;
+    line-height : 20px;
     padding: 10px;
   
 }
@@ -342,9 +342,8 @@ h3 {
 .novedad {
     display: flex;
     background-color: white;
-    width: 50vw;
-    height: 43vh;
     padding: 0 10px;
+    margin-top: 10px;
 }
 
 .novedadTxt {
@@ -473,7 +472,25 @@ form.search input{
     header .search{
         display: none;
     }
+
+    .glassHome{
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: space-around;
+    }
     
+    .glassHomeImg{
+        width: 30%;
+        height: auto;
+        display: flex;
+        
+    }
+}
+
+img{
+    width: 100%;
+    height: auto;
 }
 
 /*Terminado mobile*/
@@ -625,8 +642,8 @@ form.search input{
         right: 140px;
     }
     .copete {
-    height: 12vh;
-    width: 60vw;
+        width: auto;
+        height: auto;
      }
     
     .barraEnvio {

@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 
+
 const mainRouter = require('./routes/index')
 const registerRouter = require('./routes/register')
 const productCart = require('./routes/productCart.js')
@@ -16,7 +17,8 @@ app.set('views',__dirname + '/view');
 
 // app.set('views', __dirname + '/view/users');
 // app.set('views', __dirname + '/view/products');
-
+app.use(express.urlencoded({extender: false}));
+app.use(express.json());
 
 app.use('/home',mainRouter);
 app.use('/login',loginRouter);

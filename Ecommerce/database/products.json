@@ -1,0 +1,15 @@
+[{
+    "id": 1,
+    "name": "CAMISETA TITULAR OFICIAL BOCA JUNIORS 21/22",
+    "price": 10.999,
+    "category": "visited",
+    "description": "La camiseta adidas de Boca Juniors edición Visitante 2021 se inspira en el diseño retro de los 80's. Su tejido suave absorbe el sudor para mantenerte cómodo y seguro en el gimnasio o alentando en La Bombonera. Lucí el escudo tejido del Xeneixe que demuestra tu amor por los colores.",
+    "image": "../img/camisetaCABJ.jpg"
+}, {
+    "id": 2,
+    "name": "Zapatillas Nike Air Max Sc",
+    "price": 17.499,
+    "category": "in-sale",
+    "description": "Para vos que te gusta lo clásico de la marca, las zapatillas Nike Air Max Sc son la nueva generación del ícono. Diseñada con líneas impecables, versátiles y atemporales, mantienen la misma suela icónica, revestimientos cosidos y detalles clásicos que iniciaron la revolución. Su cámara de aire visible te da un estilo característico de Nike. No es una nueva versión, es un recordatorio.",
+    "image": ""
+}]

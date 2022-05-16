@@ -347,8 +347,8 @@ h3 {
 }
 
 .novedadTxt {
-    font-size: 9px;
-    line-height: 12px;
+    font-size: 15px;
+    
 }
 
 .novedad h2{
@@ -462,6 +462,33 @@ form.search input{
     font-size: 10px;
 }
 
+/* cards */
+.productos-cards{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+.cards {
+    width: 150px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.cards div:nth-child(1){
+    text-align: center;
+    width: 122%;
+
+}
+
+.cards img{
+    width: 100%;
+    
+}
+
 
 /*Mobile*/
 @media (min-width:360px) {
@@ -486,6 +513,7 @@ form.search input{
         display: flex;
         
     }
+    
 }
 
 img{

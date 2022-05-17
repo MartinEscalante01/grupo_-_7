@@ -3,47 +3,13 @@
         "id": 1,
         "nombre": "Camiseta Titular Oficial de Boca Juniors",
         "tipo": "Camiseta",
-        "Precio":"$7.699",
+        "descuento": "30% OFF",
+        "precio":"$7.699",
         "Talle":["XS","S","M","L","XL"],
-        "Img":"../public/img/camiseta.jpg"
-
-    },
-    {
-        "id": 2,
-        "nombre": "Buzo de Boca Juniors",
-        "tipo": "Buzo",
-        "Precio":"$10.999",
-        "Talle":["XS","S","M","L","XL"],
-        "Img":"../public/img/buzo.jpg"
-
-    },
-    {
-        "id": 3,
-        "nombre": "Camiseta Oficial de Barcelona 21/22",
-        "tipo": "Camiseta",
-        "Precio":"$14.200",
-        "Talle":["XS","S","M","L","XL"],
-        "Img":"../public/img/barcaAlt.jpg"
-
-    },
-    {
-        "id": 4,
-        "nombre": "Campera de Boca Juniors",
-        "tipo": "Campera",
-        "Precio":"$7.699",
-        "Talle":["XS","S","M","L","XL"],
-        "Img":"../public/img/camperaBoca.jpg"
-
-    },
-    {
-        "id": 5,
-        "nombre": "Guantes Arquero Naranja",
-        "tipo": "Guantes",
-        "precio":"$4.699",
-        "talle":["XS","S","M","L","XL"],
-        "Img":"../public/img/Guantes-Arquero-Feline.jpg"
+        "descripcion":"Camiseta Titular Oficial de Boca Juniors",
+        "img":"img/camisetaCABJ.jpg"
 
     }
     
-
 ]
+   

@@ -4,15 +4,15 @@ const path = require('path');
 //const methodOverride = require('method-override');
 //const multer = require('multer');
 
-<<<<<<< HEAD
+
 //datos
 const datosProducts = require('./database/products.json');
 const datosUsers = require('./database/users.json');
 
-//Routes imports
-=======
 
->>>>>>> 98d4abb7a1a8d6c67b24234f4bea848f75151385
+//Routes imports
+
+
 const mainRouter = require('./routes/index')
 const registerRouter = require('./routes/register')
 const productCart = require('./routes/productCart.js')
@@ -27,18 +27,18 @@ const { error } = require('console');
 app.set('view engine','ejs');
 app.set('views',__dirname + '/view');
 
-<<<<<<< HEAD
+
 app.use(express.static('public')); 
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 //app.use(methodOverride('_method'));
-=======
+
 // app.set('views', __dirname + '/view/users');
 // app.set('views', __dirname + '/view/products');
 app.use(express.urlencoded({extender: false}));
 app.use(express.json());
->>>>>>> 98d4abb7a1a8d6c67b24234f4bea848f75151385
+
 
 app.use('/home',mainRouter);
 app.use('/login',loginRouter);
@@ -55,6 +55,8 @@ app.get('/datosProducts', (req,res) =>{
 app.get('/datosUsers', (req,res) =>{
     res.json (datosUsers );
 })
+
+
 
 app.use('/',  (req, res) => { 
     res.status(404).send('not-found');

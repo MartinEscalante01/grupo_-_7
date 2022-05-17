@@ -56,18 +56,22 @@
     </section>
     <section> 
             <div  class="detail"> 
+                <% for(let dato of productos){ %>
                 <div>
-                    <img class= "imagen" src="../img/camisetaCABJ.jpg" alt="Camiseta Boca Juniors">
+                    <img class= "imagen" src= "<%= dato.img %>" alt="Camiseta Boca Juniors">
                 </div>
                 <div class="child">
+
+                    
                     <div>
-                        <h1>CAMISETA TITULAR OFICIAL BOCA JUNIORS 21/22</h1><br>
+                        <h1> <%= dato.nombre %></h1>
+                        
                     </div>
                     <div class="columnprices">
                         <span class="prices">
-                            <span>$7.699,00</span>
-                            <span class="oldprice">$10.999,00</span>
-                            <span class="saving"> 30% OFF </span>
+                            <span><%= dato.precio %></span>
+                            <span class="oldprice"><%= dato.descuento %></span>
+                            <span class="saving"><%= dato.descripcion %> </span>
                         </span>
                     </div>
                     <hr class="separador">
@@ -98,7 +102,10 @@
                         <button class="editar"><a href="/productCreate">Editar Producto</a></button>
                         <button class="borrar">Borrar Producto</button>
                     </div>
+                    
                 </div>
+                <% } %>
+            </div>
     </section>
     <hr class="separador2">
     <section>

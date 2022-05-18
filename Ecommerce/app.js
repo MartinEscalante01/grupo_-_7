@@ -1,5 +1,16 @@
 const express = require('express');
 const app = express();
+const path = require('path');
+//const methodOverride = require('method-override');
+//const multer = require('multer');
+
+
+//datos
+const datosProducts = require('./database/products.json');
+const datosUsers = require('./database/users.json');
+
+
+//Routes imports
 
 
 const mainRouter = require('./routes/index')
@@ -9,16 +20,25 @@ const productDetail = require('./routes/productDetail');
 const loginRouter = require('./routes/login');
 const productCreate = require('./routes/productCreate');
 const productEdit = require('./routes/productEdit');
+const { error } = require('console');
+
+
+//middlewares
+app.set('view engine','ejs');
+app.set('views',__dirname + '/view');
+
 
 app.use(express.static('public')); 
 
-app.set('view engine','ejs');
-app.set('views',__dirname + '/view');
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+//app.use(methodOverride('_method'));
 
 // app.set('views', __dirname + '/view/users');
 // app.set('views', __dirname + '/view/products');
 app.use(express.urlencoded({extender: false}));
 app.use(express.json());
+
 
 app.use('/home',mainRouter);
 app.use('/login',loginRouter);
@@ -28,9 +48,25 @@ app.use('/productDetail', productDetail);
 app.use('/productCreate', productCreate);
 app.use('/productEdit', productEdit);
 
-app.listen(3030, (req, res)=>{
-    console.log("levantando el servidor")
+app.get('/datosProducts', (req,res) =>{
+    res.json (datosProducts );
+});
+
+app.get('/datosUsers', (req,res) =>{
+    res.json (datosUsers );
 })
+
+
+
+app.use('/',  (req, res) => { 
+    res.status(404).send('not-found');
+});
+
+let port = process.env.PORT || 3030;
+
+app.listen(port, ()=> {
+    console.log(`Servidor corriendo en el puerto ${port}`);
+});
 
 
 

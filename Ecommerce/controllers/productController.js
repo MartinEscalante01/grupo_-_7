@@ -1,10 +1,11 @@
 const path = '\\JSON\\products.json';
+const productos = require('../data/database.json')
 const controller = {
     productCart : (req,res) => {
         return res.render('products/productCart')
     },
     productDetail : (req,res) => {
-        return res.render('products/productDetail')
+        return res.render('products/productDetail',{productos})
     },
     productCreate : (req,res) => {
         return res.render('products/productCreate')

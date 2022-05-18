@@ -206,7 +206,7 @@ div.searchmobile i:hover {
 
 
 .copete {
-    height: 8vh;
+    height: auto;
     width: 100vw;
 }
 
@@ -223,34 +223,33 @@ div.searchmobile i:hover {
 
 .glassHome {
     display: flex;
-    justify-content: space-around;
-
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+   
 }
 
-.adiWoman {
+
+.glassHomeImg {
     display: flex;
-    height: 24vh;
-    width: 30vw;
-    border-radius:15px;
-    box-shadow: 3px 3px 10px darkgray;
+    height: 25vh;
+    width: 70vw;
+    margin-bottom: 10px;
+    position: relative;
+    text-align: center;
 }
 
-.nikeMan {
-    display: flex;
-    height: 24vh;
-    width: 30vw;
-    border-radius:15px;
-    box-shadow: 3px 3px 10px darkgray;
+.glassHomeImg h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
 }
 
-
-.adiKid {
-    display: flex;
-    height: 24vh;
-    width: 30vw;
-    border-radius:15px;
-    box-shadow: 3px 3px 10px darkgray;
-}
+ .borderImg {
+        border-radius: 10px;
+    }
 
 
 h3 {
@@ -264,24 +263,38 @@ h3 {
     
 }
 
-.ofertas{
+/* cards */
+.productos-cards{
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-direction: row;
+    
+}
+.cards {
+    width: 170px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding-right: 14px;
+    box-shadow: 1px 5px 8px lightslategrey; 
 }
 
-.imgOferta {
-    display: flex;
-    height: 15vh;
-    width: 20vw;
+.cards div:nth-child(1){
+    text-align: center;
+    width: 122%;
+
 }
 
-
-.boxOfertas{
-    box-shadow: 1px 5px 8px lightslategrey;   
+.cards img{
+    width: 70%;
+    
 }
 
 .prices{
-    font-size: 10px;
+    font-size: 15px;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -291,13 +304,13 @@ h3 {
 }
 
 .saving{
-    font-size: 8px;
+    font-size: 15px;
     font-weight: 900;
     color: #ed3237;   
 }
 
 .oldprice{
-    font-size: 8px;
+    font-size: 12px;
     color: #999;
     text-decoration: line-through;
 }
@@ -328,14 +341,14 @@ h3 {
     align-items: flex-start;
     background-color: rgb(228, 231, 225);
     font-size: 15px;
-    line-height : 20px;
+    line-height: 20px;
     padding: 10px;
   
 }
 
 .historiasTxt h2{
     display: flex;
-    font-size: 10px;
+    font-size: 16px;
     padding-bottom: 10px;
 }
 
@@ -348,14 +361,15 @@ h3 {
 
 .novedadTxt {
     font-size: 15px;
-    
+    line-height: 20px;
 }
 
 .novedad h2{
     display: flex;
-    font-size: 11px;
+    font-size: 16px;
     justify-content: center;
     padding: 10px;
+    font-style: italic;
 }
 
 .imgNovedad {
@@ -462,32 +476,7 @@ form.search input{
     font-size: 10px;
 }
 
-/* cards */
-.productos-cards{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-evenly;
-    flex-direction: row;
-}
-.cards {
-    width: 150px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-}
 
-.cards div:nth-child(1){
-    text-align: center;
-    width: 122%;
-
-}
-
-.cards img{
-    width: 100%;
-    
-}
 
 
 /*Mobile*/
@@ -500,20 +489,6 @@ form.search input{
         display: none;
     }
 
-    .glassHome{
-        display: flex;
-        width: 100%;
-        height: auto;
-        justify-content: space-around;
-    }
-    
-    .glassHomeImg{
-        width: 30%;
-        height: auto;
-        display: flex;
-        
-    }
-    
 }
 
 img{
@@ -580,9 +555,24 @@ img{
     }
     
     .copete {
-    height: 8vh;
+    height: auto;
     width: 90vw;
     }
+    
+    .glassHome{
+      display: flex;
+      padding: 11px;
+      flex-direction: row;
+      justify-content: space-around;          
+    }
+    
+    .glassHomeImg {
+    height: 30vh;
+    width: 30vw; 
+    display: flex;
+    }
+   
+   
     
     h3 {
     font-size: 30px
@@ -601,36 +591,45 @@ img{
     }
 
 
+     .historias {
+        flex-direction: row;
+    }
+    
+    
     .historiasTxt {
-    font-size: 14px;
-    line-height : 20px;
-    height: 31vh;    
+    font-size: 15px;
+    line-height : 30px;
+    height: auto;  
+    width: 50%;
     }
     
     .historiasTxt h2{
-    font-size: 15px;
+    font-size: 20px;
         
     }
     
     .novedad {
-    padding: 0 10px;
-    height: 31vh; 
+    height: auto;
+    width: 50%;
+    margin: 10px;
+    padding-bottom: 17%
     }
     
     .novedadTxt{
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 15px;
+    line-height: 30px;
     
     }
 
     .novedad h2{ 
-    font-size: 15px;
+    font-size: 20px;
     }
 
     .imgNovedad {
-    height: 50%;
-    width: 100%;
+    margin-left: 5%;
+    width: 90%;
     }
+    
     .footercolumn4{
         display: block;
     }
@@ -670,8 +669,8 @@ img{
         right: 140px;
     }
     .copete {
-        width: auto;
-        height: auto;
+     width: auto;
+     height: auto;
      }
     
     .barraEnvio {
@@ -681,55 +680,47 @@ img{
     }
     
     .glassHome{
-        padding: 10px
+      display: flex;
+      padding: 11px;
+      flex-direction: row;
+      justify-content: space-around;          
     }
     
-    .adiWoman {
-    height: 32vh;
-    width: 23vw;
-    }
+    .glassHomeImg {
+    height: 40vh;
+    width: 30vw; 
+    display: flex;
+}
+   
     
-    .nikeMan {
-    height: 32vh;
-    width: 23vw;
-    }
-    
-    .adiKid {
-    height: 32vh;
-    width: 23vw;
-    }    
-    
-    .adiWoman:hover {
-    transition: transform .5s ease;
-    transform: scale(1.05);
-    }
-    
-    .nikeMan:hover {
-    transition: transform .5s ease;
-    transform: scale(1.05);
-    }
 
-    .adiKid:hover {
+    .glassHomeImg:hover {
     transition: transform .5s ease;
     transform: scale(1.05);
     }
     
-    .boxOfertas:hover {
+     .cards:hover {
     transition: transform .5s ease;
-    transform: scale(1.1);
+    transform: scale(1.05);
     }
     
     .imgOferta {
-    
     height: 18vh;
     width: 15vw;
     }
 
+    .historias {
+        flex-direction: row;
+         
+    }
+    
     
     .historiasTxt {
     font-size: 15px;
     line-height : 30px;
-    height: 41vh;    
+    height: auto;  
+    width: 50%;
+    margin-top: -17%
     }
     
     .historiasTxt h2{
@@ -738,8 +729,9 @@ img{
     }
     
     .novedad {
-    padding: 0 10px;
-    height: 41vh; 
+    height: auto;
+    width: 50%;
+    margin: 10px;
     }
     
     .novedadTxt{
@@ -753,8 +745,9 @@ img{
     }
 
     .imgNovedad {
-    height: 50%;
-    width: 100%;
+    
+    margin-left: 8%;
+    width: 80%;
     }
 
     .footercolumn4{

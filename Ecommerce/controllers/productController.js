@@ -1,6 +1,7 @@
 const path = '\\JSON\\products.json';
-const productos = require('../data/database.json')
-const controller = {
+const productos = require('../database/products.json')
+
+const productsController = {
     productCart : (req,res) => {
         return res.render('products/productCart')
     },
@@ -13,14 +14,19 @@ const controller = {
     productEdit : (req,res) => {
         return res.render('products/productEdit')
     },
-
-    create:(req,res) =>{
-        const body = req.body;
-        actions.path = path;
-        const response = actions.create(body);
-        return res.render('products/productDetail')
-        
+    index: (req,res) =>{
+        res.send('Bienvenido al Listado de Productos')
+    },
+    detail: (req,res) =>{
+        res.send('Bienvenidos al detalle del producto ' + req.params.idProducto)
+    },
+    detailComments: (req,res) =>{
+        if(req.params.idComments == undefined ){
+            res.send('Bienvenidos a los comentarios del producto ' + req.params.idProducto);
+        }else{
+            res.send('Bienvenidos a los comentarios del producto ' + req.params.idProducto + ' y estas enfocado en el comentario ' + req.params.idComments);
+        }
     }
 }
 
-module.exports = controller;
+module.exports = productsController;

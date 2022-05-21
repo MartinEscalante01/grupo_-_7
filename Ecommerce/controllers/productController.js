@@ -6,7 +6,7 @@ const productsController = {
         return res.render('products/productCart')
     },
     productDetail : (req,res) => {
-        return res.render('products/productDetail',{productos})
+        return res.render('products/productDetail', { productos })
     },
     productCreate : (req,res) => {
         return res.render('products/productCreate')

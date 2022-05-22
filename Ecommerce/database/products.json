@@ -1,5 +1,6 @@
 [{
     "id": 1,
+<<<<<<< HEAD
     "name": "Camiseta adidas Boca Juniors Primera Equipación 21/22",
     "description": "1981. Una leyenda del fútbol hace su debut en Boca Juniors con un uniforme que se convertiría en uno de los más preciados de la historia del club. Cuarenta años después vuelve el clásico escudo de cuatro estrellas termotransferido. Diseñada para rendir al máximo en los partidos, con tecnología HEAT.RDY.",
     "price": 19999.99,
@@ -10,6 +11,16 @@
     "brand": "Adidas",
     "gendre": "Hombre"
   }, {
+=======
+    "nombre": "Camiseta Titular Oficial de Boca Juniors",
+    "tipo": "Camiseta",
+    "descuento": "30% OFF",
+    "precio":"$7.699",
+    "Talle":["XS","S","M","L","XL"],
+    "descripcion":"Camiseta Titular Oficial de Boca Juniors",
+    "img":"img/camisetaCABJ.jpg"
+}, {
+>>>>>>> 8d9c1d6765f9511784d7ebfe7c3b33ec0b51b509
     "id": 2,
     "name": "Zapatillas Puma R78 Future",
     "description": "De inspiración retro, pero con un estilo urbano y a la moda, las zapatillas iridiscentes R78 FUTURE son un básico moderno. Presentan un diseño de running tradicional, combinaciones de color originales y elementos de diseño clásicos. Este brillante modelo es impresionante.",

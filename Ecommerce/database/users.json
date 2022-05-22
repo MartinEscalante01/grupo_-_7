@@ -1,4 +1,5 @@
-[{"id":1,"first_name":"Blondell","last_name":"Swannack","email":"bswannack0@theatlantic.com","password":"vVtiXic23o"},
+[
+    {"id":1,"first_name":"Blondell","last_name":"Swannack","email":"bswannack0@theatlantic.com","password":"vVtiXic23o"},
     {"id":2,"first_name":"Lorie","last_name":"Wildman","email":"lwildman1@163.com","password":"qpwoPZ7M"},
     {"id":3,"first_name":"Jo-anne","last_name":"Mussington","email":"jmussington2@php.net","password":"Mc3nl03MaE"},
     {"id":4,"first_name":"Brent","last_name":"Somerled","email":"bsomerled3@last.fm","password":"DKySbL"},

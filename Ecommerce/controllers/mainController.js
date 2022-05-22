@@ -1,5 +1,5 @@
 const controller = {
-    index : (req,res) => {
+    home : (req,res) => {
         return res.render('products/index')
     },
     

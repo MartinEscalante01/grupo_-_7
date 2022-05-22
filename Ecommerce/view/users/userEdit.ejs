@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styleRegister.css">
+    <%- include('../partials/head.ejs') %>
+    <title>Sportix | Editor de Usuarios </title>
+
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <main>
+        <h1>Editor de Usuario <%= userToEdit.name %> </h1>
+        <section>
+            <div class="todo">
+                <div class="formulario">
+                    <form action="POST" id="CreateForm" action="/users/edit?_method=PUT">
+                        <label for="">Nombre</label>
+                        <input class="controls" type="text" placeholder="Nombre" name="nombre" value="<%= userToEdit.name %> ">
+                        <input type="submit" value="Editar">
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

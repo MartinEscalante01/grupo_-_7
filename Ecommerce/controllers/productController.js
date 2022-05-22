@@ -6,16 +6,16 @@ const productsController = {
         return res.render('products/productCart')
     },
     productDetail : (req,res) => {
-        return res.render('products/productDetail', { productos })
+        return res.render('products/productDetail', { 'productos': productos  })
     },
     productCreate : (req,res) => {
-        return res.render('products/productCreate')
+        res.render('products/productCreate')
     },
     productEdit : (req,res) => {
         return res.render('products/productEdit')
     },
     index: (req,res) =>{
-        res.send('Bienvenido al Listado de Productos')
+        res.render('products/productList', { 'productos': productos })
     },
     detail: (req,res) =>{
         res.send('Bienvenidos al detalle del producto ' + req.params.idProducto)
@@ -26,6 +26,11 @@ const productsController = {
         }else{
             res.send('Bienvenidos a los comentarios del producto ' + req.params.idProducto + ' y estas enfocado en el comentario ' + req.params.idComments);
         }
+    },
+    create:(req,res) =>{
+        console.log(req.body);
+        //FALTA GUARDARLA
+        res.redirect('/products')
     }
 }
 

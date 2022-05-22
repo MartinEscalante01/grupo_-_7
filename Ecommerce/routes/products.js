@@ -3,12 +3,15 @@ const router = express.Router();
 
 const productController = require('../controllers/productController');
 
-router.get('/', productController.index);
 //router.get('/productDetail', productController.productDetail);
-router.get('/:idProducto', productController.detail);
-router.get('/:idProducto/comentarios/:idComments', productController.detailComments);
 
+router.get('/', productController.index); //http://localhost:3030/products
 
+router.get('/:idProducto', productController.detail); //http://localhost:3030/products/:id
 
+router.get('/:idProducto/comentarios/:idComments', productController.detailComments); //http://localhost:3030/products/:idProducto/comentarios/:idComments
+
+//router.get('/productCreate', productController.productCreate); //http://localhost:3030/products/productCreate
+//router.post('/guardar', productController.save);
 
 module.exports = router;

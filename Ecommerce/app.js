@@ -32,12 +32,10 @@ app.set('views',__dirname + '/view');
 
 app.use(express.static('public')); 
 
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-app.use(methodOverride('_method'));
+app.use(express.urlencoded({ extended: false })); //Capturar Informacion de un Formulario en un objeto literal
+app.use(express.json()); // Convertir el objeto literal en JSON
 
-app.use(express.urlencoded({extender: false}));
-app.use(express.json());
+app.use(methodOverride('_method')); //Para usar PUT y DELETE
 
 app.use('/',mainRouter);
 app.use('/login',loginRouter);

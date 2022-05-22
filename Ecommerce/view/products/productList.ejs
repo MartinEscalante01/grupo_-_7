@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styleRegister.css">
+    <title>Sportix | Listado de Productos </title>
+
+</head>
+<body>
+    <main>
+        <section>
+            <div class="todo">
+                <h1>Listado de Productos</h1>
+                <ul>
+                    <% for (let i = 0; i< productos.length; i++) { %>
+                        <li>
+                            <a href="/products/<%= productos[i].id %> "><%= productos[i].name %></a>
+                        </li>
+                    <% }  %>
+                </ul>
+        </section>
+    </main>
+
+</body>
+</html>

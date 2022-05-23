@@ -22,7 +22,7 @@ const productsController = {
         res.render('products/productList', { 'productos': productos })
     },
     detail: (req,res) =>{
-        res.send('Bienvenidos al detalle del producto ' + req.params.idProducto)
+        res.redirect('/productDetail/' + req.params.idProducto)
     },
     detailComments: (req,res) =>{
         if(req.params.idComments == undefined ){

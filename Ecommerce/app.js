@@ -44,6 +44,7 @@ app.use('/products', products);
 app.use('/users', users);
 
 
+
 app.get('/datosProducts', (req,res) =>{
     res.json (datosProducts );
 });

@@ -6,7 +6,14 @@ const productsController = {
         return res.render('products/productCart')
     },
     productDetail : (req,res) => {
-        return res.render('products/productDetail', { 'productos': productos  })
+        const product = productos.find(producto => producto.id == req.params.id)
+        const recomendaciones = []
+        for (let index = 0; index < 3; index++) {
+            const index =Math.floor(Math.random() * productos.length)
+            recomendaciones.push(productos[index])
+        }
+        return res.render('products/productDetail', {  product,recomendaciones  })
+
     },
     productCreate : (req,res) => {
         res.render('products/productCreate')
@@ -30,12 +37,8 @@ const productsController = {
         res.redirect('/products')
     },
     edit: (req,res) =>{
-        let idProducto = req.params.idProducto;
-        let productEdit = productos[idProducto];
+        let productEdit = productos.find(producto => producto.id == req.params.idProducto)
         res.render('products/productEdit', { 'productEdit': productEdit })
-    },
-    update: (req,res) =>{
-        res.render('/products');
     },
     delete: (req,res) =>{
         res.redirect('/products');

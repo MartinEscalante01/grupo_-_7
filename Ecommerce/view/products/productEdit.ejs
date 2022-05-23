@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs') %>
-    <link rel="stylesheet" href="css/productCreate.css">
+    <link rel="stylesheet" href="../../css/productCreate.css">
     <title>Sportix | Edicion Product </title>
 
 </head>
@@ -12,7 +12,7 @@
     </header>
     <main>
         <h1>Edicion Producto "<%= productEdit.name %>" | SPORTIX</h1>
-        <form method="POST" id="CreateForm" action="/edit?_method=PUT">
+        <form method="POST" id="CreateForm" action="/products/edit?_method=PUT">
             <div>
             <label for="txtNombre">Nombre del Producto:</label>
             <input class="controls" type="text" name="txtNombre" value="<%= productEdit.name %>" required="require">

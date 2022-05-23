@@ -10,33 +10,36 @@
 <main id="maincontent">
     <section>
             <div>
+                <% for (let dato of productos){ %>
+                    <% if(dato.id == 12) {%>
                 <nav>
                     <ul class="breadcrumb">
                         <li><a href="/">Home</a></li>
                         <li><a href="#">Indumentaria</a></li>
-                        <li>Buzos</li>
+                        <li><a href="#"><%= dato.category %></a></li>
                     </ul>
                 </nav>
+               
             </div>
     </section>
     <section> 
             <div  class="detail"> 
-                <% for(let dato of productos){ %>
+              
                 <div>
-                    <img class= "imagen" src= "<%= dato.img %>" alt="Camiseta Boca Juniors">
+                    <img class= "imagen" src= "<%= dato.image %>" alt="<%= dato.name %>">
                 </div>
                 <div class="child">
 
                     
                     <div>
-                        <h1> <%= dato.nombre %></h1>
+                        <h1> <%= dato.name %></h1>
                         
                     </div>
                     <div class="columnprices">
                         <span class="prices">
-                            <span><%= dato.precio %></span>
-                            <span class="oldprice"><%= dato.descuento %></span>
-                            <span class="saving"><%= dato.descripcion %> </span>
+                            <span>$<%= dato.price %></span>
+                            <span class="oldprice"><%= dato.oldprice %></span>
+                            <span class="saving"><%= dato.discount%> </span>
                         </span>
                     </div>
                     <hr class="separador">
@@ -69,7 +72,7 @@
                     </div>
                     
                 </div>
-                <% } %>
+                
             </div>
     </section>
     <hr class="separador2">
@@ -77,10 +80,10 @@
             <div class="descripcion-producto">
                 <h4>DESCRIPCION</h4>
                 <br>
-                <p>La camiseta adidas de Boca Juniors edición Visitante 2021 se inspira en el diseño retro de los 80's. Su tejido suave absorbe el sudor para mantenerte cómodo y seguro en el gimnasio o alentando en La Bombonera. Lucí el escudo tejido del Xeneixe que demuestra tu amor por los colores.</p>
+                <p><%= dato.description %></p>
                 <br>
                 <ul>
-                    <li>Género: Hombre</li>
+                    <li><%= dato.gendre %>: Hombre</li>
                     <li>Adecuado para: Entrenamiento.</li>
                     <li>Material: Poliéster reciclado.</li>
                     <li>Cuello: Redondo</li>
@@ -90,10 +93,12 @@
                     <li>Escudo: Bordado</li>
                     <li>Garantía: Contra defecto de fabricación.</li>
                     <li>Origen: Nacional</li>
-                    <li>Marca: Adidas</li>
+                    <li><%= dato.brand %>: Adidas</li>
                 </ul>
             </div>
     </section>
+    <% } %>
+    <% } %>
     <hr class="separador2">
     <section>
             <div>

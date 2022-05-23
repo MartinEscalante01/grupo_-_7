@@ -4,8 +4,8 @@
     "description": "1981. Una leyenda del fútbol hace su debut en Boca Juniors con un uniforme que se convertiría en uno de los más preciados de la historia del club. Cuarenta años después vuelve el clásico escudo de cuatro estrellas termotransferido. Diseñada para rendir al máximo en los partidos, con tecnología HEAT.RDY.",
     "price": 19999.99,
     "discount": null,
-    "category": "camisetas",
-    "image": "../public/img/camisetaCABJ.jpg",
+    "category": "Camisetas",
+    "image": "img/camisetaCABJ.jpg",
     "type": "Best Seller",
     "brand": "Adidas",
     "gendre": "Hombre"
@@ -16,7 +16,7 @@
     "price": 7999.99,
     "discount": null,
     "category": "Zapatillas",
-    "image": "../public/img/zapatilla-puma-r78-future-negro-0.jpg",
+    "image": "img/zapatilla-puma-r78-future-negro-0.jpg",
     "type": "outlet",
     "brand": "Puma",
     "gendre": "Hombre"
@@ -27,7 +27,7 @@
     "price": 30999.99,
     "discount": null,
     "category": "Camisetas",
-    "image": "../public/img/barcaAlt.jpg",
+    "image": "img/barcaAlt.jpg",
     "type": "Best Seller",
     "brand": "Nike",
     "gendre": "Hombre"
@@ -38,7 +38,7 @@
     "price": 61999.99,
     "discount": null,
     "category": "Botas",
-    "image": "../public/img/bota-adidas-x-speedflow-fg-blanco-0.jpg",
+    "image": "img/bota-adidas-x-speedflow-fg-blanco-0.jpg",
     "type": "Novedad",
     "brand": "Adidas",
     "gendre": "Hombre"
@@ -49,7 +49,7 @@
     "price": 61999.99,
     "discount": null,
     "category": "Botas",
-    "image": "../public/img/bota-adidas-copa-sense-fg-blanco-0.jpg",
+    "image": "img/bota-adidas-copa-sense-fg-blanco-0.jpg",
     "type": "Novedad",
     "brand": "Adidas",
     "gendre": "Hombre"
@@ -60,7 +60,7 @@
     "price": 61999.99,
     "discount": null,
     "category": "Botas",
-    "image": "../public/img/bota-adidas-predator-edge-fg-blanco-0.jpg",
+    "image": "img/bota-adidas-predator-edge-fg-blanco-0.jpg",
     "type": "Novedad",
     "brand": "Adidas",
     "gendre": "Hombre"
@@ -71,7 +71,7 @@
     "price": 32999.99,
     "discount": null,
     "category": "Botas",
-    "image": "../public/img/botAdiNino.jpg",
+    "image": "img/botAdiNino.jpg",
     "type": "Best Seller",
     "brand": "Adidas",
     "gendre": "Niño"
@@ -81,8 +81,8 @@
     "description": "Zapatilla de fútbol Nike Phantom GT2 Academy Turf para niños. Zapatillas de hilo para utilizar en campos de hierba artificial de cualquier generación, tierra o cemento. Zapatillas de gama baja  para jugadores de control y precisión.",
     "price": 11999.99,
     "discount": null,
-    "category": "botas",
-    "image": "../public/img/Botines-Nike-Phantom.jpg",
+    "category": "Botas",
+    "image": "img/Botines-Nike-Phantom.jpg",
     "type": "Novedad",
     "brand": "Nike",
     "gendre": "Niño"
@@ -93,7 +93,7 @@
     "price": 13.999,
     "discount": null,
     "category": "Buzos",
-    "image": "../public/img/buzo.jpg",
+    "image": "img/buzo.jpg",
     "type": "Novedad",
     "brand": "Adidas",
     "gendre": "Unisex"
@@ -104,7 +104,7 @@
     "price": 19999.99,
     "discount": null,
     "category": "Buzos",
-    "image": "../public/img/camperaBoca.jpg",
+    "image": "img/camperaBoca.jpg",
     "type": "Novedad",
     "brand": "Adidas",
     "gendre": "Unisex"
@@ -116,7 +116,7 @@
     "discount": 18,
     "old price": 12219.99,
     "category": "Pantalon",
-    "image": "../public/img/chandalJuve.jpg",
+    "image": "img/chandalJuve.jpg",
     "type": "Outlet",
     "brand": "Adidas",
     "gendre": "Hombre"
@@ -126,8 +126,8 @@
     "description": "El guante de arquero Feline 20 PRO, ofrece un corte híbrido: Flat y Negativo, los dos tipos de guantes más usados por los arqueros en la actualidad. Permiten combinar la sensibilidad que ofrece el corte negativo para los dedos centrales, y la superficie que brinda el corte Flat para los dedos periféricos.Ofrece una muñeca larga más cómoda y anatómica que las tradicionales, logrando un guante que se ajusta a la mano tomando como fortaleza la zona de la muñeca. El Látex alemán de 4mm en palma, brinda la mejor calidad disponible para lograr las mejores prestaciones para el desempeño de la actividad a nivel profesional, baja absorción de humedad, mejor sujeción a la pelota, hacen de este guante un guante de calidad profesional.",
     "price": 10599.99,
     "discount": null,
-    "category": "guantes",
-    "image": "../public/img/Guantes-Arquero-Feline.jpg",
+    "category": "Guantes",
+    "image": "img/Guantes-Arquero-Feline.jpg",
     "type": "Novedad",
     "brand": "Dribbling",
     "gendre": "Unisex"
@@ -137,8 +137,8 @@
     "description": "El pantalón corto Nike Dri-FIT Run ofrece gran rendimiento y ligereza.Los materiales transpirables mantienen la frescura y la comodidad en cada kilómetro.Este producto está fabricado con fibras de poliéster 100 % reciclado.",
     "price": 5329.99,
     "discount": null,
-    "category": "short",
-    "image": "../public/img/Short-Nike.jpg",
+    "category": "Short",
+    "image": "img/Short-Nike.jpg",
     "type": "Best Seller",
     "brand": "Nike",
     "gendre": "Unisex"
@@ -149,7 +149,7 @@
     "price": 33299.99,
     "discount": null,
     "category": "Camisetas",
-    "image": "../public/img/camiseta-adidas-real-madrid-cf-primera-equipacion-authentic-2022-2023-white-0.jpg",
+    "image": "img/camiseta-adidas-real-madrid-cf-primera-equipacion-authentic-2022-2023-white-0.jpg",
     "type": "Novedad",
     "brand": "Adidas",
     "gendre": "Hombre"
@@ -160,7 +160,7 @@
     "price": 22199.99,
     "discount": null,
     "category": "Buzo",
-    "image": "../public/img/chaqueta-adidas-real-madrid-cf-pre-match-2022-2023-magic-lilac-0.jpg",
+    "image": "img/chaqueta-adidas-real-madrid-cf-pre-match-2022-2023-magic-lilac-0.jpg",
     "type": "Novedad",
     "brand": "Adidas",
     "gendre": "Unisex"
@@ -172,7 +172,7 @@
     "discount": 11,
     "old price": 19984.09,
     "category": "Camisetas",
-    "image": "../public/img/camiseta-adidas-real-madrid-cf-segunda-equipacion-2021-2022-victory-blue-0.jpg",
+    "image": "img/camiseta-adidas-real-madrid-cf-segunda-equipacion-2021-2022-victory-blue-0.jpg",
     "type": "Outlet",
     "brand": "Adidas",
     "gendre": "Hombre"
@@ -184,7 +184,7 @@
     "discount": 30,
     "old price": 8881.99,
     "category": "Short",
-    "image": "../public/img/pantalon-corto-adidas-real-madrid-segunda-equipacion-2021-2022-victory-blue-0.jpg",
+    "image": "img/pantalon-corto-adidas-real-madrid-segunda-equipacion-2021-2022-victory-blue-0.jpg",
     "type": "Outlet",
     "brand": "Adidas",
     "gendre": "Mujer"
@@ -195,7 +195,7 @@
     "price": 10999.99,
     "discount": null,
     "category": "Short",
-    "image": "../public/img/pantalon-corto-adidas-real-madrid-cf-primera-equipacion-2022-2023-white-0.jpg",
+    "image": "img/pantalon-corto-adidas-real-madrid-cf-primera-equipacion-2022-2023-white-0.jpg",
     "type": "Novedad",
     "brand": "Adidas",
     "gendre": "Hombre"
@@ -206,7 +206,7 @@
     "price": 31089.99,
     "discount": null,
     "category": "Camisetas",
-    "image": "../public/img/camiseta-nike-paris-saint-germain-primera-equipacion-stadium-2021-2022-midnight-navy-university-red-whitefull-spons-0.jpg",
+    "image": "img/camiseta-nike-paris-saint-germain-primera-equipacion-stadium-2021-2022-midnight-navy-university-red-whitefull-spons-0.jpg",
     "type": "Best Seller",
     "brand": "Nike",
     "gendre": "Hombre"
@@ -218,7 +218,7 @@
     "discount": 39,
     "old price": 10627.31,
     "category": "Buzo",
-    "image": null,
+    "image": "img/sudadera-nike-paris-saint-germain-fleece-hoodie-pull-over-2021-2022-university-red-0.jpg",
     "type": "outlet",
     "brand": "Nike",
     "gendre": "Mujer"
@@ -229,8 +229,8 @@
     "price": 11999.99,
     "discount": 35,
     "old price": 16199.99 ,
-    "category": "camisetas",
-    "image": "../public/img/camiseta-nike-paris-saint-germain-fc-tercera-equipacion-stadium-2021-2022-mujer-black-dark-grey-white-0.jpg",
+    "category": "Camisetas",
+    "image": "img/camiseta-nike-paris-saint-germain-fc-tercera-equipacion-stadium-2021-2022-mujer-black-dark-grey-white-0.jpg",
     "type": "Outlet",
     "brand": "Nike",
     "gendre": "Mujer"
@@ -241,7 +241,7 @@
     "price": 8999.99,
     "discount": null,
     "category": "Camisetas",
-    "image": "../public/img/chomba-argentina.jpg",
+    "image": "img/chomba-argentina.jpg",
     "type": "Product",
     "brand": "Adidas",
     "gendre": "Hombre"
@@ -252,7 +252,7 @@
     "price": 19999.99,
     "discount": null,
     "category": "Guantes",
-    "image": "../public/img/Camiseta_de_Arquero_Titular_Argentina_21_Rojo.jpg",
+    "image": "img/Camiseta_de_Arquero_Titular_Argentina_21_Rojo.jpg",
     "type": "Best Seller",
     "brand": "Puma",
     "gendre": "Hombre"

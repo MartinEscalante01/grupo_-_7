@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="css/productCreate.css">
+    <title>Sportix | Edicion Product </title>
+
+</head>
+<body>
+    <header>
+        
+    </header>
+    <main>
+        <h1>Edicion Producto "<%= productEdit.name %>" | SPORTIX</h1>
+        <form method="POST" id="CreateForm" action="/edit?_method=PUT">
+            <div>
+            <label for="txtNombre">Nombre del Producto:</label>
+            <input class="controls" type="text" name="txtNombre" value="<%= productEdit.name %>" required="require">
+            </div>
+
+            <div>
+            <label for="">Descripcion del producto:</label>
+            <textarea name="txtDescripcion" id="controls" value="<%= productEdit.description %>" cols="30" rows="5"></textarea>
+            </div>
+            
+            <div>
+            <label for="txtImagen">Seleccion Imagen Perfil:</label>
+            <input type="file" name="txtImagen" value="<%= productEdit.image %>" accept=".jpg" multiple>
+            </div>
+            
+            <div>
+            <label for="cnbCategoria">Categoria del Producto:</label>
+            <select name="cnbCategory" id="cnbCategory">
+                <option value="Indumentaria">Indumentaria</option>
+                <option value="Calzado">Calzado</option>
+                <option value="Accesorios">Accesorios</option>
+            </select>
+            </div>
+            
+            <div class="size">
+            <label  for="txtCategoria">Seleccionar Talles:</label><br>
+            <ul>
+                <li>
+                  <label for="Opcion1">
+                    <input type="radio" id="Opcion1" name="category" value="S" >
+                    S
+                  </label>
+                </li>
+                <li>
+                  <label for="Opcion2">
+                    <input type="radio" id="Opcion1" name="category" value="M" >
+                    M
+                  </label>
+                </li>
+                <li>
+                <label for="Opcion3">
+                    <input type="radio" id="Opcion1" name="category" value="L" >
+                    L
+                  </label>
+                </li>
+            </ul>
+            </div>
+            
+            <div>
+            <label for="txtNombre">Fecha de Alta:</label><br>
+            <input class="controls" type="date" placeholder="DD-MM-AAAA"  name="Fecha de Alta" required="require"><br>
+            </div>
+
+            <div>
+            <label for="txtNombre">SKU Number:</label><br>
+            <input class="controls" type="number" placeholder="Number"  name="SKU" required="require"><br>
+            </div>
+
+            <div class="botones">
+            <button type="submit">ENVIAR</button>
+            <button type="reset">Limpiar Contenido</button>
+            <button type="submit">Editar</button>
+            </div>
+        </form>
+
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+</html>

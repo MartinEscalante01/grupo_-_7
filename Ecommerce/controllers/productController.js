@@ -11,9 +11,6 @@ const productsController = {
     productCreate : (req,res) => {
         res.render('products/productCreate')
     },
-    productEdit : (req,res) => {
-        return res.render('products/productEdit')
-    },
     index: (req,res) =>{
         res.render('products/productList', { 'productos': productos })
     },
@@ -31,7 +28,18 @@ const productsController = {
         console.log(req.body);
         //FALTA GUARDARLA
         res.redirect('/products')
-    }
+    },
+    edit: (req,res) =>{
+        let idProducto = req.params.idProducto;
+        let productEdit = productos[idProducto];
+        res.render('products/productEdit', { 'productEdit': productEdit })
+    },
+    update: (req,res) =>{
+        res.render('/products');
+    },
+    delete: (req,res) =>{
+        res.redirect('/products');
+    },
 }
 
 module.exports = productsController;

@@ -19,9 +19,6 @@ const loginRouter = require('./routes/login');
 const productCreate = require('./routes/productCreate');
 const products = require('./routes/products');
 const users = require('./routes/users');
-
-
-//const productEdit = require('./routes/productEdit');
 const { error } = require('console');
 
 
@@ -43,7 +40,6 @@ app.use('/register',registerRouter);
 app.use('/productCart',productCart);
 app.use('/productDetail', productDetail);
 app.use('/productCreate', productCreate);
-//app.use('/productEdit', productEdit);
 app.use('/products', products);
 app.use('/users', users);
 
@@ -58,7 +54,7 @@ app.get('/datosUsers', (req,res) =>{
 
 
 app.use('/',  (req, res) => { 
-    res.status(404).send('not-found');
+    res.status(404).send('NOT FOUND');
 });
     
     

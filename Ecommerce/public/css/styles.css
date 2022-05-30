@@ -290,13 +290,13 @@ h3 {
 
 .cards img{
     width: 70%;
-    
+    margin: 28px;
 }
 
 .prices{
     font-size: 15px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     flex-direction: column-reverse;
     padding: 10px;

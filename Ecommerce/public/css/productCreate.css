@@ -9,6 +9,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cambay&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+:root{
+    --titulos-color: #333333;
+    --tamanio-titulos: 30px;
+    --titulo-family:'Open Sans', sans-serif;
+}
 
 *{
     margin: 0px;

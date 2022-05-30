@@ -106,7 +106,7 @@
                     <section class="Opps">
                         <% for (let dato of recomendaciones){ %>
                         <div class="boxOpps">
-                            <a href=""><img src="../<%= dato.image %>" class="imgRecomendado"></a>
+                            <a href="/productDetail/<%= dato.id %>"><img src="../<%= dato.image %>" class="imgRecomendado"></a>
                             <span class="newPrice">
                                 <div>  $ <%= dato.price %></div>
                                 <span class="priorPrice">$9.199,00</span>

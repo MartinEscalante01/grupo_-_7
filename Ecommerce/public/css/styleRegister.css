@@ -11,11 +11,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Cambay&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 
+:root{
+    --titulos-color: #333333;
+    --tamanio-titulos: 30px;
+    --titulo-family:'Open Sans', sans-serif;
+}
+
 *{
     margin: 0px;
-    box-sizing: border-box;
-    
-    
+    box-sizing: border-box;    
 }
 
 .login-dektop{
@@ -658,107 +662,6 @@ form.search input{
 }
 
 @media (min-width:1024px){
-    /* .logo{
-        display: none;
-    }
-    .img-mobile{
-        display: none;
-    }
-
-    .login{
-        display: none;
-    }
-
-    .login-dektop button {
-        font-size: 10px;
-        background-color: black;
-        padding: 5px 10px;
-        color: white;
-    }
-    header{
-        display: flex;
-        flex-direction: column;
-        box-sizing: border-box;
-        margin: 0px;
-        padding: 0px;
-    }
-
-
-    header .login-dektop{
-        display: flex;
-        width: 100%;
-        justify-content: end;
-        background-color: black;
-    }
-
-    .login-dektop button{
-        font-family: 'Roboto', sans-serif;
-        border: 1px solid black;
-        font-size: 15px;
-        padding: 5px 12px;
-    }
-
-    header .desktop{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        background-color: rgb(254,195,3);
-    }
-
-    .img-desktop{
-        width: 7%;
-    }
-    .img-desktop img{
-        width: 100%;
-    }
-    .nav{
-        box-sizing: border-box;
-        width: 40%;
-    }
-    .nav ul{
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        
-    }
-
-    .nav ul li a{
-        margin-right: 10px;
-        margin-left: 10px;
-        text-decoration: none;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 16px;
-        color: black;
-    }
-    .nav ul li a:hover{
-        text-decoration:revert;
-    }
-    .search{
-        display: flex;
-        width: 25%;
-        justify-content: space-evenly;
-    }
-
-    .search input {
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        width: 160px;
-        height: 30px;
-    }
-    .iconos-desktop{
-        font-size: 20px;
-        
-    } */
-
-    /* header .menu{
-        display: none;
-    } */
-
     header .menu{
         display: none;
     }

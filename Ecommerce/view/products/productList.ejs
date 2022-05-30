@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/styleRegister.css">
+    <link rel="stylesheet" href="css/list.css">
     <title>Sportix | Listado de Productos </title>
 
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="/products">Listado de Productos</a>
+            <a href="/productCreate">Crear un nuevo Producto</a>
+        </nav>
+    </header>
     <main>
         <section>
             <div class="todo">
-                <h1>Listado de Productos</h1>
+                <h1>SPORTIX | Listado de Productos</h1>
                 <ul>
                     <% for (let i = 0; i< productos.length; i++) { %>
                         <li>

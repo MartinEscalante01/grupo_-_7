@@ -1,3 +1,4 @@
+const fs = require('fs');
 const path = '\\JSON\\products.json';
 const productos = require('../database/products.json')
 
@@ -8,7 +9,7 @@ const productsController = {
     productDetail : (req,res) => {
         const product = productos.find(producto => producto.id == req.params.id)
         const recomendaciones = []
-        for (let index = 0; index < 3; index++) {
+        for (let index = 0; index < 4; index++) {
             const index =Math.floor(Math.random() * productos.length)
             recomendaciones.push(productos[index])
         }
@@ -42,6 +43,11 @@ const productsController = {
     },
     delete: (req,res) =>{
         res.redirect('/products');
+    },
+    store: (req, res) => {
+        let product = req.body;
+        productoId = productos.create(product);
+        res.redirect('/products/' + productoId);
     },
 }
 

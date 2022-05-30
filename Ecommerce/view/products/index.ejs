@@ -40,42 +40,16 @@
 
         <hr class="separador"> 
                 <section class="productos-cards">
-                    <div class="cards">
-                        <div>
-                            <img src="img/barcaAlt.jpg" alt="">
-                        </div>
-                        <span class="prices">
-                            <div>$7.699,00</div>
-                            <span class="oldprice">$10.999,00</span>
-                            <span class="saving"> 30% OFF </span></a>
-                    </div>
-                    <div class="cards">
-                        <div>
-                            <img src="img/barcaAlt.jpg" alt="">
-                        </div>
-                        <span class="prices">
-                            <div>$7.699,00</div>
-                            <span class="oldprice">$10.999,00</span>
-                            <span class="saving"> 30% OFF </span></a>
-                    </div>
-                    <div class="cards">
-                        <div>
-                            <img src="img/barcaAlt.jpg" alt="">
-                        </div>
-                        <span class="prices">
-                            <div>$7.699,00</div>
-                            <span class="oldprice">$10.999,00</span>
-                            <span class="saving"> 30% OFF </span></a>
-                    </div>
-                    <div class="cards">
-                        <div>
-                            <img src="img/barcaAlt.jpg" alt="">
-                        </div>
-                        <span class="prices">
-                            <div>$7.699,00</div>
-                            <span class="oldprice">$10.999,00</span>
-                            <span class="saving"> 30% OFF </span></a>
-                    </div>
+                        <% for (let dato of recomendaciones){ %>
+                            <div class="cards">
+                                <a href="/productDetail/<%= dato.id %>"><img src="../<%= dato.image %>" class="imgRecomendado"></a>
+                                <span class="prices">
+                                    <div>  $ <%= dato.price %></div>
+                                    <span class="oldprice">$9.199,00</span>
+                                    <span class="saving"> 50% OFF </span>
+                                </span>
+                            </div>
+                            <% } %>
                 </section>
         </section>
         <hr class="separador">       
@@ -93,19 +67,6 @@
             </a></div>
         </section>   
     </main>
-     <!-- <footer>
-                <div>
-                    <ul>
-                        <li><a href="">Aviso de privacidad</a></li>
-                        <li><a href="">Terminos Y Condiciones</a></li>
-                        <li><a href="">Nuestros Datos</a></li>
-                    </ul>
-                </div>
-                <div class="footFixed">
-                    <p>© 2022 Sportix Argentina</p>
-                </div>
-            </footer> -->
-
-            <%- include('../partials/footer.ejs') %>
+        <%- include('../partials/footer.ejs') %>
 </body>
 </html>

@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = '\\JSON\\products.json';
-const productos = require('../database/products.json')
+const productos = require('../database/JSON/products.json')
+const actions = require('../database/actions');
 
 const productsController = {
     productCart : (req,res) => {
@@ -9,7 +10,7 @@ const productsController = {
     productDetail : (req,res) => {
         const product = productos.find(producto => producto.id == req.params.id)
         const recomendaciones = []
-        for (let index = 0; index < 4; index++) {
+        for (let index = 0; index < 3; index++) {
             const index =Math.floor(Math.random() * productos.length)
             recomendaciones.push(productos[index])
         }
@@ -33,9 +34,10 @@ const productsController = {
         }
     },
     create:(req,res) =>{
-        console.log(req.body);
-        //FALTA GUARDARLA
-        res.redirect('/products')
+        const body = req.body;
+        actions.path = path;
+        const response = actions.create(body);
+        res.status(200).render('products', {productos: response});
     },
     edit: (req,res) =>{
         let productEdit = productos.find(producto => producto.id == req.params.idProducto)

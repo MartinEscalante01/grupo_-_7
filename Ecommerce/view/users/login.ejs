@@ -10,7 +10,16 @@
     <%- include('../partials/header.ejs') %>
  
     <main>
-        
+        <% if (typeof errors != 'undefined') { %>
+        <p>ERROR</p>
+        <ul>
+            <%for (let i=0; i< errors.length; i++){%>
+                <li>
+                    <%= errors.[i].msg %>        
+                </li>
+            <%}%>    
+        </ul>    
+        <%}%>
         <form>
             <div class="diseño-form">
                 <h4 class="textoInicio">

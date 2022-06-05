@@ -2,12 +2,12 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
-
+const session = require('express-session')
 
 
 //datos
-const datosProducts = require('./database/products.json');
-const datosUsers = require('./database/users.json');
+const datosProducts = require('./database/JSON/products.json');
+const datosUsers = require('./database/JSON/users.json');
 
 
 //Routes imports
@@ -43,6 +43,12 @@ app.use('/productCreate', productCreate);
 app.use('/products', products);
 app.use('/users', users);
 
+//Express-Session
+app.use(session( {
+    secret: "Secreto",
+    resave: true,
+    saveUninitialized: true
+}));
 
 
 app.get('/datosProducts', (req,res) =>{

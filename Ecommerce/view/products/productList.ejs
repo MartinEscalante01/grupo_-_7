@@ -16,18 +16,66 @@
         <section>
             <div class="todo">
                 <h1>SPORTIX | Listado de Productos</h1>
-                <ul>
-                    <% for (let i = 0; i< productos.length; i++) { %>
-                        <li>
-                            <a href="/products/<%= productos[i].id %> "><%= productos[i].name %></a>
-                            <form method="POST" action="/products/delete/<%= productos[i].id %>?_method=DELETE">
-                                <button type="submit">Delete</button>
-                            </form>
-                        </li>
-                    <% }  %>
-                </ul>
+                <table>
+                    <tr>
+                        <td>
+                            Id
+                        </td>
+                        <td>
+                            Nombre
+                        </td>
+                        <td>
+                            Precio
+                        </td>
+                        <td>
+                            Descuento
+                        </td>
+                        <td>
+                            Categoria
+                        </td>
+                    </tr>
+                
+                    <% for(let dato of productos) { %> 
+                       <tr>
+                        <td>
+                            <%= dato.id %>
+                           </td>
+                           <td>
+                            <%= dato.name %>
+                           </td>
+                           <td>
+                            <%= dato.price %>
+                           </td>
+                           <td>
+                            <% if(dato.discount !== null){%>
+                                <%= dato.discount + '%'%>
+                            <%}else{%>
+                                <%= ''%>
+                            <% } %> 
+                           </td>
+                           <td>
+                            <%= dato.category %>
+                           </td>
+                           <td>
+                            <button>Modificar</button>
+                            <button>Eliminar</button>
+                           </td>
+                       </tr>
+                    <% } %> 
+                </table>
         </section>
     </main>
 
 </body>
 </html>
+
+<!-- <ul>
+    <% for (let i = 0; i< productos.length; i++) { %>
+        <li>
+            <a href="/products/<%= productos[i].id %> "><%= productos[i].name %></a>
+            <form method="POST" action="/products/delete/<%= productos[i].id %>?_method=DELETE">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+    <% }  %>
+</ul> -->

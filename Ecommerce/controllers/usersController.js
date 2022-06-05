@@ -23,6 +23,14 @@ const controller = {
         let userToEdit = users[idUser];
         res.render('/users/userEdit', {userToEdit: userToEdit});
     },
+    processLogin: function(req,res){
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            let usersJSON = fs.readf
+        }else{ res.render()
+            return res.render('users/login', {errors: errors.errors});
+        }
+    }
 }
 
 module.exports = controller;

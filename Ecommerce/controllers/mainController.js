@@ -1,5 +1,5 @@
 const path = '\\JSON\\products.json';
-const productos = require('../database/products.json')
+const productos = require('../database/JSON/products.json')
 
 const controller = {
     home : (req,res) => {

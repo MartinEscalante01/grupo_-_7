@@ -44,7 +44,8 @@ const productsController = {
         res.render('products/productEdit', { 'productEdit': productEdit })
     },
     delete: (req,res) =>{
-        res.redirect('/products');
+        let idProducto = productos.find(producto => producto.id == req.params.idProducto)
+        res.render('products/delete' , {'idProducto': idProducto});
     },
     store: (req, res) => {
         let product = req.body;

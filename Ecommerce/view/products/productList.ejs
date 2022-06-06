@@ -57,8 +57,8 @@
                             <%= dato.category %>
                            </td>
                            <td>
-                            <button>Modificar</button>
-                            <button>Eliminar</button>
+                            <button class="editar">Editar Producto</button>
+                            <a href="products/<%= dato.id %>/delete"><button class="borrar">Borrar Producto</button></a>
                            </td>
                        </tr>
                     <% } %> 
@@ -68,14 +68,3 @@
 
 </body>
 </html>
-
-<!-- <ul>
-    <% for (let i = 0; i< productos.length; i++) { %>
-        <li>
-            <a href="/products/<%= productos[i].id %> "><%= productos[i].name %></a>
-            <form method="POST" action="/products/delete/<%= productos[i].id %>?_method=DELETE">
-                <button type="submit">Delete</button>
-            </form>
-        </li>
-    <% }  %>
-</ul> -->

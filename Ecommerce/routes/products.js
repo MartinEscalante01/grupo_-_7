@@ -12,7 +12,7 @@ router.get('/:idProducto/comentarios/:idComments', productController.detailComme
 
 router.get('/:idProducto/edit', productController.edit); //http://localhost:3030/products/:id/edit
 router.put('/edit', (req,res) =>{res.send('PUT')}); //Actualiza informacion
-router.delete('/delete/:idProducto', productController.delete); //Elimina producto creado
+router.get('/:idProducto/delete', productController.delete); //Elimina producto creado
 
 
 

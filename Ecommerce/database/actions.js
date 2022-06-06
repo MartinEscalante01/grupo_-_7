@@ -15,8 +15,10 @@ const actions = {
         const jsonData = JSON.parse(fs.readFileSync(__dirname + this.path), 'utf8'); //Lee el JSON
         //Logica id
         let id = 0;
+        let name = ""
         if(jsonData.length > 0) {
             id = jsonData.length + 1;
+            name = jsonData.txtNombre;
         }
         const objectoACrear = { ...products, id }; //Creacion de Objeto
         jsonData.push(objectoACrear); //Agrego al Array
@@ -26,7 +28,7 @@ const actions = {
     modify: function(products) {
         const jsonData = JSON.parse(fs.readFileSync(__dirname + this.path), 'utf8');
         
-        const objectoAModificar = jsonData.find(dato => dato.id == data.id);
+        const objectoAModificar = jsonData.find(products => products.id == products.id);
         objectoAModificar = products;
 
         fs.writeFileSync(__dirname + this.path, JSON.stringify(jsonData));
@@ -35,7 +37,7 @@ const actions = {
     delete: function(products) {
         const jsonData = JSON.parse(fs.readFileSync(__dirname + this.path), 'utf8');
         
-        jsonData = jsonData.filter(dato => dato.id != products.id);
+        jsonData = jsonData.filter(products => products.id != products.id);
 
         fs.writeFileSync(__dirname + this.path, JSON.stringify(jsonData));
         return jsonData;

@@ -8,7 +8,7 @@ const actionsController = require('../database/actions');
 // Formulario de creacion
 router.get('/', productController.productCreate); //http://localhost:3030/productCreate
 
-// Creacion
+// Creacion de Informacion
 router.post('/creado', productController.create); 
 
 //Multer

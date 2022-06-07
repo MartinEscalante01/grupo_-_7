@@ -37,7 +37,7 @@ const productsController = {
         const body = req.body;
         actions.path = path;
         const response = actions.create(body);
-        res.status(200).render('products', {productos: response});
+        res.status(200).render('products/productList', {productos: response});
     },
     edit: (req,res) =>{
         let productEdit = productos.find(producto => producto.id == req.params.idProducto)

@@ -18,9 +18,9 @@ const actions = {
         let name = ""
         if(jsonData.length > 0) {
             id = jsonData.length + 1;
-            name = jsonData.txtNombre;
-        }
-        const objectoACrear = { ...products, id }; //Creacion de Objeto
+            name = req.body.txtNombre
+        };
+        const objectoACrear = { ...products, id, name }; //Creacion de Objeto
         jsonData.push(objectoACrear); //Agrego al Array
         fs.writeFileSync(__dirname + this.path, JSON.stringify(jsonData)); //Vuelve a escribirse
         return jsonData;

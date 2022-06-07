@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="../css/login.css">
     <%- include('../partials/head.ejs') %>
-    <link rel="stylesheet" href="css/login.css">
     <title>Inicia Sesion</title>
 </head>
 
@@ -10,16 +10,7 @@
     <%- include('../partials/header.ejs') %>
  
     <main>
-        <% if (typeof errors != 'undefined') { %>
-        <p>ERROR</p>
-        <ul>
-            <%for (let i=0; i< errors.length; i++){%>
-                <li>
-                    <%= errors.[i].msg %>        
-                </li>
-            <%}%>    
-        </ul>    
-        <%}%>
+
         <form>
             <div class="diseño-form">
                 <h4 class="textoInicio">

@@ -12,10 +12,8 @@ const datosUsers = require('./database/JSON/users.json');
 
 //Routes imports
 const mainRouter = require('./routes/mainRouter');
-const registerRouter = require('./routes/register.js');
 const productCart = require('./routes/productCart.js');
 const productDetail = require('./routes/productDetail');
-const loginRouter = require('./routes/login');
 const productCreate = require('./routes/productCreate');
 const products = require('./routes/products');
 const users = require('./routes/users');
@@ -35,8 +33,6 @@ app.use(express.json()); // Convertir el objeto literal en JSON
 app.use(methodOverride('_method')); //Para usar PUT y DELETE
 
 app.use('/',mainRouter);
-app.use('/login',loginRouter);
-app.use('/register',registerRouter);
 app.use('/productCart',productCart);
 app.use('/productDetail', productDetail);
 app.use('/productCreate', productCreate);

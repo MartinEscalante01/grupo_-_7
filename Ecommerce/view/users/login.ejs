@@ -10,19 +10,19 @@
     <%- include('../partials/header.ejs') %>
  
     <main>
-
-        <form>
-            <div class="diseño-form">
+        <div class="diseño-form">
                 <h4 class="textoInicio">
                     ¿YA TIENES CUENTA?
                 </h4>
+        </div>
+        <form action="/users/login" method="POST">
                 <div class="selector">
                     <p>Correo electronico</p>
-                    <input class="selector-box" type="text" name="nombres" id="nombres" placeholder="Nombre de Usuario" required="">
+                    <input class="selector-box" type="email" name="email" id="nombres" placeholder="Nombre de Usuario" required="">
                     <p>Contraseña</p>
                     <input class="selector-box" type="password" name="password" id="password" placeholder="Contraseña" required="">
                 </div>
-            </div>
+            
             <div>
                 <p>Al iniciar sesión, aceptas los <a href="#">Terminos y Condiciones</a>    de Sportix.</p>
             </div>

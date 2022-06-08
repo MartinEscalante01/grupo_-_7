@@ -14,6 +14,9 @@ const controller = {
     search : function(req,res) {
         return res.render('users/search')
     },
+    userCreate : (req,res) => {
+        res.render('users/userCreate')
+    },
     edit : function(req,res) {
         let idUser = req.params.idUser
         let users = [

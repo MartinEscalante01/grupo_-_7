@@ -1,3 +1,4 @@
+const req = require('express/lib/request');
 const fs = require('fs');
 const products = require('../database/JSON/products.json')
 
@@ -14,13 +15,11 @@ const actions = {
     create: function (products) {
         const jsonData = JSON.parse(fs.readFileSync(__dirname + this.path), 'utf8'); //Lee el JSON
         //Logica id
-        let id = 0;
-        let name = ""
-        if(jsonData.length > 0) {
-            id = jsonData.length + 1;
-            name = req.body.txtNombre
+        let productoCreado = {
+            id: jsonData.length + 1,
+            name: req.body
         };
-        const objectoACrear = { ...products, id, name }; //Creacion de Objeto
+        const objectoACrear = { ...products, productoCreado }; //Creacion de Objeto
         jsonData.push(objectoACrear); //Agrego al Array
         fs.writeFileSync(__dirname + this.path, JSON.stringify(jsonData)); //Vuelve a escribirse
         return jsonData;

@@ -11,9 +11,10 @@ router.get('/:idProducto', productController.detail); //http://localhost:3030/pr
 router.get('/:idProducto/comentarios/:idComments', productController.detailComments); //http://localhost:3030/products/:idProducto/comentarios/:idComments
 
 router.get('/:idProducto/edit', productController.edit); //http://localhost:3030/products/:id/edit
-router.put('/edit', (req,res) =>{res.send('PUT')}); //Actualiza informacion
-router.get('/:idProducto/delete', productController.delete); //Elimina producto creado
+router.put('/edit', productController.edit); //Actualiza informacion
 
+router.get('/:idProducto/delete', productController.delete); //Muestra vista de Delete
+router.delete('/:idProducto/delete', productController.delete); //Muestra vista de Delete
 
 
 

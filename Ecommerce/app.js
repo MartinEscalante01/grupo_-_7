@@ -28,6 +28,7 @@ app.set('views',__dirname + '/view');
 app.use(express.static('public')); 
 
 app.use(express.urlencoded({ extended: false })); //Capturar Informacion de un Formulario en un objeto literal
+
 app.use(express.json()); // Convertir el objeto literal en JSON
 
 app.use(methodOverride('_method')); //Para usar PUT y DELETE

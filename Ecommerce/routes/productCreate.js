@@ -8,9 +8,6 @@ const actionsController = require('../database/actions');
 // Formulario de creacion
 router.get('/', productController.productCreate); //http://localhost:3030/productCreate
 
-// Creacion de Informacion
-router.post('/creado', productController.create); 
-
 //Multer
 const multer = require('multer');
 const actions = require('../database/actions');
@@ -32,7 +29,7 @@ const uploadFile = multer({storage});
 const upload = uploadFile.single('txtImagen');
 
 // Procesamiento del formulario de creacion
-router.post('/', uploadFile.single('txtImagen'), actionsController.create);
+router.post('/', uploadFile.single('txtImagen'), productController.create);
 
 //Validaciones
 

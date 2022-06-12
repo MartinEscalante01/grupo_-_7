@@ -1,9 +1,8 @@
-function authMiddlewares  (req, res, next){
-    if(req.session.usuarioLogueado != undefined){
-        next();
-    }else{
-        res.send('Esta página es solo para usuarios');
-    }
+function authMiddleware(req, res, next) {
+	if (!req.session.userLogged) {
+		return res.redirect('/users/login');
+	}
+	next();
 }
 
-module.exports = authMiddlewares;
+module.exports = authMiddleware;

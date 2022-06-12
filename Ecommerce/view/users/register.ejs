@@ -10,42 +10,129 @@
 
     <%- include('../partials/header.ejs') %>
     <main>
+		<div >
+			<h1>Formulario de Registro</h2>
+			<ul class="nav-title" role="tablist">
+				<li class="nav-item" role="presentation">
+					<a href="/users/register">Registrarse</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a href="/users/login">Iniciar Sesión</a>
+				</li>
+			</ul>
+		</div>
+		
         <section>
             <div class="todo">
                 <div class="formulario">
-                    <form action="post" id="CreateForm" action="/view/users/register.ejs">
-                        <input class="controls" type="text" placeholder="Nombre" name="nombre" required="require">
-                        <input class="controls"type="text" placeholder="Apellido"  name="apellido" required="require">
-                        <input class="controls"type="email" placeholder="Correo Electronico"  name="correo" required="require">
-                        <input class="controls"type="password" placeholder="contraseña"  name="correo" required="require">
-                        <input class="controls" type="date" placeholder="DD-MM-AAAA"  name="nacimiento" required="require">
-                        <input class="controls" type="text" name="direccion" placeholder="Direccion" required="require">
-                        <input class="controls" type="number" placeholder="Telefono"  name="numero" required="require">
+                    <form method="POST" action="/users/register" enctype="multipart/form-data">
+                        <div class="">
+							<div class="controls">
+								<label><b>Nombre completo:</b></label>
+								<input type="text" name="fullName" class="form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.fullName : null %>">
+								<% if (locals.errors && errors.fullName) { %>
+									<div class="text-danger">
+										<%= errors.fullName.msg %> 
+									</div>
+								<% } %>
+							</div>
+						</div>
+						<div class="">
+							<div class="controls">
+								<label><b>Correo electrónico:</b></label>
+								<input 
+									type="text" 
+									name="email" 
+									class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+									value="<%= locals.oldData ? oldData.email : null %>"
+								>
+								<% if (locals.errors && errors.email) { %>
+									<div class="text-danger">
+										<%= errors.email.msg %>
+									</div>
+								<% } %>
+							</div>
+						</div>
+						<div class="">
+							<div class="controls">
+								<label><b>Password:</b></label>
+								<input type="password" name="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+								>
+								<% if (locals.errors && errors.password) { %>
+									<div class="text-danger">
+										<%= errors.password.msg %>
+									</div>
+								<% } %>
+							</div>
+						</div>
+						
+						<div class="">
+							<div class="controls">
+								<label><b>Fecha de Nacimiento:</b></label><br>
+								<input type="date" placeholder="AAAA/MM/DD"  name="birthday" required="require"
+								value="<%= locals.oldData ? oldData.birthday : null %>"
+								>
+								<br>
+							</div>
+						</div>
+
+						<div class="">
+							<div class="controls">
+								<label><b>País de nacimiento:</b></label>
+								<select name="country" class="form-select <%= locals.errors && errors.country ? 'is-invalid' : null %>">
+									<option value="">Elegí un país</option>
+									<%  let countries = ['Argentina', 'Bolivia', 'Brasil', 'Colombia', 'Chile', 'Ecuador', 'Paraguay', 'Perú', 'Uruguay', 'Venezuela'];%>
+									<% for (const oneCountry of countries) { %>
+										<option 
+											value="<%= oneCountry %>"
+											<%= locals.oldData && (oneCountry === oldData.country) ? 'selected' : null %> 
+										> <%= oneCountry %> </option>
+									<% } %>
+								</select>
+								<% if (locals.errors && errors.country) { %>
+									<div class="text-danger">
+										<%= errors.country.msg %>
+									</div>
+								<% } %>
+							</div>
+						</div>
+						<div class="">
+							<div class="controls">
+								<label><b>Perfil:</b></label>
+								<input 
+									type="file" 
+									name="file"
+									class="form-control <%= locals.errors && errors.file ? 'is-invalid' : null %>"
+								>
+								<% if (locals.errors && errors.file) { %>
+									<div class="text-danger">
+										<%= errors.file.msg %>
+									</div>
+								<% } %>
+							</div>
+						</div>
+						<div>
+							<button type="submit" class="join">Unirse</button>
+						</div>
                     </form>
                 </div>
                 <div class="acceder">
                     <div>
                         <h3>Hacete miembro</h3>
                         <p>Unite a nuestra comunidad con tu perfil obtendras acceso anticipádo a los mejores porductos deportivos</p>
-                    </div>
+					</div>
+					<div class="acuerdos">                
+						<div>
+							<input type="checkbox" name="my-checkbox" id="opt-in">
+							<label for="opt-in">Registrate para recibir coreos electronicos del sitio con actualizacopmes de productos, ofertas y beneficios como miembros</label>
+						</div>
+					</div>
                 </div>
             </div>
                
-            <div class="acuerdos">
-                
-                <div>
-                    <input type="checkbox" name="my-checkbox" id="opt-in">
-                    <label for="opt-in">Registrate para recibir coreos electronicos del sitio con actualizacopmes de productos, ofertas y beneficios como miembros</label>
-                  </div>
-
-                <div>
-                    <button type="submit" form="CreateForm" >Unirse</button>
-                </div>
-                <span>Ya sos miembro?<a href="">Iniciar Sesion</a></span>
-            </div>
+            
         </section>
     </main>
-    <%- include('../partials/footer.ejs') %>
 
 </body>
 </html>

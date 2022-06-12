@@ -45,8 +45,8 @@
                                 <a href="/productDetail/<%= dato.id %>"><img src="../<%= dato.image %>" class="imgRecomendado"></a>
                                 <span class="prices">
                                     <div>  $ <%= dato.price %></div>
-                                    <span class="oldprice">$9.199,00</span>
-                                    <span class="saving"> 50% OFF </span>
+                                    <span class="oldprice">$ <%= dato.price * 1.2 %></span>
+                                    <span class="saving"> 20% OFF </span>
                                 </span>
                             </div>
                             <% } %>

@@ -70,6 +70,10 @@ h1{
     font-weight: bold;
 }
 
+.text-danger{
+    color: red;
+    display: ruby-text;
+}
 
 /* FORMULARIO */
 form{

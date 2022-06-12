@@ -3,34 +3,32 @@
 <head>
     <%- include('../partials/head.ejs') %>
     <link rel="stylesheet" href="../../css/productCreate.css">
-    <title>Sportix | Edicion Product </title>
+    <title>Sportix | Edicion Producto </title>
 
 </head>
 <body>
-    <header>
-        
-    </header>
-    <main>
-        <h1>Edicion Producto "<%= productEdit.name %>" | SPORTIX</h1>
-        <form method="POST" id="CreateForm" action="/products/edit?_method=PUT">
+  <header>
+    <nav>
+        <a href="/products">Listado de Productos</a>
+        <a href="#">Crear un nuevo Usuario</a>
+    </nav>
+  </header>
+  <main>
+    <h1>EDITAR - "<%= productEdit.name %>" | SPORTIX</h1>
+        <form method="POST" id="CreateForm" action="/productCreate?_method=PUT" enctype="multipart/form-data">
             <div>
             <label for="txtNombre">Nombre del Producto:</label>
-            <input class="controls" type="text" name="txtNombre" value="<%= productEdit.name %>" required="require">
+            <input class="controls" type="text" value="<%= productEdit.name %>" placeholder="Ingresar aqui..." name="name" required="require">
             </div>
 
             <div>
             <label for="">Descripcion del producto:</label>
-            <textarea name="txtDescripcion" id="controls" value="<%= productEdit.description %>" cols="30" rows="5"></textarea>
-            </div>
-            
-            <div>
-            <label for="txtImagen">Seleccion Imagen Perfil:</label>
-            <input type="file" name="txtImagen" value="<%= productEdit.image %>" accept=".jpg" multiple>
+            <textarea name="description" value="<%= productEdit.description %>" id="controls" cols="30" rows="5"></textarea>
             </div>
             
             <div>
             <label for="cnbCategoria">Categoria del Producto:</label>
-            <select name="cnbCategory" id="cnbCategory">
+            <select name="category" id="cnbCategory">
                 <option value="Indumentaria">Indumentaria</option>
                 <option value="Calzado">Calzado</option>
                 <option value="Accesorios">Accesorios</option>
@@ -38,23 +36,23 @@
             </div>
             
             <div class="size">
-            <label  for="txtCategoria">Seleccionar Talles:</label><br>
+            <label  for="size">Seleccionar Talles:</label><br>
             <ul>
                 <li>
                   <label for="Opcion1">
-                    <input type="radio" id="Opcion1" name="category" value="S" >
+                    <input type="radio" id="Opcion1" name="Size S" value="S" >
                     S
                   </label>
                 </li>
                 <li>
                   <label for="Opcion2">
-                    <input type="radio" id="Opcion1" name="category" value="M" >
+                    <input type="radio" id="Opcion1" name="Size M" value="M" >
                     M
                   </label>
                 </li>
                 <li>
                 <label for="Opcion3">
-                    <input type="radio" id="Opcion1" name="category" value="L" >
+                    <input type="radio" id="Opcion1" name="Size L" value="L" >
                     L
                   </label>
                 </li>
@@ -62,21 +60,42 @@
             </div>
             
             <div>
-            <label for="txtNombre">Fecha de Alta:</label><br>
-            <input class="controls" type="date" placeholder="DD-MM-AAAA"  name="Fecha de Alta" required="require"><br>
+            <label>Fecha de Alta:</label><br>
+            <input class="controls" type="date" value="<%= productEdit.date %>" placeholder="DD-MM-AAAA"  name="date" required="require"><br>
             </div>
 
             <div>
-            <label for="txtNombre">SKU Number:</label><br>
-            <input class="controls" type="number" placeholder="Number"  name="SKU" required="require"><br>
+            <label>Price:</label><br>
+            <input class="controls" type="number" value="<%= productEdit.price %>" placeholder="Precio del Producto"  name="price" required="require"><br>
+            </div>
+
+            <div>
+              <label for="gendre">Genero del Producto:</label>
+              <select name="gendre">
+                  <option value="Hombre">Hombre</option>
+                  <option value="Mujer">Mujer</option>
+                  <option value="Niño">Niño</option>
+                  <option value="Unisex">Unisex</option>
+              </select>
+            </div>
+
+            <div>
+                <label>Marca del Producto:</label>
+                <input class="controls" type="text" value="<%= productEdit.brand %>" placeholder="Marca del Producto..." name="brand" required="require">
+            </div>
+
+            <div>
+              <label for="txtImagen">Imagen del Producto:</label>
+              <input type="file" value="<%= productEdit.file %>" name="file" accept=".jpg" multiple>
             </div>
 
             <div class="botones">
-            <button type="submit">EDITAR PRODUCTO</button>
-            <button type="reset">Limpiar Contenido</button>
-            <button type="submit">CANCELAR</button>
+              <button type="submit">EDITAR PRODUCTO</button>
+              <button type="reset">Limpiar Contenido</button>
+              <button type="submit">CANCELAR</button>
             </div>
         </form>
+  </main>
 
     </main>
     <footer>

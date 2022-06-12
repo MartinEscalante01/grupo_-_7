@@ -1,9 +1,8 @@
 const express = require('express');
 const app = express();
-const path = require('path');
 const methodOverride = require('method-override');
 const session = require('express-session')
-
+const cookies = require('cookie-parser');
 
 //datos
 const datosProducts = require('./database/JSON/products.json');
@@ -17,21 +16,19 @@ const productDetail = require('./routes/productDetail');
 const productCreate = require('./routes/productCreate');
 const products = require('./routes/products');
 const users = require('./routes/users');
-const { error } = require('console');
-
 
 //middlewares
-app.set('view engine','ejs');
+app.set('view engine','ejs');// Template Engine
 app.set('views',__dirname + '/view');
-
 
 app.use(express.static('public')); 
 
 app.use(express.urlencoded({ extended: false })); //Capturar Informacion de un Formulario en un objeto literal
-
 app.use(express.json()); // Convertir el objeto literal en JSON
 
 app.use(methodOverride('_method')); //Para usar PUT y DELETE
+
+app.use(cookies());
 
 app.use('/',mainRouter);
 app.use('/productCart',productCart);
@@ -40,22 +37,24 @@ app.use('/productCreate', productCreate);
 app.use('/products', products);
 app.use('/users', users);
 
-//Express-Session
+
 app.use(session( {
-    secret: "Secreto",
+    secret: 'SPORTIX Secret',
     resave: true,
-    saveUninitialized: true
-}));
+    saveUninitialized: true,
+    cookie: { secure: true }
+}));//Middleware Express-Session
 
-
-app.get('/datosProducts', (req,res) =>{
-    res.json (datosProducts );
+app.get('/pruebaSesiones', (req, res) =>{
+    req.session.usuario = 'JP';
+    req.session.rol = 'Admin';
+    if(req.session.visitas == undefined){
+        req.session.visitas = 0;
+    };
+    req.session.visitas++;
+    console.log(req.session.visitas)
+    res.send(`El usuario ${req.session.usuario} con rol ${req.session.rol} ha visitado la pagina ${req.session.visitas}`);
 });
-
-app.get('/datosUsers', (req,res) =>{
-    res.json (datosUsers );});
-
-
 
 app.use('/',  (req, res) => { 
     res.status(404).send('NOT FOUND');

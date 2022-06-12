@@ -1,16 +1,59 @@
+const bcryptjs = require('bcryptjs');
+const {validationResult} = require('express-validator');
+const user = require('../database/user');
+const dataUsers = require('../database/JSON/users.json')
+
 const controller = {
     index : function(req,res) {
         return res.render('/users/userEdit')
     },
+    list: (req,res) =>{
+        return res.render('users/usersList', {'dataUsers': dataUsers})
+    },
     login : function(req,res) {
         return res.render('users/login')
     },
-    register : function(req,res) {
+    processLogin: (req,res) =>{
+        let userLogueado = user.itemUser('email', req.body.email);
+		if(userLogueado) {
+		    let loadPassword = bcryptjs.compareSync(req.body.password, userLogueado.password); //VALIDAD CONTRASEÑA CON EL COMPARESYNC, puedo comparar con la contraseña que esta encriptada en mi base de datos
+			if (loadPassword) {
+			// 	delete userLogueado.password;
+			// 	req.session.userLogged = userLogueado;
+
+			// 	if(req.body.remember_user) {
+			// 		res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+			// 	}
+			//return res.redirect('/users/profile');
+			res.redirect('/')
+            };
+		return res.render('users/login', {errors: {email: {msg: 'El usuario o la contraseña no son correctas. Por favor, inténtalo de nuevo.'}}});
+    }
+    },
+    register : (req,res) =>{
         return res.render('users/register')
     },
-    list : function(req,res) {
-        return res.render('users/list')
-    },
+    processRegister: (req, res) => {
+		//VALIDACIONES Y MENSAJES DE ERRORES
+        const resultValidation = validationResult(req);
+		if (resultValidation.errors.length > 0) {
+			return res.render('users/register', {
+				errors: resultValidation.mapped(), //mapped convierte el array en objeto literal
+				oldData: req.body
+			});
+		};
+        //VALIDACION PARA NO RECARGAR + DE 1 USUARIO CON EL MISMO MAIL
+		let usuarioExistente = user.itemUser('email', req.body.email); 
+		if (usuarioExistente) {
+			return res.render('users/register', {
+				errors: {email: {msg: 'Este email ya está registrado'}},
+				oldData: req.body
+			});
+		}
+		let usuarioCreado = {...req.body, password: bcryptjs.hashSync(req.body.password, 10),file: req.file.filename}
+        let userCreated = user.create(usuarioCreado);
+        return res.redirect('/users/login');
+	},
     search : function(req,res) {
         return res.render('users/search')
     },
@@ -26,14 +69,17 @@ const controller = {
         let userToEdit = users[idUser];
         res.render('/users/userEdit', {userToEdit: userToEdit});
     },
-    processLogin: function(req,res){
-        let errors = validationResult(req);
-        if(errors.isEmpty()){
-            let usersJSON = fs.readf
-        }else{ res.render()
-            return res.render('users/login', {errors: errors.errors});
-        }
-    }
+    profile: (req, res) => {
+		return res.render('/users/profile', {
+			user: req.session.userLogged
+		});
+	},
+
+	logout: (req, res) => {
+		res.clearCookie('userEmail');
+		req.session.destroy();
+		return res.redirect('/');
+	}
 }
 
 module.exports = controller;

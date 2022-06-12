@@ -1,32 +1,39 @@
 const express = require('express');
 const router = express.Router();
-const { check, validationResult, body } = require('express-validator');
-const fs = require('fs');
+const {body, validationResult} = require('express-validator');
+
+// Controller
 const userController = require('../controllers/usersController');
+
+// Middlewares
+const uploadFile = require('../middlewares/multerMiddleware');
+const logDBMiddlewares = require('../middlewares/logDBMiddlewares');
+const guestMiddleware = require('../middlewares/guestMiddlewares');
+const authMiddleware = require('../middlewares/authMiddlewares');
+const validations = require('../middlewares/validations');
 
 router.get('/', userController.index);
 
-router.get('/register', userController.register);
+// Formulario de registro
+router.get('/register', userController.register); //Falta sumar el guestMiddleware
 
-//router.post('/register', userController.create);
+// Procesar el registro
+router.post('/register', uploadFile.single('file'), validations ,userController.processRegister);
 
+// Formulario de login
 router.get('/login', userController.login);
 
-router.post('/login', [
-    check('email').isEmail().withMessage('Email Inválido'),
-    check('password').isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres')
-] , userController.processLogin);
+// Procesar el login
+router.post('/login', userController.processLogin);//Falta sumar el guestMiddleware
 
-router.get('/list', userController.list);
+// Perfil de Usuario
+router.get('/profile/', userController.profile); //Falta sumar el authMiddleware
 
-router.get('/userCreate', userController.userCreate);
+// Logout
+router.get('/logout/', userController.logout);
 
-router.get('/search', userController.search);
-
-router.get('/:idUser', userController.edit);
-router.put('/edit', function(req,res){
-    res.send("Logrado por PUT")
-});
+// Listado de Usuarios
+router.get('/usersList', userController.list);
 
 
 module.exports = router;

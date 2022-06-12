@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = '\\JSON\\products.json';
 const productos = require('../database/JSON/products.json')
 const actions = require('../database/actions');
+const actionsProducts = require('../database/products');
 
 const productsController = {
     productCart : (req,res) => {
@@ -33,24 +34,29 @@ const productsController = {
             res.send('Bienvenidos a los comentarios del producto ' + req.params.idProducto + ' y estas enfocado en el comentario ' + req.params.idComments);
         }
     },
-    create:(req,res) =>{
-        const body = req.body;
-        actions.path = path;
-        const response = actions.create(body);
-        res.status(200).render('products/productList', {productos: response});
+    create: (req,res) =>{
+        let newProduct = {...req.body,file: req.file.filename};
+        let productCreate = actionsProducts.create(newProduct);
+        return res.redirect('/products');
     },
     edit: (req,res) =>{
         let productEdit = productos.find(producto => producto.id == req.params.idProducto)
         res.render('products/productEdit', { 'productEdit': productEdit })
     },
+    editProcess: (req,res) =>{
+        const body = req.body;
+        actions.path = path;
+        const response = actions.modify(body);
+        res.status(200).redirect('/products', {productos: response});
+    },
     delete: (req,res) =>{
         let idProducto = productos.find(producto => producto.id == req.params.idProducto)
         res.render('products/delete' , {'idProducto': idProducto});
     },
-    store: (req, res) => {
+    deleteProcess: (req,res) =>{
         let product = req.body;
-        productoId = productos.create(product);
-        res.redirect('/products/' + productoId);
+        let deleteProduct = actionsProducts.delete(product);
+        res.status(200).redirect('/products', {productos: deleteProduct});
     },
 }
 

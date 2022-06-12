@@ -10,17 +10,29 @@
     <%- include('../partials/header.ejs') %>
  
     <main>
-        <div class="diseño-form">
-                <h4 class="textoInicio">
-                    ¿YA TIENES CUENTA?
-                </h4>
-        </div>
+        <div >
+			<h1>Iniciar Sesión</h1>
+			<ul class="nav-title" role="tablist">
+				<li class="nav-item" role="presentation">
+					<a href="/users/register">Registrarse</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a href="/users/login">Iniciar Sesión</a>
+				</li>
+			</ul>
+		</div>
         <form action="/users/login" method="POST">
-                <div class="selector">
-                    <p>Correo electronico</p>
-                    <input class="selector-box" type="email" name="email" id="nombres" placeholder="Nombre de Usuario" required="">
-                    <p>Contraseña</p>
-                    <input class="selector-box" type="password" name="password" id="password" placeholder="Contraseña" required="">
+                <div>
+                    <div><% if (locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
+                    </div>
+                    <div class="selector">
+                        <input class="selector-box" type="email" name="email" id="nombres" placeholder="Nombre de Usuario" required="">
+                        <input class="selector-box" type="password" name="password" id="password" placeholder="Contraseña" required="">
+                    </div>
                 </div>
             
             <div>

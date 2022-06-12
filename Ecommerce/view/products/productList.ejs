@@ -8,7 +8,7 @@
 <body>
     <header>
         <nav>
-            <a href="#">Listado de Usuarios</a>
+            <a href="/users/usersList">Listado de Usuarios</a>
             <a href="/productCreate">Crear un nuevo Producto</a>
         </nav>
     </header>
@@ -25,13 +25,19 @@
                             Nombre
                         </td>
                         <td>
+                            Categoria
+                        </td>
+                        <td>
                             Precio
                         </td>
                         <td>
-                            Descuento
+                            Genero
                         </td>
                         <td>
-                            Categoria
+                            Marca
+                        </td>
+                        <td>
+                            Fecha
                         </td>
                     </tr>
                 
@@ -44,17 +50,19 @@
                             <%= dato.name %>
                            </td>
                            <td>
+                            <%= dato.category %>
+                           </td>
+                           <td>
                             <%= dato.price %>
                            </td>
                            <td>
-                            <% if(dato.discount !== null){%>
-                                <%= dato.discount + '%'%>
-                            <%}else{%>
-                                <%= ''%>
-                            <% } %> 
+                            <%= dato.gendre %>
                            </td>
                            <td>
-                            <%= dato.category %>
+                            <%= dato.brand%>
+                           </td>
+                           <td>
+                            <%= dato.date%>
                            </td>
                            <td>
                             <a href="products/<%= dato.id %>/edit"><button class="editar">Editar Producto</button></a>

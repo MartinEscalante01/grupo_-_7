@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/list.css">
+    <title>Sportix | Listado de Usuarios </title>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/products">Listado de Productos</a>
+            <a href="/users/register">Crear un nuevo Usuario</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="todo">
+                <h1>SPORTIX | Listado de Usuarios</h1>
+                <table>
+                    <tr>
+                        <td>
+                            Id
+                        </td>
+                        <td>
+                            Nombre
+                        </td>
+                        <td>
+                            Email
+                        </td>
+                        <td>
+                            Fecha de Nacimiento
+                        </td>
+                        <td>
+                            Pais de Nacimiento
+                        </td>
+                    </tr>
+                
+                    <% for(let dato of dataUsers) { %> 
+                       <tr>
+                        <td>
+                            <%= dato.id %>
+                           </td>
+                           <td>
+                            <%= dato.fullName %>
+                           </td>
+                           <td>
+                            <%= dato.email %>
+                           </td>
+                           <td>
+                            <%= dato.birthday %>
+                           </td>
+                           <td>
+                            <%= dato.country %>
+                           </td>
+                           <td>
+                            <a href="products/<%= dato.id %>/edit"><button class="editar">Editar Usuario</button></a>
+                            <a href="products/<%= dato.id %>/delete"><button class="borrar">Eliminar</button></a>
+                           </td>
+                       </tr>
+                    <% } %> 
+                </table>
+        </section>
+    </main>
+
+</body>
+</html>

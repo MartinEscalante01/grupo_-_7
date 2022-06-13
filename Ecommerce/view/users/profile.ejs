@@ -10,20 +10,17 @@
     <%- include('../partials/header.ejs') %>
  
     <main>
-	<!-- Container -->
-	<div class="container">
-		<div>
+		<div class="container">
 			<div>
-				<h2>Hi <%= user.fullName %> </h2>
-				<img src="../public/img/profileImages/<%= user.file %> ">
-				<br>
-				<br>
-				<div class="alert alert-success"><%= user.email %> </div>
+				<div>
+					<h2>Hi <%= user.fullName %> </h2>
+					<img src="../img/profileImages/<%= user.file %> ">
+					<br>
+					<br>
+					<div class="alert alert-success"><%= user.email %> </div>
+				</div>
 			</div>
-		</div>
-	</div>
-	<!-- //Container -->
-        
+		</div>   
     </main>
 
     <!-- <%- include('../partials/footer.ejs') %> -->

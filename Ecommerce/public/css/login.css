@@ -87,7 +87,6 @@
   
   .selector {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 30px;
@@ -284,6 +283,24 @@ div.searchmobile i:hover {
     text-decoration: none;
 }
 
+.col-remember{
+    flex:0 0 auto;
+    width:50%;
+    margin-top:.5rem;
+    margin-bottom:.5rem;
+}
+
+.form-remember{
+    display: block;
+    padding-left: 1.5em;
+    min-height: 1.5rem;
+    margin-bottom: 0.125rem
+
+}
+
+.form-check{
+    opacity: 0.5;
+}
 
 /*Mobile*/
 @media (min-width:360px) {
@@ -396,6 +413,20 @@ div.searchmobile i:hover {
     div.descripcion-producto ul{
         list-style: none;
     }
+
+    .form-remember{
+        display: block;
+        padding-left: 31.5em;
+    
+    }
+
+    .selector {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 30px;
+      }
      
 }
 /* Terminado Desktop */

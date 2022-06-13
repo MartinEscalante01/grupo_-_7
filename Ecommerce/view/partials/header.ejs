@@ -13,6 +13,20 @@
 </head>
 <body>
     <header>
+        <!-- <ul class="navbar-nav align-items-center">
+            % if (locals.isLogged) { %>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="/images/avatars/%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;">
+                        Hi %= locals.userLogged.fullName %> 
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/users/profile">My profile</a>
+                        <li><hr class="dropdown-divider"></li>
+                        <a class="dropdown-item" href="/users/logout">Logout</a>
+                    </ul>
+                </li>
+        </ul> -->
         <div class="login-dektop">
             <a href="/users/register"><button>Registrarse </button></a>
             <span> | </span>

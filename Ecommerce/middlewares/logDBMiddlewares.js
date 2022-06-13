@@ -1,11 +1,10 @@
-const {body, validationResult} = require('express-validator');
-const User = require('../database/user');
+const user = require('../database/user');
 
-function validations(req, res, next) {
+function logDBMiddlewares(req, res, next) {
 	res.locals.isLogged = false;
 
 	let emailInCookie = req.cookies.userEmail;
-	let userFromCookie = User.itemUser('email', emailInCookie);
+	let userFromCookie = user.itemUser('email', emailInCookie);
 
 	if (userFromCookie) {
 		req.session.userLogged = userFromCookie;
@@ -19,4 +18,4 @@ function validations(req, res, next) {
 	next();
 }
 
-module.exports = validations;
+module.exports = logDBMiddlewares;

@@ -42,7 +42,7 @@
                 <section class="productos-cards">
                         <% for (let dato of recomendaciones){ %>
                             <div class="cards">
-                                <a href="/productDetail/<%= dato.id %>"><img src="../<%= dato.image %>" class="imgRecomendado"></a>
+                                <a href="/productDetail/<%= dato.id %>"><img src="../img/productsImages/<%= dato.file %>" class="imgRecomendado"></a>
                                 <span class="prices">
                                     <div>  $ <%= dato.price %></div>
                                     <span class="oldprice">$ <%= dato.price * 1.2 %></span>

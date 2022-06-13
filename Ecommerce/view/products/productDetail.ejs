@@ -26,7 +26,7 @@
             <div class="detail">
 
                 <div>
-                    <img class="imagen" src="../<%= product.file %>" alt="<%= product.name %>">
+                    <img class="imagen" src="../img/productsImages/<%= product.file %>" alt="<%= product.name %>">
                 </div>
                 <div class="child">
 
@@ -62,7 +62,7 @@
                             <input class="input-qty" type="txtNumber" min="1" value="1">
                         </div>
                         <div class="container-comprar">
-                            <button class="comprar"><a href="/productCart"></a>Agregar al Carrito</a></button>
+                            <a href="/productCart"><button class="comprar">Agregar al Carrito</button></a>
                             <i class="fas fa-light fa-heart-circle-plus"></i>
                         </div>
                     </div>
@@ -78,17 +78,13 @@
                 <p><%= product.description %></p>
                 <br>
                 <ul>
-                    <li><%= product.gendre %>: Hombre</li>
-                    <li>Adecuado para: Entrenamiento.</li>
+                    <li>Categoria: <%= product.category %></li>
+                    <li>Genero: <%= product.gendre %></li>
+                    <li>Marca: <%= product.brand %></li>
                     <li>Material: Poliéster reciclado.</li>
-                    <li>Cuello: Redondo</li>
-                    <li>Manga: Corta</li>
-                    <li>Calce: Regular</li>
-                    <li>Equipo: Boca Juniors</li>
-                    <li>Escudo: Bordado</li>
                     <li>Garantía: Contra defecto de fabricación.</li>
                     <li>Origen: Nacional</li>
-                    <li>Marca: <%= product.brand %></li>
+                    
                 </ul>
             </div>
         </section>
@@ -101,7 +97,7 @@
                     <section class="Opps">
                         <% for (let dato of recomendaciones){ %>
                         <div class="boxOpps">
-                            <a href="/productDetail/<%= dato.id %>"><img src="../<%= dato.file %>" class="imgRecomendado"></a>
+                            <a href="/productDetail/<%= dato.id %>"><img src="../img/productsImages/<%= dato.file %>" class="imgRecomendado"></a>
                             <span class="newPrice">
                                 <div>  $ <%= dato.price %></div>
                                 <span class="priorPrice">$9.199,00</span>

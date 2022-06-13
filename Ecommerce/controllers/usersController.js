@@ -18,14 +18,9 @@ const controller = {
 		if(userLogueado) {
 		    let loadPassword = bcryptjs.compareSync(req.body.password, userLogueado.password); //VALIDAD CONTRASEÑA CON EL COMPARESYNC, puedo comparar con la contraseña que esta encriptada en mi base de datos
 			if (loadPassword) {
-			// 	delete userLogueado.password;
-			// 	req.session.userLogged = userLogueado;
-
-			// 	if(req.body.remember_user) {
-			// 		res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
-			// 	}
-			//return res.redirect('/users/profile');
-			res.redirect('/')
+                delete userLogueado.password; //por seguridad
+                req.session.userLogged = userLogueado;
+                return res.redirect('/users/profile');
             };
 		return res.render('users/login', {errors: {email: {msg: 'El usuario o la contraseña no son correctas. Por favor, inténtalo de nuevo.'}}});
     }
@@ -52,7 +47,7 @@ const controller = {
 		}
 		let usuarioCreado = {...req.body, password: bcryptjs.hashSync(req.body.password, 10),file: req.file.filename}
         let userCreated = user.create(usuarioCreado);
-        return res.redirect('/users/login');
+        return res.redirect('users/login');
 	},
     search : function(req,res) {
         return res.render('users/search')
@@ -70,9 +65,8 @@ const controller = {
         res.render('/users/userEdit', {userToEdit: userToEdit});
     },
     profile: (req, res) => {
-		return res.render('/users/profile', {
-			user: req.session.userLogged
-		});
+        res.send(userLogueado)
+        //return res.render('users/profile', {user: req.session.userLogged});
 	},
 
 	logout: (req, res) => {

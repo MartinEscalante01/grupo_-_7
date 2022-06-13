@@ -12,16 +12,5 @@ router.get('/', productController.productCreate); //http://localhost:3030/produc
 // Procesamiento del formulario de creacion
 router.post('/', upload, productController.create);
 
-//Validaciones
-
-router.post('/creadovalidacion', (req, res) =>{
-    upload(req, res, (err) => {
-        if(err){
-            res.status(400).send('ALGO SALIO MAL')
-        }
-        res.send('OK')
-    })
-});
-
 
 module.exports = router;

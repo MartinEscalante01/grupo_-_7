@@ -315,6 +315,9 @@ div.descripcion-producto{
 
 }
 
+div.container-comprar a{
+    text-decoration: none;
+}
 
 /* Oportunidades */
 .Container-Opps{

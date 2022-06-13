@@ -1,3 +1,45 @@
+# Retrospectiva Sprint 5- Equipo N°7
+
+Nuestras principales conclusiones de la retro del Sprint 5.
+
+## Para destacar:
+
+-   **Compromiso y esfuerzo a pesar de las adversidades.**
+
+## Avances como equipo:
+
+-   **Avanzamos en generar una pagina dinamica con base de datos de productos y usuarios.**
+-   **Aceptamos que fue complicado dedicarle tiempo al proyecto y pedimos mucha ayuda al profesor.**
+-   **Mejoramos en la organizacion y utilizacion del tablero de trabajo.**
+
+## Puntos Negativos y Complicaciones que tuvimos en el proceso de este Sprint:
+
+-   **Estamos de acuerdo entre los 3 que fue un sprint muy dificil por problemas personales.**
+-   **Subestimamos las tareas y entregables.**
+-   **Perdimos mucho tiempo en pedir ayudar.**
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Retrospectiva Sprint 4- Equipo N°7
+
+Nuestras principales conclusiones de la retro del Sprint 4.
+
+## Para destacar:
+
+-   **Sorpresa de los cambios que va generando el proyecto.**
+
+## Avances como equipo:
+
+-   **Logramos entregar en tiempo.**
+-   **Nos sentimos comodos como equipo y cada uno sabe las fortalezas del otro.**
+-   **Nos pudimos complementar correctamente y suplir o corregir errores del compañero, donde se aprende aun mas.**
+
+## Oportunidades para Mejorar:
+
+-   **Atencion a los tiempos de entrega.**
+-   **Hacer una reunion inicial para repasar los temas nuevos aprendidos en clase del sprint.**
+-   **Pedir mas ayuda a los profesores/compañeros y no perder tanto tiempo en intentar resolverlo uno mismo.**
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Retrospectiva Sprint 3- Equipo N°7
 
 Nuestras principales conclusiones de la retro del Sprint 3.

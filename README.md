@@ -19,8 +19,6 @@ Estudiante de la licenciatura en Sistemas en la Universidad Nacional de Lanús, 
 _**Facundo Emmanuel Rodríguez**_:
 Recibido de Contador Público en la Univesidad de Buenos Aires y actualmente trabajo como Analista de Planning en us de programacion que captaron mi atencion y ganas de aprender y desarrollarme sobre el back-end. Soy un apasionado del futbol, de pasar tiempo con mis amigos y los juegos online.
 
-_**Gustavo Dalla Costa**_:
-Licenciado en Informática en la UP. Actualmente me desarrollo como Auditor de Sistemas en Banco Credicoop. Me apasiona el desarrollo back-end, en ese momento puedo crear y superar nuevos desafíos. Disfruto del tiempo libre en familia y con amigos.
 
 **Referentes**:
 
@@ -33,3 +31,7 @@ https://www.futbolemotion.com/ --> e-comerce seleccionado por la información qu
 https://www.mercadolibre.com.ar/c/deportes-y-fitness --> El famoso e indiscutido sitio de compras, seleccionado por la gran variedad de productos que ofrecen.
 
 https://locademia.racingclub.com.ar/ --> Sitio web del Primer Grande del Futbol Argentino, con distintos tipos de servicios y productos para sus asosciados. Nos gusta su versatilidad.
+
+**Tablero de Trabajo - TRELLO**:
+
+https://trello.com/b/IVKmjy97/proyecto-integrador-dh

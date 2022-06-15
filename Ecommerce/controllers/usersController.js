@@ -14,12 +14,12 @@ const controller = {
         return res.render('users/login')
     },
     processLogin: (req,res) =>{
-        let userLogueado = user.itemUser('email', req.body.email);
-		if(userLogueado) {
-		    let loadPassword = bcryptjs.compareSync(req.body.password, userLogueado.password); //VALIDAD CONTRASEÑA CON EL COMPARESYNC, puedo comparar con la contraseña que esta encriptada en mi base de datos
+        let userLog = user.itemUser('email', req.body.email);
+		if(userLog) {
+		    let loadPassword = bcryptjs.compareSync(req.body.password, userLog.password); //VALIDAD CONTRASEÑA CON EL COMPARESYNC, puedo comparar con la contraseña que esta encriptada en mi base de datos
 			if (loadPassword) {
-                delete userLogueado.password; //por seguridad
-                req.session.userLogged = userLogueado;
+                delete userLog.password; //por seguridad
+                req.session.userLogged = userLog;
                 return res.redirect('/users/profile');
             };
 		return res.render('users/login', {errors: {email: {msg: 'El usuario o la contraseña no son correctas. Por favor, inténtalo de nuevo.'}}});
@@ -65,7 +65,7 @@ const controller = {
         res.render('/users/userEdit', {userToEdit: userToEdit});
     },
     profile: (req, res) => {
-        res.send(userLogueado)
+        console.log(req.session)
         //return res.render('users/profile', {user: req.session.userLogged});
 	},
 

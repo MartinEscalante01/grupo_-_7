@@ -94,6 +94,11 @@ tr:nth-child(even) {
     background: #F8F8F8;
 }
 
+td img {
+    width: 4rem;
+    height: 4rem
+}
+
 /* Responsive */
 
 @media (max-width: 760px) {

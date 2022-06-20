@@ -25,10 +25,10 @@ const actions = {
         fs.writeFileSync(__dirname + this.path, JSON.stringify(jsonData)); //Vuelve a escribirse
         return jsonData;
     },
-    modify: function(products) {
+    modify: function (products) {
+        console.log("pasamos por el action");
         const jsonData = JSON.parse(fs.readFileSync(__dirname + this.path), 'utf8');
-        
-        const objectoAModificar = jsonData.find(producto => producto.id == products.id);
+        let objectoAModificar = jsonData.find(producto => producto.id == products.id);
         objectoAModificar = products;
 
         fs.writeFileSync(__dirname + this.path, JSON.stringify(jsonData));

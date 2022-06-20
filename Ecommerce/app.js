@@ -10,9 +10,6 @@ const logDBMiddleware = require('./middlewares/logDBMiddlewares');
 //middlewares
 app.use(session( {
     secret: 'SPORTIX Secret',
-    resave: true,
-    saveUninitialized: true,
-    cookie: { secure: true }
 }));//Middleware Express-Session
 
 app.use(cookies());
@@ -45,9 +42,9 @@ app.use('/products', products);
 app.use('/users', users);
 
 
-app.use('/',  (req, res) => { 
-    res.status(404).send('NOT FOUND');
-});
+// app.use('/',  (req, res) => { 
+//     res.status(404).send('NOT FOUND');
+// });
       
 // Servidor
 let port = process.env.PORT || 3030;

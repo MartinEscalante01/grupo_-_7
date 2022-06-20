@@ -14,7 +14,7 @@ const user = {
 		let usuarioEncontrado = allUser.find(user => user.id === id);
 		return usuarioEncontrado;
 	},
-	itemUser: function (item, text) {
+	itemUser: function (item, text) { //Metodo que busque por algun campo especifico
 		let allUser = this.usersData();
 		let usuarioEncontrado = allUser.find(user => user[item] === text);
 		return usuarioEncontrado;

@@ -5,58 +5,64 @@ const actions = require('../database/actions');
 const actionsProducts = require('../database/products');
 
 const productsController = {
-    productCart : (req,res) => {
+    productCart: (req, res) => {
         return res.render('products/productCart')
     },
-    productDetail : (req,res) => {
+    productDetail: (req, res) => {
         const product = productos.find(producto => producto.id == req.params.id)
         const recomendaciones = []
         for (let index = 0; index < 3; index++) {
-            const index =Math.floor(Math.random() * productos.length)
+            const index = Math.floor(Math.random() * productos.length)
             recomendaciones.push(productos[index])
         }
-        return res.render('products/productDetail', {  product,recomendaciones  })
+        return res.render('products/productDetail', { product, recomendaciones })
 
     },
-    productCreate : (req,res) => {
+    productCreate: (req, res) => {
         res.render('products/productCreate')
     },
-    index: (req,res) =>{
+    index: (req, res) => {
+
         res.render('products/productList', { 'productos': productos })
     },
-    detail: (req,res) =>{
+    detail: (req, res) => {
         res.redirect('/productDetail/' + req.params.idProducto)
     },
-    detailComments: (req,res) =>{
-        if(req.params.idComments == undefined ){
+    detailComments: (req, res) => {
+        if (req.params.idComments == undefined) {
             res.send('Bienvenidos a los comentarios del producto ' + req.params.idProducto);
-        }else{
+        } else {
             res.send('Bienvenidos a los comentarios del producto ' + req.params.idProducto + ' y estas enfocado en el comentario ' + req.params.idComments);
         }
     },
-    create: (req,res) =>{
-        let newProduct = {...req.body,file: req.file.filename};
+    create: (req, res) => {
+        let newProduct = { ...req.body, file: req.file.filename };
         let productCreate = actionsProducts.create(newProduct);
         return res.redirect('/products');
     },
-    edit: (req,res) =>{
+    edit: (req, res) => {
         let productEdit = productos.find(producto => producto.id == req.params.idProducto)
-        res.render('products/productEdit', { 'productEdit': productEdit })
+        res.render('products/productEdit', { productEdit })
     },
-    editProcess: (req,res) =>{
-        const body = req.body;
+    editProcess: (req, res) => {
+        console.log("llegue a guardar la edicion del producto");
+        let editar = req.body;
+        console.log(editar, " ------- datos de req.body ");
+        console.log(req.body, " ------------------- req.body");
+        console.log(req.params, " -----------------------req.params");
         actions.path = path;
-        const response = actions.modify(body);
-        res.status(200).redirect('/products', {productos: response});
+        let resp = actions.modify(req.params);
+        console.log(resp, "------------aca tenemos resp")
+        res.status(200).redirect('/products');
     },
-    delete: (req,res) =>{
+    delete: (req, res) => {
         let idProducto = productos.find(producto => producto.id == req.params.idProducto)
-        res.render('products/delete' , {'idProducto': idProducto});
+        res.render('products/delete', { 'idProducto': idProducto });
     },
-    deleteProcess: (req,res) =>{
+    deleteProcess: (req, res) => {
         let product = req.body;
         let deleteProduct = actionsProducts.delete(product);
-        res.status(200).redirect('/products', {productos: deleteProduct});
+        res.status(200).redirect('/products', { productos: deleteProduct });
     },
 }
 

@@ -10,6 +10,10 @@ const controller = {
             recomendaciones.push(productos[index])
         }
         return res.render('products/index', {  product,recomendaciones  })
+    },
+
+    notFound : (req,res) => {
+        return res.status(404).render('products/notFound')
     }
 }
 

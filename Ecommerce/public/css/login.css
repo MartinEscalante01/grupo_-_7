@@ -190,7 +190,9 @@ input {
     }
 
 .text-danger{
-    color:#dc3545!important
+    font-size: 12px;
+    color:#dc3545!important;
+    padding: 7px;
 }
 
 @media (max-width: 760px) {

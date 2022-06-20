@@ -42,9 +42,9 @@ app.use('/products', products);
 app.use('/users', users);
 
 
-// app.use('/',  (req, res) => { 
-//     res.status(404).send('NOT FOUND');
-// });
+app.use('/',  (req, res) => { 
+    res.status(404).redirect("/error");
+});
       
 // Servidor
 let port = process.env.PORT || 3030;

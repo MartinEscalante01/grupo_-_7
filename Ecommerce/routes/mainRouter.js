@@ -7,5 +7,7 @@ const controller = require('../controllers/mainController');
 /* GET HOME PAGE */
 router.get('/', controller.home);
 
+// NOT FOUND
+router.get('/error', controller.notFound)
 
 module.exports = router;

@@ -1,1 +1,48 @@
-[{"name":"Camiseta adidas Boca Juniors Primera Equipación 21/22","description":"Camiseta adidas Boca Juniors Primera Equipación 21/22","category":"Indumentaria","Size M":"M","date":"2022-06-11","price":"10999","gendre":"Hombre","brand":"Adidas","file":"1654959687221_img_.jpg","id":1},{"id":2,"name":"Zapatillas Puma R78 Future","description":"De inspiración retro, pero con un estilo urbano y a la moda, las zapatillas iridiscentes R78 FUTURE son un básico moderno. Presentan un diseño de running tradicional, combinaciones de color originales y elementos de diseño clásicos. Este brillante modelo es impresionante.","category":"Calzado","date":"2022-06-13","price":"7999","gendre":"Hombre","brand":"Puma","file":"1655151438981_img_.jpg"},{"id":3,"name":"Camiseta Nike FC Barcelona Primera Equipación 2021-2022","description":"Anima a tu equipo con la camiseta de la primera equipación Match FC Barcelona. Está confeccionada con un tejido con capilarización del sudor para mantener la comodidad y la transpirabilidad tanto en el campo como en las gradas. Además, los detalles del equipo te permiten mostrar tu apoyo estés donde estés.","category":"Indumentaria","Size L":"L","date":"2022-06-13","price":"10800","gendre":"Hombre","brand":"Nike","file":"1655151512483_img_.jpg"},{"id":4,"name":"Bota adidas X Speedflow + FG","description":"DIAMOND EDGE es el nuevo pack de adidas para este final de temporada. Los tres silos de la marca alemana se tiñen de blanco combinado con azul para los detalles. Clase y buen gusto, eso es lo que nos trae adidas en esta preciosa colección.","category":"Calzado","date":"2022-06-13","price":"19900","gendre":"Hombre","brand":"Adidas","file":"1655151620567_img_.jpg"},{"id":5,"name":"Remera San Lorenzo","description":"dfgfdfg","category":"Indumentaria","date":"2022-06-21","price":"9997","gendre":"Hombre","brand":"Nike","file":"1655334201188_img_.jpg"}]
+[ 
+{
+  "name": "Camiseta adidas Boca Juniors Primera Equipación 21/22",
+  "description": "Camiseta adidas Boca Juniors Primera Equipación 21/22",
+  "category": "Indumentaria",
+  "Size M": "M",
+  "date": "2022-06-11",
+  "price": "10999",
+  "gendre": "Hombre",
+  "brand": "Adidas",
+  "file": "1654959687221_img_.jpg",
+  "id": 1
+ },
+ {
+  "id": 2,
+  "name": "Zapatillas Puma R78 Future",
+  "description": "De inspiración retro, pero con un estilo urbano y a la moda, las zapatillas iridiscentes R78 FUTURE son un básico moderno. Presentan un diseño de running tradicional, combinaciones de color originales y elementos de diseño clásicos. Este brillante modelo es impresionante.",
+  "category": "Calzado",
+  "date": "2022-06-13",
+  "price": "7999",
+  "gendre": "Hombre",
+  "brand": "Puma",
+  "file": "1655151438981_img_.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Camiseta Nike FC Barcelona Primera Equipación 2021-2022",
+  "description": "Anima a tu equipo con la camiseta de la primera equipación Match FC Barcelona. Está confeccionada con un tejido con capilarización del sudor para mantener la comodidad y la transpirabilidad tanto en el campo como en las gradas. Además, los detalles del equipo te permiten mostrar tu apoyo estés donde estés.",
+  "category": "Indumentaria",
+  "Size L": "L",
+  "date": "2022-06-13",
+  "price": "10800",
+  "gendre": "Hombre",
+  "brand": "Nike",
+  "file": "1655151512483_img_.jpg"
+ },
+ {
+  "id": 4,
+  "name": "Bota adidas X Speedflow + FG",
+  "description": "DIAMOND EDGE es el nuevo pack de adidas para este final de temporada. Los tres silos de la marca alemana se tiñen de blanco combinado con azul para los detalles. Clase y buen gusto, eso es lo que nos trae adidas en esta preciosa colección.",
+  "category": "Calzado",
+  "date": "2022-06-13",
+  "price": "19900",
+  "gendre": "Hombre",
+  "brand": "Adidas",
+  "file": "1655151620567_img_.jpg"
+ }
+]

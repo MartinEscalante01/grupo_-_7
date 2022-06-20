@@ -16,123 +16,147 @@
 }
 
 *{
-    margin: 0px;
     box-sizing: border-box;
-    
-}
-
-
-/* MAIN */
-main{
-    background-color: #d2dcf1fd;
-    padding: 15px;
-}
-
-
-/* TITULO / ENCABEZADO */
-header {
-    background-color: #000000;
-    color: white;
-    padding: 1rem;
-}
-
-a {
-    text-decoration: none;
-    color: var(--blue);
-}
-
-header nav a {
-    display: inline-block;
-    background-color: #000000;
-    color: rgb(255, 254, 254);
-    padding: var(--default-padding);
-    margin: 0 var(--default-margin);
-    border-radius: var(--default-radius);
-}
-
-header nav a:hover {
-    background-color: #ee1616;
-}
-
-h1{
-    font-family: 'Roboto', sans-serif;
-    font-style: italic;
-    margin: 60px;
-    display: flex;
-    justify-content: center;
-    font-size: 50px;
-    font-weight: bold;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
 /* FORMULARIO */
 
-label{
-    font-family: cursive;
-    font-size: larger;
-    font-weight: bolder;
-    margin-bottom: 10px;
+body{
+    font-family: Helvetica;
+    -webkit-font-smoothing: antialiased;;
 }
 
-.controls{
-    width: 100%;
-    background-color: rgb(255, 255, 255);
+.opciones{
     padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;  
+}
+
+.opciones a{
+    color: black;     
+}
+h1{
+    text-align: center;
     font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+    padding: 30px 0;
 }
 
+/* Table Styles */
 
-ul{
-    flex-direction: column;
+.table-wrapper{
     display: flex;
-    list-style: none;
-    font-size: x-large;
-    font-weight: bold;
+    justify-content: center;
+    margin: 0px 30px 40px;
+    border-radius: 5px;
 }
 
-li{
-    display: flex;
+.fl-table { 
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    background-color: white;
 }
 
-form{
-    padding: 5px;
+th {
+    padding: 18px;
+    border: solid 1px #fec303;
+    
 }
 
-@media (min-width:360px) {
-
+td {
+    text-align: center;
+    font-size: 15px;
+    border-bottom:  solid 0.5px lightgray;
+    padding: 10px
+    
 }
 
-@media (min-width:768px) {
-    .controls{
+thead th {
+    color: black;
+    background: #fec303;
+}
+
+
+thead th:nth-child(odd) {
+    color: black;
+    background: #fec303;
+}
+
+tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+/* Responsive */
+
+@media (max-width: 760px) {
+    .fl-table {
+        text-align: center;
+        display: block;
         width: 100%;
-        background-color: rgb(255, 255, 255);
-        padding: 10px;
-        border-radius: 4px;
-        margin-bottom: 16px;
-        border: 1px solid #8c8c8e;
-        font-size: 18px;
     }
-}
-
-@media (min-width:1024px){
-
-    div.size{
-        width: 54%;
+    .table-wrapper:before{
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
         position: relative;
+        overflow-x: auto;
     }
-    
-    .controls{
-        width: 100%;
-        background-color: rgb(255, 255, 255);
-        padding: 10px;
-        border-radius: 4px;
-        margin-bottom: 16px;
-        border: 1px solid #8c8c8e;
-        font-size: 18px;
+     td, th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
     }
-    
-
-    
+     thead th {
+        text-align: center;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
 }
-

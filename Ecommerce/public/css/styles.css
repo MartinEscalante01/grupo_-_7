@@ -331,7 +331,7 @@ h3 {
     text-align: justify;
     padding-top: 20px;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
        
 }
 .historiasTxt {
@@ -612,7 +612,6 @@ img{
     height: auto;
     width: 50%;
     margin: 10px;
-    padding-bottom: 17%
     }
     
     .novedadTxt{
@@ -720,7 +719,6 @@ img{
     line-height : 30px;
     height: auto;  
     width: 50%;
-    margin-top: -17%
     }
     
     .historiasTxt h2{
@@ -745,7 +743,7 @@ img{
     }
 
     .imgNovedad {
-    
+    height:30vht;
     margin-left: 8%;
     width: 80%;
     }

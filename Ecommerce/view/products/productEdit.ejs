@@ -15,7 +15,7 @@
   </header>
   <main>
     <h1>EDITAR - "<%= productEdit.name %>" | SPORTIX</h1>
-        <form method="POST" id="CreateForm" action="/<%= productEdit.id %>/edit?_method=PUT" enctype="multipart/form-data">
+        <form id="CreateForm" action="/products/edit/<%= productEdit.id %>?_method=PUT"  method="POST" enctype="multipart/form-data">
             <div>
             <label for="txtNombre">Nombre del Producto:</label>
             <input class="controls" type="text" value="<%= productEdit.name %>" placeholder="Ingresar aqui..." name="name" required="require">

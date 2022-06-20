@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="../css/login.css">
-    <%- include('../partials/head.ejs') %>
-    <title>Inicia Sesion</title>
-</head>
 
+<head>
+    <link rel="stylesheet" href="../css/login.css" !important> 
+
+    <%- include('../partials/head.ejs') %>
+        <title>Inicia Sesion</title>
+</head>
 <body>
-    <%- include('../partials/header.ejs') %>
- 
     <main>
-        <div >
-			<h1>Iniciar Sesión</h1>
-			<ul class="nav-title" role="tablist">
-				<li class="nav-item" role="presentation">
-					<a href="/users/register">Registrarse</a>
-				</li>
-				<li class="nav-item" role="presentation">
-					<a href="/users/login">Iniciar Sesión</a>
-				</li>
-			</ul>
-		</div>
-        <form action="/users/login" method="POST">
-                <div>
-                    <div><% if (locals.errors && errors.email) { %>
+        <nav class="opciones">
+            <a href="/users/usersList"> ← Volver al home</a>
+        </nav>
+
+        <div class="container" id="container">
+            <div class="form-container sign-in-container">
+                <form action="/users/login" method="POST">
+                    <h1>Bienvenido de nuevo!</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>o usa tu cuenta</span>
+                    <div>
+                        <% if (locals.errors && errors.email) { %>
                         <div class="text-danger">
                             <%= errors.email.msg %>
                         </div>
-                    <% } %>
+                         <% } %>
                     </div>
-                    <div class="selector">
-                        <input class="selector-box" type="email" name="email" id="nombres" placeholder="Nombre de Usuario" required="">
-                        <input class="selector-box" type="password" name="password" id="password" placeholder="Contraseña" required="">
-                    </div>
-                </div>
-                <div class="col-remember">
-                    <div class="form-remember">
-                        <label class="form-check">
-                            <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
-                        </label>
-                    </div>
-                </div>
-            <div>
-                <p>Al iniciar sesión, aceptas los <a href="#">Terminos y Condiciones</a>    de Sportix.</p>
+                    <input class="selector-box" type="email" name="email" id="nombres" placeholder="Nombre de Usuario" required="">
+                    <input class="selector-box" type="password" name="password" id="password" placeholder="Contraseña" required="">
+                    <label class="form-check">
+                        <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
+                    </label>
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                    <button>Entrar</button>
+                </form>
             </div>
-            <input class="send" type="submit" value="INICIA SESION">
-        </form>
-        
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-right">
+                        <h1>Un gusto conocerte, Sportixta!</h1>
+                        <p>Registrate con nosotros y comienza tu viaje</p>
+                        <a href="/users/register"><button class="ghost">Registrarse </button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
     </main>
 
     <!-- <%- include('../partials/footer.ejs') %> -->
-    
+
 </body>
+
 </html>

@@ -44,5 +44,16 @@
   "gendre": "Hombre",
   "brand": "Adidas",
   "file": "1655151620567_img_.jpg"
+ },
+ {
+  "id": 5,
+  "name": "Remera San Lorenzo",
+  "description": "dfgfdfg",
+  "category": "Indumentaria",
+  "date": "2022-06-21",
+  "price": "9997",
+  "gendre": "Hombre",
+  "brand": "Nike",
+  "file": "1655334201188_img_.jpg"
  }
 ]

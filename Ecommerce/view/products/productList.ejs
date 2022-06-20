@@ -1,78 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/list.css">
-    <title>Sportix | Listado de Productos </title>
-
+    <link rel="stylesheet" href="../css/list.css">
+    <%- include('../partials/head.ejs') %>
+    <title>Listado de Productos</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <a href="/users/usersList">Listado de Usuarios</a>
-            <a href="/productCreate">Crear un nuevo Producto</a>
-        </nav>
-    </header>
+    <%- include('../partials/header.ejs') %>
     <main>
         <section>
-            <div class="todo">
+            <nav class="opciones">
+                <a href="/users/usersList"> ← Listado de Usuarios</a>
+                <a href="/productCreate">Crear un nuevo Producto →</a>
+            </nav>
+            
                 <h1>SPORTIX | Listado de Productos</h1>
-                <table>
+                <div class="table-wrapper">
+                <table class="fl-table">
                     <tr>
-                        <td>
-                            Id
-                        </td>
-                        <td>
-                            Nombre
-                        </td>
-                        <td>
-                            Categoria
-                        </td>
-                        <td>
-                            Precio
-                        </td>
-                        <td>
-                            Genero
-                        </td>
-                        <td>
-                            Marca
-                        </td>
-                        <td>
-                            Fecha
-                        </td>
-                    </tr>
-                
-                    <% for(let dato of productos) { %> 
-                       <tr>
-                        <td>
-                            <%= dato.id %>
-                           </td>
-                           <td>
-                            <%= dato.name %>
-                           </td>
-                           <td>
-                            <%= dato.category %>
-                           </td>
-                           <td>
-                            <%= dato.price %>
-                           </td>
-                           <td>
-                            <%= dato.gendre %>
-                           </td>
-                           <td>
-                            <%= dato.brand%>
-                           </td>
-                           <td>
-                            <%= dato.date%>
-                           </td>
-                           <td>
-                            <a href="products/<%= dato.id %>/edit"><button class="editar">Editar Producto</button></a>
-                            <a href="products/<%= dato.id %>/delete"><button class="borrar">Borrar Producto</button></a>
-                           </td>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nombre</th>
+                                <th>Categoria</th>
+                                <th>Precio</th>
+                                <th>Genero</th>
+                                <th>Marca</th>
+                                <th>Fecha</th>
+                                <th>Editar</th>
+                                <th>Eliminar</th>
+                            </tr>
+                            </thead>
+                    <tbody>                   
+                         <% for(let dato of productos) { %> 
+                        <tr>
+                            <td> <%= dato.id %> </td>
+                            <td> <%= dato.name %></td>
+                            <td> <%= dato.category %></td>            
+                            <td><%= dato.price %></td>     
+                            <td><%= dato.gendre %></td>          
+                            <td><%= dato.brand %></td>                
+                            <td><%= dato.date %></td>
+                            <td><a href="edit/<%= dato.id %>"><button class="editar">Editar Producto</button></a></td>
+                            <td><a href="products/<%= dato.id %>/delete"><button class="borrar">Eliminar Producto</button></a></td>
                        </tr>
+                    </tbody>
                     <% } %> 
                 </table>
         </section>
     </main>
-
+    <%- include('../partials/footer.ejs') %> 
 </body>
 </html>

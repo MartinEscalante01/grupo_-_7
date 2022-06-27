@@ -10,7 +10,7 @@
     <header>
     <nav>
         <a href="/products">Listado de Productos</a>
-        <a href="#">Crear un nuevo Usuario</a>
+        <a href="/users/register">Registrar Usuario</a>
     </nav>
     </header>
     <main>
@@ -40,19 +40,19 @@
             <ul>
                 <li>
                   <label for="Opcion1">
-                    <input type="radio" id="Opcion1" name="Size S" value="S" >
+                    <input type="radio" id="Opcion1" name="Size" value="S" >
                     S
                   </label>
                 </li>
                 <li>
                   <label for="Opcion2">
-                    <input type="radio" id="Opcion1" name="Size M" value="M" >
+                    <input type="radio" id="Opcion1" name="Size" value="M" >
                     M
                   </label>
                 </li>
                 <li>
                 <label for="Opcion3">
-                    <input type="radio" id="Opcion1" name="Size L" value="L" >
+                    <input type="radio" id="Opcion1" name="Size" value="L" >
                     L
                   </label>
                 </li>
@@ -66,7 +66,7 @@
 
             <div>
             <label>Price:</label><br>
-            <input class="controls" type="number" placeholder="Precio del Producto"  name="price" required="require"><br>
+            <input class="controls" type="number" placeholder="Precio del Producto"  name="price" step="0.01" required="require"><br>
             </div>
 
             <div>

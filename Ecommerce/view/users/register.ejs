@@ -37,6 +37,28 @@
 								<% } %>
 							</div>
 						</div>
+
+						<div class="">
+							<div class="controls">
+								<label><b>Genero:</b></label>
+								<select name="gender" class="form-select <%= locals.errors && errors.gender ? 'is-invalid' : null %>">
+									<option value="">Elegí un Genero: </option>
+									<%  let gender = ['Femenino', 'Masculino', 'Otros'];%>
+									<% for (const oneGender of gender) { %>
+										<option 
+											value="<%= oneGender %>"
+											<%= locals.oldData && (oneGender === oldData.gender) ? 'selected' : null %> 
+										> <%= oneGender %> </option>
+									<% } %>
+								</select>
+								<% if (locals.errors && errors.country) { %>
+									<div class="text-danger">
+										<%= errors.gender.msg %>
+									</div>
+								<% } %>
+							</div>
+						</div>
+
 						<div class="">
 							<div class="controls">
 								<label><b>Correo electrónico:</b></label>
@@ -78,15 +100,24 @@
 
 						<div class="">
 							<div class="controls">
-								<label><b>País de nacimiento:</b></label>
+								<label><b>Contacto:</b></label><br>
+								<input type="number"  placeholder="1520622333" name="phone" required="require"
+								>
+								<br>
+							</div>
+						</div>
+
+						<div class="">
+							<div class="controls">
+								<label><b>País:</b></label>
 								<select name="country" class="form-select <%= locals.errors && errors.country ? 'is-invalid' : null %>">
 									<option value="">Elegí un país</option>
 									<%  let countries = ['Argentina', 'Bolivia', 'Brasil', 'Colombia', 'Chile', 'Ecuador', 'Paraguay', 'Perú', 'Uruguay', 'Venezuela'];%>
-									<% for (const oneCountry of countries) { %>
+									<% for (const oneState of countries) { %>
 										<option 
-											value="<%= oneCountry %>"
-											<%= locals.oldData && (oneCountry === oldData.country) ? 'selected' : null %> 
-										> <%= oneCountry %> </option>
+											value="<%= oneState %>"
+											<%= locals.oldData && (oneState === oldData.country) ? 'selected' : null %> 
+										> <%= oneState %> </option>
 									<% } %>
 								</select>
 								<% if (locals.errors && errors.country) { %>
@@ -96,6 +127,28 @@
 								<% } %>
 							</div>
 						</div>
+
+						<div class="">
+							<div class="controls">
+								<label><b>Provincia:</b></label>
+								<select name="state" class="form-select <%= locals.errors && errors.state ? 'is-invalid' : null %>">
+									<option value="">Elegí una provincia</option>
+									<%  let states = ['Otro', 'Buenos Aires', 'CABA', 'Catamarca', 'Chaco', 'Chubut', 'Cordoba', 'Corrientes', 'Entre Rios', 'Formosa', 'Jujuy', 'La Pampa', 'La Rioja', 'Mendoza', 'Misiones', 'Neuquen', 'Rio Negro', 'Salta', 'Santa Cruz', 'Santa Fe', 'San Juan', 'San Luis', 'Santiago del Estero', 'Tucuman', 'Tierra del Fuego'];%>
+									<% for (const oneState of states) { %>
+										<option 
+											value="<%= oneState %>"
+											<%= locals.oldData && (oneState === oldData.state) ? 'selected' : null %> 
+										> <%= oneState %> </option>
+									<% } %>
+								</select>
+								<% if (locals.errors && errors.state) { %>
+									<div class="text-danger">
+										<%= errors.state.msg %>
+									</div>
+								<% } %>
+							</div>
+						</div>
+
 						<div class="">
 							<div class="controls">
 								<label><b>Perfil:</b></label>
@@ -114,7 +167,7 @@
 						<div>
 							<button type="submit" class="join">Unirse</button>
 						</div>
-                    </form>
+                    
                 </div>
                 <div class="acceder">
                     <div>
@@ -123,13 +176,13 @@
 					</div>
 					<div class="acuerdos">                
 						<div>
-							<input type="checkbox" name="my-checkbox" id="opt-in">
+							<input type="checkbox" name="newsletter" id="opt-in">
 							<label for="opt-in">Registrate para recibir coreos electronicos del sitio con actualizacopmes de productos, ofertas y beneficios como miembros</label>
 						</div>
 					</div>
                 </div>
             </div>
-               
+		</form>
             
         </section>
     </main>

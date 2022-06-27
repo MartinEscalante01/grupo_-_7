@@ -20,7 +20,6 @@ const controller = {
 			if (loadPassword) {
                 delete userLog.password; //por seguridad
                 req.session.userLogged = userLog;
-                console.log(req.session.userLogged);
                 return res.redirect('profile');
             };
 		return res.render('users/login', {errors: {email: {msg: 'El usuario o la contraseña no son correctas. Por favor, inténtalo de nuevo.'}}});

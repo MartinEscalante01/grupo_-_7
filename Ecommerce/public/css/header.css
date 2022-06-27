@@ -20,21 +20,39 @@
 }
 
 /* Esta es la barra de categorias */
-header div.login-dektop {
+.login-dektop {
     display: flex;
     width: 100%;
-    justify-content: end;
+    justify-content: space-between;
+    align-items: flex-end;
     background-color: black;
 }
 
-.login-dektop button, header div span{
-    font-family: 'Roboto', sans-serif;
+.user{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    left: 20px
+    
+}
+
+.user p{
+    color: white;
+    font-size: 12px
+}
+
+.user img{
+    border-radius: 50px;
+    width: 30px
+   
+}
+
+.login button{
     border: 1px solid black;
     color: white;
     font-size: 12px;
     background-color: black;
-    padding: 0px 2px;
-    font-style: italic;
 }
 
 .header-banner{
@@ -191,7 +209,6 @@ div.searchmobile i:hover {
         color: #333;
         border-radius: 10px;
         margin: 0;
-        font-family: cursive;
     }
 
     i.fa.fa-search{
@@ -201,7 +218,8 @@ div.searchmobile i:hover {
     .login {
         width: 30%;
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-end;
+        font-style: normal;
     }
     
 }
@@ -228,9 +246,9 @@ div.searchmobile i:hover {
     }
 
     .login {
-        width: 30%;
         display: flex;
         justify-content: space-around;
+        font-style: normal;
     }
 
     div.searchmobile{

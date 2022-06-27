@@ -24,58 +24,7 @@ a {
     text-decoration: none;
 }
 
-/*Mobile*/
 
-
-/* Esta es la barra de navegacion */
-
-/* Encabezado */
-/* header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    background-color: #fec303;
-    height: 50px;
-    width: 100%;
-    top: 0;
-    z-index: 10;
-}
-
-.menu {
-    width: 15vw;
-    display: flex;
-    padding: 0 10px
-}
-
-.logo {
-    width: 80px;
-}
-
-
-.login{
-    width: 18%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.nav{
-    box-sizing: border-box;
-}
-
-.nav ul{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    
-}
-
-.nav ul li a{
-    margin-right: 10px;
-    margin-left: 10px;
-    text-decoration: none;
-} */
 header div.login-dektop {
     display: flex;
     width: 100%;
@@ -90,7 +39,6 @@ header div.login-dektop {
     font-size: 12px;
     background-color: black;
     padding: 0px 2px;
-    font-style: italic;
 }
 
 .header-banner{

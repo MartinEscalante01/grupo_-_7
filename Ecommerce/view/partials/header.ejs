@@ -12,25 +12,18 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <!-- <ul class="navbar-nav align-items-center">
-            % if (locals.isLogged) { %>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="/images/avatars/%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;">
-                        Hi %= locals.userLogged.fullName %> 
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/users/profile">My profile</a>
-                        <li><hr class="dropdown-divider"></li>
-                        <a class="dropdown-item" href="/users/logout">Logout</a>
-                    </ul>
-                </li>
-        </ul> -->
+    <header>     
         <div class="login-dektop">
-            <a href="/users/register"><button>Registrarse </button></a>
-            <span> | </span>
-            <a href="/users/login"><button>Log in</button></a>
+             <div class="user">
+                    <% if (locals.isLogged) { %>
+                <p> Hola, <%= locals.userLogged.fullName %>!</p>     
+                    <% } %> 
+                </div>
+            <div class="login">
+                <a href="/users/register"><button>Registrarse </button></a>
+                <span> | </span>
+                <a href="/users/login"><button>Log in</button></a>
+            </div>          
         </div>
         <div>
             <div class="menu">
@@ -51,10 +44,7 @@
                     <li><a href="">Ofertas</a></li>
                 </ul>
             </nav>
-            <form class="search" action= "http://localhost:3030/home/search" method="GET" role="search">
-                <input type="text" name= "searchBar" placeholder="Buscar..">
-                <button type="submit" class="nav-search" tabindex="4"><i class="fas fa-solid fa-magnifying-glass"></i></button>
-            </form>
+            
             <div class="searchmobile"><a href="#"><i class="fas fa-solid fa-magnifying-glass"></i></a>
                 <a href="/productCart"><i class="fa-solid fa-bag-shopping"></i></a>
                 <a href="#"><i class="fa-solid fa-heart-circle-check"></i></a>

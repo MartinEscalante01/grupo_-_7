@@ -8,9 +8,38 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             type: DataTypes.INTEGER
         },
-        name: {
-            allowNull: false,
-            type: DataTypes.STRING
+        fullName: {
+            type: DataTypes.STRING(45)
+        },
+        gender: {
+            type: DataTypes.INTEGER
+        },
+        email: {
+            type: DataTypes.STRING(100)
+        },
+        password: {
+            type: DataTypes.STRING(45)
+        },
+        birthday: {
+            type: DataTypes.DATE
+        },
+        phone: {
+            type: DataTypes.INTEGER(11)
+        },
+        country: {
+            type: DataTypes.INTEGER
+        },
+        state: {
+            type: DataTypes.INTEGER
+        },
+        newsletter: {
+            type: DataTypes.STRING(3)
+        },
+        file: {
+            type: DataTypes.STRING(100)
+        },
+        roles: {
+            type: DataTypes.STRING(45)
         },
     };
     let config = {

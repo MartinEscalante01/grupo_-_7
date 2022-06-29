@@ -42,13 +42,13 @@
 							<div class="controls">
 								<label><b>Genero:</b></label>
 								<select name="gender" class="form-select <%= locals.errors && errors.gender ? 'is-invalid' : null %>">
-									<option value="">Elegí un Genero: </option>
+									<option value="">Elegí un Genero </option>
 									<%  let gender = ['Femenino', 'Masculino', 'Otros'];%>
-									<% for (const oneGender of gender) { %>
+									<% for (const onegender of gender) { %>
 										<option 
-											value="<%= oneGender %>"
-											<%= locals.oldData && (oneGender === oldData.gender) ? 'selected' : null %> 
-										> <%= oneGender %> </option>
+											value="<%= onegender %>"
+											<%= locals.oldData && (onegender === oldData.gender) ? 'selected' : null %> 
+										> <%= onegender %> </option>
 									<% } %>
 								</select>
 								<% if (locals.errors && errors.country) { %>
@@ -164,6 +164,22 @@
 								<% } %>
 							</div>
 						</div>
+
+						<div class="">
+							<div class="controls">
+								<label><b>Rol:</b></label>
+								<select name="roles" class="form-select <%= locals.errors && errors.roles ? 'is-invalid' : null %>">
+									<option value="">Elegí un Rol </option>
+									<%  let roles = ['Cliente', 'Admin'];%>
+									<% for (const oneRol of roles) { %>
+										<option value="<%= oneRol %>" <%= locals.oldData && (oneRol === oldData.roles) ? 'selected' : 'Cliente' %>> 
+											<%= oneRol %> 
+										</option>
+									<% } %>
+								</select>
+							</div>
+						</div>
+
 						<div>
 							<button type="submit" class="join">Unirse</button>
 						</div>

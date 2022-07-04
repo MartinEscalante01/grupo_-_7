@@ -1,6 +1,6 @@
 module.exports = {
   "development": {
-    "username": "Sportix",
+    "username": "root",
     "password": "Scaloneta2022",
     "database": "sportix_arg",
     "host": "127.0.0.1",

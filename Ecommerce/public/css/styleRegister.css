@@ -118,6 +118,13 @@ div h1{
     display: ruby-text;
 }
 
+.opciones{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;  
+    text-decoration: underline;
+}
+
 @media (min-width:360px) {
    
     main{
@@ -287,6 +294,11 @@ div h1{
         align-items: center;
         margin-bottom: 35px;
         
+    }
+
+    .opciones{
+        position: absolute;
+        z-index: 10;
     }
 
 

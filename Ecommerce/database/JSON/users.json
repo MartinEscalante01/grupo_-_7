@@ -4,19 +4,19 @@
   "fullName": "Lionel Messi",
   "email": "messi@gmail.com",
   "password": "$2a$10$ham2wC5vR5UL4n2oqLeCuuHgD1s1WBtTsZaXJw7.1CM9UnZuFHobu",
-  "birthday": "1986/06/24",
+  "birthday": "1986-06-24",
   "country": "Argentina",
   "file": "1654962009039_img.jpg"
  },
  {
-  "id": 2,
-  "fullName": "Bartholomew Fleisch",
-  "email": "bfleisch1@4shared.com",
-  "password": "cb635beeb1139b3f9d28f1092be0088b3d3040e8",
-  "birthday": "1982/01/27",
-  "country": "Brazil",
-  "file": "http://dummyimage.com/213x100.png/dddddd/000000"
- },
+    "id": 2,
+    "fullName": "Juan Roman Riquelme",
+    "email": "riquelme@gmail.com",
+    "password": "$2a$10$TIefwqRefVKQLwDemkvLMuK//TLPhGluFc/i6Xx.GwC5dXDnHDe/G",
+    "birthday": "1986-06-24",
+    "country": "Argentina",
+    "file": "1655056106130_img.jpg"
+},
  {
   "id": 3,
   "fullName": "Madelaine Sahnow",
@@ -448,14 +448,5 @@
   "birthday": "2011/07/23",
   "country": "Colombia",
   "file": "http://dummyimage.com/104x100.png/5fa2dd/ffffff"
- },
- {
-  "id": 51,
-  "fullName": "Juan Roman Riquelme",
-  "email": "riquelme@gmail.com",
-  "password": "$2a$10$TIefwqRefVKQLwDemkvLMuK//TLPhGluFc/i6Xx.GwC5dXDnHDe/G",
-  "birthday": "1986-06-24",
-  "country": "Argentina",
-  "file": "1655056106130_img.jpg"
  }
 ]

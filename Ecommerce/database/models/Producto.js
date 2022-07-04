@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = "Usuario";
+    let alias = "Producto";
     let cols = {
         id:{
             autoIncrement: true,
@@ -41,45 +41,45 @@ module.exports = (sequelize, DataTypes) => {
         },
     };
     let config = {
-        tableName: 'usuarios', //Si el nombre de la tabla no coincide con el del modelo
+        tableName: 'Productos', //Si el nombre de la tabla no coincide con el del modelo
         timestamps: false,  //Si no tengo timestamps
     }
-    const Usuario = sequelize.define(alias, cols, config); 
+    const Producto = sequelize.define(alias, cols, config); 
 
-    Usuario.associate = function(models){
-        Usuario.belongsTo(models.Usuario , {
+    Producto.associate = function(models){
+        Producto.belongsTo(models.Producto , {
             as: "genero",
             foreignKey: "gender"
          });
     };
 
-    Usuario.associate = function(models){
-        Usuario.belongsTo(models.Usuario , {
+    Producto.associate = function(models){
+        Producto.belongsTo(models.Producto , {
             as: "rol",
             foreignKey: "roles"
          });
     };
 
-    Usuario.associate = function(models){
-        Usuario.belongsTo(models.Usuario , {
+    Producto.associate = function(models){
+        Producto.belongsTo(models.Producto , {
             as: "state",
             foreignKey: "state"
          });
     };
 
-    Usuario.associate = function(models){
-        Usuario.belongsTo(models.Usuario , {
+    Producto.associate = function(models){
+        Producto.belongsTo(models.Producto , {
             as: "country",
             foreignKey: "country"
          });
     };
 
-    Usuario.associate = function(models){
-        Usuario.belongsTo(models.Usuario , {
+    Producto.associate = function(models){
+        Producto.belongsTo(models.Producto , {
             as: "order",
             foreignKey: "order"
          });
     };
 
-        return Usuario;
+        return Producto;
 }

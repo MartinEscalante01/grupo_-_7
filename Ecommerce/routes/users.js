@@ -12,19 +12,23 @@ const guestMiddleware = require('../middlewares/guestMiddlewares');
 const authMiddleware = require('../middlewares/authMiddlewares');
 const validations = require('../middlewares/validations');
 
-router.get('/', userController.index);
-
 // Formulario de registro
-router.get('/register', guestMiddleware, userController.register); //Falta sumar el guestMiddleware
+router.get('/register', guestMiddleware, userController.register); 
 
 // Procesar el registro
+router.post('/register', uploadFile.single('file'), validations ,userController.processRegister);
+
+// Vista Edicion de registro
+router.get('/userEdit/:idUser', guestMiddleware, userController.edit); 
+
+// Procesar Edicion de registro
 router.post('/register', uploadFile.single('file'), validations ,userController.processRegister);
 
 // Formulario de login
 router.get('/login', userController.login);
 
 // Procesar el login
-router.post('/login', guestMiddleware, userController.processLogin);//Falta sumar el guestMiddleware
+router.post('/login', guestMiddleware, userController.processLogin);
 
 // Perfil de Usuario
 router.get('/profile', authMiddleware, userController.profile); 

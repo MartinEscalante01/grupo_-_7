@@ -2,11 +2,9 @@ const bcryptjs = require('bcryptjs');
 const {validationResult} = require('express-validator');
 const user = require('../database/user');
 const dataUsers = require('../database/JSON/users.json')
+// const db = require('../database/models')
 
 const controller = {
-    index : function(req,res) {
-        return res.render('/users/userEdit')
-    },
     list: (req,res) =>{
         return res.render('users/usersList', {'dataUsers': dataUsers})
     },
@@ -23,9 +21,13 @@ const controller = {
                 return res.redirect('profile');
             };
 		return res.render('users/login', {errors: {email: {msg: 'El usuario o la contraseña no son correctas. Por favor, inténtalo de nuevo.'}}});
-    }
+        }
     },
     register : (req,res) =>{
+        // db.Gender.findAll()
+        //     .then(function(gender){
+        //         return res.render('users/register', {gender:gender})
+        //     });
         return res.render('users/register')
     },
     processRegister: (req, res) => {
@@ -47,22 +49,22 @@ const controller = {
 		}
 		let usuarioCreado = {...req.body, password: bcryptjs.hashSync(req.body.password, 10),file: req.file.filename}
         let userCreated = user.create(usuarioCreado);
-        return res.redirect('users/login');
+        return res.redirect('/users/login');
 	},
-    search : function(req,res) {
-        return res.render('users/search')
+    edit: (req, res) => {
+        let userEdit = dataUsers.find(dataUser => dataUser.id == req.params.idUser)
+        res.render('users/userEdit', {userEdit })
     },
-    userCreate : (req,res) => {
-        res.render('users/userCreate')
-    },
-    edit : function(req,res) {
-        let idUser = req.params.idUser
-        let users = [
-            {id: 1, name: 'Juan'}, 
-            {id: 2, name: 'Luis'}
-        ];
-        let userToEdit = users[idUser];
-        res.render('/users/userEdit', {userToEdit: userToEdit});
+    editProcess: (req, res) => {
+        console.log("llegue a guardar la edicion del producto");
+        let editar = req.body;
+        console.log(editar, " ------- datos de req.body ");
+        console.log(req.body, " ------------------- req.body");
+        console.log(req.params, " -----------------------req.params");
+        actions.path = path;
+        let resp = actions.modify(req.params);
+        console.log(resp, "------------aca tenemos resp")
+        res.status(200).redirect('/products');
     },
     profile: (req, res) => {
         res.render('users/profile', {user: req.session.userLogged});

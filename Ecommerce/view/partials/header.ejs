@@ -11,23 +11,34 @@
     <link rel="stylesheet" href="../css/header.css">
     <title>Document</title>
 </head>
-<body>
-<<<<<<< HEAD
-    <header>     
-=======
+<body>   
     <header>
->>>>>>> 5572030b999d2556420482113627bc5b635b27b1
         <div class="login-dektop">
              <div class="user">
-                    <% if (locals.isLogged) { %>
-                <p> Hola, <%= locals.userLogged.fullName %>!</p>     
-                    <% } %> 
+                <% if (locals.isLogged) { %>
+                    <p class="dropdown">
+                        <img src="../img/profileImages/<%= locals.userLogged.file %>">
+                        Hola, <%= locals.userLogged.fullName%> ! 
+                    </p>
+                    <div class="dropdown">
+                        <button class="mainmenubtn">Main Menu</button>>
+                        <ul class="dropdown-child">
+                            <a href="/users/profile">My profile</a>
+                            <a href="/products">Edicion Productos</a>
+                            <a href="/users/usersList">Edicion Usuarios</a>  
+                            <li><hr class="dropdown-divider"></li>
+                            <a href="/users/logout">Logout</a>
+                        </ul>     
+                            <% }else{ %>
+                            <p>Lo invitamos a unirse!</p>
+                            <% } %> 
                 </div>
-            <div class="login">
-                <a href="/users/register"><button>Registrarse </button></a>
-                <span> | </span>
-                <a href="/users/login"><button>Log in</button></a>
-            </div>          
+                <div class="login"> 
+                        <a href="/users/register"><button>Registrarse </button></a>
+                        <span> | </span>
+                        <a href="/users/login"><button>Log in</button></a>         
+                </div>
+            </div>
         </div>
         <div>
             <div class="menu">

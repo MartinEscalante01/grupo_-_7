@@ -26,7 +26,7 @@
                                     <th>Email</th>
                                     <th>Fecha de Nacimiento</th>
                                     <th>Pais de Nacimiento</th>
-                                    <th>Avatar</th>
+                                    <th>Imagen</th>
                                     <th>Editar</th>
                                     <th>Eliminar</th>
                                 </tr>
@@ -39,9 +39,9 @@
                                     <td> <%= dato.email %> </td>
                                     <td> <%= dato.birthday %> </td>
                                     <td> <%= dato.country %> </td>
-                                    <td> <img src="<%= dato.file %>">  </td>
-                                    <td><a href="products/<%= dato.id %>/edit"><button class="editar">Editar Usuario</button> </a></td>
-                                    <td><a href="products/<%= dato.id %>/delete"><button class="borrar">Eliminar</button></a> </td>
+                                    <td> <img src="../img/profileImages/<%= dato.file %>">  </td>
+                                    <td><a href="/users/userEdit/<%= dato.id %>"><button class="editar">Editar Usuario</button> </a></td>
+                                    <td><a href="/users/<%= dato.id %>/delete"><button class="borrar">Eliminar</button></a> </td>
                                    </tr>
                     <% } %> 
                 </table>

@@ -46,40 +46,5 @@ module.exports = (sequelize, DataTypes) => {
     }
     const Producto = sequelize.define(alias, cols, config); 
 
-    Producto.associate = function(models){
-        Producto.belongsTo(models.Producto , {
-            as: "genero",
-            foreignKey: "gender"
-         });
-    };
-
-    Producto.associate = function(models){
-        Producto.belongsTo(models.Producto , {
-            as: "rol",
-            foreignKey: "roles"
-         });
-    };
-
-    Producto.associate = function(models){
-        Producto.belongsTo(models.Producto , {
-            as: "state",
-            foreignKey: "state"
-         });
-    };
-
-    Producto.associate = function(models){
-        Producto.belongsTo(models.Producto , {
-            as: "country",
-            foreignKey: "country"
-         });
-    };
-
-    Producto.associate = function(models){
-        Producto.belongsTo(models.Producto , {
-            as: "order",
-            foreignKey: "order"
-         });
-    };
-
         return Producto;
 }

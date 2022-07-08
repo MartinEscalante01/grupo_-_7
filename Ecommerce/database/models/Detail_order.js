@@ -16,15 +16,15 @@ module.exports = (sequelize, DataTypes) => {
     }
     const Detail_order = sequelize.define(alias, cols, config); 
 
-    Detail_order.associate = function(models){
-        Detail_order.belongsToMany(models.Producto , {
-            as: "productos",
-            through: "detalle_de_orden",
-            foreignKey: "id_usuarios",
-            otherKey: "id_productos",
-            timestamps: false,
-         });
-    }
+    // Detail_order.associate = function(models){
+    //     Detail_order.belongsToMany(models.Producto , {
+    //         as: "productos",
+    //         through: "detalle_de_orden",
+    //         foreignKey: "id_usuarios",
+    //         otherKey: "id_productos",
+    //         timestamps: false,
+    //      });
+    // }
   
         return Detail_order;
 }

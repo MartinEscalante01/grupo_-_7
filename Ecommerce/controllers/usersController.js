@@ -2,7 +2,7 @@ const bcryptjs = require('bcryptjs');
 const {validationResult} = require('express-validator');
 const user = require('../database/user');
 const dataUsers = require('../database/JSON/users.json')
-// const db = require('../database/models')
+const db = require('../database/models')
 
 const controller = {
     list: (req,res) =>{
@@ -24,11 +24,11 @@ const controller = {
         }
     },
     register : (req,res) =>{
-        // db.Gender.findAll()
-        //     .then(function(gender){
-        //         return res.render('users/register', {gender:gender})
-        //     });
-        return res.render('users/register')
+        db.Gender.findAll()
+            .then(function(gender){
+                return res.render('users/register', {gender:gender})
+            });
+        // return res.render('users/register')
     },
     processRegister: (req, res) => {
 		//VALIDACIONES Y MENSAJES DE ERRORES
@@ -49,7 +49,22 @@ const controller = {
 		}
 		let usuarioCreado = {...req.body, password: bcryptjs.hashSync(req.body.password, 10),file: req.file.filename}
         let userCreated = user.create(usuarioCreado);
-        return res.redirect('/users/login');
+        // return res.redirect('/users/login');
+
+        db.User.create({
+            fullName: req.body.fullName,
+            gender: req.body.gender,
+            email: req.body.email,
+            password: req.body.password,
+            birthday: req.body.birthday,
+            phone: req.body.phone,
+            country: req.body.email,
+            state: req.body.password,
+            file: req.body.birthday,
+            roles: req.body.roles,
+            newsletter: req.body.newsletter,
+        })
+        return res.redirect('users/usersList');
 	},
     edit: (req, res) => {
         let userEdit = dataUsers.find(dataUser => dataUser.id == req.params.idUser)

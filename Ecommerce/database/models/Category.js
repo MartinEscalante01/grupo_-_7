@@ -15,13 +15,6 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false,  //Si no tengo timestamps
     }
     const Category = sequelize.define(alias, cols, config); 
-
-    Category.associate = function(models){
-        Category.hasMany(models.Producto , {
-            as: "productos",
-            foreignKey: "category"
-         });
-    }
   
         return Category;
 }

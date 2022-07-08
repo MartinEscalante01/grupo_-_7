@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DECIMAL
         },
         date: {
-            type: DataTypes.DATETIME
+            type: DataTypes.DATE
         }
     };
     let config = {
@@ -21,13 +21,6 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false,  //Si no tengo timestamps
     }
     const Order = sequelize.define(alias, cols, config); 
-
-    Order.associate = function(models){
-        Order.hasMany(models.Usuario , {
-            as: "usuarios",
-            foreignKey: "order"
-         });
-    }
   
         return Order;
 }

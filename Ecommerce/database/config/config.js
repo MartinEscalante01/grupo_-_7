@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "Scaloneta2022",
+    "password": null,
     "database": "sportix_arg",
     "host": "127.0.0.1",
     "dialect": "mysql"

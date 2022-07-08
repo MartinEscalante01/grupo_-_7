@@ -11,24 +11,9 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
     let config = {
-        tableName: 'gender', //Si el nombre de la tabla no coincide con el del modelo
+        tableName: "gender", //Si el nombre de la tabla no coincide con el del modelo
         timestamps: false,  //Si no tengo timestamps
     }
     const Gender = sequelize.define(alias, cols, config); 
-
-    Gender.associate = function(models){
-         Gender.hasMany(models.Usuario , {
-            as: "usuarios",
-            foreignKey: "gender"
-         });
-    }
-
-    Gender.associate = function(models){
-        Gender.hasMany(models.Producto , {
-            as: "productos",
-            foreignKey: "gender"
-        });
-    }
-  
         return Gender;
 }

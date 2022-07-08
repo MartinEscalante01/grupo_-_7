@@ -22,14 +22,24 @@
     box-sizing: border-box;    
 }
 
-div h1{
+h1{
     text-align: center;
     font-weight: bold;
     color: #000;
     margin-top: 10px;
     margin-bottom: 15px;
-    font-size: xxx-large;
-    font-style: oblique;
+    font-size: xxx-large; 
+}
+
+a{
+    color: black !important;
+}
+
+.opciones{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;  
+    text-decoration: underline;
 }
 
 .nav-title{
@@ -61,7 +71,6 @@ div h1{
     width: 100%;
     padding: 10px;
     order: 1;
-    border: 4px solid rgb(82, 82, 82)
 }
 
 .join{
@@ -82,13 +91,18 @@ div h1{
 }
 
 .controls{
-    width: 100%;
+    width: 75%;
     background-color: rgb(255, 255, 255);
-    padding: 10px;
-    border-radius: 4px;
+    padding: 10px 0px;
     margin-bottom: 16px;
     font-size: 18px;
-    display: block ruby;
+    display: flex;
+    flex-direction: column;
+}
+
+.controls input, select{
+    height: 4vh;
+    
 }
 
 .acuerdos div:nth-child(2) button{
@@ -254,14 +268,14 @@ div h1{
     main section{
         display: flex;
         flex-direction: column;
-        text-align: center;
+        text-align: left;
     }
 
 
 
     .formulario{
         width: 50%;
-        order: 1;
+        order: 0;
     }
     form{
         width: 80%;

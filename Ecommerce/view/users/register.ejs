@@ -1,158 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="../css/styleRegister.css">
-    <%- include('../partials/head.ejs') %>
-    <title>Sportix | Registro </title>
 
+<head>
+    <link rel="stylesheet" href="../css/styleRegister.css"> 
+
+    <%- include('../partials/head.ejs') %>
+        <title>Inicia Sesion</title>
 </head>
 <body>
-
-    <%- include('../partials/header.ejs') %>
     <main>
-		<nav class="opciones">
-            <a href="/"> ← Iniciar Sesion</a>
+        <nav class="opciones">
+            <a href="/"> ← Volver al home</a>
         </nav>
-		<h1>Formulario de Registro</h1>
-        <section>
-            <div class="todo">
-                <div class="formulario">
-                    <form method="POST" action="/users/register" enctype="multipart/form-data">
-                        <div class="">
-							<div class="controls">
-								<label><b>Nombre completo:</b></label>
-								<input type="text" name="fullName" class="form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.fullName : null %>">
-								<% if (locals.errors && errors.fullName) { %>
-									<div class="text-danger">
-										<%= errors.fullName.msg %> 
-									</div>
-								<% } %>
-							</div>
-						</div>
 
-						<div class="">
-							<div class="controls">
-								<label><b>Genero:</b></label>
-								<select name="gender" class="form-select <%= locals.errors && errors.gender ? 'is-invalid' : null %>">
-									<% for (let i = 0; i < gender.lenght; i++) { %>
-										<option value= "<%= gender[i].id %>">
-											<%= gender[i].name %> 
-										</option>
-									<% } %>
-								</select>
-							</div>
-						</div>
+        <div class="container" id="container">
+            <div class="form-container sign-in-container">
+                <form method="POST" action="/users/register" enctype="multipart/form-data">
+                    <h1>Formulario de registro</h1>
+                    <div>
+                        <% if (locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                            <%= errors.email.msg %>
+                        </div>
+                         <% } %>
+                    </div>
+                    <div class="selector-box">
+                        <input type="text" name="fullName" <%= locals.errors && errors.fullName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.fullName : null %>" placeholder="Nombre Completo">
+                        <% if (locals.errors && errors.fullName) { %>
+                            <div class="text-danger">
+                                <%= errors.fullName.msg %> 
+                            </div>
+                        <% } %>
+                    
+                        <input type="password" name="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" placeholder="Password"
+                        >
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="text-danger">
+                                <%= errors.password.msg %>
+                            </div>
+                        <% } %>  
 
-						<div class="">
-							<div class="controls">
-								<label><b>Correo electrónico:</b></label>
-								<input 
-									type="text" 
-									name="email" 
-									class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
-									value="<%= locals.oldData ? oldData.email : null %>"
-								>
-								<% if (locals.errors && errors.email) { %>
-									<div class="text-danger">
-										<%= errors.email.msg %>
-									</div>
-								<% } %>
-							</div>
-						</div>
-						<div class="">
-							<div class="controls">
-								<label><b>Password:</b></label>
-								<input type="password" name="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
-								>
-								<% if (locals.errors && errors.password) { %>
-									<div class="text-danger">
-										<%= errors.password.msg %>
-									</div>
-								<% } %>
-							</div>
-						</div>
-						
-						<div class="">
-							<div class="controls">
-								<label><b>Fecha de Nacimiento:</b></label><br>
-								<input type="date" placeholder="AAAA/MM/DD"  name="birthday" required="require"
-								value="<%= locals.oldData ? oldData.birthday : null %>"
-								>
-								<br>
-							</div>
-						</div>
+                        <input 
+                            type="text" 
+                            name="email" 
+                            class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.email : null %>"
+                            placeholder="Correo Electrónico"
+                        >
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="text-danger">
+                                <%= errors.email.msg %>
+                            </div>
+                        <% } %>
 
-						<div class="">
-							<div class="controls">
-								<label><b>Contacto:</b></label><br>
-								<input type="number"  placeholder="1520622333" name="phone" required="require"
-								>
-								<br>
-							</div>
-						</div>
+                        <select name="gender" class="form-select <%= locals.errors && errors.gender ? 'is-invalid' : null %>">
+                            <option value="">Genero</option>
+                            <% for (let i = 0; i < gender.lenght; i++) { %>
+                                <option value= "<%= gender[i].id %>">
+                                    <%= gender[i].name %> 
+                                </option>
+                            <% } %>
+                        </select>
+                        
+						<input type="date" placeholder="AAAA/MM/DD"  name="birthday" required="require" value="<%= locals.oldData ? oldData.birthday : null %>">
+					    
+                        <input type="tel"  placeholder="Numero de telefono" name="phone" required="require">
 
-						<div class="">
-							<div class="controls">
-								<label><b>País:</b></label>
-								<select name="country" class="form-select <%= locals.errors && errors.country ? 'is-invalid' : null %>">
-									<option value="">Elegí un país</option>
-									<%  let countries = ['Argentina', 'Bolivia', 'Brasil', 'Colombia', 'Chile', 'Ecuador', 'Paraguay', 'Perú', 'Uruguay', 'Venezuela'];%>
-									<% for (const oneState of countries) { %>
-										<option 
-											value="<%= oneState %>"
-											<%= locals.oldData && (oneState === oldData.country) ? 'selected' : null %> 
-										> <%= oneState %> </option>
-									<% } %>
-								</select>
-								<% if (locals.errors && errors.country) { %>
-									<div class="text-danger">
-										<%= errors.country.msg %>
-									</div>
-								<% } %>
-							</div>
-						</div>
+                        <select name="country" class="form-select <%= locals.errors && errors.country ? 'is-invalid' : null %>">
+                            <option value="">Elegí un país</option>
+                            <%  let countries = ['Argentina', 'Bolivia', 'Brasil', 'Colombia', 'Chile', 'Ecuador', 'Paraguay', 'Perú', 'Uruguay', 'Venezuela'];%>
+                            <% for (const oneState of countries) { %>
+                                <option 
+                                    value="<%= oneState %>"
+                                    <%= locals.oldData && (oneState === oldData.country) ? 'selected' : null %> 
+                                > <%= oneState %> </option>
+                            <% } %>
+                        </select>
+                        <% if (locals.errors && errors.country) { %>
+                            <div class="text-danger">
+                                <%= errors.country.msg %>
+                            </div>
+                        <% } %>
 
-						<div class="">
-							<div class="controls">
-								<label><b>Provincia:</b></label>
-								<select name="state" class="form-select <%= locals.errors && errors.state ? 'is-invalid' : null %>">
-									<option value="">Elegí una provincia</option>
-									<%  let states = ['Otro', 'Buenos Aires', 'CABA', 'Catamarca', 'Chaco', 'Chubut', 'Cordoba', 'Corrientes', 'Entre Rios', 'Formosa', 'Jujuy', 'La Pampa', 'La Rioja', 'Mendoza', 'Misiones', 'Neuquen', 'Rio Negro', 'Salta', 'Santa Cruz', 'Santa Fe', 'San Juan', 'San Luis', 'Santiago del Estero', 'Tucuman', 'Tierra del Fuego'];%>
-									<% for (const oneState of states) { %>
-										<option 
-											value="<%= oneState %>"
-											<%= locals.oldData && (oneState === oldData.state) ? 'selected' : null %> 
-										> <%= oneState %> </option>
-									<% } %>
-								</select>
-								<% if (locals.errors && errors.state) { %>
-									<div class="text-danger">
-										<%= errors.state.msg %>
-									</div>
-								<% } %>
-							</div>
-						</div>
+                        <select name="state" class="form-select <%= locals.errors && errors.state ? 'is-invalid' : null %>">
+                            <option value="">Elegí una provincia</option>
+                            <%  let states = ['Otro', 'Buenos Aires', 'CABA', 'Catamarca', 'Chaco', 'Chubut', 'Cordoba', 'Corrientes', 'Entre Rios', 'Formosa', 'Jujuy', 'La Pampa', 'La Rioja', 'Mendoza', 'Misiones', 'Neuquen', 'Rio Negro', 'Salta', 'Santa Cruz', 'Santa Fe', 'San Juan', 'San Luis', 'Santiago del Estero', 'Tucuman', 'Tierra del Fuego'];%>
+                            <% for (const oneState of states) { %>
+                                <option 
+                                    value="<%= oneState %>"
+                                    <%= locals.oldData && (oneState === oldData.state) ? 'selected' : null %> 
+                                > <%= oneState %> </option>
+                            <% } %>
+                        </select>
+                        <% if (locals.errors && errors.state) { %>
+                            <div class="text-danger">
+                                <%= errors.state.msg %>
+                            </div>
+                        <% } %>
 
-						<div class="">
-							<div class="controls">
-								<label><b>Perfil:</b></label>
-								<input 
-									type="file" 
-									name="file"
-									class="form-control <%= locals.errors && errors.file ? 'is-invalid' : null %>"
-								>
+                        <input type="file" name="file" class="form-control <%= locals.errors && errors.file ? 'is-invalid' : null %>">
 								<% if (locals.errors && errors.file) { %>
 									<div class="text-danger">
 										<%= errors.file.msg %>
 									</div>
 								<% } %>
-							</div>
-						</div>
 
-						<div class="">
-							<div class="controls">
-								<label><b>Rol:</b></label>
-								<select name="roles" class="form-select <%= locals.errors && errors.roles ? 'is-invalid' : null %>">
+                                <select name="roles" class="form-select <%= locals.errors && errors.roles ? 'is-invalid' : null %>">
 									<option value="">Elegí un Rol </option>
 									<%  let roles = ['Cliente', 'Admin'];%>
 									<% for (const oneRol of roles) { %>
@@ -161,31 +114,32 @@
 										</option>
 									<% } %>
 								</select>
-							</div>
-						</div>
 
-						<div>
-							<button type="submit" class="join">Unirse</button>
-						</div>
-                    
-                </div>
-                <div class="acceder">
-                    <div>
-                        <h3>Hacete miembro</h3>
-                        <p>Unite a nuestra comunidad con tu perfil obtendras acceso anticipádo a los mejores porductos deportivos</p>
-					</div>
-					<div class="acuerdos">                
+                    </div>
+                   
+                    <input class="send" type="submit" value="REGISTRARSE">
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-right">
+                        <h1>Hazte miembro!</h1>
+                        <p>Unete a nuestra comunidad con tu perfil obtendras acceso anticipado a los mejores productos deportivos</p>
+						<div class="acuerdos">                
 						<div>
 							<input type="checkbox" name="newsletter" id="opt-in">
 							<label for="opt-in">Registrate para recibir correos electronicos del sitio con actualizaciones de productos, ofertas y beneficios como miembros</label>
 						</div>
-					</div>
+                    </div>
                 </div>
             </div>
-		</form>
-            
-        </section>
+        </div>
+
+        <footer>
     </main>
 
+    <!-- <%- include('../partials/footer.ejs') %> -->
+
 </body>
+
 </html>

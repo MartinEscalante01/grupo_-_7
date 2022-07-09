@@ -1,22 +1,12 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cambay&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
-
-
 
 
 *{
     margin: 0px;
     box-sizing: border-box;
+    font-family:"Montserrat";
     
     
 }
@@ -36,7 +26,6 @@ header div.login-dektop {
 }
 
 .login-dektop button, header div span{
-    font-family: 'Roboto', sans-serif;
     border: 1px solid black;
     color: white;
     font-size: 12px;
@@ -129,7 +118,6 @@ div.searchmobile i:hover {
     justify-content: space-between;
     list-style: none;
     margin-bottom: 0px;
-    font-family: serif;
     color: black;
     align-items: center; 
 }
@@ -202,7 +190,6 @@ form.search input{
     padding: 4px;
     margin: 0px;
     font-size: 15px;
-    font-family: inherit;
     font-style: italic;
     color: black;
 }
@@ -268,11 +255,9 @@ form.search input{
     
     .carrito p:nth-child(2){
         font-size: 120%;
-        font-family: 'Roboto Mono', monospace;
     }
     .carrito p:nth-child(3){
         font-size: 100%;
-        font-family: 'Karla', sans-serif;
         font-weight: bold;
     }
     .carrito h1{
@@ -280,7 +265,6 @@ form.search input{
         font-size: var(--tamanio-titulos);
         color: var(--titulos-color);
         margin-bottom: 10px;
-        font-family: 'Ubuntu', sans-serif;
         font-size: 35px;
     
     }
@@ -327,7 +311,7 @@ form.search input{
     
     .info p{
         line-height: 25px;
-        font-family: 'Chivo', sans-serif;
+        font-family: 'Montserrat', sans-serif;
     }
     
     .info p:nth-child(2){
@@ -345,7 +329,7 @@ form.search input{
     .info p:nth-child(5){
         margin-top: 10px;
         font-size: 20px;
-        font-family: 'Cambay', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         
     }
@@ -357,7 +341,7 @@ form.search input{
         border: 1px solid #F65446;
         padding: 5px 25px;
         border-radius: 10px;
-        font-family: 'Lato', sans-serif;
+        font-family: 'Montserrat', sans-serif;
     }
 
     .info button:hover{
@@ -378,7 +362,7 @@ form.search input{
     
     .resumen h1{
         margin-bottom: 20px;
-        font-family: 'Karla', sans-serif;
+        font-family: 'Montserrat', sans-serif;
     }
     
     .resumen div{
@@ -428,7 +412,7 @@ form.search input{
     }
     .pagos h1{
         margin-top: 5px;
-        font-family: 'Karla', sans-serif;
+        font-family: 'Montserrat', sans-serif;
     }
     .pagos .tarjetas{
         display: flex;
@@ -473,7 +457,6 @@ form.search input{
         font-size: 0.8em;
         border-radius: 10px;
         margin: 0;
-        font-family: cursive;
     }
 
     div.logo{
@@ -490,7 +473,6 @@ form.search input{
         color: #333;
         border-radius: 10px;
         margin: 0;
-        font-family: cursive;
     }
 
     i.fa.fa-search{

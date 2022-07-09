@@ -12,7 +12,7 @@
 :root{
     --titulos-color: #333333;
     --tamanio-titulos: 30px;
-    --titulo-family:'Open Sans', sans-serif;
+    --titulo-family:'Montserrat', sans-serif;
 }
 
 *{
@@ -61,7 +61,6 @@ header nav a:hover {
 }
 
 h1{
-    font-family: 'Roboto', sans-serif;
     font-style: italic;
     margin: 60px;
     display: flex;
@@ -81,7 +80,6 @@ form{
 }
 
 label{
-    font-family: cursive;
     font-size: larger;
     font-weight: bolder;
     margin-bottom: 10px;

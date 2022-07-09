@@ -164,7 +164,6 @@ div.searchmobile i:hover {
     justify-content: space-between;
     list-style: none;
     margin-bottom: 0px;
-    font-family: serif;
     color: black;
     align-items: center; 
 }
@@ -224,7 +223,6 @@ div.searchmobile i:hover {
         font-size: 0.8em;
         border-radius: 10px;
         margin: 0;
-        font-family: cursive;
     }
 
     div.logo{

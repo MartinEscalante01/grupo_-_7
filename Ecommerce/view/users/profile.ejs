@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../css/profileStyles.css">
+    <link rel="stylesheet" href="../../public/css/profileStyles.css">
     <%- include('../partials/head.ejs') %>
     <title>Inicia Sesion</title>
 </head>
@@ -14,7 +14,7 @@
         <div class="row">
           <div class="col-md-3">
             <h2>Hi <%= user.fullName %> </h2>
-            <img src="../img/profileImages/<%= user.file %> ">
+            <img src="../img/profileImages/<%= user.file %> " class="profileImg">
             <br>
             <br>
             <div class="alert alert-success"><%= user.email %> </div>

@@ -54,10 +54,9 @@
                         <% } %>
 
                         <select name="gender" class="form-select <%= locals.errors && errors.gender ? 'is-invalid' : null %>">
-                            <option value="">Genero</option>
                             <option value="#" selected disabled>Seleccione su categoría...</option>
-                            <% gender.forEach(gender => { %>
-                              <option value="<%=gender.id %>"><%=gender.name %></option>
+                            <% user.forEach(idGender => { %>
+                              <option value="<%=idGender.id %>"><%=idGender.name %></option>
                             <% }); %>
                         </select>
 

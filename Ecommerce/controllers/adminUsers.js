@@ -11,9 +11,9 @@ const adminController = {
         .catch(error => res.send(error))
     },
     create: (req, res) =>{
-        db.Gender.findAll()
-        .then(gender =>{
-            res.render('users/register', {gender});
+        db.User.findAll()
+        .then(user =>{
+            res.render('users/register', {user});
         })
     },
     save: (req,res)=>{

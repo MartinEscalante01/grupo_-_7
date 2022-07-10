@@ -1,17 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cambay&display=swap');
+
 :root{
-    --titulos-color: #333333;
-    --tamanio-titulos: 30px;
-    --titulo-family:'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 *{
@@ -173,7 +164,6 @@ div.searchmobile i:hover {
     justify-content: space-between;
     list-style: none;
     margin-bottom: 0px;
-    font-family: serif;
     color: black;
     align-items: center; 
 }
@@ -233,7 +223,6 @@ div.searchmobile i:hover {
         font-size: 0.8em;
         border-radius: 10px;
         margin: 0;
-        font-family: cursive;
     }
 
     div.logo{

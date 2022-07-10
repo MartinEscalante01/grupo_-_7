@@ -37,26 +37,12 @@
             
             <div class="size">
             <label  for="size">Seleccionar Talles:</label><br>
-            <ul>
-                <li>
-                  <label for="Opcion1">
-                    <input type="radio" id="Opcion1" name="Size" value="S" >
-                    S
-                  </label>
-                </li>
-                <li>
-                  <label for="Opcion2">
-                    <input type="radio" id="Opcion1" name="Size" value="M" >
-                    M
-                  </label>
-                </li>
-                <li>
-                <label for="Opcion3">
-                    <input type="radio" id="Opcion1" name="Size" value="L" >
-                    L
-                  </label>
-                </li>
-            </ul>
+              <select name="size">
+                <option value="#" selected disabled>Seleccione su talle...</option>
+                <% size.forEach(size => { %>
+                  <option value="<%=size.id %>"><%=size.sizes %></option>
+                <% }); %>
+              </select>
             </div>
             
             <div>
@@ -70,8 +56,8 @@
             </div>
 
             <div>
-              <label for="gendre">Genero del Producto:</label>
-              <select name="gendre">
+              <label for="gender">Genero del Producto:</label>
+              <select name="gender">
                   <option value="Hombre">Hombre</option>
                   <option value="Mujer">Mujer</option>
                   <option value="Niño">Niño</option>

@@ -14,6 +14,14 @@ module.exports = (sequelize, DataTypes) => {
         tableName: "roles", //Si el nombre de la tabla no coincide con el del modelo
         timestamps: false,  //Si no tengo timestamps
     }
-    const Rol = sequelize.define(alias, cols, config); 
+    const Rol = sequelize.define(alias, cols, config);
+
+    Rol.associate = function(models){
+        Rol.hasMany(models.User , {
+            as: "users",
+            foreignKey: "idRoles"
+         });
+    };
+
     return Rol;
 }

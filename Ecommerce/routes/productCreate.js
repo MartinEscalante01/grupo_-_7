@@ -5,12 +5,13 @@ const upload = require('../middlewares/multerProducts')
 
 // Controller
 const productController = require('../controllers/productController');
+const adminProducts = require('../controllers/adminProducts');
 
 // Formulario de creacion
-router.get('/', productController.productCreate); //http://localhost:3030/productCreate
+router.get('/', adminProducts.create); //http://localhost:3030/productCreate
 
 // Procesamiento del formulario de creacion
-router.post('/', upload, productController.create);
+router.post('/', upload, adminProducts.save);
 
 
 module.exports = router;

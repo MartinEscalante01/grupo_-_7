@@ -19,13 +19,7 @@
     "method-override": "^3.0.0",
     "multer": "^1.4.4",
     "mysql2": "^2.3.3",
-<<<<<<< HEAD
     "nodemon": "^2.0.19",
     "sequelize": "^6.21.0"
-=======
-    "nodemon": "^2.0.18",
-    "sequelize": "^6.21.2",
-    "sequelize-cli": "^6.4.1"
->>>>>>> 7b5c5f49305ba6b21064bbc609f906a6d89d30a1
   }
 }

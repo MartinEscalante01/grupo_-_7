@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/error.css">
+    <title>ELIMINANDO USUARIO </title>
+
+</head>
+<body>
+    <% for(let dato of resultado) { %> 
+        <h1>ATENCION - Eliminando Usuario!</h1>
+        <h2>Esta SEGURO que quiere eliminar el Usuario "<%= dato.fullName %>" ?</h2>
+    
+	<form method="POST" action="/users/delete/<%=dato.id %>?_method=DELETE">
+		<button>SI</button>
+	</form>
+	<a href="/users/usersList"><button>Volver hacia Atras</button></a>
+    <% } %>
+</body>
+
+</html>

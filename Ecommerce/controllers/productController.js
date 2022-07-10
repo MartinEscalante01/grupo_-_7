@@ -22,14 +22,14 @@ const productsController = {
     productCreate: (req, res) => {
         res.render('products/productCreate')
     },
-    index: async (req, res) => {
+    index: (req, res) => {
         // Async/Await - Try&Catch
-        try{
-            let producto = await Producto.findAll()
-        } catch(error) {
-            console.log('ERROR!')
-        }
-        //res.render('products/productList', { 'productos': productos })
+        // try{
+        //     let producto = await db.Product.findAll()
+        // } catch(error) {
+        //     console.log('ERROR!')
+        // }
+        res.render('products/productList', { 'productos': productos })
     },
     detail: (req, res) => {
         res.redirect('/productDetail/' + req.params.idProducto)

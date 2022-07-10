@@ -16,5 +16,12 @@ module.exports = (sequelize, DataTypes) => {
     }
     const Country = sequelize.define(alias, cols, config); 
 
+    Country.associate = function(models){
+        Country.hasMany(models.User , {
+            as: "users",
+            foreignKey: "idCountry"
+         });
+    };
+
         return Country;
 }

@@ -42,11 +42,10 @@
 							<div class="controls">
 								<label><b>Genero:</b></label>
 								<select name="gender" class="form-select <%= locals.errors && errors.gender ? 'is-invalid' : null %>">
-									<% for (let i = 0; i < gender.lenght; i++) { %>
-										<option value= "<%= gender[i].id %>">
-											<%= gender[i].name %> 
-										</option>
-									<% } %>
+									<option value="#" selected disabled>Seleccione su categoría...</option>
+                                    <% gender.forEach(gender => { %>
+                                      <option value="<%=gender.id %>"><%=gender.name %></option>
+                                    <% }); %>
 								</select>
 							</div>
 						</div>

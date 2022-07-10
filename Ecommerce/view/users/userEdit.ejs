@@ -15,15 +15,15 @@
     <main>
         
         <section>
-            <h1>Editando el usuario <%= userEdit.fullName %></h1>
+            <h1>Editando el usuario <%= user.fullName %></h1>
             <div class="todo">
                 
                 <div class="formulario">
-                    <form method="POST" action="/users/register" enctype="multipart/form-data">
+                    <form method="POST" action="/users/edit/<%=user.id%>?_method=PUT" enctype="multipart/form-data">
                         <div class="">
 							<div class="controls">
 								<label><b>Nombre completo:</b></label>
-								<input type="text" name="fullName" value="<%= userEdit.fullName %>" class="form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.fullName : null %>">
+								<input type="text" name="fullName" value="<%= user.fullName %>" class="form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.fullName : null %>">
 								<% if (locals.errors && errors.fullName) { %>
 									<div class="text-danger">
 										<%= errors.fullName.msg %> 
@@ -36,16 +36,20 @@
 							<div class="controls">
 								<label><b>Genero:</b></label>
 								<select name="gender"  class="form-select <%= locals.errors && errors.gender ? 'is-invalid' : null %>">
-									<option value="<%= userEdit.gender %>">Elegí un Genero </option>
-									<%  let gender = ['Femenino', 'Masculino', 'Otros'];%>
-									<% for (const onegender of gender) { %>
-										<option 
-											value="<%= onegender %>"
-											<%= locals.oldData && (onegender === oldData.gender) ? 'selected' : null %> 
-										> <%= onegender %> </option>
-									<% } %>
+									<option value="<%= user.gender %>">Elegí un Genero </option>
+									<% for(let i= 0; i< gender.length; i++) { %>
+										<% if(gender[i].id == user.idGender) { %>
+											<option value="<%= gender[i].id %>" selected>
+												<%= gender[i].name %>
+											</option>
+										<% } else { %>
+											<option value="<%= gender[i].id %>">
+												<%= gender[i].name %>
+											</option>
+										<% } %>
+									<% } %>	
 								</select>
-								<% if (locals.errors && errors.country) { %>
+								<% if (locals.errors && errors.gender) { %>
 									<div class="text-danger">
 										<%= errors.gender.msg %>
 									</div>
@@ -58,7 +62,7 @@
 								<label><b>Correo electrónico:</b></label>
 								<input 
 									type="text"
-                                    value="<%= userEdit.email %>" 
+                                    value="<%= user.email %>" 
 									name="email" 
 									class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
 									value="<%= locals.oldData ? oldData.email : null %>"
@@ -73,7 +77,7 @@
 						<div class="">
 							<div class="controls">
 								<label><b>Password:</b></label>
-								<input type="password" name="password" value="<%= userEdit.password %>" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+								<input type="password" name="password" value="<%= user.password %>" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
 								>
 								<% if (locals.errors && errors.password) { %>
 									<div class="text-danger">
@@ -86,7 +90,7 @@
 						<div class="">
 							<div class="controls">
 								<label><b>Fecha de Nacimiento:</b></label><br>
-								<input type="date" value="<%= userEdit.birthday %>"  name="birthday" required="require">
+								<input type="date" value="<%= user.birthday %>"  name="birthday" required="require">
 								<br>
 							</div>
 						</div>
@@ -94,7 +98,7 @@
 						<div class="">
 							<div class="controls">
 								<label><b>Contacto:</b></label><br>
-								<input type="number"  value="<%= userEdit.phone %>"  name="phone">
+								<input type="number"  value="<%= user.phone %>"  name="phone">
 								<br>
 							</div>
 						</div>
@@ -103,7 +107,7 @@
 							<div class="controls">
 								<label><b>País:</b></label>
 								<select name="country" class="form-select <%= locals.errors && errors.country ? 'is-invalid' : null %>">
-									<option value="<%= userEdit.country %>" >Elegí un país</option>
+									<option value="<%= user.country %>" >Elegí un país</option>
 									<%  let countries = ['Argentina', 'Bolivia', 'Brasil', 'Colombia', 'Chile', 'Ecuador', 'Paraguay', 'Perú', 'Uruguay', 'Venezuela'];%>
 									<% for (const oneState of countries) { %>
 										<option 
@@ -124,7 +128,7 @@
 							<div class="controls">
 								<label><b>Provincia:</b></label>
 								<select name="state" class="form-select <%= locals.errors && errors.state ? 'is-invalid' : null %>">
-									<option value="<%= userEdit.state %>" >Elegí una provincia</option>
+									<option value="<%= user.state %>" >Elegí una provincia</option>
 									<%  let states = ['Otro', 'Buenos Aires', 'CABA', 'Catamarca', 'Chaco', 'Chubut', 'Cordoba', 'Corrientes', 'Entre Rios', 'Formosa', 'Jujuy', 'La Pampa', 'La Rioja', 'Mendoza', 'Misiones', 'Neuquen', 'Rio Negro', 'Salta', 'Santa Cruz', 'Santa Fe', 'San Juan', 'San Luis', 'Santiago del Estero', 'Tucuman', 'Tierra del Fuego'];%>
 									<% for (const oneState of states) { %>
 										<option 
@@ -147,7 +151,7 @@
 								<input 
 									type="file" 
 									name="file"
-                                    value="<%= userEdit.file %>" 
+                                    value="<%= user.file %>" 
 									class="form-control <%= locals.errors && errors.file ? 'is-invalid' : null %>"
 								>
 								<% if (locals.errors && errors.file) { %>
@@ -162,7 +166,7 @@
 							<div class="controls">
 								<label><b>Rol:</b></label>
 								<select name="roles" class="form-select <%= locals.errors && errors.roles ? 'is-invalid' : null %>">
-									<option value="<%= userEdit.roles %>" >Elegí un Rol </option>
+									<option value="<%= user.roles %>" >Elegí un Rol </option>
 									<%  let roles = ['Cliente', 'Admin'];%>
 									<% for (const oneRol of roles) { %>
 										<option value="<%= oneRol %>" <%= locals.oldData && (oneRol === oldData.roles) ? 'selected' : 'Cliente' %>> 

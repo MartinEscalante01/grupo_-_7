@@ -4,6 +4,7 @@ const {body, validationResult} = require('express-validator');
 
 // Controller
 const userController = require('../controllers/usersController');
+const adminController = require('../controllers/adminUsers');
 
 // Middlewares
 const uploadFile = require('../middlewares/multerMiddleware');
@@ -13,16 +14,16 @@ const authMiddleware = require('../middlewares/authMiddlewares');
 const validations = require('../middlewares/validations');
 
 // Formulario de registro
-router.get('/register', guestMiddleware, userController.register); 
+router.get('/register', guestMiddleware, adminController.create); 
 
 // Procesar el registro
-router.post('/register', uploadFile.single('file'), validations ,userController.processRegister);
+router.post('/register', uploadFile.single('file'), validations ,adminController.save);
 
 // Vista Edicion de registro
-router.get('/userEdit/:idUser', guestMiddleware, userController.edit); 
+router.get('/edit/:id', guestMiddleware, adminController.edit); 
 
 // Procesar Edicion de registro
-router.post('/register', uploadFile.single('file'), validations ,userController.processRegister);
+router.put('/edit/:id', uploadFile.single('file'), validations ,adminController.update);
 
 // Formulario de login
 router.get('/login', userController.login);
@@ -37,7 +38,14 @@ router.get('/profile', authMiddleware, userController.profile);
 router.get('/logout', userController.logout);
 
 // Listado de Usuarios
-router.get('/usersList', userController.list);
+router.get('/usersList', adminController.index);
+
+// Vista - Eliminar Usuario
+// router.get('/delete/:userId', adminController.delete);
+
+// Procesar - Eliminar Usuario
+
+router.get('/delete/:id', adminController.destroy);
 
 
 module.exports = router;

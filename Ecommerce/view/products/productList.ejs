@@ -39,11 +39,11 @@
                             <td> <%= dato.name %></td>
                             <td> <%= dato.category %></td>            
                             <td><%= dato.price %></td>     
-                            <td><%= dato.gendre %></td>          
+                            <td><%= dato.gender %></td>          
                             <td><%= dato.brand %></td>                
                             <td><%= dato.date %></td>
-                            <td><a href="products/edit/<%= dato.id %>"><button class="editar">Editar Producto</button></a></td>
-                            <td><a href="products/<%= dato.id %>/delete"><button class="borrar">Eliminar Producto</button></a></td>
+                            <td><a href="products/edit/<%= dato.id %>"><button class="editar">Editar</button></a></td>
+                            <td><a href="products/delete/<%= dato.id %>"><button class="borrar">Eliminar</button></a></td>
                        </tr>
                     </tbody>
                     <% } %> 

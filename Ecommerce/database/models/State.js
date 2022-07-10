@@ -15,6 +15,13 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false,  //Si no tengo timestamps
     }
     const State = sequelize.define(alias, cols, config); 
+
+    State.associate = function(models){
+        State.hasMany(models.User , {
+            as: "users",
+            foreignKey: "idState"
+         });
+    };
   
         return State;
 }

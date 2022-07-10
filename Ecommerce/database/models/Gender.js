@@ -15,5 +15,20 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false,  //Si no tengo timestamps
     }
     const Gender = sequelize.define(alias, cols, config); 
+
+    Gender.associate = function(models){
+        Gender.hasMany(models.User , {
+            as: "User",
+            foreignKey: "idGender"
+         });
+    };
+
+    Gender.associate = function(models){
+        Gender.hasMany(models.Producto , {
+            as: "Producto",
+            foreignKey: "gender"
+         });
+    };
+
         return Gender;
 }

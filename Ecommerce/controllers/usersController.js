@@ -50,20 +50,6 @@ const controller = {
 		let usuarioCreado = {...req.body, password: bcryptjs.hashSync(req.body.password, 10),file: req.file.filename}
         let userCreated = user.create(usuarioCreado);
         // return res.redirect('/users/login');
-
-        db.User.create({
-            fullName: req.body.fullName,
-            gender: req.body.gender,
-            email: req.body.email,
-            password: req.body.password,
-            birthday: req.body.birthday,
-            phone: req.body.phone,
-            country: req.body.email,
-            state: req.body.password,
-            file: req.body.birthday,
-            roles: req.body.roles,
-            newsletter: req.body.newsletter,
-        })
         return res.redirect('users/usersList');
 	},
     edit: (req, res) => {

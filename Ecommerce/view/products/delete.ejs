@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/error.css">
-    <title>ELIMINANDO PRODUCTO "<%= idProducto.name %>"</title>
+    <title>ELIMINANDO PRODUCTO</title>
 
 </head>
 <body>
-	<h1>Eliminando el Producto "<%= idProducto.name %>"</h1>
-	<h2>Esta SEGURO que quiere eliminar el producto "<%= idProducto.name %>" ?</h2>
-	<form method="POST" action="/products/<%=idProducto.id %>/delete?_method=DELETE">
+	<% for(let dato of resultado) { %> 
+	<h1>Eliminando el Producto "<%= dato.name %>"</h1>
+	<h2>Esta SEGURO que quiere eliminar el producto "<%= dato.name %>" ?</h2>
+	<form method="POST" action="/products/delete/<%=dato.id %>?_method=DELETE">
 		<button>SI</button>
 	</form>
 	<a href="/products"><button>Volver hacia Atras</button></a>
+	<% } %>
 </body>
 
 </html>

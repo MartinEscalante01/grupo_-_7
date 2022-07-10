@@ -41,7 +41,7 @@ module.exports = (sequelize, DataTypes) => {
         },
     };
     let config = {
-        tableName: 'Users', //Si el nombre de la tabla no coincide con el del modelo
+        tableName: 'users', //Si el nombre de la tabla no coincide con el del modelo
         timestamps: false,  //Si no tengo timestamps
     }
     const User = sequelize.define(alias, cols, config); 
@@ -60,19 +60,19 @@ module.exports = (sequelize, DataTypes) => {
          });
     };
 
-    // User.associate = function(models){
-    //     User.belongsTo(models.State , {
-    //         as: "state",
-    //         foreignKey: "idState"
-    //      });
-    // };
+    User.associate = function(models){
+        User.belongsTo(models.State , {
+            as: "state",
+            foreignKey: "idState"
+         });
+    };
 
-    // User.associate = function(models){
-    //     User.belongsTo(models.Country , {
-    //         as: "country",
-    //         foreignKey: "idCountry"
-    //      });
-    // };
+    User.associate = function(models){
+        User.belongsTo(models.Country , {
+            as: "country",
+            foreignKey: "idCountry"
+         });
+    };
 
 
         return User;

@@ -12,7 +12,7 @@ const adminController = {
     },
     show: (req,res)=>{
         db.User.findByPk(req.params.id, {
-            // include : [{association : "gender"}]
+            include : [{association: "gender"}]
         })  
         .then(data =>{
             res.render('users/detail', {data})

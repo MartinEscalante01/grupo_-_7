@@ -1,3 +1,15 @@
+# Retrospectiva Sprint 6- Equipo N°7
+
+Nuestras principales conclusiones de la retro del Sprint 6.
+
+## Reflexiones del Sprint:
+
+-   Como equipo estamos de acuerdo que fue el sprint mas completo e interesante hasta el momento ya que tuvimos que aprender una herramienta nueva para los 3 que es MySql, y no solo eso si no que tambien asociarla con nuestro proyecto integrador, el cual estaba basado hasta el momento en JSON. Si bien fue el sprint menos complejo, donde tuvimos y seguimos teniendo las mayores dificultades es en el CRUD, como tambien la tuvimos con el JSON.
+
+-   Logramos generar una pagina mas dinamica y que se nutra de los datos cargados en MySql.
+-   Seguimos teniendo varios problemas con la organizacion y los tiempos de entrega, siendo 3 personas en el equipo y con horarios tan dispares no logramos combinarnos en un 100% pero gracias a la ayuda de los profesores, pudimos seguir avanzando y logrando los sprints.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Retrospectiva Sprint 5- Equipo N°7
 
 Nuestras principales conclusiones de la retro del Sprint 5.

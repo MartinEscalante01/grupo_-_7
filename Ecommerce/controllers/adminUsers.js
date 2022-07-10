@@ -10,10 +10,18 @@ const adminController = {
         })
         .catch(error => res.send(error))
     },
+    show: (req,res)=>{
+        db.User.findByPk(req.params.id, {
+            // include : [{association : "gender"}]
+        })  
+        .then(data =>{
+            res.render('users/detail', {data})
+        })
+    },
     create: (req, res) =>{
-        db.User.findAll()
-        .then(user =>{
-            res.render('users/register', {user});
+        db.Gender.findAll()
+        .then(gender =>{
+            res.render('users/register', {gender});
         })
     },
     save: (req,res)=>{

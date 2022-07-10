@@ -40,6 +40,9 @@ router.get('/logout', userController.logout);
 // Listado de Usuarios
 router.get('/usersList', adminController.index);
 
+// Detalle de Usuario
+router.get('/detail/:id', adminController.show);
+
 // Vista - Eliminar Usuario
 // router.get('/delete/:userId', adminController.delete);
 

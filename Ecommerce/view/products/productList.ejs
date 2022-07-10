@@ -28,6 +28,7 @@
                                 <th>Genero</th>
                                 <th>Marca</th>
                                 <th>Fecha</th>
+                                <th>Ver</th>
                                 <th>Editar</th>
                                 <th>Eliminar</th>
                             </tr>
@@ -42,8 +43,9 @@
                             <td><%= dato.gender %></td>          
                             <td><%= dato.brand %></td>                
                             <td><%= dato.date %></td>
-                            <td><a href="products/edit/<%= dato.id %>"><button class="editar">Editar</button></a></td>
-                            <td><a href="products/delete/<%= dato.id %>"><button class="borrar">Eliminar</button></a></td>
+                            <td><a href="productDetail/<%= dato.id %>"><button class="editar"><i class="fas fa-solid fa-eye"></i></button></a></td>
+                            <td><a href="products/edit/<%= dato.id %>"><button class="editar"><i class="fas fa-solid fa-pen-to-square"></i></button></a></td>
+                            <td><a href="products/delete/<%= dato.id %>"><button class="borrar"><i class="fas fa-solid fa-trash"></i></button></a></td>
                        </tr>
                     </tbody>
                     <% } %> 

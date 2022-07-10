@@ -18,14 +18,14 @@ module.exports = (sequelize, DataTypes) => {
 
     Gender.associate = function(models){
         Gender.hasMany(models.User , {
-            as: "User",
+            as: "users",
             foreignKey: "idGender"
          });
     };
 
     Gender.associate = function(models){
         Gender.hasMany(models.Producto , {
-            as: "Producto",
+            as: "productos",
             foreignKey: "gender"
          });
     };

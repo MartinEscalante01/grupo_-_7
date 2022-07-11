@@ -4,11 +4,18 @@ const Op = db.Sequelize.Op; //Activa los operadores en sus querys (like - count 
 
 const adminController = {
     index: (req,res) =>{
-        db.User.findAll()   
+        db.User.findAll({
+                include : [
+                    {association: "genders"},
+                    {association: "countries"},
+                    {association: "states"},
+                    {association: "roles"},
+                ]
+            })   
         .then(dataUsers =>{
             res.render('users/usersList',{dataUsers});
         })
-        .catch(error => res.send(error))
+        // .catch(error => res.send(error))
     },
     show: (req,res)=>{
         db.User.findByPk(req.params.id, {
@@ -19,29 +26,33 @@ const adminController = {
         })
     },
     create: (req, res) =>{
-        db.Gender.findAll()
-        .then(gender =>{
-            res.render('users/register', {gender});
+        db.User.findAll()
+        .then( async (data)  =>{
+            let genders = await db.Gender.findAll();
+            let country = await db.Country.findAll();
+            let state = await db.State.findAll();
+            let roles = await db.Rol.findAll();
+            res.render('users/register', {data, genders, country, state, roles});
         })
     },
     save: (req,res)=>{
         db.User.create({
             fullName: req.body.fullName,
-            gender: req.body.gender,
+            idGender: req.body.gender,
             email: req.body.email,
             password: req.body.password,
             birthday: req.body.birthday,
             phone: req.body.phone,
-            country: req.body.country,
-            state: req.body.state,
+            idCountry: req.body.country,
+            idState: req.body.state,
             file: req.file.filename,
-            roles: req.body.roles,
+            idRoles: req.body.roles,
         })
         res.redirect('/users/usersList');
     },
     edit: function(req,res){
         const pedidoUser = db.User.findByPk(req.params.id,{
-            include : [{association : 'gender'}]
+            include : [{association : 'genders'}]
         });
         const pedidoGender = db.Gender.findAll();
 

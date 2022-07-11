@@ -46,32 +46,27 @@ module.exports = (sequelize, DataTypes) => {
     }
     const User = sequelize.define(alias, cols, config); 
 
-    User.associate = function(models){
-        User.belongsTo(models.Rol , {
-            as: "rol",
-            foreignKey: "idRoles"
-         });
-    };
-
-    User.associate = function(models){
-        User.belongsTo(models.Gender , {
-            as: "gender",
-            foreignKey: "idGender"
-         });
-    };
-
-    User.associate = function(models){
-        User.belongsTo(models.State , {
-            as: "state",
-            foreignKey: "idState"
-         });
-    };
-
-    User.associate = function(models){
+    User.associate = function(models){  //Se escribe sola una vez la asociacion
         User.belongsTo(models.Country , {
-            as: "country",
+            as: "countries",
             foreignKey: "idCountry"
          });
+
+         User.belongsTo(models.State , {
+            as: "states",
+            foreignKey: "idState"
+         });
+
+         User.belongsTo(models.Gender , {
+            as: "genders",
+            foreignKey: "idGender"
+         });
+
+         User.belongsTo(models.Rol , {
+            as: "roles",
+            foreignKey: "idRoles"
+         });
+
     };
 
 

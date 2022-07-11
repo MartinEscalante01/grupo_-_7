@@ -54,8 +54,8 @@
                         <% } %>
 
                         <select name="gender" class="form-select <%= locals.errors && errors.gender ? 'is-invalid' : null %>">
-                            <option value="#" selected disabled>Seleccione su categoría...</option>
-                            <% gender.forEach(gender => { %>
+                            <option value="#" selected disabled>Seleccione su genero...</option>
+                            <% genders.forEach(gender => { %>
                               <option value="<%=gender.id %>"><%=gender.name %></option>
                             <% }); %>
                         </select>
@@ -66,9 +66,11 @@
                         <input type="tel"  placeholder="Numero de telefono" name="phone" required="require">
 
                         <select name="country" class="form-select <%= locals.errors && errors.country ? 'is-invalid' : null %>">
-                            <option value="">Elegí un país</option>
-                            <%  let countries = ['Argentina', 'Bolivia', 'Brasil', 'Colombia', 'Chile', 'Ecuador', 'Paraguay', 'Perú', 'Uruguay', 'Venezuela'];%>
-                            <% for (const oneState of countries) { %>
+                            <option value="#" selected disabled>Seleccione su país...</option>
+                            <% countries.forEach(country => { %>
+                              <option value="<%=country.id %>"><%=country.name %></option>
+                            <% }); %>
+                            <% for (const oneState of country) { %>
                                 <option 
                                     value="<%= oneState %>"
                                     <%= locals.oldData && (oneState === oldData.country) ? 'selected' : null %> 
@@ -82,9 +84,11 @@
                         <% } %>
 
                         <select name="state" class="form-select <%= locals.errors && errors.state ? 'is-invalid' : null %>">
-                            <option value="">Elegí una provincia</option>
-                            <%  let states = ['Otro', 'Buenos Aires', 'CABA', 'Catamarca', 'Chaco', 'Chubut', 'Cordoba', 'Corrientes', 'Entre Rios', 'Formosa', 'Jujuy', 'La Pampa', 'La Rioja', 'Mendoza', 'Misiones', 'Neuquen', 'Rio Negro', 'Salta', 'Santa Cruz', 'Santa Fe', 'San Juan', 'San Luis', 'Santiago del Estero', 'Tucuman', 'Tierra del Fuego'];%>
-                            <% for (const oneState of states) { %>
+                            <option value="#" selected disabled>Seleccione su provincia...</option>
+                            <% states.forEach(state => { %>
+                              <option value="<%=state.id %>"><%=state.name %></option>
+                            <% }); %>
+                            <% for (const oneState of state) { %>
                                 <option 
                                     value="<%= oneState %>"
                                     <%= locals.oldData && (oneState === oldData.state) ? 'selected' : null %> 
@@ -105,9 +109,11 @@
 								<% } %>
 
                                 <select name="roles" class="form-select <%= locals.errors && errors.roles ? 'is-invalid' : null %>">
-									<option value="">Elegí un Rol </option>
-									<%  let roles = ['Cliente', 'Admin'];%>
-									<% for (const oneRol of roles) { %>
+                                    <option value="#" selected disabled>Seleccione su rol...</option>
+                                    <% roles.forEach(rol => { %>
+                                      <option value="<%=rol.id %>"><%=rol.name %></option>
+                                    <% }); %>
+									<% for (const oneRol of rol) { %>
 										<option value="<%= oneRol %>" <%= locals.oldData && (oneRol === oldData.roles) ? 'selected' : 'Cliente' %>> 
 											<%= oneRol %> 
 										</option>

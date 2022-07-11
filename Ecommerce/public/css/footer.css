@@ -21,6 +21,8 @@ footer{
     flex-direction: column;
     width: 100%;
     background-color: #0a141d;
+    position: relative;
+    bottom: 0;
 }
 
 .pie-pagina .grupo-1{

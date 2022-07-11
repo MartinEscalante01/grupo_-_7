@@ -139,11 +139,11 @@ CREATE TABLE `productos` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
 -- -----------------------------------------------------
--- Table `sportix_arg`.`states`
+-- Table `sportix_arg`.`state`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `sportix_arg`.`states` ;
+DROP TABLE IF EXISTS `sportix_arg`.`state` ;
 
-CREATE TABLE IF NOT EXISTS `sportix_arg`.`states` (
+CREATE TABLE IF NOT EXISTS `sportix_arg`.`state` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)

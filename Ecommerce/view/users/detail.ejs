@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../css/list.css">
+    <link rel="stylesheet" href="../../css/list.css">
     <%- include('../partials/head.ejs') %>
     <title>Sportix | Listado de Usuarios</title>
 </head>
@@ -30,28 +30,24 @@
                                     <th>Telefono</th>
                                     <th>Rol</th>
                                     <th>Imagen</th>
-                                    <th>Ver</th>
-                                    <th>Editar</th>
-                                    <th>Eliminar</th>
                                 </tr>
                             </thead>
                         <tbody>                   
-                             <% for(let dato of data) { %> 
+                             
                                 <tr>
                                     <td> <%= dato.id %> </td>
                                     <td> <%= dato.fullName %> </td>
                                     <td> <%= dato.email %> </td>
                                     <td> <%= dato.birthday %> </td>
-                                    <td> <%= dato.idCountry %> </td>
-                                    <td> <%= dato.idGender %> </td>
+                                    <td> <%= dato.countries.name %> </td>
+                                    <td> <%= dato.genders.name %> </td>
                                     <td> <%= dato.phone %> </td>
-                                    <td> <%= dato.idRoles  %> </td>
-                                    <td> <img src="../img/profileImages/<%= dato.file %>">  </td>
-                                    <td><a href="/users/detail/<%= dato.id %>"><button class="editar">Ver</button> </a></td>
+                                    <td> <%= dato.roles.name %> </td>
+                                    <td> <img src="../../img/profileImages/<%= dato.file %>">  </td>
                                     <td><a href="/users/edit/<%= dato.id %>"><button class="editar">Editar</button> </a></td>
                                     <td><a href="/users/delete/<%= dato.id %>"><button class="borrar">Eliminar</button></a> </td>
                                    </tr>
-                                <% } %> 
+                                
                     </table>
         </section>
     </main>

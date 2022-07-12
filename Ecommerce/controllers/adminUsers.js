@@ -15,24 +15,29 @@ const adminController = {
         .then(dataUsers =>{
             res.render('users/usersList',{dataUsers});
         })
-        // .catch(error => res.send(error))
+        .catch(error => res.send(error))
     },
     show: (req,res)=>{
         db.User.findByPk(req.params.id, {
-            include : [{association: "gender"}]
+            include : [
+                {association: "genders"},
+                {association: "countries"},
+                {association: "states"},
+                {association: "roles"},
+            ]
         })  
-        .then(data =>{
-            res.render('users/detail', {data})
+        .then(dato =>{
+            res.render('users/detail', {dato})
         })
     },
     create: (req, res) =>{
         db.User.findAll()
         .then( async (data)  =>{
             let genders = await db.Gender.findAll();
-            let country = await db.Country.findAll();
-            let state = await db.State.findAll();
+            let countries = await db.Country.findAll();
+            let states = await db.State.findAll();
             let roles = await db.Rol.findAll();
-            res.render('users/register', {data, genders, country, state, roles});
+            res.render('users/register', {data, genders, countries, states, roles});
         })
     },
     save: (req,res)=>{
@@ -57,8 +62,8 @@ const adminController = {
         const pedidoGender = db.Gender.findAll();
 
         Promise.all([pedidoUser, pedidoGender])
-        .then(([user, gender]) => { 
-            res.render('users/userEdit', {user, gender});
+        .then(([user, genders]) => { 
+            res.render('users/userEdit', {user, genders});
         })
     },
     update: (req,res)=>{

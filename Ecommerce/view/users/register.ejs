@@ -70,12 +70,6 @@
                             <% countries.forEach(country => { %>
                               <option value="<%=country.id %>"><%=country.name %></option>
                             <% }); %>
-                            <% for (const oneState of country) { %>
-                                <option 
-                                    value="<%= oneState %>"
-                                    <%= locals.oldData && (oneState === oldData.country) ? 'selected' : null %> 
-                                > <%= oneState %> </option>
-                            <% } %>
                         </select>
                         <% if (locals.errors && errors.country) { %>
                             <div class="text-danger">
@@ -88,12 +82,6 @@
                             <% states.forEach(state => { %>
                               <option value="<%=state.id %>"><%=state.name %></option>
                             <% }); %>
-                            <% for (const oneState of state) { %>
-                                <option 
-                                    value="<%= oneState %>"
-                                    <%= locals.oldData && (oneState === oldData.state) ? 'selected' : null %> 
-                                > <%= oneState %> </option>
-                            <% } %>
                         </select>
                         <% if (locals.errors && errors.state) { %>
                             <div class="text-danger">
@@ -113,11 +101,6 @@
                                     <% roles.forEach(rol => { %>
                                       <option value="<%=rol.id %>"><%=rol.name %></option>
                                     <% }); %>
-									<% for (const oneRol of rol) { %>
-										<option value="<%= oneRol %>" <%= locals.oldData && (oneRol === oldData.roles) ? 'selected' : 'Cliente' %>> 
-											<%= oneRol %> 
-										</option>
-									<% } %>
 								</select>
 
                     </div>

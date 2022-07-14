@@ -21,9 +21,7 @@ module.exports = (sequelize, DataTypes) => {
             as: "users",
             foreignKey: "idGender"
          });
-    };
 
-    Gender.associate = function(models){
         Gender.hasMany(models.Producto , {
             as: "productos",
             foreignKey: "gender"

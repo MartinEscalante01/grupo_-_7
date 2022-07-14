@@ -16,10 +16,65 @@
   <main>
     <h1>EDITAR - "<%= productEdit.name %>" | SPORTIX</h1>
         <form id="CreateForm" action="/products/edit/<%= productEdit.id %>?_method=PUT"  method="POST" enctype="multipart/form-data">
+          <form method="POST" id="CreateForm" action="/productCreate" enctype="multipart/form-data">
             <div>
             <label for="txtNombre">Nombre del Producto:</label>
             <input class="controls" type="text" value="<%= productEdit.name %>" placeholder="Ingresar aqui..." name="name" required="require">
             </div>
+
+            <div>
+            <label for="">Descripcion del producto:</label>
+            <textarea name="description" id="controls" cols="30" rows="5" value="<%= productEdit.description %>"></textarea>
+            </div>
+            
+            <div>
+            <label for="cnbCategoria">Categoria del Producto:</label>
+            <select name="category" id="cnbCategory">
+                <option value="Indumentaria">Indumentaria</option>
+                <option value="Calzado">Calzado</option>
+                <option value="Accesorios">Accesorios</option>
+            </select>
+            </div>
+            
+            <div class="size">
+            <label  for="size">Seleccionar Talles:</label><br>
+              <select name="size">
+                <option value="#" selected disabled>Seleccione su talle...</option>
+                <% size.forEach(size => { %>
+                  <option value="<%=size.id %>"><%=size.sizes %></option>
+                <% }); %>
+              </select>
+            </div>
+            
+            <div>
+            <label>Fecha de Alta:</label><br>
+            <input class="controls" type="date" placeholder="DD-MM-AAAA"  name="date" required="require"><br>
+            </div>
+
+            <div>
+            <label>Price:</label><br>
+            <input class="controls" type="number" placeholder="Precio del Producto"  name="price" step="0.01" required="require"><br>
+            </div>
+
+            <div>
+              <label for="gender">Genero del Producto:</label>
+              <select name="gender">
+                  <option value="Hombre">Hombre</option>
+                  <option value="Mujer">Mujer</option>
+                  <option value="Niño">Niño</option>
+                  <option value="Unisex">Unisex</option>
+              </select>
+            </div>
+
+            <div>
+                <label>Marca del Producto:</label>
+                <input class="controls" type="text" placeholder="Marca del Producto..." name="brand" required="require">
+            </div>
+
+            <div>
+              <label for="txtImagen">Imagen del Producto:</label>
+              <input type="file" name="file" accept=".jpg" multiple>
+            </div>  
 
             <div>
             <label for="">Descripcion del producto:</label>

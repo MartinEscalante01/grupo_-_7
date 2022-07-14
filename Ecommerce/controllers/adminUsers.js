@@ -57,27 +57,35 @@ const adminController = {
     },
     edit: function(req,res){
         const pedidoUser = db.User.findByPk(req.params.id,{
-            include : [{association : 'genders'}]
-        });
+            include : [
+                {association: "genders"},
+                {association: "countries"},
+                {association: "states"},
+                {association: "roles"},
+            ]});
+        
         const pedidoGender = db.Gender.findAll();
+        const pedidoCountries = db.Country.findAll();
+        const pedidoStates =  db.State.findAll();
+        const pedidoRoles =  db.Rol.findAll();
 
-        Promise.all([pedidoUser, pedidoGender])
-        .then(([user, genders]) => { 
-            res.render('users/userEdit', {user, genders});
+        Promise.all([pedidoUser, pedidoGender, pedidoCountries, pedidoStates, pedidoRoles])
+        .then(([user, genders, countries, states, roles]) => { 
+            res.render('users/userEdit', {user, genders, countries, states, roles});
         })
     },
     update: (req,res)=>{
         db.User.update({
             fullName: req.body.fullName,
-            gender: req.body.gender,
+            idGender: req.body.gender,
             email: req.body.email,
             password: req.body.password,
             birthday: req.body.birthday,
             phone: req.body.phone,
-            country: req.body.country,
-            state: req.body.state,
-            file: req.body.file,
-            roles: req.body.roles,
+            idCountry: req.body.country,
+            idState: req.body.state,
+            file: req.file.filename,
+            idRoles: req.body.roles,
         },{
             where:{
                 id: req.params.id

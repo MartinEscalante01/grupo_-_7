@@ -40,28 +40,22 @@ module.exports = (sequelize, DataTypes) => {
     }
     const Product = sequelize.define(alias, cols, config); 
 
-    // Product.associate = function(models){
-    //     Product.belongsTo(models.Gender , {
-    //         as: "genero",
-    //         foreignKey: "gender"
-    //      });
-    // };
-
-    // Product.associate = function(models){
-    //     Product.belongsTo(models.Brand , {
-    //         as: "marcas",
-    //         foreignKey: "brand"
-    //      });
-    // };
-
-    // Product.associate = function(models){
-    //     Product.belongsTo(models.Category , {
-    //         as: "categories",
-    //         foreignKey: "category"
-    //      });
-    // };
-
     Product.associate = function(models){
+        Product.belongsTo(models.Gender , {
+            as: "genders",
+            foreignKey: "gender"
+         });
+
+        Product.belongsTo(models.Brand , {
+            as: "brands",
+            foreignKey: "brand"
+         });
+
+        Product.belongsTo(models.Category , {
+            as: "categories",
+            foreignKey: "category"
+         });
+    
         Product.belongsTo(models.Size , {
             as: "sizes",
             foreignKey: "size"

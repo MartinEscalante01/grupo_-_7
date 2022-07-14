@@ -4,7 +4,14 @@ const Op = db.Sequelize.Op; //Aqui hacen esto para lograr activalos operadores e
 
 const adminProducts = {
     index: (req,res) =>{
-        db.Producto.findAll()   
+        db.Producto.findAll(
+            {include : [
+                {association: "genders"},
+                {association: "brands"},
+                {association: "categories"},
+                {association: "sizes"},
+            ]}
+        )   
         .then(productos =>{
             res.render('products/productList', { productos })
         })

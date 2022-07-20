@@ -10,21 +10,21 @@
   <header>
     <nav>
         <a href="/products">Listado de Productos</a>
-        <a href="#">Crear un nuevo Usuario</a>
+        <a href="/users/register">Crear un nuevo Usuario</a>
     </nav>
   </header>
   <main>
-    <h1>EDITAR - "<%= productEdit.name %>" | SPORTIX</h1>
-        <form id="CreateForm" action="/products/edit/<%= productEdit.id %>?_method=PUT"  method="POST" enctype="multipart/form-data">
+    <h1>EDITAR - "<%= productos.name %>" | SPORTIX</h1>
+        <form id="CreateForm" action="/products/edit/<%= productos.id %>?_method=PUT"  method="POST" enctype="multipart/form-data">
           <form method="POST" id="CreateForm" action="/productCreate" enctype="multipart/form-data">
             <div>
             <label for="txtNombre">Nombre del Producto:</label>
-            <input class="controls" type="text" value="<%= productEdit.name %>" placeholder="Ingresar aqui..." name="name" required="require">
+            <input class="controls" type="text" value="<%= productos.name %>" placeholder="Ingresar aqui..." name="name" required="require">
             </div>
 
             <div>
             <label for="">Descripcion del producto:</label>
-            <textarea name="description" id="controls" cols="30" rows="5" value="<%= productEdit.description %>"></textarea>
+            <textarea name="description" id="controls" cols="30" rows="5" value="<%= productos.description %>"></textarea>
             </div>
             
             <div>
@@ -40,7 +40,7 @@
             <label  for="size">Seleccionar Talles:</label><br>
               <select name="size">
                 <option value="#" selected disabled>Seleccione su talle...</option>
-                <% size.forEach(size => { %>
+                <% sizes.forEach(size => { %>
                   <option value="<%=size.id %>"><%=size.sizes %></option>
                 <% }); %>
               </select>
@@ -78,7 +78,7 @@
 
             <div>
             <label for="">Descripcion del producto:</label>
-            <textarea name="description" value="<%= productEdit.description %>" id="controls" cols="30" rows="5"></textarea>
+            <textarea name="description" value="<%= productos.description %>" id="controls" cols="30" rows="5"></textarea>
             </div>
             
             <div>
@@ -116,12 +116,12 @@
             
             <div>
             <label>Fecha de Alta:</label><br>
-            <input class="controls" type="date" value="<%= productEdit.date %>" placeholder="DD-MM-AAAA"  name="date" required="require"><br>
+            <input class="controls" type="date" value="<%= productos.date %>" placeholder="DD-MM-AAAA"  name="date" required="require"><br>
             </div>
 
             <div>
             <label>Price:</label><br>
-            <input class="controls" type="number" value="<%= productEdit.price %>" placeholder="Precio del Producto"  name="price" required="require"><br>
+            <input class="controls" type="number" value="<%= productos.price %>" placeholder="Precio del Producto"  name="price" required="require"><br>
             </div>
 
             <div>
@@ -136,18 +136,17 @@
 
             <div>
                 <label>Marca del Producto:</label>
-                <input class="controls" type="text" value="<%= productEdit.brand %>" placeholder="Marca del Producto..." name="brand" required="require">
+                <input class="controls" type="text" value="<%= productos.brand %>" placeholder="Marca del Producto..." name="brand" required="require">
             </div>
 
             <div>
               <label for="txtImagen">Imagen del Producto:</label>
-              <input type="file" value="<%= productEdit.file %>" name="file" accept=".jpg" multiple>
+              <input type="file" value="<%= productos.file %>" name="file" accept=".jpg" multiple>
             </div>
 
             <div class="botones">
               <button type="submit">EDITAR PRODUCTO</button>
               <button type="reset">Limpiar Contenido</button>
-              <button type="submit">CANCELAR</button>
             </div>
         </form>
   </main>

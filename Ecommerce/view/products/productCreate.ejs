@@ -28,18 +28,19 @@
             
             <div>
             <label for="cnbCategoria">Categoria del Producto:</label>
-            <select name="category" id="cnbCategory">
-                <option value="Indumentaria">Indumentaria</option>
-                <option value="Calzado">Calzado</option>
-                <option value="Accesorios">Accesorios</option>
-            </select>
+                <select name="category" id="cnbCategory">
+                  <option value="#" selected disabled>Seleccione su Categoria...</option>
+                      <% categories.forEach(category => { %>
+                        <option value="<%=category.id %>"><%=category.category %></option>
+                      <% }); %>
+                </select>
             </div>
             
             <div class="size">
             <label  for="size">Seleccionar Talles:</label><br>
               <select name="size">
                 <option value="#" selected disabled>Seleccione su talle...</option>
-                <% size.forEach(size => { %>
+                <% sizes.forEach(size => { %>
                   <option value="<%=size.id %>"><%=size.sizes %></option>
                 <% }); %>
               </select>
@@ -58,17 +59,22 @@
             <div>
               <label for="gender">Genero del Producto:</label>
               <select name="gender">
-                  <option value="Hombre">Hombre</option>
-                  <option value="Mujer">Mujer</option>
-                  <option value="Niño">Niño</option>
-                  <option value="Unisex">Unisex</option>
+                <option value="#" selected disabled>Seleccione su genero...</option>
+                    <% genders.forEach(gender => { %>
+                      <option value="<%=gender.id %>"><%=gender.name %></option>
+                    <% }); %>
               </select>
             </div>
 
             <div>
                 <label>Marca del Producto:</label>
-                <input class="controls" type="text" placeholder="Marca del Producto..." name="brand" required="require">
-            </div>
+                <select name="brand">
+                  <option value="#" selected disabled>Seleccione su marca...</option>
+                      <% brands.forEach(brand => { %>
+                        <option value="<%=brand.id %>"><%=brand.name %></option>
+                      <% }); %>
+                </select>
+              </div>
 
             <div>
               <label for="txtImagen">Imagen del Producto:</label>

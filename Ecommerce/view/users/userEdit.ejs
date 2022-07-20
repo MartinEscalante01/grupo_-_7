@@ -55,7 +55,7 @@
                         <% } %>
 
                         <select name="gender" class="form-select <%= locals.errors && errors.gender ? 'is-invalid' : null %>">
-                            <option value="<%= user.genders.name %>" ></option>
+                            <option value="<%= user.idGender.name %>" ></option>
                             <% genders.forEach(gender => { %>
                               <option value="<%=gender.id %>"><%=gender.name %></option>
                             <% }); %>
@@ -90,13 +90,18 @@
                             </div>
                         <% } %>
 
-                        <input type="file" value="<%= user.file %>" name="file" class="form-control <%= locals.errors && errors.file ? 'is-invalid' : null %>">
-								<% if (locals.errors && errors.file) { %>
-									<div class="text-danger">
-										<%= errors.file.msg %>
-									</div>
-								<% } %>
-                                
+                        <div class="containerImagen">
+                            <input type="file" value="<%= user.file %>" name="file" class="form-control <%= locals.errors && errors.file ? 'is-invalid' : null %>">
+                                    <% if (locals.errors && errors.file) { %>
+                                        <div class="text-danger">
+                                            <%= errors.file.msg %>
+                                        </div>
+                                    <% } %>
+
+                            <figure>
+                                <img  src="/img/profileImages/<%= user.file %> " alt="Imagen">
+                            </figure>
+                        </div>     
 
                         <select name="roles" class="form-select <%= locals.errors && errors.roles ? 'is-invalid' : null %>">
                             <option value="<%= user.roles %>" selected disabled>Seleccione su rol...</option>

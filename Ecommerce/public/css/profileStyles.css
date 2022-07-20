@@ -68,3 +68,23 @@
    margin-top: 1em;
    padding: 50px 20px
 }
+
+.detailData{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-bottom: 1px solid black;
+    padding: 0px 100px;
+}
+
+.detail h1{
+    font-size: 2rem;
+    text-decoration: underline;
+    padding-bottom: 0px;
+
+}
+
+.detail p{
+    font-size: 1rem;
+    letter-spacing: 3px;
+}

@@ -192,6 +192,14 @@ input, select {
     padding: 7px;
 }
 
+.containerImagen{
+    display: flex;
+}
+
+.containerImagen img{
+    width: 65px;
+}
+
 @media (max-width: 760px) {
     body{
         margin: 0

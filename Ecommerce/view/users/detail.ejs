@@ -1,54 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../../css/list.css">
+    <link rel="stylesheet" href="../../css/profileStyles.css">
     <%- include('../partials/head.ejs') %>
     <title>Sportix | Listado de Usuarios</title>
 </head>
 
 <body>
-    <%- include('../partials/header.ejs') %>
-    <main>
-        <section>
-            <nav class="opciones">
-                <a href="/users/usersList"> ← Listado de Usuarios</a>
-                <a href="/users/register">Crear un nuevo Usuario →</a>
-            </nav>
-
-                <h1>SPORTIX | Detalle de Usuario</h1>
-                <div class="table-wrapper">
-                    <table class="fl-table">
-                        <tr>
-                            <thead>
-                                <tr>
-                                    <th>Id</th>
-                                    <th>Nombre</th>
-                                    <th>Email</th>
-                                    <th>Fecha de Nacimiento</th>
-                                    <th>Pais de Nacimiento</th>
-                                    <th>Genero</th>
-                                    <th>Telefono</th>
-                                    <th>Rol</th>
-                                    <th>Imagen</th>
-                                </tr>
-                            </thead>
-                        <tbody>                   
-                             
-                                <tr>
-                                    <td> <%= dato.id %> </td>
-                                    <td> <%= dato.fullName %> </td>
-                                    <td> <%= dato.email %> </td>
-                                    <td> <%= dato.birthday %> </td>
-                                    <td> <%= dato.countries.name %> </td>
-                                    <td> <%= dato.genders.name %> </td>
-                                    <td> <%= dato.phone %> </td>
-                                    <td> <%= dato.roles.name %> </td>
-                                    <td> <img src="../../img/profileImages/<%= dato.file %>">  </td>
-                                    <td><a href="/users/edit/<%= dato.id %>"><button class="editar">Editar</button> </a></td>
-                                    <td><a href="/users/delete/<%= dato.id %>"><button class="borrar">Eliminar</button></a> </td>
-                                   </tr>
-                                
-                    </table>
+    <nav class="opciones">
+        <a href="/users/usersList"> ← Listado de Usuarios</a>
+        <a href="/users/register">Crear un nuevo Usuario →</a>
+    </nav>
+    <h1>SPORTIX | Detalle de Usuario</h1>
+    <main class="profile">
+        <section class="container">
+            <img src="../../img/profileImages/<%= user.file %> " class="profileImg">
+            <div class="profileData">
+            <h2><%= user.fullName %></h2>
+            <p><%= user.email %> </p>
+            </div>
+        </section>
+        <section class="detail">
+            <div class="detailData">
+                <h1>Datos personales</h1>
+                <p>EMAIL: <%= user.email %></p>
+                <p>TELEFONO: <%= user.phone %></p>
+                <p>CUMPLEAÑOS: <%= user.birthday %></p>
+                <p>PAIS: <%= user.countries.name %></p>
+                <p>PROVINCIA: <%= user.states.name %></p>
+                <p>GENERO: <%= user.genders.name %></p>
+                <p>ROL: <%= user.roles.name %></p>
+            </div>         
         </section>
     </main>
 

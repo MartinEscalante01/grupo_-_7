@@ -26,8 +26,8 @@ const adminController = {
                 {association: "roles"},
             ]
         })  
-        .then(dato =>{
-            res.render('users/detail', {dato})
+        .then(user =>{
+            res.render('users/detail', {user})
         })
     },
     create: (req, res) =>{

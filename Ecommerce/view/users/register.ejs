@@ -15,43 +15,35 @@
 
         <div class="container" id="container">
             <div class="form-container sign-in-container">
-                <form method="POST" action="/users/register" enctype="multipart/form-data">
+                <form id="formulario" method="POST" action="/users/register" enctype="multipart/form-data">
                     <h1>Formulario de registro</h1>
-                    <div>
-                        <% if (locals.errors && errors.email) { %>
-                        <div class="text-danger">
-                            <%= errors.email.msg %>
-                        </div>
-                         <% } %>
-                    </div>
+
                     <div class="selector-box">
                         <input type="text" name="fullName" <%= locals.errors && errors.fullName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.fullName : null %>" placeholder="Nombre Completo">
-                        <% if (locals.errors && errors.fullName) { %>
-                            <div class="text-danger">
-                                <%= errors.fullName.msg %> 
-                            </div>
-                        <% } %>
+                            <% if (locals.errors && errors.fullName) { %>
+                                <div class="text-danger">
+                                    <%= errors.fullName.msg %> 
+                                </div>
+                            <% } %>
                     
-                        <input type="password" name="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" placeholder="Password"
-                        >
-                        <% if (locals.errors && errors.password) { %>
-                            <div class="text-danger">
-                                <%= errors.password.msg %>
-                            </div>
-                        <% } %>  
+                        <input type="password" name="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" placeholder="Password">
+                            <% if (locals.errors && errors.password) { %>
+                                <div class="text-danger">
+                                    <%= errors.password.msg %>
+                                </div>
+                            <% } %>  
 
                         <input 
                             type="text" 
                             name="email" 
                             class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
                             value="<%= locals.oldData ? oldData.email : null %>"
-                            placeholder="Correo Electrónico"
-                        >
-                        <% if (locals.errors && errors.email) { %>
-                            <div class="text-danger">
-                                <%= errors.email.msg %>
-                            </div>
-                        <% } %>
+                            placeholder="Correo Electrónico">
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="text-danger">
+                                    <%= errors.email.msg %>
+                                </div>
+                            <% } %>
 
                         <select name="gender" class="form-select <%= locals.errors && errors.gender ? 'is-invalid' : null %>">
                             <option value="#" selected disabled>Seleccione su genero...</option>
@@ -102,10 +94,10 @@
                                       <option value="<%=rol.id %>"><%=rol.name %></option>
                                     <% }); %>
 								</select>
-
+                                <input class="send" type="submit" value="REGISTRARSE">
                     </div>
                    
-                    <input class="send" type="submit" value="REGISTRARSE">
+                    
                 </form>
             </div>
             <div class="overlay-container">
@@ -123,9 +115,8 @@
             </div>
         </div>
 
-        <footer>
     </main>
-
+    <script src="js/formulario.js"></script>
     <!-- <%- include('../partials/footer.ejs') %> -->
 
 </body>

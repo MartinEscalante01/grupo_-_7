@@ -12,7 +12,7 @@
         <nav class="opciones">
             <a href="/"> ← Volver al home</a>
         </nav>
-
+        <script src="js/formulario.js"></script>
         <div class="container" id="container">
             <div class="form-container sign-in-container">
                 <form id="formulario" method="POST" action="/users/register" enctype="multipart/form-data">
@@ -53,9 +53,9 @@
                         </select>
 
                         
-						<input type="date" placeholder="AAAA/MM/DD"  name="birthday" required="require" value="<%= locals.oldData ? oldData.birthday : null %>">
+						<input type="date" placeholder="AAAA/MM/DD"  name="birthday" value="<%= locals.oldData ? oldData.birthday : null %>">
 					    
-                        <input type="tel"  placeholder="Numero de telefono" name="phone" required="require">
+                        <input type="tel"  placeholder="Numero de telefono" name="phone">
 
                         <select name="country" class="form-select <%= locals.errors && errors.country ? 'is-invalid' : null %>">
                             <option value="#" selected disabled>Seleccione su país...</option>
@@ -94,7 +94,8 @@
                                       <option value="<%=rol.id %>"><%=rol.name %></option>
                                     <% }); %>
 								</select>
-                                <input class="send" type="submit" value="REGISTRARSE">
+                                <button type="submit">REGISTRARSE</button>
+                                <!-- <input class="send" type="submit" value="REGISTRARSE"> -->
                     </div>
                    
                     
@@ -116,7 +117,7 @@
         </div>
 
     </main>
-    <script src="js/formulario.js"></script>
+    
     <!-- <%- include('../partials/footer.ejs') %> -->
 
 </body>

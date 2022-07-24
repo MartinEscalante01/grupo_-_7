@@ -16,14 +16,7 @@
         <div class="container" id="container">
             <div class="form-container sign-in-container">
                 <form method="PUT" action="/users/edit/<%= user.id %>?_method=PUT" enctype="multipart/form-data">
-                    <h1>Editar Usuario <%= user.fullName %> </h1>
-                    <div>
-                        <% if (locals.errors && errors.email) { %>
-                        <div class="text-danger">
-                            <%= errors.email.msg %>
-                        </div>
-                         <% } %>
-                    </div>
+                    
                     <div class="selector-box">
                         <input type="text"  value="<%= user.fullName %>" name="fullName" <%= locals.errors && errors.fullName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.fullName : null %>" placeholder="Nombre Completo">
                         <% if (locals.errors && errors.fullName) { %>
@@ -32,8 +25,7 @@
                             </div>
                         <% } %>
                     
-                        <input type="password" value="<%= user.password %>" name="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" placeholder="Password"
-                        >
+                        <input type="password" value="<%= user.password %>" name="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" placeholder="Password">
                         <% if (locals.errors && errors.password) { %>
                             <div class="text-danger">
                                 <%= errors.password.msg %>
@@ -55,7 +47,7 @@
                         <% } %>
 
                         <select name="gender" class="form-select <%= locals.errors && errors.gender ? 'is-invalid' : null %>">
-                            <option value="<%= user.idGender.name %>" ></option>
+                            <option value="<%= user.genders.name %>" ></option>
                             <% genders.forEach(gender => { %>
                               <option value="<%=gender.id %>"><%=gender.name %></option>
                             <% }); %>
@@ -67,7 +59,7 @@
                         <input type="tel"  value="<%= user.phone %>" placeholder="Numero de telefono" name="phone" required="require">
 
                         <select name="country" class="form-select <%= locals.errors && errors.country ? 'is-invalid' : null %>">
-                            <option value="<%= user.countries.name %>"></option>
+                            <option value="<%= user.countries%>"></option>
                             <% countries.forEach(country => { %>
                               <option value="<%=country.id %>"><%=country.name %></option>
                             <% }); %>
@@ -79,7 +71,7 @@
                         <% } %>
 
                         <select name="state" class="form-select <%= locals.errors && errors.state ? 'is-invalid' : null %>">
-                            <option value="<%= user.state %>" selected disabled>Seleccione su provincia...</option>
+                            <option value="<%= user.states %>"></option>
                             <% states.forEach(state => { %>
                               <option value="<%=state.id %>"><%=state.name %></option>
                             <% }); %>
@@ -104,27 +96,21 @@
                         </div>     
 
                         <select name="roles" class="form-select <%= locals.errors && errors.roles ? 'is-invalid' : null %>">
-                            <option value="<%= user.roles %>" selected disabled>Seleccione su rol...</option>
+                            <option value="<%= user.roles %>"></option>
                             <% roles.forEach(rol => { %>
                                 <option value="<%=rol.id %>"><%=rol.name %></option>
                             <% }); %>
                         </select>
 
                     </div>
-                   
-                    <input class="send" type="submit" value="REGISTRARSE">
+                    <button type="submit">EDITAR</button>
                 </form>
             </div>
             <div class="overlay-container">
                 <div class="overlay">
                     <div class="overlay-panel overlay-right">
-                        <h1>Hazte miembro!</h1>
-                        <p>Unete a nuestra comunidad con tu perfil obtendras acceso anticipado a los mejores productos deportivos</p>
-						<div class="acuerdos">                
-						<div>
-							<input type="checkbox" name="newsletter" id="opt-in">
-							<label for="opt-in">Registrate para recibir correos electronicos del sitio con actualizaciones de productos, ofertas y beneficios como miembros</label>
-						</div>
+                        <h1>Editar Usuario </h1>
+                        <h1><%= user.fullName %> </h1>
                     </div>
                 </div>
             </div>

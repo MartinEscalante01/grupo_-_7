@@ -18,12 +18,12 @@
         <form method="POST" id="CreateForm" action="/productCreate" enctype="multipart/form-data">
             <div>
             <label for="txtNombre">Nombre del Producto:</label>
-            <input class="controls" type="text" placeholder="Ingresar aqui..." name="name" required="require">
+            <input class="controls" type="text" placeholder="Ingresar aqui..." name="name" required="require" minlength="5">
             </div>
 
             <div>
             <label for="">Descripcion del producto:</label>
-            <textarea name="description" id="controls" cols="30" rows="5"></textarea>
+            <textarea name="description" id="controls" cols="30" rows="5" minlength="20"></textarea>
             </div>
             
             <div>

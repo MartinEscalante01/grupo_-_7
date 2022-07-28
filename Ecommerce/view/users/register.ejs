@@ -19,14 +19,14 @@
                     <h1>Formulario de registro</h1>
 
                     <div class="selector-box">
-                        <input type="text" name="fullName" <%= locals.errors && errors.fullName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.fullName : null %>" placeholder="Nombre Completo">
+                        <input type="text" name="fullName" <%= locals.errors && errors.fullName ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.fullName : null %>" placeholder="Nombre Completo" required="required" minlength="2">
                             <% if (locals.errors && errors.fullName) { %>
                                 <div class="text-danger">
                                     <%= errors.fullName.msg %> 
                                 </div>
                             <% } %>
                     
-                        <input type="password" name="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" placeholder="Password">
+                        <input type="password" name="password" required="required" minlength="8" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" placeholder="Password">
                             <% if (locals.errors && errors.password) { %>
                                 <div class="text-danger">
                                     <%= errors.password.msg %>
@@ -35,7 +35,8 @@
 
                         <input 
                             type="text" 
-                            name="email" 
+                            name="email"
+                            rrequired="required"
                             class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
                             value="<%= locals.oldData ? oldData.email : null %>"
                             placeholder="Correo Electrónico">
@@ -55,7 +56,7 @@
                         
 						<input type="date" placeholder="AAAA/MM/DD"  name="birthday" value="<%= locals.oldData ? oldData.birthday : null %>">
 					    
-                        <input type="tel"  placeholder="Numero de telefono" name="phone">
+                        <input type="tel"  placeholder="Numero de telefono" name="phone" max="10">
 
                         <select name="country" class="form-select <%= locals.errors && errors.country ? 'is-invalid' : null %>">
                             <option value="#" selected disabled>Seleccione su país...</option>

@@ -1,3 +1,20 @@
+# Retrospectiva Sprint 7- Equipo N°7
+
+Nuestras principales pensamientos de la retro del Sprint 7.
+
+## Sprint:
+
+Start Doing: Llamada semanal entre el equipo para entender lo requerido por el sprint y la organizacion/division de tareas. Objetivos simples pero diarios donde observemos dia a dia algun avance en el proyecto.
+
+More of: La llamada inicial debe ser una vez que nos comunican que comienza el sprint, ser eficientes con los tiempos entre la apertura del sprint y la division de tareas.
+
+Keep Doing : Estamos logrando que la organizacion de tareas e entendimiento del sprint sea rapido e eficiente.
+
+Less of: Quedar atrasado con temas anteriores o con puntos de sprints anteriores que no se pudieron realizar, mejorar estilos o vistas que generen perdida de tiempo y no se le dedique tiempo a cosas importantes o entregables.
+
+Stop Doing: Retrasos y desorganizacion de tiempos luego de la division de tareas.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Retrospectiva Sprint 6- Equipo N°7
 
 Nuestras principales conclusiones de la retro del Sprint 6.

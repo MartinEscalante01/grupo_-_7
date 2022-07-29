@@ -45,10 +45,10 @@ INSERT INTO gender (`id`,`name`) VALUES(3,'Otros');
 INSERT INTO gender (`id`,`name`) VALUES(4,'Unisex');
 
 -- Category
-INSERT INTO category (`id`,`name`) VALUES(1,'Indumentaria');
-INSERT INTO category (`id`,`name`) VALUES(2,'Calzado');
-INSERT INTO category (`id`,`name`) VALUES(3,'Accesorios');
-INSERT INTO category (`id`,`name`) VALUES(4,'Otros');
+INSERT INTO category (`id`,`category`) VALUES(1,'Indumentaria');
+INSERT INTO category (`id`,`category`) VALUES(2,'Calzado');
+INSERT INTO category (`id`,`category`) VALUES(3,'Accesorios');
+INSERT INTO category (`id`,`category`) VALUES(4,'Otros');
 
 -- Brand
 INSERT INTO brand (`id`,`name`) VALUES(1,'Adidas');

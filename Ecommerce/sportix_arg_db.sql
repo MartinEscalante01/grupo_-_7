@@ -39,7 +39,7 @@ DROP TABLE IF EXISTS `sportix_arg`.`category` ;
 
 CREATE TABLE IF NOT EXISTS `sportix_arg`.`category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(25) NOT NULL,
+  `category` varchar(25) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 

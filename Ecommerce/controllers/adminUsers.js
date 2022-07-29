@@ -50,7 +50,7 @@ const adminController = {
             phone: req.body.phone,
             idCountry: req.body.country,
             idState: req.body.state,
-            file: req.file.filename,
+            // file: req.file.file,
             idRoles: req.body.roles,
         })
         res.redirect('/users/usersList');

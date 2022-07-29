@@ -12,14 +12,18 @@
         <nav class="opciones">
             <a href="/"> ← Volver al home</a>
         </nav>
-        <script src="js/formulario.js"></script>
+
+        <div class="errores">
+            <ul></ul>
+        </div>
+        
         <div class="container" id="container">
             <div class="form-container sign-in-container">
                 <form id="formulario" method="POST" action="/users/register" enctype="multipart/form-data">
                     <h1>Formulario de registro</h1>
 
                     <div class="selector-box">
-                        <input type="text" name="fullName" <%= locals.errors && errors.fullName ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.fullName : null %>" placeholder="Nombre Completo" required="required" minlength="2">
+                        <input class="name" type="text" name="fullName" <%= locals.errors && errors.fullName ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.fullName : null %>" placeholder="Nombre Completo" required="required" minlength="2">
                             <% if (locals.errors && errors.fullName) { %>
                                 <div class="text-danger">
                                     <%= errors.fullName.msg %> 
@@ -37,7 +41,7 @@
                             type="text" 
                             name="email"
                             rrequired="required"
-                            class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                            class="form-control email <%= locals.errors && errors.email ? 'is-invalid' : null %>"
                             value="<%= locals.oldData ? oldData.email : null %>"
                             placeholder="Correo Electrónico">
                             <% if (locals.errors && errors.email) { %>
@@ -89,14 +93,14 @@
 									</div>
 								<% } %>
 
-                                <select name="roles" class="form-select <%= locals.errors && errors.roles ? 'is-invalid' : null %>">
-                                    <option value="#" selected disabled>Seleccione su rol...</option>
-                                    <% roles.forEach(rol => { %>
-                                      <option value="<%=rol.id %>"><%=rol.name %></option>
-                                    <% }); %>
-								</select>
+                        <select name="roles" class="form-select <%= locals.errors && errors.roles ? 'is-invalid' : null %>">
+                            <option value="#" selected disabled>Seleccione su rol...</option>
+                            <% roles.forEach(rol => { %>
+                                <option value="<%=rol.id %>"><%=rol.name %></option>
+                            <% }); %>
+                        </select>
+
                                 <button type="submit">REGISTRARSE</button>
-                                <!-- <input class="send" type="submit" value="REGISTRARSE"> -->
                     </div>
                    
                     
@@ -116,11 +120,8 @@
                 </div>
             </div>
         </div>
-
+        <script src="../js/formulario.js"></script>
     </main>
-    
-    <!-- <%- include('../partials/footer.ejs') %> -->
-
 </body>
 
 </html>

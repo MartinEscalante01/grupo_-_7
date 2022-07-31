@@ -12,25 +12,28 @@
         <nav class="opciones">
             <a href="/"> ← Volver al home</a>
         </nav>
-
+        
         <div class="errores">
             <ul></ul>
         </div>
-        
+
         <div class="container" id="container">
             <div class="form-container sign-in-container">
-                <form id="formulario" method="POST" action="/users/register" enctype="multipart/form-data">
+
+                
+
+                <form class="validation" id="formulario" method="POST" action="/users/register" enctype="multipart/form-data">
                     <h1>Formulario de registro</h1>
 
                     <div class="selector-box">
-                        <input class="name" type="text" name="fullName" <%= locals.errors && errors.fullName ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.fullName : null %>" placeholder="Nombre Completo" required="required" minlength="2">
+                        <input class="name" type="text" name="fullName" <%= locals.errors && errors.fullName ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.fullName : null %>" placeholder="Nombre Completo"  minlength="2">
                             <% if (locals.errors && errors.fullName) { %>
                                 <div class="text-danger">
                                     <%= errors.fullName.msg %> 
                                 </div>
                             <% } %>
                     
-                        <input type="password" name="password" required="required" minlength="8" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" placeholder="Password">
+                        <input type="password" name="password"  minlength="8" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" placeholder="Password">
                             <% if (locals.errors && errors.password) { %>
                                 <div class="text-danger">
                                     <%= errors.password.msg %>
@@ -38,9 +41,9 @@
                             <% } %>  
 
                         <input 
-                            type="text" 
+                            type="email" 
                             name="email"
-                            rrequired="required"
+                            
                             class="form-control email <%= locals.errors && errors.email ? 'is-invalid' : null %>"
                             value="<%= locals.oldData ? oldData.email : null %>"
                             placeholder="Correo Electrónico">

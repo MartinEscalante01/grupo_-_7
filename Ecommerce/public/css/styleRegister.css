@@ -200,6 +200,10 @@ input, select {
     width: 65px;
 }
 
+.errores{
+    color: red;
+}
+
 @media (max-width: 760px) {
     body{
         margin: 0

@@ -59,11 +59,12 @@
 					    
                         <input type="tel"  value="<%= user.phone %>" placeholder="Numero de telefono" name="phone" required="require">
 
-                        <select name="country" class="form-select <%= locals.errors && errors.country ? 'is-invalid' : null %>">
-                            <option value="<%= user.countries%>"></option>
+                        <select value="<%= user.countries%>" name="country" class="form-select <%= locals.errors && errors.country ? 'is-invalid' : null %>">
+                            
                             <% countries.forEach(country => { %>
                               <option value="<%=country.id %>"><%=country.name %></option>
                             <% }); %>
+                            
                         </select>
                         <% if (locals.errors && errors.country) { %>
                             <div class="text-danger">
@@ -71,11 +72,12 @@
                             </div>
                         <% } %>
 
-                        <select name="state" class="form-select <%= locals.errors && errors.state ? 'is-invalid' : null %>">
-                            <option value="<%= user.states %>"></option>
+                        <select value="<%= user.states.id %>" name="state" class="form-select <%= locals.errors && errors.state ? 'is-invalid' : null %>">
+                            
                             <% states.forEach(state => { %>
                               <option value="<%=state.id %>"><%=state.name %></option>
                             <% }); %>
+
                         </select>
                         <% if (locals.errors && errors.state) { %>
                             <div class="text-danger">
@@ -96,11 +98,12 @@
                             </figure>
                         </div>     
 
-                        <select name="roles" class="form-select <%= locals.errors && errors.roles ? 'is-invalid' : null %>">
-                            <option value="<%= user.roles %>"></option>
+                        <select value="<%= user.roles %>" name="roles" class="form-select <%= locals.errors && errors.roles ? 'is-invalid' : null %>">
+                            
                             <% roles.forEach(rol => { %>
                                 <option value="<%=rol.id %>"><%=rol.name %></option>
                             <% }); %>
+
                         </select>
 
                     </div>

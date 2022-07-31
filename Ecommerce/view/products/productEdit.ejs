@@ -14,12 +14,12 @@
     </nav>
   </header>
   <main>
-    <h1>EDITAR  | SPORTIX</h1>
+    <h1>EDITAR <%= productos.name %> | SPORTIX</h1>
         <form id="CreateForm" action="/products/edit/<%= productos.id %>?_method=PUT"  method="POST" enctype="multipart/form-data">
           <form method="POST" id="CreateForm" action="/productCreate" enctype="multipart/form-data">
             <div>
             <label for="txtNombre">Nombre del Producto:</label>
-            <input class="controls" type="text" value="<%= productos.name %>" placeholder="Ingresar aqui..." name="name" required="require">
+            <input class="controls" type="text" value="<%= productos.name %>" placeholder="Ingresar aqui..." name="name" >
             </div>
 
             <div>
@@ -48,12 +48,12 @@
             
             <div>
             <label>Fecha de Alta:</label><br>
-            <input class="controls" type="date" placeholder="DD-MM-AAAA"  name="date" required="require"><br>
+            <input class="controls" type="date" placeholder="DD-MM-AAAA"  name="date" ><br>
             </div>
 
             <div>
             <label>Price:</label><br>
-            <input class="controls" type="number" placeholder="Precio del Producto"  name="price" step="0.01" required="require"><br>
+            <input class="controls" type="number" placeholder="Precio del Producto"  name="price" step="0.01" ><br>
             </div>
 
             <div>
@@ -68,7 +68,7 @@
 
             <div>
                 <label>Marca del Producto:</label>
-                <input class="controls" type="text" placeholder="Marca del Producto..." name="brand" required="require">
+                <input class="controls" type="text" placeholder="Marca del Producto..." name="brand" >
             </div>
 
             <div>
@@ -116,12 +116,12 @@
             
             <div>
             <label>Fecha de Alta:</label><br>
-            <input class="controls" type="date" value="<%= productos.date %>" placeholder="DD-MM-AAAA"  name="date" required="require"><br>
+            <input class="controls" type="date" value="<%= productos.date %>" placeholder="DD-MM-AAAA"  name="date" ><br>
             </div>
 
             <div>
             <label>Price:</label><br>
-            <input class="controls" type="number" value="<%= productos.price %>" placeholder="Precio del Producto"  name="price" required="require"><br>
+            <input class="controls" type="number" value="<%= productos.price %>" placeholder="Precio del Producto"  name="price" ><br>
             </div>
 
             <div>
@@ -136,7 +136,7 @@
 
             <div>
                 <label>Marca del Producto:</label>
-                <input class="controls" type="text" value="<%= productos.brand %>" placeholder="Marca del Producto..." name="brand" required="require">
+                <input class="controls" type="text" value="<%= productos.brand %>" placeholder="Marca del Producto..." name="brand" >
             </div>
 
             <div>

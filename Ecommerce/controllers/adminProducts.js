@@ -42,37 +42,37 @@ const adminProducts = {
         res.redirect('/products');
     },
     edit: function(req,res){
-        db.Producto.findByPk(req.params.id,{include : [
-                    {association: "genders"},
-                    {association: "brands"},
-                    {association: "categories"},
-                    {association: "sizes"},
-                ]})
-        .then( async (productos)  =>{
-            let genders = await db.Gender.findAll();
-            let brands = await db.Brand.findAll();
-            let categories = await db.Category.findAll();
-            let sizes = await db.Size.findAll();
+        // db.Producto.findByPk(req.params.id,{include : [
+        //             {association: "genders"},
+        //             {association: "brands"},
+        //             {association: "categories"},
+        //             {association: "sizes"},
+        //         ]})
+        // .then( async (productos)  =>{
+        //     let genders = await db.Gender.findAll();
+        //     let brands = await db.Brand.findAll();
+        //     let categories = await db.Category.findAll();
+        //     let sizes = await db.Size.findAll();
+        //     res.render('products/productEdit', {productos, genders, brands, categories, sizes});
+        // })
+
+        const pedidoProduct = db.Producto.findByPk(req.params.id,{
+            include : [
+                {association: "genders"},
+                {association: "brands"},
+                {association: "categories"},
+                {association: "sizes"},
+            ]});
+        
+        const pedidoGender = db.Gender.findAll();
+        const pedidoBrand = db.Brand.findAll();
+        const pedidoCategory =  db.Category.findAll();
+        const pedidoSize =  db.Size.findAll();
+
+        Promise.all([pedidoProduct, pedidoGender, pedidoBrand, pedidoCategory, pedidoSize])
+        .then(([productos, genders, brands, categories, sizes]) => { 
             res.render('products/productEdit', {productos, genders, brands, categories, sizes});
         })
-
-        // const pedidoProduct = db.Producto.findByPk(req.params.id,{
-        //     include : [
-        //         {association: "genders"},
-        //         {association: "brands"},
-        //         {association: "categories"},
-        //         {association: "sizes"},
-        //     ]});
-        
-        // const pedidoGender = db.Gender.findAll();
-        // const pedidoBrand = db.Brand.findAll();
-        // const pedidoCategory =  db.Category.findAll();
-        // const pedidoSize =  db.Size.findAll();
-
-        // Promise.all([pedidoProduct, pedidoGender, pedidoBrand, pedidoCategory, pedidoSize])
-        // .then(([productEdit, genders, brands, categories, sizes]) => { 
-        //     res.render('products/productEdit', {productEdit, genders, brands, categories, sizes});
-        // })
     },
     update: (req,res)=>{
         db.Producto.update({

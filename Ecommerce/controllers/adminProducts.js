@@ -42,20 +42,6 @@ const adminProducts = {
         res.redirect('/products');
     },
     edit: function(req,res){
-        // db.Producto.findByPk(req.params.id,{include : [
-        //             {association: "genders"},
-        //             {association: "brands"},
-        //             {association: "categories"},
-        //             {association: "sizes"},
-        //         ]})
-        // .then( async (productos)  =>{
-        //     let genders = await db.Gender.findAll();
-        //     let brands = await db.Brand.findAll();
-        //     let categories = await db.Category.findAll();
-        //     let sizes = await db.Size.findAll();
-        //     res.render('products/productEdit', {productos, genders, brands, categories, sizes});
-        // })
-
         const pedidoProduct = db.Producto.findByPk(req.params.id,{
             include : [
                 {association: "genders"},

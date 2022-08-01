@@ -39,20 +39,15 @@ const validarFormulario = (e) => {
 		case "fullName":
 		 	validarCampo(expresiones.fullName, e.target, 'fullName');
 		break;
-
-
-		// case "fullName":
-		// 	validarCampo(expresiones.fullName, e.target, 'fullName');
-		// break;
-		// case "password":
-		// 	validarCampo(expresiones.password, e.target, 'password');
-		// break;
-		// case "email":
-		// 	validarCampo(expresiones.email, e.target, 'email');
-		// break;
-		// case "phone":
-		// 	validarCampo(expresiones.phone, e.target, 'phone');
-		// break;
+		case "password":
+			validarCampo(expresiones.password, e.target, 'password');
+		break;
+		case "email":
+			validarCampo(expresiones.email, e.target, 'email');
+		break;
+		case "phone":
+			validarCampo(expresiones.phone, e.target, 'phone');
+		break;
 	}
 }
 
@@ -63,43 +58,19 @@ inputs.forEach((input) => {
 
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
+	const terminos = document.getElementById('terminos');
+	if(campos.fullName && campos.password && campos.email && campos.phone && terminos.checked ){
+		form.reset();
+
+		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
+		setTimeout(() => {
+			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
+		}, 5000);
+
+		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
+			icono.classList.remove('formulario__grupo-correcto');
+		});
+	} else {
+		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+	}
 });
-
-
-// window.addEventListener("load", function(){
-// 	let form = document.querySelector('form.validation');
-
-// 	form.addEventListener("submit", function(e){
-// 		let errores = [];
-
-// 		let fullName = document.querySelector("div.selector-box input.name");
-
-// 		console.log('fullName')
-
-// 		if(fullName.value == ""){
-// 			errores.push("El campo de Nombre tiene que estar completo")
-// 		}else if (fullName.value.length < 3 ){
-// 			errores.push("El campo de Nombre tiene que tener al menos 3 caracteres")
-// 		};
-
-// 		let email = document.querySelector("div input.email");
-
-// 		if(email.value == ""){
-// 			errores.push("El campo de Nombre tiene que estar completo")
-// 		}else if (email.value.length < 3 ){
-// 			errores.push("El campo de Nombre tiene que tener al menos 3 caracteres")
-// 		};
-
-// 		if(errores.length > 0){
-// 			e.preventDefault();
-
-// 			let ulErrores = document.querySelector("div.errores ul")
-// 			for (let i = 0; i < ulErrores.length; i++) {
-
-// 				ulErrores.innerHTML += "<li>" + errores + "</li>" ;
-				
-// 			}
-// 		}
-
-// 	});
-// });

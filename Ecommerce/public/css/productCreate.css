@@ -67,6 +67,7 @@ h1{
     justify-content: center;
     font-size: 50px;
     font-weight: bold;
+    line-height: 40px;
 }
 
 .text-danger{
@@ -150,12 +151,14 @@ ul{
         align-items: center;
     margin: 10px;
     width: 100%;
-    justify-content: center;
+    
     }
 
     div.size{
-        width: 54%;
-        position: relative;
+        display: inline-flex;
+        align-items: center;
+        margin: 10px;
+        width: 100%;
     }
 
     div.botones{
@@ -171,8 +174,16 @@ ul{
         border: 1px solid #8c8c8e;
         font-size: 18px;
     }
-    
+
+    select{
+        font-size: 15px;
+    }
+    .size ul{
+        flex-direction: row;
+    }
+    .size li {
+        margin-right: 15px;
+    }
 
     
 }
-

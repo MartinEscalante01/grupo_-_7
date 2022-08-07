@@ -18,7 +18,7 @@
                 <form method="PUT" action="/users/edit/<%= user.id %>?_method=PUT" enctype="multipart/form-data">
                     
                     <div class="selector-box">
-                        <input type="text"  value="<%= user.fullName %>" name="fullName" <%= locals.errors && errors.fullName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.fullName : null %>" placeholder="Nombre Completo">
+                        <input type="text"  value="<%= user.fullName %>" name="fullName <%= locals.errors && errors.fullName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.fullName : null %>" placeholder="Nombre Completo">
                         <% if (locals.errors && errors.fullName) { %>
                             <div class="text-danger">
                                 <%= errors.fullName.msg %> 

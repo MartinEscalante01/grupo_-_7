@@ -37,7 +37,7 @@ const adminProducts = {
             price: req.body.price,
             gender: req.body.gender,
             brand: req.body.brand,
-            file: req.file.filename,
+            // file: req.file.filename,
         })
         res.redirect('/products');
     },

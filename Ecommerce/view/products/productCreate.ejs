@@ -15,17 +15,26 @@
     </header>
     <main>
         <h1>Crear Nuevo Producto | SPORTIX</h1>
-        <form method="POST" id="CreateForm" action="/productCreate" enctype="multipart/form-data">
+        <form method="POST" class="createForm" id="CreateForm" action="/productCreate" enctype="multipart/form-data">
+          <div class="errores">
+            <ul></ul>
+          </div>  
+          
+          <!-- Grupo: Name -->
             <div>
-            <label for="txtNombre">Nombre del Producto:</label>
-            <input class="controls" type="text" placeholder="Ingresar aqui..." name="name" required="require" minlength="5">
+              <div class="formulario__grupo-input">
+              <label for="txtNombre">Nombre del Producto:</label>
+              <input class="controls name" type="text" placeholder="Ingresar aqui..." name="name" minlength="5">
             </div>
+          </div>
 
+            <!-- Grupo: Description -->
             <div>
             <label for="">Descripcion del producto:</label>
-            <input class="controls" name="description" id="controls" cols="30" rows="5" minlength="20"></input>
+            <input class="controls description" name="description" id="controls" cols="30" rows="5" minlength="20"></input>
             </div>
             
+            <!-- Grupo: Category -->
             <div>
             <label for="cnbCategoria">Categoria del Producto:</label> 
                 <select name="category" id="cnbCategory">
@@ -36,6 +45,7 @@
                 </select>
             </div>
             
+            <!-- Grupo: Size -->
             <div class="size">
             <label  for="size">Seleccionar Talles:</label><br>
               <select name="size">
@@ -46,16 +56,19 @@
               </select>
             </div>
             
+            <!-- Grupo: date -->
             <div>
             <label>Fecha de Alta:</label><br>
-            <input class="controls" type="date" placeholder="DD-MM-AAAA"  name="date" required="require"><br>
+            <input class="controls date" type="date" placeholder="DD-MM-AAAA"  name="date" ><br>
             </div>
 
+            <!-- Grupo: Price -->
             <div>
             <label>Price:</label><br>
-            <input class="controls" type="number" placeholder="Precio del Producto"  name="price" step="0.01" required="require"><br>
+            <input class="controls" type="number" placeholder="Precio del Producto"  name="price" step="0.01" ><br>
             </div>
 
+            <!-- Grupo: Genre -->
             <div>
               <label for="gender">Genero del Producto:</label>
               <select name="gender">
@@ -66,6 +79,7 @@
               </select>
             </div>
 
+            <!-- Grupo: brand -->
             <div>
                 <label>Marca del Producto:</label>
                 <select name="brand">
@@ -76,6 +90,7 @@
                 </select>
               </div>
 
+              <!-- Grupo: File -->
             <div>
               <label for="txtImagen">Imagen del Producto:</label>
               <input type="file" name="file" accept=".jpg" multiple>
@@ -86,7 +101,7 @@
             <button type="reset">Limpiar Contenido</button>
             </div>
         </form>
-
+        <script src="../js/newProduct.js"></script>
     </main>
 
 </body>

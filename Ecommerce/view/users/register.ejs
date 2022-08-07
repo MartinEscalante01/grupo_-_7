@@ -14,31 +14,46 @@
         </nav>
 
         <div class="container" id="container">
+            
             <div class="form-container sign-in-container">
                 <form class="validation" id="formulario" method="POST" action="/users/register" enctype="multipart/form-data">
-                    <h1>Formulario de registro</h1>
-
-                    <div class="formulario__mensaje" id="formulario__mensaje">
-                        <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
-                    </div>
 
                     <div class="selector-box" >
                         <!-- Grupo: Nombre -->
                         <div id="grupo__fullName">
                             <div class="formulario__grupo-input">
-                                <input class="name" type="text" name="fullName" placeholder="Nombre Completo"  minlength="2">
+                                <input class="name" type="text" name="fullName <%= locals.errors && errors.fullName ? 'is-invalid' : null %>" placeholder="Nombre Completo"  minlength="2">
                                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
                             </div>
-                            <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>    
+                            <p class="formulario__input-error">El Nombre tiene que tener al menos 2 dígitos y no puede tener caracteres especiales.</p>    
+                            <% if (locals.errors && errors.fullName) { %>
+                                <div class="text-danger">
+                                    <%= errors.fullName.msg %> 
+                                </div>
+                            <% } %>
                         </div>
                         
                         <!-- Grupo: Contraseña -->
                         <div id="grupo__password">
                             <div class="formulario__grupo-input">
-                                <input type="password" name="password"  minlength="8" class="form-control"  placeholder="Password"> 
+                                <input type="password" id="password" name="password"  minlength="8" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"  placeholder="Contraseña"> 
                                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
                             </div>
-                            <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+                            <p class="formulario__input-error">La contraseña tiene que ser de 8 a 12 dígitos.</p>
+                            <% if (locals.errors && errors.password) { %>
+                                <div class="text-danger">
+                                    <%= errors.password.msg %>
+                                </div>
+                            <% } %>
+                        </div>
+
+                         <!-- Grupo: Validacion Contraseña  -->
+                         <div id="grupo__password2">
+                            <div class="formulario__grupo-input">
+                                <input type="password" id="password2" name="password2"  minlength="8" class="form-control"  placeholder="Repetir Contraseña"> 
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario__input-error">La contraseña no coincide.</p>
                         </div>
                         
                         <!-- Grupo: Correo Electronico -->
@@ -47,11 +62,18 @@
                                 <input 
                                     type="email" 
                                     name="email"
-                                    class="form-control email"
+                                    class="form-control email <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                                    value="<%= locals.oldData ? oldData.email : null %>"
                                     placeholder="Correo Electrónico">
                                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
                             </div>
                             <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+                            
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="text-danger">
+                                    <%= errors.email.msg %>
+                                </div>
+                            <% } %>
                         </div>    
 
                         <select name="gender" class="form-select <%= locals.errors && errors.gender ? 'is-invalid' : null %>">
@@ -61,9 +83,12 @@
                             <% }); %>
                         </select>
 
-                        
-						<input type="date" placeholder="AAAA/MM/DD"  name="birthday" value="<%= locals.oldData ? oldData.birthday : null %>">
-					    
+                        <div>
+						    <div>
+                                <input id="birthday" type="date" name="birthday">
+                            </div>
+                        </div>
+
                         <!-- Grupo: Teléfono -->
                         <div id="grupo__phone">
                             <div class="formulario__grupo-input">
@@ -119,6 +144,10 @@
                             </label>
                         </div>
 
+                        <div class="formulario__mensaje" id="formulario__mensaje">
+                            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                        </div>
+
                         <div >
                             <button type="submit">REGISTRARSE</button>
                             <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
@@ -128,8 +157,11 @@
             </div>
             <div class="overlay-container">
                 <div class="overlay">
+                    
                     <div class="overlay-panel overlay-right">
-                        <h1>Hazte miembro!</h1>
+                        <h1>Formulario de registro</h1>
+                        <br>
+                        <h2>Hazte miembro!</h2>
                         <p>Unete a nuestra comunidad con tu perfil obtendras acceso anticipado a los mejores productos deportivos</p>
 						<div class="acuerdos">                
 						<div>

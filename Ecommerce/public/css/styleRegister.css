@@ -19,7 +19,10 @@
 
 h1 {
     font-weight: bold;
-    margin: 0;
+    margin: 54px;
+    display: block ruby;
+    position: revert;
+    direction: inherit;
 }
 
 h2 {
@@ -268,7 +271,7 @@ main {
 }
 
 .formulario__label {
-	display: block;
+	display: flex;
 	font-weight: 700;
 	padding: 10px;
 	cursor: pointer;
@@ -316,6 +319,7 @@ main {
 
 .formulario__checkbox {
 	margin-right: 10px;
+    width: 35%;
 }
 
 .formulario__grupo-terminos, 

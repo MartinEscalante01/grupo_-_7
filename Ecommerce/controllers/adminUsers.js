@@ -45,7 +45,7 @@ const adminController = {
             fullName: req.body.fullName,
             idGender: req.body.gender,
             email: req.body.email,
-            password: req.body.password,
+            password: bcryptjs.hashSync(req.body.password, 10),
             birthday: req.body.birthday,
             phone: req.body.phone,
             idCountry: req.body.country,

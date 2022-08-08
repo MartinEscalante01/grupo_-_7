@@ -13,7 +13,15 @@ const controller = {
     },
 
     notFound : (req,res) => {
-        return res.status(404).render('products/notFound')
+        return res.status(404).render('more/notFound')
+    },
+
+    nosotros : (req,res) => {
+        return res.render('more/us')
+    },
+
+    terms : (req,res) => {
+        return res.render('more/terms')
     }
 }
 

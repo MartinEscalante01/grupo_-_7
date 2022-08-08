@@ -1,27 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-
-html, body {
-    font-size: 10px;
-    font-family: "Montserrat";
-    background-color: #dddddd;
-}
-h1 {
-    font-size: 3.2em;
-}
-h2 {
-    font-size: 2.4em;
-}
-pre {
-    color: crimson;
-    border: solid 1px crimson;
-    display: block;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 1.4em;
-}
-pre::first-line {
-    font-weight: bold;
-}
-p {
-    font-size: 1.5em;
+.text-9xl{
+    font-size: 14rem;
+    }
+    @media(max-width: 645px){
+    .text-9xl{
+    font-size: 5.75rem;
+    }
+    .text-6xl{
+    font-size: 1.75rem;
+    }
+    .text-2xl {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    }
+    .py-8 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    }
+    .px-6 {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    }
+    .mr-6{
+    margin-right: 0.5rem;
+    }
+    .px-12 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    }
 }

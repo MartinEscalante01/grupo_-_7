@@ -1,0 +1,683 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cambay&display=swap');
+:root{
+    --titulos-color: #333333;
+    --tamanio-titulos: 30px;
+    --titulo-family:'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+/* Main Content */
+
+#maincontent{
+    background: #fff;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    margin: 10px;
+    font-size: 15px;
+}
+
+/* Categorias */
+main nav {
+    font-size: 5px;
+    margin-top: 5px;
+  }
+
+ul.breadcrumb {
+    padding: 2px;
+    list-style: none;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+  }
+
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover{
+color: blue;
+font-style: underline;
+}
+
+/* Contenedor Imagen */
+
+main .imagen{
+    width: 50vw;
+    display: flex;
+    margin: 10px auto;
+}
+
+/* Product Name - Prices */
+
+div h1{
+    font-size: 20px;
+    display: flex;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.columnprices{
+    display: flex;
+}
+
+.saving{
+    font-size: 15px;
+    font-weight: 900;
+    color: #ed3237;
+    position: relative;
+    bottom: 25px;
+    right: 165px;
+
+}
+
+.prices{
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}
+
+
+.oldprice{
+    font-size: 15px;
+    align-items: center;
+    color: #999;
+    text-decoration: line-through;
+    align-self: flex-end;
+}
+
+/* Linea Separadora */
+.separador{
+    margin: 20px;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+.separador2{
+    margin: 20px;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+/* Talles */
+.column-size{
+    display: flex;  
+
+}
+
+.atributos{
+    display: flex;
+    padding-left: 0;
+    box-sizing: border-box;
+    list-style: none; 
+    cursor: pointer;
+}
+
+.atributos-sizes{
+    display: flex;
+    border: 1px solid #222;
+    border-radius: 20px;
+    min-width: 30px;
+    height: 30px; 
+    justify-content: center;
+    margin: 10px;
+    font-size: 10px;
+    align-items: center;
+}
+
+.atributos-sizes:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Comprar */
+.agregar{
+    display: flex;
+    margin: 25px 20px;
+    justify-content: space-evenly;
+}
+
+.quantity{
+    display: flex;
+    border: 1px solid #cccccc;
+    max-height: 44px;
+}
+
+.input-qty{
+    width: 100px;
+    text-align: center;
+    display: flex;
+}
+
+.comprar{
+    display: initial;
+    color: #ffffff;
+    background-color: #ed3237;
+    border: 1px solid #ed3237;
+    padding: 5px 25px;
+    width: 90%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.fa-light{
+    width: 16px;
+    font-size: 21px;
+    position: relative;
+    top: 10px;
+  }
+
+.botones-mod{
+    display: block;
+    text-align: center;
+}
+
+/* Descripcion */
+div.descripcion-producto{
+    line-height: 25px;
+    font-weight: normal;
+    text-align: justify;
+
+}
+
+div.container-comprar a{
+    text-decoration: none;
+}
+
+/* Oportunidades */
+.Container-Opps{
+    margin-top: 0x;
+}
+
+h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-style: italic;
+    font-weight: bold;
+    color: tomato;
+    margin-bottom: 10px;
+}
+
+.Opps{
+    display: flex;
+    justify-content: space-around;
+}
+
+.imgRecomendado {
+    display: flex;
+    height: 110px;
+    width: 100px;
+    border-radius: 55px;   
+}
+.boxOpps{
+    box-shadow: 1px 5px 8px lightslategrey   
+}
+
+.boxOpps:hover {
+    transition: transform .5s ease;
+    transform: scale(1.2);
+  }
+
+.newPrice{
+    font-size: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+    padding: 10px;
+    line-height: 1.5;
+}
+
+.discuount{
+    font-size: 8px;
+    font-weight: 900;
+    color: #ed3237;
+    
+}
+
+.priorPrice{
+    font-size: 8px;
+    color: #999;
+    text-decoration: line-through;
+    
+}
+
+
+/* Footer Content */
+
+footer{
+    display: flex;
+    text-align: center;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0a141d;
+}
+
+.pie-pagina .grupo-1{
+    width: 100%;
+    margin: auto;
+    display:grid;
+}
+
+.pie-pagina .grupo-1 figure img{
+    width: 30%;
+    margin: 20px;
+}
+.pie-pagina .grupo-1 .box{
+    display: flex;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 10px;
+    justify-content: space-around;
+    align-items: baseline;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.footercolumn1 p i, .footercolumn3 p i{
+    margin-right: 5px;
+} 
+
+.footercolumn1 p i, .footercolumn3 p i{
+    margin-right: 5px;
+} 
+
+.footercolumn1 p i:hover, .footercolumn3 p i:hover{
+    color: orange;
+} 
+
+.footercolumn4{
+    display: none;
+}
+
+button.nav-email{
+    background-color: #0a141d;
+    color: white;
+    border: none;
+}
+
+form.search input{
+    border-radius: 10px;
+    padding: 4px;
+    margin: 0px;
+    font-size: 15px;
+    font-style: italic;
+    color: black;
+}
+
+.redes{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    margin-right: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a{
+    display: contents;
+    text-decoration: none;
+    line-height: 25px;
+    color: #fff;
+    transition: all 300ms ease;
+    justify-content: center;
+}
+
+.red-social a:hover{
+    color: aqua;
+}
+
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 10px;
+}
+
+
+
+
+
+/*Mobile*/
+@media (min-width:360px) {
+    header .nav{
+        display: none;
+    }
+    
+    header .search{
+        display: none;
+    }
+}
+
+/*Terminado mobile*/
+
+/* Tablet */
+@media (min-width:768px) {
+
+/* ENCABEZADO */
+    header .menu{
+        display: none;
+    }
+    
+    header .nav{
+        display: flex
+    }
+
+    header .search{
+        display: flex;
+        margin: 10px;
+        width: auto;
+    }
+
+    header form.search input{
+        padding-top: 5px;
+        padding-bottom: 7px;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+        background-color: #fff;
+        border: none;
+        color: #333;
+        font-size: 0.8em;
+        border-radius: 10px;
+        margin: 0;
+    }
+
+    div.logo{
+        display: flex;
+        width: 11vw;
+    }
+
+    button.nav-search {
+        padding-top: 5px;
+        padding-bottom: 7px;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+        background-color: #fff;
+        border: none;
+        color: #333;
+        border-radius: 10px;
+        margin: 0;
+    }
+
+    i.fa.fa-search{
+        display: none;
+    }
+
+    .login {
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    
+    div.descripcion-producto{
+        text-align: center;
+    }
+
+    .Opps{
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .imgRecomendado {
+        display: flex;
+        height: 20%;
+        width: 84%;
+        border-radius: 60px;   
+    }
+    .boxOpps{
+        box-shadow: 1px 5px 8px lightslategrey; 
+        width: 25%;
+        height: 75%;
+    }
+
+    .newPrice{
+        font-size: 25px;
+    }
+
+    .discuount, .priorPrice{
+        font-size: 15px;
+    }
+    main .imagen {
+        width: 400px;
+        display: flex;
+        margin: 10px auto;
+    }
+    
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    main section div h1{
+        font-size: 30px;
+        width: 60%;
+        font-weight: bold;
+        text-align: center;
+        margin-left: auto;
+    }
+
+    main div .column-size{
+        display: flex;
+        flex-direction: row;
+    }
+
+    main section div .agregar{
+        display: flex;
+        margin-left: 0px;
+        margin-right: 0px;
+        justify-content: start;
+    }
+
+    main section div .container-comprar{
+        height: 100%;
+        width: 84%;
+        display: inline-grid;
+    }
+
+    .fa-light {
+        font-size: 25px;
+        position: relative;
+        bottom: 32px;
+        left: 250px;
+        top: -33px;
+    }
+
+    .comprar{
+        padding: 12px 40px 12px 40px;
+        display: block;
+        width: 100%;
+    }
+
+    div.searchmobile{
+        display: none;
+    }
+
+    div.descripcion-producto ul{
+        list-style: none;
+    }
+
+    .nav:hover{
+        color: blue;
+        font-style: underline ;
+    }
+
+    .child{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .separador{
+        width: 70%;
+    }
+
+    .footercolumn4{
+        display: block;
+    }
+    
+}
+/* Terminado Tablet */
+
+/* Desktop */
+@media (min-width:1024px){
+    header .menu{
+        display: none;
+    }
+
+    header div form.search{
+        margin:20px;
+
+    }
+
+    main section .detail{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    main .imagen {
+        width: 400px;
+        display: flex;
+        margin: 10px auto;
+    }
+    
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    main section div h1{
+        font-size: 30px;
+        width: 60%;
+        font-weight: bold;
+        font-style: normal;
+        text-align: center;
+        margin-left: 106px;
+    }
+
+    main div .column-size{
+        display: flex;
+        flex-direction: row;
+    }
+
+    main section div .agregar{
+        display: flex;
+        margin-left: 0px;
+        margin-right: 0px;
+        justify-content: start;
+    }
+
+    main section div .container-comprar{
+        height: 100%;
+        width: 84%;
+        justify-content: space-around;
+        display: flex;
+    }
+
+    .comprar{
+        padding: 12px 40px 12px 40px;
+        display: block;
+    }
+
+    .fa-light {
+        left: 0px;
+        width: 13px;
+        font-size: 30px;
+        position: relative;
+        top: 6px;
+        left: 15px;
+      }
+
+    main section .descripcion{
+          text-align: center;
+      }
+
+    .Opps{
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .imgRecomendado {
+        display: flex;
+        height: 20%;
+        width: 84%;
+        border-radius: 60px;   
+    }
+    .boxOpps{
+        box-shadow: 1px 5px 8px lightslategrey; 
+        width: 25%;
+        height: 75%;
+    }
+
+    .newPrice{
+        font-size: 25px;
+    }
+
+    .discuount, .priorPrice{
+        font-size: 15px;
+    }
+
+    header .search{
+        display: flex;
+    }
+
+    i.fa.fa-search{
+        display: none;
+    }
+
+    .login {
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    div.searchmobile{
+        display: none;
+    }
+
+    div.search i {
+        right: 140px;
+    }
+
+    div.descripcion-producto ul{
+        list-style: none;
+    }
+
+    .footercolumn4{
+        display: block;
+    } 
+    
+    
+}
+/* Terminado Desktop */

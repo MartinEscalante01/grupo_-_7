@@ -50,15 +50,19 @@ footer{
     margin-top: 10px;
 }
 
-.footercolumn1 p i, .footercolumn3 p i{
-    margin-right: 5px;
-} 
+.links:hover{
+    color: orange;
+}
 
 .footercolumn1 p i, .footercolumn3 p i{
     margin-right: 5px;
 } 
 
-.footercolumn1 p i:hover, .footercolumn3 p i:hover{
+.footercolumn1 p i, .footercolumn3 p i{
+    margin-right: 5px;
+} 
+
+.footercolumn1 p.links:hover,.footercolumn1 p i:hover, .footercolumn3 p i:hover{
     color: orange;
 } 
 

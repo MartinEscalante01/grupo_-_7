@@ -1,0 +1,25 @@
+@import url("https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css");
+
+
+
+/* Responsive */
+
+@media (max-width:360px) {
+  .lg\:w-3\/12 {
+    width: 100%;
+  };
+};
+
+@media (max-width: 768px){
+  .lg\:w-3\/12 {
+    width: 50%;
+  };
+}
+
+
+
+@media (min-width:1024px){
+  .lg\:w-3\/12 {
+    width: 33.3%;
+  };
+}

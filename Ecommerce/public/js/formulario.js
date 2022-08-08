@@ -79,26 +79,26 @@ const validarPassword2 = () => {
 	}
 };
 
-const validarBday = () => {
-	const campoFecha = document.querySelector("input.birthday");
+ /*const validarBday = () => {
+	const campoFecha = document.querySelector("#birthday");
 	if(campoFecha.value == ""){
 		errores.push("El campo de fecha tiene que estar completo")
 	}
-};
-
-
+}; */
 
 inputs.forEach((input) => {
-	input.addEventListener('keyup', validarFormulario);
-	input.addEventListener('blur', validarFormulario);
+	if(input.type != "date"){
+		input.addEventListener('keyup', validarFormulario);
+		input.addEventListener('blur', validarFormulario);
+	}
+	
 });
 
 form.addEventListener('submit', (e) => {
-	e.preventDefault();
+	
 	const terminos = document.getElementById('terminos');
 	if(campos.fullName && campos.password && campos.email && campos.phone && terminos.checked ){
-		form.reset();
-
+		/*
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
 		setTimeout(() => {
 			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
@@ -106,8 +106,10 @@ form.addEventListener('submit', (e) => {
 
 		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
 			icono.classList.remove('formulario__grupo-correcto');
-		});
+		}); */
+		
 	} else {
+		e.preventDefault();
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 	}
 });

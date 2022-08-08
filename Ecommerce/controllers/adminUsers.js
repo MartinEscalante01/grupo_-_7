@@ -1,5 +1,6 @@
 const path = require('path');
 const db = require('../database/models');
+const bcryptjs = require('bcryptjs');
 const Op = db.Sequelize.Op; //Activa los operadores en sus querys (like - count - max) 
 
 const adminController = {
@@ -41,6 +42,7 @@ const adminController = {
         })
     },
     save: (req,res)=>{
+        console.error(req.body);
         db.User.create({
             fullName: req.body.fullName,
             idGender: req.body.gender,
@@ -52,6 +54,8 @@ const adminController = {
             idState: req.body.state,
             // file: req.file.file,
             idRoles: req.body.roles,
+        }).catch(e =>{
+            console.error(e)
         })
         res.redirect('/users/usersList');
     },

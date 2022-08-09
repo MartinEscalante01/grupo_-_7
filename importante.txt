@@ -1,0 +1,5 @@
+1.Colocar valor por default para la columna newwlester para la tabla usuarios
+2.Colocar valor por default para la columna file para la tabla usuarios
+3.Quitar la llave FK de la tabla states
+4. y crear una nueva para la tabla state 
+5.Aumentar el tama;o de la columna password a 100

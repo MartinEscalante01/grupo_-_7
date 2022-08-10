@@ -52,7 +52,7 @@ const adminController = {
             phone: req.body.phone,
             idCountry: req.body.country,
             idState: req.body.state,
-            // file: req.file.file,
+            file: req.file.filname,
             idRoles: req.body.roles,
         }).catch(e =>{
             console.error(e)

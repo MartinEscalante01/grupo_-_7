@@ -93,6 +93,24 @@ LIMIT 0, 1000
 */
 INSERT INTO users (`id`,`fullName`,`email`,`idGender`,`password`,`birthday`,`phone`,`idCountry`,`idState`,`newsletter`,`file`,`idRoles`) VALUES (1,'Lionel Messi','messi@gmail.com',1,'$2a$10$ham2wC5vR5UL4n2oqLeCuuHgD1s1WBtTsZaXJw','1987-06-24',1510202020,1,2,'on','1654962009039_img.jpg',2);
 INSERT INTO users (`id`,`fullName`,`email`,`idGender`,`password`,`birthday`,`phone`,`idCountry`,`idState`,`newsletter`,`file`,`idRoles`) VALUES (2,'Juan Roman Riquelme','riquelme@gmail.com',1,'$2a$10$TIefwqRefVKQLwDemkvLMuK//TLPhGluFc/i6X','1987-06-24',1510101010,1,2,'on','1655056106130_img.jpg',1);
+INSERT INTO users (`id`,`fullName`,`email`,`idGender`,`password`,`birthday`,`phone`,`idCountry`,`idState`,`newsletter`,`file`,`idRoles`) VALUES (1,"Lionel Messi",'messi@gmail.com',1,'$2a$10$ham2wC5vR5UL4n2oqLeCuuHgD1s1WBtTsZaXJw','1987-06-24',1510202020,1,2,'on','1654962009039_img.jpg',2);
+INSERT INTO users (`id`,`fullName`,`email`,`idGender`,`password`,`birthday`,`phone`,`idCountry`,`idState`,`newsletter`,`file`,`idRoles`) VALUES (2,"Juan Roman Riquelme",'riquelme@gmail.com',1,'$2a$10$TIefwqRefVKQLwDemkvLMuK//TLPhGluFc/i6X','1987-06-24',1510101010,1,2,'on','1655056106130_img.jpg',1);
+INSERT INTO users (`id`,`fullName`,`email`,`idGender`,`password`,`birthday`,`phone`,`idCountry`,`idState`,`newsletter`,`file`,`idRoles`) VALUES (3,"Facundo Rodriguez",'facu@gmail.com',1,'facundo123','2022-07-14',11111111,1,12,'on','1658602847250_img.jpg',2);
+INSERT INTO users (`id`,`fullName`,`email`,`idGender`,`password`,`birthday`,`phone`,`idCountry`,`idState`,`newsletter`,`file`,`idRoles`) VALUES (4,"Alexis Sanchez",'asanchez@gmail.com',1,'$2a$10$cfoixhCT4UBCPzS2JyN1a.EZ8yO0Rj1P8MkhnC','1980-10-20',1156789546,5,25,'on','1660099752371_img.jpg',1);
+INSERT INTO users (`id`,`fullName`,`email`,`idGender`,`password`,`birthday`,`phone`,`idCountry`,`idState`,`newsletter`,`file`,`idRoles`) VALUES (5,"Ronaldo de Assis Moreira",'ronaldinho@gmail.com',1,'$2a$10$U0J0wpqQLloQH3e57CqT5eBRFEEfx5f8pLmcPJ','1980-03-21',1167096795,3,25,'on','1660100283529_img.jpg',1);
+INSERT INTO users (`id`,`fullName`,`email`,`idGender`,`password`,`birthday`,`phone`,`idCountry`,`idState`,`newsletter`,`file`,`idRoles`) VALUES (6,"Joaquin Braconi",'joaco@gmail.com',1,'$2a$10$q9xaD6hmAQe6y117njARi.EHBXfE0whGCsr4KG','2000-02-19',1143642464,1,19,'on','1660100431472_img.jpg',2);
+INSERT INTO users (`id`,`fullName`,`email`,`idGender`,`password`,`birthday`,`phone`,`idCountry`,`idState`,`newsletter`,`file`,`idRoles`) VALUES (7,"Sakura Haruno",'sakura@gmail.com',2,'$2a$10$YzMVNEogfspIpT4iONCZqeVBanjoaO4AapMjNH','1990-02-21',2147483647,11,25,'on','1660100609706_img.jpg',1);
+INSERT INTO users (`id`,`fullName`,`email`,`idGender`,`password`,`birthday`,`phone`,`idCountry`,`idState`,`newsletter`,`file`,`idRoles`) VALUES (8,"Gianluigi Buffon",'buffon@gmail.com',1,'$2a$10$SgoySJK/bN6xGKWm1eL79uVciILCuly9ZhYGlz','1978-01-28',2147483647,11,25,'on','1660100998406_img.jpg',1);
+
+
+
+
+
+
+
+
+
+
 
 
 /*

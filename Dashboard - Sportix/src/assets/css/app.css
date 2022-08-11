@@ -131,7 +131,7 @@ li{
 }
 
 .statsBox1{
-    background-color:#0c0120;
+    background-color: #190244;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -160,7 +160,7 @@ li{
 }
 
 .statsBox2{
-    background-color: #0c0120;
+    background-color:  #190244;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -189,7 +189,7 @@ li{
 }
 
 .statsBox3{
-    background-color: #0c0120;
+    background-color:  #190244;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -233,7 +233,7 @@ li{
 .lastMovie{
     width: 50%;
     height: auto;
-    background-color: #0c0120;
+    background-color:  #0c0120;
     box-shadow: 0px 0px 41px -16px rgba(0,0,0,0.48);
     border-radius: 10px;
     margin: 25px;
@@ -309,6 +309,17 @@ li{
     border-radius: .35rem;
     text-align: center;
 }
+
+
+.productList{
+    width: 100%;
+    height: auto;
+    color: whitesmoke;
+    text-align: center;
+    border: #fec303 0.5px solid;
+    background-color: #190244;
+}
+
 
 .footer{
     display: flex;

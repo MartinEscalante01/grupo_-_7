@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes, { number } from "prop-types"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import{faAward, faFilm, faUser} from "@fortawesome/free-solid-svg-icons"
+import{faSackDollar, faBoxesStacked, faUser} from "@fortawesome/free-solid-svg-icons"
 
 function Metrics(props) {
     return(
@@ -12,7 +12,7 @@ function Metrics(props) {
                 <p>{props.numberOfMovies}</p>
             </div>
             <div class='icon'>
-                <FontAwesomeIcon icon= {faFilm}/>
+                <FontAwesomeIcon icon= {faBoxesStacked}/>
             </div>
             
         </section>
@@ -23,7 +23,7 @@ function Metrics(props) {
                 <p>{props.numberOfAwards}</p>
             </div>
             <div class='icon'>
-                <FontAwesomeIcon icon= {faAward}/>
+                <FontAwesomeIcon icon= {faSackDollar}/>
             </div>
         </section>
         

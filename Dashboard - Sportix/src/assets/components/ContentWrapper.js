@@ -5,6 +5,8 @@ import GenresInDb from "./GenresInDb";
 import LastMovieInDb from "./LastMovieInDb";
 import Metrics from "./Metrics";
 import TopBar from './TopBar';
+import ProductList from "./ProductList";
+import UsersList from "./UsersList";
 
 
 function ContentWrapper() {
@@ -21,6 +23,8 @@ function ContentWrapper() {
             <LastMovieInDb/>
             <GenresInDb/>
             </section>
+            <ProductList/>
+            <UsersList/>
             <Footer/>
             
         </div>

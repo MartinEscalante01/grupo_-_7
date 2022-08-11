@@ -4,6 +4,7 @@ import{faAward, faFilm, faUser} from "@fortawesome/free-solid-svg-icons"
 import PropTypes from "prop-types"
 import Metrics from "./Metrics"
 
+
 function ContentRowMovies(props){
 
     const metrics =[{
@@ -20,8 +21,7 @@ function ContentRowMovies(props){
         <div>
 
             <Metrics/>
-               
-            
+              
         </div>
     )
 }

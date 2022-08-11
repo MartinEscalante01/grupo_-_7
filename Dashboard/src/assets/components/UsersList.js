@@ -4,44 +4,47 @@ class UsersList extends Component {
     constructor() {
         super();
         this.state = {
-            name: "Joaquin Braconi",
-            class: "Admin",
-            birthday: "14-10-1998",
-            country: "Argentina",
+             user: ""
         }
     }
-    // componentDidMount(){
-    //     fetch()
-    //     .then(response => (response.json))
-    //     .then(data => (this.setState({¿?})))
-    //     .catch(e => {console.log(e);})
-    // }
+   apiCall(){
+        fetch("localhost:3030/sportix")
+        .then(response => (response.json))
+        .then(data => (this.setState({user: data})))
+        .catch(e => {console.log(e);})
+    }
+   
+    componentDidMount(){
+        console.log(this.state.user)
+    }
     render() { 
+                let content = this.state.user
+                console.log(content)
                 return(
                     <div >
                         <h1>Users List</h1>
                         <table className="productList">
                                 <tr>
-                                    <th>Name</th>
+                                    {<th>{content.fullName}</th>}
                                     <th>Class</th>
                                     <th>Birthday</th>
                                     <th>Country</th>
                                     
                                 </tr>
                                 <tr>
-                                    <td>{this.state.name}</td>
+                                    <td></td>
                                     <td>Admin</td>
                                     <td>14-10-1998</td>
                                     <td>Argentina</td>
                                 </tr>
                                 <tr>
-                                    <td>{this.state.name}</td>
+                                    <td></td>
                                     <td>Admin</td>
                                     <td>14-10-1998</td>
                                     <td>Argentina</td>
                                 </tr>
                                 <tr>
-                                    <td>{this.state.name}</td>
+                                    <td></td>
                                     <td>Admin</td>
                                     <td>14-10-1998</td>
                                     <td>Argentina</td>

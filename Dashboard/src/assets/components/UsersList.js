@@ -10,12 +10,12 @@ class UsersList extends Component {
             country: "Argentina",
         }
     }
-    componentDidMount(){
-        fetch()
-        .then(response => (response.json))
-        .then(data => (this.setState({¿?})))
-        .catch(e => {console.log(e);})
-    }
+    // componentDidMount(){
+    //     fetch()
+    //     .then(response => (response.json))
+    //     .then(data => (this.setState({¿?})))
+    //     .catch(e => {console.log(e);})
+    // }
     render() { 
                 return(
                     <div >

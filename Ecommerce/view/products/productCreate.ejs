@@ -16,22 +16,25 @@
     <main>
         <h1>Crear Nuevo Producto | SPORTIX</h1>
         <form method="POST" class="createForm" id="CreateForm" action="/productCreate" enctype="multipart/form-data">
-          <div class="errores">
-            <ul></ul>
-          </div>  
           
           <!-- Grupo: Name -->
-            <div>
+            <div id="grupo__name">
               <div class="formulario__grupo-input">
               <label for="txtNombre">Nombre del Producto:</label>
               <input class="controls name" type="text" placeholder="Ingresar aqui..." name="name" minlength="5">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
             </div>
+              <p class="formulario__input-error">El Nombre tiene que tener al menos 5 dígitos y no puede tener caracteres especiales.</p>            
           </div>
 
             <!-- Grupo: Description -->
-            <div>
-            <label for="">Descripcion del producto:</label>
-            <input class="controls description" name="description" id="controls" cols="30" rows="5" minlength="20"></input>
+            <div id="grupo__description">
+              <div>
+                <label for="">Descripcion del producto:</label>
+                <input class="controls description" name="description" id="controls" cols="30" rows="5" minlength="20"></input>
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>  
+              </div>
+              <p class="formulario__input-error">El campo tiene que tener al menos 20 dígitos.</p>
             </div>
             
             <!-- Grupo: Category -->

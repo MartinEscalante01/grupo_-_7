@@ -5,11 +5,11 @@ const router = express.Router();
 const apiController = require('../controllers/apiController');
 
 /* GET ---------------------- */
-router.get('/', apiController.list);
-router.get('/search', apiController.search);
-router.get('/:id',apiController.show);
-router.post('/',apiController.store);
-router.delete('/:id',apiController.delete);
+router.get('/users', apiController.list);
+router.get('/users/search', apiController.search);
+router.get('/users/:id',apiController.show);
+router.post('/users',apiController.store);
+router.delete('/users/:id',apiController.delete);
 
 
 

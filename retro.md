@@ -8,7 +8,7 @@ En primer lugar como equipo reflexionamos y compartimos nuestros pensamientos ac
 
 Como puntos importantes nos llevamos para los proximos equipos que integremos:
 
-*Start Doing: Llamada semanal entre el equipo para entender lo requerido por el sprint y la organizacion/division de tareas. Objetivos simples pero diarios donde observemos dia a dia algun avance en el proyecto.
+*Start Doing*: Llamada semanal entre el equipo para entender lo requerido por el sprint y la organizacion/division de tareas. Objetivos simples pero diarios donde observemos dia a dia algun avance en el proyecto.
 
 *More of: Llamada inicial para organizar el sprint, ser eficientes con los tiempos entre la apertura del sprint y la division de tareas.
 

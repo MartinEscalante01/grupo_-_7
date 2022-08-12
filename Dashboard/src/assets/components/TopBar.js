@@ -6,12 +6,12 @@ import image from "../images/jordan-walke.png"
 
 function TopBar (){
     return(
-        <div class='topbar'>
-            <section class= 'alerts'>
+        <div className='topbar'>
+            <section className= 'alerts'>
                 <FontAwesomeIcon icon={faBell}/>     
                 <FontAwesomeIcon icon={faEnvelope}/>
             </section>
-            <section class='user'>
+            <section className='user'>
                 <p>Joaquin Braconi</p>
                 <img src= {image} alt="imageUser" />
             </section>

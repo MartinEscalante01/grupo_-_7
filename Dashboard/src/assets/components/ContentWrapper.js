@@ -11,7 +11,7 @@ import UsersList from "./UsersList";
 
 function ContentWrapper() {
     return(
-        <div class='contentWrapper'>
+        <div className='contentWrapper'>
             <TopBar/>
             <h1>Sportix Dashboard</h1>
             <Metrics 
@@ -19,7 +19,7 @@ function ContentWrapper() {
             numberOfAwards = "$555.453"
             numberOfActors = "28"
             />
-            <section class='databaseContent'>
+            <section className='databaseContent'>
             <LastMovieInDb/>
             <GenresInDb/>
             </section>

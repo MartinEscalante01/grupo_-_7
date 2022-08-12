@@ -2,27 +2,27 @@ import React from "react";
 
 function GenresInDb() {
     return(
-        <div class='genres'>
+        <div className='genres'>
             <section class='title'>
                 <h1>Products in Data Base</h1>
             </section>
-            <section class='cards'>
-            <div class='cardContent'>
+            <section className='cards'>
+            <div className='cardContent'>
                 T-shirt
             </div>
-            <div class='cardContent'>
+            <div className='cardContent'>
                 Shorts
             </div>
-            <div class='cardContent'>
+            <div className='cardContent'>
                 Shoes
             </div>
-            <div class='cardContent'>
+            <div className='cardContent'>
                 Sneakers
             </div>
-            <div class='cardContent'>
+            <div className='cardContent'>
                 Pants
             </div>
-            <div class='cardContent'>
+            <div className='cardContent'>
                 Hoodies
             </div>
             </section>

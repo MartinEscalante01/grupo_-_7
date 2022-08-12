@@ -6,23 +6,23 @@ import{faSackDollar, faBoxesStacked, faUser} from "@fortawesome/free-solid-svg-i
 function Metrics(props) {
     return(
         <div class="contentRowMovies">
-            <section class='statsBox1'>
+            <section className='statsBox1'>
             <div>
                 <h2>Products in database</h2>
                 <p>{props.numberOfMovies}</p>
             </div>
-            <div class='icon'>
+            <div className='icon'>
                 <FontAwesomeIcon icon= {faBoxesStacked}/>
             </div>
             
         </section>
         
-        <section class='statsBox2'>
+        <section className='statsBox2'>
             <div>
                 <h2>Total Account</h2>
                 <p>{props.numberOfAwards}</p>
             </div>
-            <div class='icon'>
+            <div className='icon'>
                 <FontAwesomeIcon icon= {faSackDollar}/>
             </div>
         </section>

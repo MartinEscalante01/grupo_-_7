@@ -3,7 +3,7 @@ const inputs = document.querySelectorAll('form div input');
 const selects = document.querySelectorAll('form div select option');
 
 const expresiones = {
-	name: /^[a-zA-ZÀ-ÿ\s]{5,40}$/, // Letras y espacios, pueden llevar acentos.
+	name: /^[a-zA-ZÀ-ÿ\s]{5,100}$/, // Letras y espacios, pueden llevar acentos.
 	description: /^.{20,1000}$/, // 20 a 1000 digitos.
 };
 

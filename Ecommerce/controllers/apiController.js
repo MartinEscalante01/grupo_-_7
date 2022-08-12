@@ -3,7 +3,14 @@ const Op = db.Sequelize.Op; //Aqui hacen esto para lograr activalos operadores e
 
 module.exports = {
     list: (req, res) => {
-        db.User.findAll()
+        db.User.findAll({
+            include : [
+                {association: "genders"},
+                {association: "countries"},
+                {association: "states"},
+                {association: "roles"},
+            ]
+        })
         .then( sportix => {
             return res.status(200).json({
                 total:sportix.length,
@@ -13,7 +20,14 @@ module.exports = {
         })
     },
     show: (req,res)=>{
-        db.User.findByPk(req.params.id)
+        db.User.findByPk(req.params.id, {
+            include : [
+                {association: "genders"},
+                {association: "countries"},
+                {association: "states"},
+                {association: "roles"},
+            ]
+        })
         .then(sportix => {
             return res.status(200).json({
                 data: sportix,

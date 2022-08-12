@@ -8,15 +8,20 @@ En primer lugar como equipo reflexionamos y compartimos nuestros pensamientos ac
 
 Como puntos importantes nos llevamos para los proximos equipos que integremos:
 
-*#Start Doing:# Llamada semanal entre el equipo para entender lo requerido por el sprint y la organizacion/division de tareas. Objetivos simples pero diarios donde observemos dia a dia algun avance en el proyecto.*
+*#Start Doing: 
+Llamada semanal entre el equipo para entender lo requerido por el sprint y la organizacion/division de tareas. Objetivos simples pero diarios donde observemos dia a dia algun avance en el proyecto.*
 
-*#More of:# Llamada inicial para organizar el sprint, ser eficientes con los tiempos entre la apertura del sprint y la division de tareas.*
+*#More of: 
+Llamada inicial para organizar el sprint, ser eficientes con los tiempos entre la apertura del sprint y la division de tareas.*
 
-*#Keep Doing:# Comunicacion entre el equipo.*
+*#Keep Doing: 
+Comunicacion entre el equipo.*
 
-*#Less of:# Atrasarnos con un tema e intentar solucionarlo dejando otras cosas importantes para otro momento, debemos ir haciendo y donde estamos trabados, dejarlo por un momento, continuar con las demas cosas, y luego volver a enfocarnos en el problema.*
+*#Less of: 
+Atrasarnos con un tema e intentar solucionarlo dejando otras cosas importantes para otro momento, debemos ir haciendo y donde estamos trabados, dejarlo por un momento, continuar con las demas cosas, y luego volver a enfocarnos en el problema.*
 
-*#Stop Doing:# Subestimarnos a nosotros mismos por querer compararnos con otras personas, cualquier desafio que se nos presente con paciencia y responsabilidad lo vamos a poder lograr realizar.*
+*#Stop Doing: 
+Subestimarnos a nosotros mismos por querer compararnos con otras personas, cualquier desafio que se nos presente con paciencia y responsabilidad lo vamos a poder lograr realizar.*
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Retrospectiva Sprint 7- Equipo N°7

@@ -1,15 +1,16 @@
 const express = require('express');
 const router = express.Router();
+const cors = require('cors');
 
 // Controller
 const apiController = require('../controllers/apiController');
 
 /* GET ---------------------- */
-router.get('/', apiController.list);
-router.get('/search', apiController.search);
-router.get('/:id',apiController.show);
-router.post('/',apiController.store);
-router.delete('/:id',apiController.delete);
+router.get('/',cors(),apiController.list);
+router.get('/search',cors(),apiController.search);
+router.get('/:id',cors(),apiController.show);
+router.post('/',cors(),apiController.store);
+router.delete('/:id',cors(),apiController.delete);
 
 
 

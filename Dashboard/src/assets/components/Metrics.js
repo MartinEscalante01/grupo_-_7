@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes, { number } from "prop-types"
+import PropTypes from "prop-types"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import{faSackDollar, faBoxesStacked, faUser} from "@fortawesome/free-solid-svg-icons"
 

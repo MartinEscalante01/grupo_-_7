@@ -1,5 +1,4 @@
 import React from "react";
-import ContentRowMovies from "./ContentRowMovies";
 import Footer from "./Footer";
 import GenresInDb from "./GenresInDb";
 import LastMovieInDb from "./LastMovieInDb";

@@ -17,9 +17,10 @@ function UsersList () {
 
     useEffect(() => {
         console.log("Funciona");
-    }, [users])
-
- const user = users.data
+    }, [users]) 
+    
+    
+    const user = users.data
  console.log(user);
     return(
         
@@ -27,10 +28,9 @@ function UsersList () {
                        
                         <h1>Users List</h1> 
                                 
-                             <table className="productList">
-                              
+                        <table className="productList">                              
 
-                                 {user.map((user, i) => {
+                            {user?.map((user, i) => {
                                     return (
                                         <tr key={i}>
                                             <td>{user.fullName}</td>

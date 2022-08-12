@@ -1,3 +1,24 @@
+# Retrospectiva Sprint 8- Equipo N°7
+
+Nuestras principales pensamientos de la retro del ultimo Sprint 8 React y API's.
+
+## Sprint:
+
+En primer lugar como equipo reflexionamos y compartimos nuestros pensamientos acerca de la cursada y de nosotros como equipo. Fueron 6 meses arduos con mucho aprendizaje, frustaciones, desorganizacion entre nosotros mas que nada por las diferencias horarias o por nuestros trabajos y los cambios, porque este ultimo mes 2 de nosotros cambiamos de trabajo y las dificultadades de tiempo que eso implica, pero los 3 coincidimos en que pudimos superar todos esos desafios como equipo, supimos dividir las tareas y ayudarnos entre nosotros para poder entregar cada sprint a tiempo y que esté lo mejor posible. Por eso, estamos orgullosos de todo lo que logramos y tambien se lo debemos a los profesores Walter y Ximena que sin ellos hubiese sido imposible lograrlo.
+
+Como puntos importantes nos llevamos para los proximos equipos que integremos:
+
+*Start Doing: Llamada semanal entre el equipo para entender lo requerido por el sprint y la organizacion/division de tareas. Objetivos simples pero diarios donde observemos dia a dia algun avance en el proyecto.
+
+*More of: Llamada inicial para organizar el sprint, ser eficientes con los tiempos entre la apertura del sprint y la division de tareas.
+
+*Keep Doing : Comunicacion entre el equipo.
+
+*Less of: Atrasarnos con un tema e intentar solucionarlo dejando otras cosas importantes para otro momento, debemos ir haciendo y donde estamos trabados, dejarlo por un momento, continuar con las demas cosas, y luego volver a enfocarnos en el problema.
+
+*Stop Doing: Subestimarnos a nosotros mismos por querer compararnos con otras personas, cualquier desafio que se nos presente con paciencia y responsabilidad lo vamos a poder lograr realizar.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Retrospectiva Sprint 7- Equipo N°7
 
 Nuestras principales pensamientos de la retro del Sprint 7.

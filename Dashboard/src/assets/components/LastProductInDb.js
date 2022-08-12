@@ -1,6 +1,6 @@
 import React from "react";
 import image from "../images/diamondEdge.jpg"
-function LastMovieInDb() {
+function LastProductInDb() {
     return(
         <div className='lastMovie'>
             <section className='title'>
@@ -15,4 +15,4 @@ function LastMovieInDb() {
     )
 }
 
-export default LastMovieInDb
+export default LastProductInDb

@@ -10,7 +10,7 @@ function UsersList () {
         .then(response => response.json())
         .then(data => {
             setUsers(data)
-            console.log(data);
+            ;
         })
         .catch(error => console.log(error))
     }, [])
@@ -21,7 +21,6 @@ function UsersList () {
     
     
     const user = users.data
- console.log(user);
     return(
         
                     <div >
@@ -29,14 +28,19 @@ function UsersList () {
                         <h1>Users List</h1> 
                                 
                         <table className="productList">                              
-
+                        <tr>
+                                <td>Name</td>
+                                <td>Birthday</td>
+                                <td>Email</td>
+                                <td>Profile Photo</td>
+                         </tr>
                             {user?.map((user, i) => {
                                     return (
                                         <tr key={i}>
                                             <td>{user.fullName}</td>
                                             <td>{user.birthday}</td>
                                             <td>{user.email}</td>
-                                            <td>{user.idRoles}</td>
+                                            <td><img src={user.file} alt="user"/></td>
                                         </tr>
                                     )
                                 })}

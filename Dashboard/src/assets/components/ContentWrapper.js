@@ -26,7 +26,6 @@ function ContentWrapper() {
             <ProductList/>
             <UsersList/>
             <Footer/>
-            
         </div>
     )
 }

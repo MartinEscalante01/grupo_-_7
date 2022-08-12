@@ -1,30 +1,42 @@
 import React from "react";
+import { useState, useEffect } from "react"
 
-function GenresInDb() {
+
+function GenresInDb () {
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:3030/sportix/products")
+        .then(response => response.json())
+        .then(data => {
+            setProducts(data);
+        })
+        .catch(error => console.log(error))
+    }, [])
+
+    useEffect(() => {
+        console.log("Funciona");
+    }, [products]) 
+    
+    
+    const product = products.data
+    console.log(product);
     return(
         <div className='genres'>
             <section class='title'>
                 <h1>Products in Data Base</h1>
-            </section>
-            <section className='cards'>
-            <div className='cardContent'>
-                T-shirt
-            </div>
-            <div className='cardContent'>
-                Shorts
-            </div>
-            <div className='cardContent'>
-                Shoes
-            </div>
-            <div className='cardContent'>
-                Sneakers
-            </div>
-            <div className='cardContent'>
-                Pants
-            </div>
-            <div className='cardContent'>
-                Hoodies
-            </div>
+                <section className='cards'>  
+                    {product?.map((product, i) => {
+                                    return (
+                                        <div className='cardContent'>
+                                            <h3>{product.category}</h3>
+                                            
+                                        </div>
+                                    )
+                                })}
+                <p>{products.category}</p>
+                </section>
+                  
             </section>
         </div>
     )

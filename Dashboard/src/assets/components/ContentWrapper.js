@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "./Footer";
 import GenresInDb from "./GenresInDb";
-import LastMovieInDb from "./LastMovieInDb";
+import LastProductInDb from "./LastProductInDb";
 import Metrics from "./Metrics";
 import TopBar from './TopBar';
 import ProductList from "./ProductList";
@@ -19,7 +19,7 @@ function ContentWrapper() {
             numberOfActors = "28"
             />
             <section className='databaseContent'>
-            <LastMovieInDb/>
+            <LastProductInDb/>
             <GenresInDb/>
             </section>
             <ProductList/>

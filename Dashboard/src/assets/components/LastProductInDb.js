@@ -1,14 +1,39 @@
 import React from "react";
-import image from "../images/diamondEdge.jpg"
+import { useState, useEffect } from "react"
+
 function LastProductInDb() {
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:3030/sportix/products")
+        .then(response => response.json())
+        .then(data => {
+            setProducts(data);
+        })
+        .catch(error => console.log(error))
+    }, [])
+
+    useEffect(() => {
+        console.log("Funciona");
+    }, [products]) 
+    
+    const lastProduct = products[ products.length - 1]    
+    console.log(lastProduct);
+   
+   
     return(
         <div className='lastMovie'>
             <section className='title'>
                 <h1>Last product in Data Base</h1>
             </section>
             <section className='content'>
-            <img src= {image} alt="DiamondEdge"/>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa citationem ratione aperiam voluptatum non corporis ratione aperiam voluptatum quae dolorem culpa ratione aperiam voluptatum?</p>
+            
+                    <div>              
+                        <img src= "" alt="productPic"/>
+                        <p>{lastProduct}  </p>
+                
+                </div>
+
             <button>View product details</button>
             </section>
         </div>
@@ -16,3 +41,4 @@ function LastProductInDb() {
 }
 
 export default LastProductInDb
+

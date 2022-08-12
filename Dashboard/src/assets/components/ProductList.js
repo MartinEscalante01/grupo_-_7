@@ -39,8 +39,8 @@ function ProductList () {
                                         <tr key={i}>
                                             <td>{product.name}</td>
                                             <td>${product.price}</td>
-                                            <td>{product.category}</td>
-                                            <td>{product.gender}</td>
+                                            <td>{product.categories.category}</td>
+                                            <td>{product.genders.name}</td>
                                         </tr>
                                     )
                                 })}

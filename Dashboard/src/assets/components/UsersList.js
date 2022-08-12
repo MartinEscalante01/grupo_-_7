@@ -45,19 +45,6 @@ function UsersList () {
                                     )
                                 })}
                                 
-                                {/* // <tr>
-                                //     <td></td>
-                                //     <td>Admin</td>
-                                //     <td>14-10-1998</td>
-                                //     <td>Argentina</td>
-                                // </tr>
-                                // <tr>
-                                //     <td></td>
-                                //     <td>Admin</td>
-                                //     <td>14-10-1998</td>
-                                //     <td>Argentina</td>
-                                // </tr> */}
-
                         </table>
                     </div>
                 )

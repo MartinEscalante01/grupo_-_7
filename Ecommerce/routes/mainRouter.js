@@ -16,4 +16,7 @@ router.get('/nosotros', controller.nosotros)
 // Terminos y Politica
 router.get('/terms', controller.terms)
 
+// Terminos y Politica
+router.get('/faqs', controller.faqs)
+
 module.exports = router;

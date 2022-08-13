@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>FAQ Page | Sportix</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.3/tailwind.min.css" integrity="sha512-wl80ucxCRpLkfaCnbM88y4AxnutbGk327762eM9E/rRTvY/ZGAHWMZrYUq66VQBYMIYDFpDdJAOGSLyIPHZ2IQ==" crossorigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@600&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="../css/faqs.css">
+    </head>
+    <body>
+        <article id="the-article">
+    <div>
+        <div class="mx-auto max-w-6xl">
+            <div class="p-2 rounded">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/3 p-4 text-sm">
+    
+                <div class="sticky inset-x-0 top-0 left-0 py-12">
+                    
+                        <div class="text-3xl text-green-400 mb-8">Preguntas Frecuentes</div>
+                        <div class="mb-2">Lorem Ipsum ?</div>
+                        <div class="text-xs text-gray-600">See our FAQ for more details</div>
+    
+                        <div class="relative text-gray-600 mt-8 lg:mr-16">
+                            <input 
+                            x-ref="searchField"
+                            x-model="search"
+                            x-on:keydown.window.prevent.slash="$refs.searchField.focus()"
+                            type="search" name="serch" placeholder="Search" class="bg-white w-full h-10 px-5 rounded-full text-sm focus:outline-none">
+                            <button type="submit" class="focus:outline-none absolute right-0 top-0 mt-3 mr-4">
+                              <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="512px" height="512px">
+                                <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"/>
+                              </svg>
+                            </button>
+                          </div>
+    
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 py-12 ">
+                        <div class="p-4">
+    
+                <div class="item px-6 py-6" x-data="{isOpen : false}">
+                    <a href="#" class="flex items-center justify-between" @click.prevent="isOpen = true">
+                        <h4 :class="{'text-green-400 font-medium' : isOpen == true}">¿A cuánto ascienden los gastos de envío?</h4>
+                        <svg 
+                        :class="{'transform rotate-180' : isOpen == true}"
+                        class="w-5 h-5 text-gray-500"
+                            fill="none" stroke-linecap="round" 
+                            stroke-linejoin="round" stroke-width="2" 
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+                    <div x-show="isOpen" @click.away="isOpen = false" class="mt-3" :class="{'text-gray-600' : isOpen == true}">
+                        <p>Si tu compra supera los $18,999 ARS el envío es totalmente gratuito a todo país.
+
+                            Si tu pedido se encuentra por debajo de ese valor (menor a  $18,999 ARS), los costos de envío según distancia* son los siguientes:  
+                            Zona 1: hasta 50 KM  $599
+                            Zona 2: desde 50 KM hasta 350 KM  $699
+                            Zona 3: desde 350 hasta 800 KM  $759
+                            Zona 4: más de 800 KM $819
+                            *Se toma como KM 0 la Ciudad Autónoma de Buenos Aires.</p>
+                    </div>
+                </div>
+                
+                <div class="item px-6 py-6" x-data="{isOpen : false}">
+                    <a href="#" class="flex items-center justify-between" @click.prevent="isOpen = true">
+                        <h4 :class="{'text-green-400 font-medium' : isOpen == true}">¿Por qué se retrasa mi pedido?</h4>
+                        <svg 
+                        :class="{'transform rotate-180' : isOpen == true}"
+                        class="w-5 h-5 text-gray-500"
+                            fill="none" stroke-linecap="round" 
+                            stroke-linejoin="round" stroke-width="2" 
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+                    <div x-show="isOpen" @click.away="isOpen = false" class="mt-3" :class="{'text-gray-600' : isOpen == true}">
+                        <p>Para SPORIX lo más importante es que puedas disfrutar de tus productos lo antes posible, sin embargo, en ocasiones pueden ocurrir eventos que escapen de nuestra gestión y retrasen el envío de tu pedido.
+                            • Dirección incompleta
+                            • Falta de referencias en la dirección
+                            • Problemas de pago con tu orden
+                            • Incidencias durante el proceso de entrega
+                            • Retrasos durante eventos comerciales (siempre comunicados en nuestros Términos y condiciones)
+                            
+                            Si tenes dudas con tu pedido , comunicate con nuestro Centro de Atención a Clientes para que podamos ayudarte.</p>
+                    </div>
+                </div>
+    
+                <div class="item px-6 py-6" x-data="{isOpen : false}">
+                    <a href="#" class="flex items-center justify-between" @click.prevent="isOpen = true">
+                        <h4 :class="{'text-green-400 font-medium' : isOpen == true}">¿Cómo puedo utilizar mi código promocional?</h4>
+                        <svg 
+                        :class="{'transform rotate-180' : isOpen == true}"
+                        class="w-5 h-5 text-gray-500"
+                            fill="none" stroke-linecap="round" 
+                            stroke-linejoin="round" stroke-width="2" 
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+                    <div x-show="isOpen" @click.away="isOpen = false" class="mt-3" :class="{'text-gray-600' : isOpen == true}">
+                        <p>Si contas con un código promocional válido para nuestra tienda online, seguí estos pasos para conseguir tu descuento:
+                            1) Ingresá a nuestra tienda online SPORTIX.ar.
+                            2) Seleccioná tus artículos y hacé click  en "añadir al carrito".
+                            3) Encontrarás un apartado ‘Código promocional’  situado del lado derecho debajo de el resumen de tu pedido, hacé click sobre la flecha y se habilitará el campo para ingresar el código.
+                            4) Introducí el código en dicho recuadro y hacé clic en ‘Aplicar’. Evitá el ingreso manual del código, te sugerimos copiar /pegar el código directamente del correo electrónico.
+                            5) Una vez que el código haya sido aplicado, revisá que en la sección de "Resumen de pedido" aparezca el  descuento aplicado.</p>
+                    </div>
+                </div>
+    
+                <div class="item px-6 py-6" x-data="{isOpen : false}">
+                    <a href="#" class="flex items-center justify-between" @click.prevent="isOpen = true">
+                        <h4 :class="{'text-green-400 font-medium' : isOpen == true}">¿Qué garantía tienen mis productos?</h4>
+                        <svg 
+                        :class="{'transform rotate-180' : isOpen == true}"
+                        class="w-5 h-5 text-gray-500"
+                            fill="none" stroke-linecap="round" 
+                            stroke-linejoin="round" stroke-width="2" 
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+                    <div x-show="isOpen" @click.away="isOpen = false" class="mt-3" :class="{'text-gray-600' : isOpen == true}">
+                        <p>Para SPORTIX la calidad es lo primero. Comprobamos exhaustivamente todos nuestros productos en condiciones reales para asegurarnos de que están en óptimas condiciones para soportar los usos para los que han sido diseñados. Sin embargo, a veces resulta inevitable que se entregue un producto defectuoso.
+
+                            Si un producto que compraste en nuestra tienda online presenta daños de origen y problemas con la calidad y quieres devolverlo, deberás hacerlo a través de nuestro Servicio de Atención a Clientes. En cuanto lo recibamos, nuestro departamento de calidad procederá a inspeccionarlo.
+                            
+                            Te reembolsaremos el importe del producto tanto si, una vez realizada la comprobación, observamos que presenta defectos de fabricación o sino se ajusta a las condiciones normales de venta de un producto SPORTIX. Adicional, SPORTIX te indemnizará por los gastos que hubiera podido causar su producto defectuoso.
+                            
+                            No darán lugar a indemnización los productos defectuosos por motivos distintos a los anteriores, como por ejemplo la negligencia, el mal uso o el desgaste natural del producto. En ningún caso darán lugar a indemnización los productos que no fueron adquiridos en la tienda online de SPORTIX o en nuestra red de tiendas oficiales.
+                            
+                            Tené en cuenta que la vida útil de un producto depende en gran medida de cómo lo uses y en qué condiciones lo uses. No se sustituirán los productos dañados por el uso y el desgaste normales o que hayan excedido la vida razonable del producto.</p>
+                    </div>
+                </div>
+    
+                <div class="item px-6 py-6" x-data="{isOpen : false}">
+                    <a href="#" class="flex items-center justify-between" @click.prevent="isOpen = true">
+                        <h4 :class="{'text-green-400 font-medium' : isOpen == true}">¿Quién puede retirar el pedido?</h4>
+                        <svg 
+                        :class="{'transform rotate-180' : isOpen == true}"
+                        class="w-5 h-5 text-gray-500"
+                            fill="none" stroke-linecap="round" 
+                            stroke-linejoin="round" stroke-width="2" 
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+                    <div x-show="isOpen" @click.away="isOpen = false" class="mt-3" :class="{'text-gray-600' : isOpen == true}">
+                        <p>El pedido puede ser retirado por el titular de la compra o un tercero autorizado. En ambos casos deberá presentar su DNI.</p>
+                    </div>
+                </div>
+    
+                <div class="item px-6 py-6" x-data="{isOpen : false}">
+                    <a href="#" class="flex items-center justify-between" @click.prevent="isOpen = true">
+                        <h4 :class="{'text-green-400 font-medium' : isOpen == true}">¿Cuál es el horario de entrega?</h4>
+                        <svg 
+                        :class="{'transform rotate-180' : isOpen == true}"
+                        class="w-5 h-5 text-gray-500"
+                            fill="none" stroke-linecap="round" 
+                            stroke-linejoin="round" stroke-width="2" 
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+                    <div x-show="isOpen" @click.away="isOpen = false" class="mt-3" :class="{'text-gray-600' : isOpen == true}">
+                        <p>La entrega de los pedidos se realiza de Lunes a Domingo de 10:00 am a 18:00 pm.</p>
+                    </div>
+                </div>
+    
+                <div class="item px-6 py-6" x-data="{isOpen : false}">
+                    <a href="#" class="flex items-center justify-between" @click.prevent="isOpen = true">
+                        <h4 :class="{'text-green-400 font-medium' : isOpen == true}">¿Puedo realizar un cambio por Whatsapp?</h4>
+                        <svg 
+                        :class="{'transform rotate-180' : isOpen == true}"
+                        class="w-5 h-5 text-gray-500"
+                            fill="none" stroke-linecap="round" 
+                            stroke-linejoin="round" stroke-width="2" 
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+                    <div x-show="isOpen" @click.away="isOpen = false" class="mt-3" :class="{'text-gray-600' : isOpen == true}">
+                        <p>Por el momento, SOLO es posible realizar cambios de productos comprados por este medio en los 30 días posteriores a la compra. Para ello, es necesario contactarse vía Whatsapp con la tienda en la que se realizó la compra y solicitar el cambio. Se informará día  en el  que se deberá acercar al punto de entrega del shopping a realizar el mismo.</p>
+                    </div>
+                </div>
+    
+                <div class="item px-6 py-6" x-data="{isOpen : false}">
+                    <a href="#" class="flex items-center justify-between" @click.prevent="isOpen = true">
+                        <h4 :class="{'text-green-400 font-medium' : isOpen == true}">¿Puedo comprar por whatsapp cualquier producto que vea en la página de Ecomm?</h4>
+                        <svg 
+                        :class="{'transform rotate-180' : isOpen == true}"
+                        class="w-5 h-5 text-gray-500"
+                            fill="none" stroke-linecap="round" 
+                            stroke-linejoin="round" stroke-width="2" 
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+                    <div x-show="isOpen" @click.away="isOpen = false" class="mt-3" :class="{'text-gray-600' : isOpen == true}">
+                        <p>Cada una de las tiendas cuenta con un catálogo que le será enviado una vez se comunique con el punto de venta y la disponibilidad del producto va a depender del portafolio del almacén. Si hay algún producto que ya haya visto y esté buscando de manera especial, puede comunicarse con la tienda y preguntar si este artículo está disponible.</p>
+                    </div>
+                </div>
+    
+                <div class="item px-6 py-6" x-data="{isOpen : false}">
+                    <a href="#" class="flex items-center justify-between" @click.prevent="isOpen = true">
+                        <h4 :class="{'text-green-400 font-medium' : isOpen == true}">¿Cuáles son los medios de pago disponibles?</h4>
+                        <svg 
+                        :class="{'transform rotate-180' : isOpen == true}"
+                        class="w-5 h-5 text-gray-500"
+                            fill="none" stroke-linecap="round" 
+                            stroke-linejoin="round" stroke-width="2" 
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+                    <div x-show="isOpen" @click.away="isOpen = false" class="mt-3" :class="{'text-gray-600' : isOpen == true}">
+                        <p>Tarjetas de crédito:
+                            VISA
+                            AMERICAN EXPRESS
+                            MASTERCARD
+                            TARJETA NARANJA
+                            NATIVA
+                            CABAL
+                            TARJETA SHOPPING
+                            CENCOSUD
+                            DINERS CLUB
+                            ARGENCARD
+                            TARJETA WALMART
+                            CMR FALABELLA
+                            
+                            Tarjetas de debito:
+                            MAESTRO
+                            MASTERCARD
+                            CABAL
+                            VISA</p>
+                    </div>
+                </div>
+                
+            </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </article>
+    
+    <div
+        x-data="scrollHandler(document.getElementById('the-article'))"
+        x-cloak
+        aria-hidden="true"
+        @scroll.window="calculateHeight(window.scrollY)"
+        class="fixed h-screen w-1 hover:bg-gray-200 top-0 left-0 bg-gray-300">
+        <div :style="`max-height:${height}%`" class="h-full bg-green-400"></div>
+    </div>
+    
+    <div
+        id="alpine-devtools"
+        x-data="devtools()"
+        x-show="alpines.length"
+        x-init="start()">
+    </div>
+    <script>
+    function scrollHandler(element = null) {
+        return {
+            height: 0,
+            element: element,
+            calculateHeight(position) {
+                const distanceFromTop = this.element.offsetTop
+                const contentHeight = this.element.clientHeight
+                const visibleContent = contentHeight - window.innerHeight
+                const start = Math.max(0, position - distanceFromTop)
+                const percent = (start / visibleContent) * 100;
+                requestAnimationFrame(() => {
+                    this.height = percent;
+                });
+            },
+            init() {
+                this.element = this.element || document.body;
+                this.calculateHeight(window.scrollY);
+            }
+        };
+    }
+    
+    </script>
+    </body>
+</html>

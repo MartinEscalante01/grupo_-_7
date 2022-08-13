@@ -22,6 +22,10 @@ const controller = {
 
     terms : (req,res) => {
         return res.render('more/terms')
+    },
+
+    faqs : (req,res) => {
+        return res.render('more/faqs')
     }
 }
 

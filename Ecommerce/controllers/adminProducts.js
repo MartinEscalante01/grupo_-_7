@@ -24,7 +24,7 @@ const adminProducts = {
             let brands = await db.Brand.findAll();
             let categories = await db.Category.findAll();
             let sizes = await db.Size.findAll();
-            res.render('products/productCreate', {data, genders, brands, categories, sizes});
+            res.render('products/newProduct', {data, genders, brands, categories, sizes});
         })
     },
     save: (req,res)=>{

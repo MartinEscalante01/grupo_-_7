@@ -2,159 +2,47 @@
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs') %>
-    <link rel="stylesheet" href="../../css/productCreate.css">
+    <link rel="stylesheet" href="../../css/productRegister.css">
     <title>Sportix | Edicion Producto </title>
 
 </head>
 <body>
   <header>
-    <nav>
+    <!-- <nav>
         <a href="/products">Listado de Productos</a>
         <a href="/users/register">Crear un nuevo Usuario</a>
-    </nav>
+    </nav> -->
   </header>
   <main>
-    <h1>EDITAR <%= productos.name %> | SPORTIX</h1>
-        <form id="CreateForm" action="/products/edit/<%= productos.id %>?_method=PUT"  method="POST" enctype="multipart/form-data">
-          <form method="POST" id="CreateForm" action="/productCreate" enctype="multipart/form-data">
-            <div>
-            <label for="txtNombre">Nombre del Producto:</label>
-            <input class="controls" type="text" value="<%= productos.name %>" placeholder="Ingresar aqui..." name="name" >
+    <div class="form">
+      <div class="title">Editar | Sportix</div>
+      <div class="subtitle"><%= productos.name %></div>
+        <form method="POST" class="createForm" id="CreateForm" action="/products/edit/<%= productos.id %>?_method=PUT" enctype="multipart/form-data">
+          <!-- Grupo: Name -->
+          <div id="grupo__name">
+            <div class="formulario__grupo-input input-container ic1">
+              <input id="nombre" class="input name" type="text" placeholder="<%= productos.name %>" name="name" minlength="5">
+              <div class="cut"></div>
+              <label for="nombre" class="placeholder"><%= productos.name %></label>
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
             </div>
+              <p class="formulario__input-error">El Nombre tiene que tener al menos 5 dígitos y no puede tener caracteres especiales.</p>            
+          </div>
 
-            <div>
-            <label for="">Descripcion del producto:</label>
-            <input class="controls" name="description" id="controls" cols="30" rows="5" value="<%= productos.description %>"></input>
-            </div>
-            
-            <div>
-            <label for="cnbCategoria">Categoria del Producto:</label>
-            <select name="category" id="cnbCategory">
-                <option value="Indumentaria">Indumentaria</option>
-                <option value="Calzado">Calzado</option>
-                <option value="Accesorios">Accesorios</option>
-            </select>
-            </div>
-            
-            <div class="size">
-            <label  for="size">Seleccionar Talles:</label><br>
-              <select name="size">
-                <option value="#" selected disabled>Seleccione su talle...</option>
-                <% sizes.forEach(size => { %>
-                  <option value="<%=size.id %>"><%=size.sizes %></option>
-                <% }); %>
-              </select>
-            </div>
-            
-            <div>
-            <label>Fecha de Alta:</label><br>
-            <input class="controls" type="date" placeholder="DD-MM-AAAA"  name="date" ><br>
-            </div>
-
-            <div>
-            <label>Price:</label><br>
-            <input class="controls" type="number" placeholder="Precio del Producto"  name="price" step="0.01" ><br>
-            </div>
-
-            <div>
-              <label for="gender">Genero del Producto:</label>
-              <select name="gender">
-                  <option value="Hombre">Hombre</option>
-                  <option value="Mujer">Mujer</option>
-                  <option value="Niño">Niño</option>
-                  <option value="Unisex">Unisex</option>
-              </select>
-            </div>
-
-            <div>
-                <label>Marca del Producto:</label>
-                <input class="controls" type="text" placeholder="Marca del Producto..." name="brand" >
-            </div>
-
-            <div>
-              <label for="txtImagen">Imagen del Producto:</label>
-              <input type="file" name="file" accept=".jpg" multiple>
-            </div>  
-
-            <div>
-            <label for="">Descripcion del producto:</label>
-            <textarea name="description" value="<%= productos.description %>" id="controls" cols="30" rows="5"></textarea>
-            </div>
-            
-            <div>
-            <label for="cnbCategoria">Categoria del Producto:</label>
-            <select name="category" id="cnbCategory">
-                <option value="Indumentaria">Indumentaria</option>
-                <option value="Calzado">Calzado</option>
-                <option value="Accesorios">Accesorios</option>
-            </select>
-            </div>
-            
-            <div class="size">
-            <label  for="size">Seleccionar Talles:</label><br>
-            <ul>
-                <li>
-                  <label for="Opcion1">
-                    <input type="radio" id="Opcion1" name="Size S" value="S" >
-                    S
-                  </label>
-                </li>
-                <li>
-                  <label for="Opcion2">
-                    <input type="radio" id="Opcion1" name="Size M" value="M" >
-                    M
-                  </label>
-                </li>
-                <li>
-                <label for="Opcion3">
-                    <input type="radio" id="Opcion1" name="Size L" value="L" >
-                    L
-                  </label>
-                </li>
-            </ul>
-            </div>
-            
-            <div>
-            <label>Fecha de Alta:</label><br>
-            <input class="controls" type="date" value="<%= productos.date %>" placeholder="DD-MM-AAAA"  name="date" ><br>
-            </div>
-
-            <div>
-            <label>Price:</label><br>
-            <input class="controls" type="number" value="<%= productos.price %>" placeholder="Precio del Producto"  name="price" ><br>
-            </div>
-
-            <div>
-              <label for="gendre">Genero del Producto:</label>
-              <select name="gendre">
-                  <option value="Hombre">Hombre</option>
-                  <option value="Mujer">Mujer</option>
-                  <option value="Niño">Niño</option>
-                  <option value="Unisex">Unisex</option>
-              </select>
-            </div>
-
-            <div>
-                <label>Marca del Producto:</label>
-                <input class="controls" type="text" value="<%= productos.brand %>" placeholder="Marca del Producto..." name="brand" >
-            </div>
-
-            <div>
-              <label for="txtImagen">Imagen del Producto:</label>
-              <input type="file" value="<%= productos.file %>" name="file" accept=".jpg" multiple>
-            </div>
-
-            <div class="botones">
-              <button type="submit">EDITAR PRODUCTO</button>
-              <button type="reset">Limpiar Contenido</button>
-            </div>
+              <div class="input-container ic2">
+                <input id="lastname" class="input" type="text" placeholder=" " />
+                <div class="cut"></div>
+                <label for="lastname" class="placeholder">Last name</label>
+              </div>
+              <div class="input-container ic2">
+                <input id="email" class="input" type="text" placeholder=" " />
+                <div class="cut cut-short"></div>
+                <label for="email" class="placeholder">Email />
+              </div>
+              <button type="text" class="submit">submit</button>
         </form>
+    </div>
+    <script src="../js/editProduct.js"></script>     
   </main>
-
-    </main>
-    <footer>
-
-    </footer>
-
 </body>
 </html>

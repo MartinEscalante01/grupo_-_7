@@ -14,7 +14,14 @@ module.exports = (sequelize, DataTypes) => {
         tableName: 'category', //Si el nombre de la tabla no coincide con el del modelo
         timestamps: false,  //Si no tengo timestamps
     }
-    const Category = sequelize.define(alias, cols, config); 
+    const Category = sequelize.define(alias, cols, config);
+    
+    // Category.associate = function(models){
+    //     Category.hasMany(models.Product , {
+    //         as: "Producto",
+    //         foreignKey: "category"
+    //      });
+    // }
   
         return Category;
 }

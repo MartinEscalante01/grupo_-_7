@@ -3,46 +3,106 @@
 <head>
     <%- include('../partials/head.ejs') %>
     <link rel="stylesheet" href="../../css/productRegister.css">
-    <title>Sportix | Edicion Producto </title>
+    <title>Sportix | Crear Nuevos Productos </title>
 
 </head>
 <body>
   <header>
-    <!-- <nav>
-        <a href="/products">Listado de Productos</a>
-        <a href="/users/register">Crear un nuevo Usuario</a>
-    </nav> -->
+    
   </header>
   <main>
     <div class="form">
-      <div class="title">Editar | Sportix</div>
-      <div class="subtitle"><%= productos.name %></div>
+        <nav class="opciones">
+            
+            <a href="/"> ← Volver al home</a>
+            <a href="/products">Volver a Productos →</a>
+        </nav>
+        <div class="title">EDITAR</div>
+        <div class="subtitle"><%= productos.name %></div>
         <form method="POST" class="createForm" id="CreateForm" action="/products/edit/<%= productos.id %>?_method=PUT" enctype="multipart/form-data">
-          <!-- Grupo: Name -->
+        <!-- Grupo: Name -->
           <div id="grupo__name">
             <div class="formulario__grupo-input input-container ic1">
-              <input id="nombre" class="input name" type="text" placeholder="<%= productos.name %>" name="name" minlength="5">
+              <input id="nombre" class="input name" value="<%= productos.name %>"  type="text" name="name" minlength="5">
               <div class="cut"></div>
-              <label for="nombre" class="placeholder"><%= productos.name %></label>
+              <label for="nombre" class="placeholder">Nombre</label>
               <i class="formulario__validacion-estado fas fa-times-circle"></i>
             </div>
               <p class="formulario__input-error">El Nombre tiene que tener al menos 5 dígitos y no puede tener caracteres especiales.</p>            
           </div>
 
-              <div class="input-container ic2">
-                <input id="lastname" class="input" type="text" placeholder=" " />
+        <!-- Grupo: Description -->
+        <div id="grupo__description">
+            <div class="formulario__grupo-input input-container ic1">
+                <input class="input description"value="<%= productos.description %>" name="description" id="description" cols="30" rows="5" minlength="20"></input>
                 <div class="cut"></div>
-                <label for="lastname" class="placeholder">Last name</label>
-              </div>
-              <div class="input-container ic2">
-                <input id="email" class="input" type="text" placeholder=" " />
-                <div class="cut cut-short"></div>
-                <label for="email" class="placeholder">Email />
-              </div>
-              <button type="text" class="submit">submit</button>
+                <label for="description" class="placeholder">Descripcion</label>
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>  
+            </div>
+            <p class="formulario__input-error">El campo tiene que tener al menos 20 dígitos.</p>
+            </div>
+            
+        <!-- Grupo: Category -->
+        <div class="formulario__grupo-input input-container ic1">
+            <select value="<%= productos.genders.name %>" class="input"  name="category" id="category">
+                <% categories.forEach(category => { %>
+                    <option value="<%=category.id %>"><%=category.category %></option>
+                <% }); %>
+            </select>
+        </div>
+            
+            <!-- Grupo: Size -->
+            <div class="input-container ic2">
+            <select value="<%= productos.sizes.sizes %>" class="input" name="size">
+                <% sizes.forEach(size => { %>
+                <option value="<%=size.id %>"><%=size.sizes %></option>
+                <% }); %>
+            </select>
+            </div>
+            
+            <!-- Grupo: date -->
+            <div class="input-container ic2">
+                <div class="cut"></div>
+                <input class="input date" type="date" value="<%= productos.date %>"  name="date" ><br>
+            </div>
+
+            <!-- Grupo: Price -->
+            <div class="input-container ic2">
+                <input class="input" type="number" value="<%= productos.price %>"  name="price" step="0.01" ><br>
+            </div>
+
+            <!-- Grupo: Genre -->
+            <div class="input-container ic2">
+                <select value="<%= productos.genders.name %>" class="input" name="gender">
+                        <% genders.forEach(gender => { %>
+                        <option value="<%=gender.id %>"><%=gender.name %></option>
+                        <% }); %>
+                </select>
+            </div>
+
+            <!-- Grupo: brand -->
+            <div class="input-container ic2">
+                <select value="<%= productos.brands.name %>"class="input" name="brand">
+                    <% brands.forEach(brand => { %>
+                        <option value="<%=brand.id %>"><%=brand.name %></option>
+                    <% }); %>
+                </select>
+            </div>
+
+            <!-- Grupo: File -->
+            <div class="input-container ic2">
+              <input value="<%= productos.file %>" class="input" type="file" name="file" accept=".jpg" multiple>
+              <div class="cut"></div>
+              <label for="file" class="placeholder">Imagen </label>
+              <figure>
+                <img  src="/img/productsImages/<%= productos.file %> " alt="Imagen">
+            </figure>
+            </div>
+            <button type="text" class="submit">Editar</button>
+            <button type="reset" class="submit">Reestablecer</button>
         </form>
     </div>
-    <script src="../js/editProduct.js"></script>     
+    <script src="../js/newProduct.js"></script>   
   </main>
 </body>
 </html>

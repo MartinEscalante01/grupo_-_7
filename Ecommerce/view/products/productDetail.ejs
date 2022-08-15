@@ -26,20 +26,20 @@
             <div class="detail">
 
                 <div>
-                    <img class="imagen" src="../img/productsImages/<%= product.file %>" alt="<%= product.name %>">
+                    <img class="imagen" src="../img/productsImages/<%= productos.file %>" alt="<%= productos.name %>">
                 </div>
                 <div class="child">
 
 
                     <div>
-                        <h1> <%= product.name %></h1>
+                        <h1> <%= productos.name %></h1>
 
                     </div>
                     <div class="columnprices">
                         <span class="prices">
-                            <span>$<%= product.price %></span>
-                            <span class="oldprice"><%= product.oldprice %></span>
-                            <span class="saving"><%= product.discount%> </span>
+                            <span>$<%= productos.price %></span>
+                            <span class="oldprice"><%= productos.oldprice %></span>
+                            <span class="saving"><%= productos.discount%> </span>
                         </span>
                     </div>
                     <hr class="separador">
@@ -75,40 +75,21 @@
             <div class="descripcion-producto">
                 <h4>DESCRIPCION</h4>
                 <br>
-                <p><%= product.description %></p>
+                <p><%= productos.description %></p>
                 <br>
                 <ul>
-                    <li>Categoria: <%= product.category %></li>
-                    <li>Genero: <%= product.gendre %></li>
-                    <li>Marca: <%= product.brand %></li>
-                    <li>Material: Poliéster reciclado.</li>
+                    <li>Categoria: <%= productos.categories.category %></li>
+                    <li>Genero: <%= productos.genders.name %></li>
+                    <li>Marca: <%= productos.brands.name %></li>
+                    <li>Tamaño: <%= productos.sizes.sizes %></li>
                     <li>Garantía: Contra defecto de fabricación.</li>
-                    <li>Origen: Nacional</li>
                     
                 </ul>
             </div>
         </section>
 
         <hr class="separador2">
-        <section>
-            <div>
-                <section class="Container-Opps">
-                    <h3>RECOMENDANDO PARA VOS</h3>
-                    <section class="Opps">
-                        <% for (let dato of recomendaciones){ %>
-                        <div class="boxOpps">
-                            <a href="/productDetail/<%= dato.id %>"><img src="../img/productsImages/<%= dato.file %>" class="imgRecomendado"></a>
-                            <span class="newPrice">
-                                <div>  $ <%= dato.price %></div>
-                                <span class="priorPrice">$9.199,00</span>
-                                <span class="discuount"> 50% OFF </span>
-                            </span>
-                        </div>
-                        <% } %>
-                    </section>
-                </section>
-            </div>
-        </section>
+        <!--  -->
     </main>
     <hr>
 

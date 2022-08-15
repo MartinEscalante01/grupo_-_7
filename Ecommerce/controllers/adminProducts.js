@@ -1,5 +1,6 @@
 const path = require('path');
 const db = require('../database/models');
+const productos = require('../database/JSON/products.json')
 const Op = db.Sequelize.Op; //Aqui hacen esto para lograr activalos operadores en sus querys (like - count - max) 
 
 const adminProducts = {
@@ -70,7 +71,7 @@ const adminProducts = {
             price: req.body.price,
             gender: req.body.gender,
             brand: req.body.brand,
-            file: req.body.file,
+            file: req.file.filename,
         },{
             where:{
                 id: req.params.id
@@ -99,7 +100,39 @@ const adminProducts = {
         })
         .then(()=>  res.redirect('/products'))
         .catch(error => res.send(error))
-    }
-}
+    },
+    productDetail: (req, res) => {
+        const pedidoProduct = db.Producto.findByPk(req.params.id,{
+            include : [
+                {association: "genders"},
+                {association: "brands"},
+                {association: "categories"},
+                {association: "sizes"},
+            ]});
+        
+        const pedidoGender = db.Gender.findAll();
+        const pedidoBrand = db.Brand.findAll();
+        const pedidoCategory =  db.Category.findAll();
+        const pedidoSize =  db.Size.findAll();
+        // const product = db.Producto.findAll();
+        // const productJSON = productos.find(producto => producto.id == req.params.id)
+        // const recomendaciones = []
+        //     for (let index = 0; index < 3; index++) {
+        //         const index = Math.floor(Math.random() * productJSON.length)
+        //         recomendaciones.push(productJSON[index])
+        //     };
+
+        Promise.all([pedidoProduct, pedidoGender, pedidoBrand, pedidoCategory, pedidoSize])
+        .then(([productos, genders, brands, categories, sizes]) => { 
+            res.render('products/productDetail', {productos, genders, brands, categories, sizes});
+        })
+        // const product = productos.find(producto => producto.id == req.params.id)
+        // const recomendaciones = []
+        // for (let index = 0; index < 3; index++) {
+        //     const index = Math.floor(Math.random() * productos.length)
+        //     recomendaciones.push(productos[index])
+        // }
+        // return res.render('products/productDetail', { product, recomendaciones })
+}}
 
 module.exports = adminProducts

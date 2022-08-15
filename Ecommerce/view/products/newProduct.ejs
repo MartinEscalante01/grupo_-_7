@@ -8,13 +8,15 @@
 </head>
 <body>
   <header>
-    <!-- <nav>
-        <a href="/products">Listado de Productos</a>
-        <a href="/users/register">Crear un nuevo Usuario</a>
-    </nav> -->
+    
   </header>
   <main>
     <div class="form">
+        <nav class="opciones">
+            
+            <a href="/"> ← Volver al home</a>
+            <a href="/products">Volver a Productos →</a>
+        </nav>
         <div class="title">Nuevo Producto</div>
         <div class="subtitle">SPORTIX</div>
         <form method="POST" class="createForm" id="CreateForm" action="/productCreate" enctype="multipart/form-data">
@@ -32,7 +34,7 @@
         <!-- Grupo: Description -->
         <div id="grupo__description">
             <div class="formulario__grupo-input input-container ic1">
-                <input class="input description" name="description" id="description" cols="30" rows="5" minlength="20"></input>
+                <input class="input description" placeholder=" " name="description" id="description" cols="30" rows="5" minlength="20"></input>
                 <div class="cut"></div>
                 <label for="description" class="placeholder">Descripcion</label>
                 <i class="formulario__validacion-estado fas fa-times-circle"></i>  
@@ -95,11 +97,19 @@
 
             <!-- Grupo: File -->
             <div class="input-container ic2">
-            <input class="input" type="file" name="file" accept=".jpg" multiple>
-            <div class="cut cut-short"></div>
+            <input class="input" id="seleccionArchivos" type="file" name="file" accept=".jpg" multiple>
+            <div class="cut"></div>
             <label for="email" class="placeholder">Imagen </label>
+            <img id="imagenPrevisualizacion">
             </div>
-            <button type="text" class="submit">Editar</button>
+
+            <div class="formulario__mensaje" id="formulario__mensaje">
+                <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+            </div>
+
+            
+            <button type="text" class="submit">Crear</button>
+            <button type="reset" class="submit">Limpiar Contenido</button>
         </form>
     </div>
     <script src="../js/newProduct.js"></script>   

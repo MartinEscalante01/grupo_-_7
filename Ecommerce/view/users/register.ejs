@@ -122,12 +122,10 @@
                             </div>
                         <% } %>
 
-                        <input type="file" name="file" class="form-control <%= locals.errors && errors.file ? 'is-invalid' : null %>">
-								<% if (locals.errors && errors.file) { %>
-									<div class="text-danger">
-										<%= errors.file.msg %>
-									</div>
-								<% } %>
+                        <div class="containerImagen">
+                            <input type="file" id="seleccionArchivos" name="file" class="form-control <%= locals.errors && errors.file ? 'is-invalid' : null %>">
+                            <img id="imagenPrevisualizacion">
+                        </div>
 
                         <select name="roles" class="form-select <%= locals.errors && errors.roles ? 'is-invalid' : null %>">
                             <option value="#" selected disabled>Seleccione su rol...</option>

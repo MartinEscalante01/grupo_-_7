@@ -199,9 +199,12 @@ input, select {
     display: flex;
 }
 
-.containerImagen img{
-    width: 65px;
-}
+img{
+    width: 78px;
+    display: flex;
+    position: absolute;
+    right: 0px;
+  }
 
 .errores{
     color: red;

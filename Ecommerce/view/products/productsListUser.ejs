@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <%- include('../partials/head.ejs') %>
+    <title>Sportix Página Oficial</title>
+</head>
+<body>
+
+    <%- include('../partials/header.ejs') %>
+
+    <main>
+        <section> 
+            <div class="barraEnvio">Con tu compra superior a $20.000 tenes envio gratis</div>
+        </section>
+       
+        <section>
+            <div class="fondoCopete">
+            <img src="img/image.png"  class="copete">
+            </div>
+        </section>
+
+        <hr class="separador"> 
+                <section class="productos-cards">
+                        <% for (let dato of recomendaciones){ %>
+                            <div class="cards">
+                                <a href="/productDetail/<%= dato.id %>"><img src="../img/productsImages/<%= dato.file %>" class="imgRecomendado"></a>
+                                <span class="prices">
+                                    <div>  $ <%= dato.price %></div>
+                                    <span class="oldprice">$ <%= dato.price * 1.2 %></span>
+                                    <span class="saving"> 20% OFF </span>
+                                </span>
+                            </div>
+                            <% } %>
+                </section>
+        </section>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

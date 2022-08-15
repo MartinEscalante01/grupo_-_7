@@ -1,11 +1,13 @@
 import React from "react";
 import { useState, useEffect } from "react"
-import image from "../images/profileImages"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser} from "@fortawesome/free-solid-svg-icons"
+
 
 
 function UsersList () {
     const [users, setUsers] = useState([]);
-
+    
     useEffect(() => {
         fetch("http://localhost:3040/sportix/users")
         .then(response => response.json())
@@ -17,10 +19,13 @@ function UsersList () {
     }, [])
   
     const user = users.data
+    console.log(user);
+
+    
     return(
         
                     <div >
-                       
+                    
                         <h1>Users List</h1> 
                                 
                         <table className="productList">                              
@@ -36,7 +41,7 @@ function UsersList () {
                                             <td>{user.fullName}</td>
                                             <td>{user.birthday}</td>
                                             <td>{user.email}</td>
-                                            <td>{<img src={image}/>}</td>
+                                            <td> <FontAwesomeIcon icon= {faUser}/> </td>
                                         </tr>
                                     )
                                 })}

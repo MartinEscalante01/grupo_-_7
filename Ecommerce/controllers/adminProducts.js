@@ -1,6 +1,7 @@
 const path = require('path');
 const db = require('../database/models');
-const productos = require('../database/JSON/products.json')
+const productos = require('../database/JSON/products.json');
+const { log } = require('console');
 const Op = db.Sequelize.Op; //Aqui hacen esto para lograr activalos operadores en sus querys (like - count - max) 
 
 const adminProducts = {
@@ -43,6 +44,7 @@ const adminProducts = {
         res.redirect('/products');
     },
     edit: function(req,res){
+        console.log(req.body);
         const pedidoProduct = db.Producto.findByPk(req.params.id,{
             include : [
                 {association: "genders"},
@@ -62,6 +64,7 @@ const adminProducts = {
         })
     },
     update: (req,res)=>{
+        console.log(req.body);
         db.Producto.update({
             name: req.body.name,
             description: req.body.description,

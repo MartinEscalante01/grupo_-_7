@@ -85,12 +85,7 @@
                         <% } %>
 
                         <div class="containerImagen">
-                            <input type="file" value="<%= user.file %>" name="file" class="form-control <%= locals.errors && errors.file ? 'is-invalid' : null %>">
-                                    <% if (locals.errors && errors.file) { %>
-                                        <div class="text-danger">
-                                            <%= errors.file.msg %>
-                                        </div>
-                                    <% } %>
+                            <input type="file" value="/img/profileImages/<%= user.file %>" name="file" class="form-control">
 
                             <figure>
                                 <img  src="/img/profileImages/<%= user.file %> " alt="Imagen">

@@ -60,6 +60,8 @@ const adminController = {
         res.redirect('/users/usersList');
     },
     edit: function(req,res){
+        console.log(req.file);
+        console.log(req.body);
         const pedidoUser = db.User.findByPk(req.params.id,{
             include : [
                 {association: "genders"},
@@ -67,18 +69,19 @@ const adminController = {
                 {association: "states"},
                 {association: "roles"},
             ]});
-        
         const pedidoGender = db.Gender.findAll();
         const pedidoCountries = db.Country.findAll();
         const pedidoStates =  db.State.findAll();
         const pedidoRoles =  db.Rol.findAll();
-
+        
         Promise.all([pedidoUser, pedidoGender, pedidoCountries, pedidoStates, pedidoRoles])
         .then(([user, genders, countries, states, roles]) => { 
             res.render('users/userEdit', {user, genders, countries, states, roles});
         })
     },
+    
     update: (req,res)=>{
+        console.log(req.file);
         db.User.update({
             fullName: req.body.fullName,
             idGender: req.body.gender,

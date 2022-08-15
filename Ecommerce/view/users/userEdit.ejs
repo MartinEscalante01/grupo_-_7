@@ -15,8 +15,7 @@
 
         <div class="container" id="container">
             <div class="form-container sign-in-container">
-                <form method="PUT" action="/users/edit/<%= user.id %>?_method=PUT" enctype="multipart/form-data">
-                    
+                <form method="POST" action="/users/edit/<%= user.id %>?_method=PUT" enctype="multipart/form-data">                    
                     <div class="selector-box">
                         <input type="text"  value="<%= user.fullName %>" name="fullName <%= locals.errors && errors.fullName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.fullName : null %>" placeholder="Nombre Completo">
                         <% if (locals.errors && errors.fullName) { %>

@@ -160,7 +160,7 @@ CREATE TABLE IF NOT EXISTS `sportix_arg`.`users` (
   `fullName` varchar(45) NOT NULL,
   `email` varchar(100) NOT NULL,
   `idGender` int(11) NOT NULL,
-  `password` varchar(45) NOT NULL,
+  `password` varchar(100) NOT NULL,
   `birthday` date NOT NULL,
   `phone` int(11) NOT NULL,
   `idCountry` int(11) NOT NULL,

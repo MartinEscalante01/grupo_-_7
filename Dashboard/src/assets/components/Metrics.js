@@ -2,14 +2,44 @@ import React from "react";
 import PropTypes from "prop-types"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import{faSackDollar, faBoxesStacked, faUser} from "@fortawesome/free-solid-svg-icons"
+import { useState, useEffect } from "react"
 
 function Metrics(props) {
+
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:3040/sportix/products")
+        .then(response => response.json())
+        .then(data => {
+            setProducts(data);
+        })
+        .catch(error => console.log(error))
+    }, [])
+
+    useEffect(() => {
+        console.log("Funciona");
+    }, [products]) 
+    
+
+    const [users, setUsers] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:3040/sportix/users")
+        .then(response => response.json())
+        .then(data => {
+            setUsers(data);
+        })
+        .catch(error => console.log(error))
+    }, [])
+
+
     return(
         <div class="contentRowMovies">
             <section className='statsBox1'>
-            <div>
-                <h2>Products in database</h2>
-                <p>{props.numberOfMovies}</p>
+            <div>   
+                <div><h2>Products in data base</h2>
+                     <p>{products.total}</p></div>           
             </div>
             <div className='icon'>
                 <FontAwesomeIcon icon= {faBoxesStacked}/>
@@ -30,7 +60,7 @@ function Metrics(props) {
         <section class='statsBox3'>
             <div>
                 <h2>Users Quantity</h2>
-                <p>{props.numberOfActors}</p>
+                <p>{users.total}</p>
             </div>
             <div class='icon'>
                 <FontAwesomeIcon icon= {faUser}/>

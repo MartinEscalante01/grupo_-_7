@@ -1,12 +1,13 @@
 import React from "react";
 import { useState, useEffect } from "react"
+import image from "../images/profileImages"
 
 
 function UsersList () {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3030/sportix/users")
+        fetch("http://localhost:3040/sportix/users")
         .then(response => response.json())
         .then(data => {
             setUsers(data)
@@ -14,12 +15,7 @@ function UsersList () {
         })
         .catch(error => console.log(error))
     }, [])
-
-    useEffect(() => {
-        console.log("Funciona");
-    }, [users]) 
-    
-    
+  
     const user = users.data
     return(
         
@@ -40,7 +36,7 @@ function UsersList () {
                                             <td>{user.fullName}</td>
                                             <td>{user.birthday}</td>
                                             <td>{user.email}</td>
-                                            <td><img src={user.file} alt="user"/></td>
+                                            <td>{<img src={image}/>}</td>
                                         </tr>
                                     )
                                 })}

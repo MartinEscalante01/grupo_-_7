@@ -6,35 +6,31 @@ function GenresInDb () {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3030/sportix/products")
+        fetch("http://localhost:3040/sportix/products")
         .then(response => response.json())
         .then(data => {
             setProducts(data);
         })
         .catch(error => console.log(error))
     }, [])
-
-    useEffect(() => {
-        console.log("Funciona");
-    }, [products]) 
-    
-    
-    const product = products.data
+   
+    const product = products
     console.log(product);
     return(
         <div className='genres'>
             <section class='title'>
-                <h1>Products in Data Base</h1>
+                <h1>Categories in Data Base</h1>
                 <section className='cards'>  
-                    {product?.map((product, i) => {
+                    {/* {product.map((product, i) => {
                                     return (
                                         <div className='cardContent'>
-                                            <h3>{product.category}</h3>
-                                            
+                                            <h3>{product.categories.category}</h3>
+                                            <p>{product.total}</p>
+                                            {console.log([product.categories].length)}
                                         </div>
                                     )
-                                })}
-                <p>{products.category}</p>
+                                })} */}
+                
                 </section>
                   
             </section>

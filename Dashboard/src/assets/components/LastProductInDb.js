@@ -5,7 +5,7 @@ function LastProductInDb() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3030/sportix/products")
+        fetch("http://localhost:3040/sportix/products")
         .then(response => response.json())
         .then(data => {
             setProducts(data);
@@ -13,11 +13,9 @@ function LastProductInDb() {
         .catch(error => console.log(error))
     }, [])
 
-    useEffect(() => {
-        console.log("Funciona");
-    }, [products]) 
-    
-    const lastProduct = products[ products.length - 1]    
+
+    const lastProduct = products.data
+   
     console.log(lastProduct);
    
    
@@ -26,11 +24,10 @@ function LastProductInDb() {
             <section className='title'>
                 <h1>Last product in Data Base</h1>
             </section>
-            <section className='content'>
-            
+            <section className='content'>           
                     <div>              
                         <img src= "" alt="productPic"/>
-                        <p>{lastProduct}  </p>
+                        <p>{products[1]}</p>
                 
                 </div>
 

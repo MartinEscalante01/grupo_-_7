@@ -11,7 +11,7 @@ const apiSportix = require('./routes/apiSportix');
 app.use('/sportix',cors(), apiSportix);
 
 // Servidor
-let port = process.env.PORT || 3030;
+let port = process.env.PORT || 3040;
     
 app.listen(port, ()=> {
     console.log(`Servidor corriendo en el puerto ${port}`);

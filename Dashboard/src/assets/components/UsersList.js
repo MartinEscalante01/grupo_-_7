@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser} from "@fortawesome/free-solid-svg-icons"
+
 
 
 
@@ -41,7 +40,8 @@ function UsersList () {
                                             <td>{user.fullName}</td>
                                             <td>{user.birthday}</td>
                                             <td>{user.email}</td>
-                                            <td> <FontAwesomeIcon icon= {faUser}/> </td>
+                                            <td><img src={'images/profileImages/'+ user.file}/></td>
+                                            
                                         </tr>
                                     )
                                 })}

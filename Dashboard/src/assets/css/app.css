@@ -278,7 +278,7 @@ li{
 
 .genres{
     width: 50%;
-    height: auto;
+    height: fit-content;
     background-color: #2b2a2e;
     box-shadow: 0px 0px 41px -16px rgba(0,0,0,0.48);
     border-radius: 10px;
@@ -290,10 +290,11 @@ li{
 
 .cards{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     background-color: #1d1d1f;
-    height: 100%;
+    height: fit-content;
     padding: 1.25rem;
     flex-wrap: wrap;
 }
@@ -318,6 +319,12 @@ li{
     text-align: center;
     border: #fec303 0.5px solid;
     background-color: #2b2a2e;
+}
+
+.productList img {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
 }
 
 

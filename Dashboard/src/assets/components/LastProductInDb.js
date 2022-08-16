@@ -25,10 +25,16 @@ function LastProductInDb() {
                 <h1>Last product in Data Base</h1>
             </section>
             <section className='content'>           
-                    <div>              
-                        <img src= "" alt="productPic"/>
-                        <p>{products[1]}</p>
-                
+                    <div>   
+                    {lastProduct?.slice(lastProduct.length -1).map((product, index) => {
+                        return (
+                        <div key={index}>
+                            <img src={'images/productsImages/'+ product.file}/>
+                            <h2> {product.name}</h2>
+                            <p> {product.description}</p>
+                        </div>
+        );
+      })}
                 </div>
 
             <button>View product details</button>

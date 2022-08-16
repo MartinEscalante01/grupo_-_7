@@ -38,20 +38,6 @@
             </div>
         </section>
 
-        <hr class="separador"> 
-                <section class="productos-cards">
-                        <% for (let dato of recomendaciones){ %>
-                            <div class="cards">
-                                <a href="/productDetail/<%= dato.id %>"><img src="../img/productsImages/<%= dato.file %>" class="imgRecomendado"></a>
-                                <span class="prices">
-                                    <div>  $ <%= dato.price %></div>
-                                    <span class="oldprice">$ <%= dato.price * 1.2 %></span>
-                                    <span class="saving"> 20% OFF </span>
-                                </span>
-                            </div>
-                            <% } %>
-                </section>
-        </section>
         <hr class="separador">       
         
         <section class="historias">
@@ -66,7 +52,26 @@
                 <h2> Nuevo Adidas Diamond Edge Pack </h2>
                 <p class="novedadTxt"> Les presentamos el nuevo pack de adidas para este final de temporada. Los tres silos de la marca alemana se tiñen de blanco, combinado con azul para los detalles. Clase y buen gusto, eso es lo que nos trae adidas en esta preciosa colección. </p>
             </a></div>
-        </section>   
+        </section>
+        <hr class="separador">
+        
+        <h3>Nuestros productos</h3>
+        
+        <hr class="separador"> 
+                <section class="productos-cards">
+                        <% for (let dato of recomendaciones){ %>
+                            <div class="cards">
+                                <a href="/productDetail/<%= dato.id %>"><img src="../img/productsImages/<%= dato.file %>" class="imgRecomendado"></a>
+                                <span class="prices">
+                                    <div>  $ <%= dato.price %></div>
+                                    <span class="oldprice">$ <%= dato.price * 1.2 %></span>
+                                    <span class="saving"> 20% OFF </span>
+                                </span>
+                            </div>
+                            <% } %>
+                </section>
+        </section>
+        <hr class="separador"> 
     </main>
         <%- include('../partials/footer.ejs') %>
 </body>

@@ -350,7 +350,7 @@ h3 {
 
 .boxOpps:hover {
     transition: transform .5s ease;
-    transform: scale(1.2);
+    transform: scale(1.05);
   }
 
 .newPrice{

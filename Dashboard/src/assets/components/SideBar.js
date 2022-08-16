@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
-import logo from "../images/mob-logo.svg"
+import logo from "../css/mob-logo.svg"
 import{faDashboard} from "@fortawesome/free-solid-svg-icons"
 
 class SideBar extends Component {

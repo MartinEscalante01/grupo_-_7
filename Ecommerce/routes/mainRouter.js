@@ -9,7 +9,7 @@ const adminProducts = require('../controllers/adminProducts');
 router.get('/', controller.home);
 
 /* Catalogo de Productos */
-router.get('/catalogo', adminProducts.show); 
+router.get('/catalogo', adminProducts.list); 
 
 // NOT FOUND
 router.get('/error', controller.notFound)

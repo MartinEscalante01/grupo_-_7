@@ -47,7 +47,15 @@ const adminProducts = {
         for (let index = 0; index <=5; index++) {
             recomendaciones.push(productos[index])
         }
-        return res.render('products/index', {  product,recomendaciones  })
+        return res.render('products/productsListUser', {  product,recomendaciones  })
+    },
+    list: (req,res) =>{
+        const product = productos.find(producto => producto.id == req.params.id)
+        const recomendaciones = []
+        for (let index = 0; index < productos.length; index++) {
+            recomendaciones.push(productos[index])
+        }
+        return res.render('products/productsListUser', {  product,recomendaciones  })
     },
     create: (req, res) =>{
         db.Producto.findAll()

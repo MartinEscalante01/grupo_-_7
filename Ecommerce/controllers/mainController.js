@@ -12,7 +12,14 @@ const controller = {
         }
         return res.render('products/index', {  product,recomendaciones  })
     },
-
+    show : (req,res) => {
+        const product = productos.find(producto => producto.id == req.params.id)
+        const list = []
+        for (let index = 0; index < productos.length; index++) {
+            list.push(productos[index])
+        }
+        return res.render('products/index', {  product,list  })
+    },
     notFound : (req,res) => {
         return res.status(404).render('more/notFound')
     },

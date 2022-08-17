@@ -3,9 +3,13 @@ const router = express.Router();
 
 // Controller
 const controller = require('../controllers/mainController');
+const adminProducts = require('../controllers/adminProducts');
 
 /* GET HOME PAGE */
 router.get('/', controller.home);
+
+/* Catalogo de Productos */
+router.get('/catalogo', adminProducts.show); 
 
 // NOT FOUND
 router.get('/error', controller.notFound)

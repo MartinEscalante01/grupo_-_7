@@ -19,6 +19,20 @@ const adminProducts = {
         })
         .catch(error => res.send(error))
     },
+    show: (req,res) =>{
+        db.Producto.findAll(
+            {include : [
+                {association: "genders"},
+                {association: "brands"},
+                {association: "categories"},
+                {association: "sizes"},
+            ]}
+        )   
+        .then(productos =>{
+            res.render('products/productsListUser', { productos })
+        })
+        .catch(error => res.send(error))
+    },
     create: (req, res) =>{
         db.Producto.findAll()
         .then( async (data)  =>{
@@ -91,7 +105,7 @@ const adminProducts = {
     })  
     .then(resultado =>{
         console.log(resultado)
-        res.render('products/delete', {resultado});
+        res.render('more/delete', {resultado});
     })
     .catch(error => res.send(error))
     },
@@ -117,14 +131,7 @@ const adminProducts = {
         const pedidoBrand = db.Brand.findAll();
         const pedidoCategory =  db.Category.findAll();
         const pedidoSize =  db.Size.findAll();
-        // const product = db.Producto.findAll();
-        // const productJSON = productos.find(producto => producto.id == req.params.id)
-        // const recomendaciones = []
-        //     for (let index = 0; index < 3; index++) {
-        //         const index = Math.floor(Math.random() * productJSON.length)
-        //         recomendaciones.push(productJSON[index])
-        //     };
-
+        
         Promise.all([pedidoProduct, pedidoGender, pedidoBrand, pedidoCategory, pedidoSize])
         .then(([productos, genders, brands, categories, sizes]) => { 
             res.render('products/productDetail', {productos, genders, brands, categories, sizes});

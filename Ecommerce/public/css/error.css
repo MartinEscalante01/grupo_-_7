@@ -1,30 +1,108 @@
-.text-9xl{
-    font-size: 14rem;
-    }
-    @media(max-width: 645px){
-    .text-9xl{
-    font-size: 5.75rem;
-    }
-    .text-6xl{
-    font-size: 1.75rem;
-    }
-    .text-2xl {
-    font-size: 1rem;
-    line-height: 1.2rem;
-    }
-    .py-8 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    }
-    .px-6 {
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-    }
-    .mr-6{
-    margin-right: 0.5rem;
-    }
-    .px-12 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    }
+body {
+    background-color: #888;
+  }
+  
+  * {
+    -webkit-font-smoothing:antialiased;
+  }
+  
+  /* RESET BUTTON */
+  button::-moz-focus-inner {
+    border:0;
+    padding:0
+  }
+  button {
+    width:auto;
+    border:0 none;
+    margin:0;
+    padding:0;
+    background:transparent;
+    overflow:visible;
+    font:14px arial, sans-serif;
+  }
+  
+  /* STYLES */
+  .popup {
+    margin: 10% auto;
+    width:70%;
+  }
+  
+  .upper {
+    box-sizing:border-box;
+    padding:10%;
+    background-color:#fff;
+    color: rgba(100,100,100,0.6);
+    font-size:18px;
+    transition: color 0.4s ease;
+  }
+  
+  .upper:hover {
+    color: rgba(100,100,100,1);
+  }
+  
+  .stroke {
+    height:5px;
+    background: #1763a6; /* Old browsers */
+    background: -webkit-linear-gradient(left, #1763a6 0%, #419ca6 47%, #54bf83 91%);
+    background: -moz-linear-gradient(left, #1763a6 0%, #419ca6 47%, #54bf83 91%);
+    background: -o-linear-gradient(left, #1763a6 0%, #419ca6 47%, #54bf83 91%);
+    background: linear-gradient(left, #1763a6 0%, #419ca6 47%, #54bf83 91%); /* FF3.6+ */ /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */ /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1763a6', endColorstr='#54bf83',GradientType=1 ); /* IE6-9 */
+  }
+  
+  .lower {
+    box-sizing:border-box;
+    background-color: #333;
+    height:60px;
+    width:100%;
+    padding: 6% 15%;
+    color: rgb(200,200,200)
+  }
+  
+  .button {
+    float:left;
+    height:18px;
+    line-height:18px;
+    display:block;
+    color: rgba(255, 255, 255, 0.6);
+    width:50%;
+    transition: color 0.3s ease;
+  }
+  
+  .button i {
+    width:19px;
+    height:18px;
+    display:block;
+    float:left;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+  
+  button:hover {
+    color: rgba(255,255,255,1);
+  }
+  
+  button:hover .icon-ok {
+    color:rgba(100,255,100,0.5);
+  }
+  
+  button:hover .icon-remove {
+    color:rgba(255,100,100,0.5);
+  }
+
+/* Tablet */
+@media (min-width:768px) {
+ 
 }
+/* Terminado Tablet */
+
+/* Desktop */
+@media (min-width:1024px){
+    .popup {
+        margin: 10% auto;
+        width:50%;
+      }
+}
+/* Terminado Desktop */

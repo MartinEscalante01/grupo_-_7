@@ -58,6 +58,7 @@ const adminProducts = {
         res.redirect('/products');
     },
     edit: function(req,res){
+        console.log(req.file);
         console.log(req.body);
         const pedidoProduct = db.Producto.findByPk(req.params.id,{
             include : [
@@ -66,7 +67,6 @@ const adminProducts = {
                 {association: "categories"},
                 {association: "sizes"},
             ]});
-        
         const pedidoGender = db.Gender.findAll();
         const pedidoBrand = db.Brand.findAll();
         const pedidoCategory =  db.Category.findAll();
@@ -88,7 +88,7 @@ const adminProducts = {
             price: req.body.price,
             gender: req.body.gender,
             brand: req.body.brand,
-            // file: req.file.filename,
+            file: req.file.filename,
         },{
             where:{
                 id: req.params.id

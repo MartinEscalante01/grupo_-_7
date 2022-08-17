@@ -156,30 +156,13 @@ div.searchmobile i:hover {
     transform: scale(1.2);
 }
 
-.nav{
-    box-sizing: border-box;
-    padding-right: 40px;
-}
-.nav ul{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin-bottom: 0px;
-    color: black;
-    align-items: center; 
-}
 
-.nav ul li a{
-    margin-right: 10px;
-    margin-left: 10px;
-    text-decoration: none;
-}
 
 
 
 /*Mobile*/
 @media (min-width:360px) {
-    header .nav{
+    .nav{
         display: none;
     }
     
@@ -200,14 +183,15 @@ div.searchmobile i:hover {
 /* Tablet */
 @media (min-width:768px) {
 
+    .nav{
+        display: none;
+    }
+
 /* ENCABEZADO */
     header .menu{
         display: none;
     }
-    
-    header .nav{
-        display: flex
-    }
+
 
     header .search{
         display: flex;
@@ -303,6 +287,24 @@ div.searchmobile i:hover {
         font-size: 11px;
         margin-left: 15px;
     }
-     
+    header.nav{
+        box-sizing: border-box;
+        padding-right: 40px;
+    }
+    .nav ul{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        margin-bottom: 0px;
+        color: black;
+        align-items: center; 
+    }
+    
+    .nav ul li a{
+        margin-right: 10px;
+        margin-left: 10px;
+        text-decoration: none;
+        color: black;
+    }
 }
 /* Terminado Desktop */

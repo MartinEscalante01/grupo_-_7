@@ -28,10 +28,11 @@ a {
 .barraEnvio {
     
     height: auto;
-    border:solid 1.5px lightgrey;
     text-align: center;
     font-size: 12px;
     padding: 4px;
+    background-color: #007BC6;
+    color: white;
 }
 
 
@@ -277,7 +278,24 @@ h3 {
     font-size: 16px;
     padding-bottom: 10px;
 }
+.historia{
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #ECEFF1;
+    line-height: 30px;
+}
 
+.historia div{
+    padding: 1rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 60%;
+    font-size: 18px;
+    
+}
 /* .novedad {
     display: flex;
     background-color: white;
@@ -336,6 +354,7 @@ h3 {
         width: 100%;
         height: auto;
     }
+    
 }
 
 /*Terminado mobile*/
@@ -432,6 +451,13 @@ h3 {
         justify-content: center;
         margin: 10px;
     }
+    .historia{
+        flex-direction: column;
+        text-align: center;
+    }
+    .historia div{
+        width: 100%;
+    }
 
 }
 
@@ -448,6 +474,8 @@ h3 {
     font-size: 18px;
     padding: 7px;
     height: auto;
+    background-color: #007BC6;
+    color: white;
     }
     
     .glassHome{

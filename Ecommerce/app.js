@@ -30,6 +30,7 @@ app.use(methodOverride('_method')); //Para usar PUT y DELETE
 //Routes imports
 const mainRouter = require('./routes/mainRouter');
 const productCart = require('./routes/productCart.js');
+const carrito = require('./routes/carrito.js');
 const productDetail = require('./routes/productDetail');
 const productCreate = require('./routes/productCreate');
 const products = require('./routes/products');
@@ -37,6 +38,7 @@ const users = require('./routes/users');
 
 app.use('/',mainRouter);
 app.use('/productCart',productCart);
+app.use('/carrito',carrito);
 app.use('/productDetail', productDetail);
 app.use('/productCreate', productCreate);
 app.use('/products', products);

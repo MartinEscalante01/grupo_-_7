@@ -19,6 +19,28 @@ const adminProducts = {
         })
         .catch(error => res.send(error))
     },
+    productCart: (req, res) => {
+        const product = productos.find(producto => producto.id == req.params.id)
+        const test1 = []
+        for (let index = 2; index <= 2; index++) {
+            const index = Math.floor(Math.random() * productos.length)
+            test1.push(productos[index])
+        }
+        const test2 = []
+        for (let index = 2; index <= 2; index++) {
+            const index = Math.floor(Math.random() * productos.length)
+            test2.push(productos[index])
+        }
+        const test3 = []
+        for (let index = 2; index <= 2; index++) {
+            const index = Math.floor(Math.random() * productos.length)
+            test3.push(productos[index])
+        }
+        return res.render('products/productCart', {  product,test1,test2,test3  })
+    },
+    carrito: (req, res) => {
+        return res.render('products/carrito')
+    },
     show: (req,res) =>{
         db.Producto.findAll(
             {include : [

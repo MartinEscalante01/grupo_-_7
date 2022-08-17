@@ -10,7 +10,7 @@
 <body>
     <%- include('../partials/header.ejs') %>
     <main id="maincontent">
-        <section>
+        <section class="detail">
             <div>
 
                 <nav>
@@ -32,12 +32,12 @@
 
 
                     <div>
-                        <h1> <%= productos.name %></h1>
+                        <h1 class="title"> <%= productos.name %></h1>
 
                     </div>
                     <div class="columnprices">
                         <span class="prices">
-                            <span>$<%= productos.price %></span>
+                            <span class="price"><%= productos.price %></span>
                             <span class="oldprice"><%= productos.oldprice %></span>
                             <span class="saving"><%= productos.discount%> </span>
                         </span>
@@ -62,7 +62,7 @@
                             <input class="input-qty" type="txtNumber" min="1" value="1">
                         </div>
                         <div class="container-comprar">
-                            <a href="/productCart"><button class="comprar">Agregar al Carrito</button></a>
+                            <button class="comprar">Agregar al Carrito</button>
                             <i class="fas fa-light fa-heart-circle-plus"></i>
                         </div>
                     </div>
@@ -85,11 +85,12 @@
                     <li>Garantía: Contra defecto de fabricación.</li>
                     
                 </ul>
-            </div>
+            </div><script src="../js/productDetail.js"></script>
         </section>
 
         <hr class="separador2">
         <!--  -->
+        
     </main>
     <hr>
 

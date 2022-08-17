@@ -715,7 +715,9 @@ form.search input{
         justify-content: space-around;
         display: flex;
     }
-
+    .descripcion img {
+        width: 30%;
+    }
     .comprar{
         padding: 12px 40px 12px 40px;
         display: block;

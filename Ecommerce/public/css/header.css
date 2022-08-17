@@ -308,5 +308,9 @@ div.searchmobile i:hover {
         text-decoration: none;
         color: black;
     }
+
+    header div nav.nav ul li {
+        margin: 50px;
+    }
 }
 /* Terminado Desktop */

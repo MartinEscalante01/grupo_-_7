@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../../css/profileStyles.css">
+    <link rel="stylesheet" href="../../css/userDetail.css">
     <%- include('../partials/head.ejs') %>
     <title>Sportix | Listado de Usuarios</title>
 </head>
@@ -9,30 +9,59 @@
 <body>
     <nav class="opciones">
         <a href="/users/usersList"> ← Listado de Usuarios</a>
-        <a href="/users/register">Crear un nuevo Usuario →</a>
+        <a href="/">Home →</a>
     </nav>
+    <br>
     <h1>SPORTIX | Detalle de Usuario</h1>
-    <main class="profile">
-        <section class="container">
-            <img src="../../img/profileImages/<%= user.file %> " class="profileImg">
-            <div class="profileData">
-            <h2><%= user.fullName %></h2>
-            <p><%= user.email %> </p>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <div class="wrapper">
+        <div class="left">
+            <img src="../../img/profileImages/<%= user.file %> " class="profileImg" width="100">
+            <h4><%= user.fullName %></h4>
+                <p><%= user.roles.name %></p>
+                <p><%= user.genders.name %></p>
+                <p><%= user.birthday %></p>
+                <p><%= user.countries.name %></p>
+                <p><%= user.states.name %></p>
+        </div>
+        <div class="right">
+            <div class="info">
+                <h3>Information</h3>
+                <div class="info_data">
+                    <div class="data">
+                        <h4>Email</h4>
+                        <p><%= user.email %></p>
+                    </div>
+                    <div class="data">
+                    <h4>Phone</h4>
+                        <p><%= user.phone %></p>
+                    </div>
+                </div>
             </div>
-        </section>
-        <section class="detail">
-            <div class="detailData">
-                <h1>Datos personales</h1>
-                <p>EMAIL: <%= user.email %></p>
-                <p>TELEFONO: <%= user.phone %></p>
-                <p>CUMPLEAÑOS: <%= user.birthday %></p>
-                <p>PAIS: <%= user.countries.name %></p>
-                <p>PROVINCIA: <%= user.states.name %></p>
-                <p>GENERO: <%= user.genders.name %></p>
-                <p>ROL: <%= user.roles.name %></p>
-            </div>         
-        </section>
-    </main>
+        
+        <div class="projects">
+                <h3>Pedidos</h3>
+                <div class="projects_data">
+                    <div class="data">
+                        <h4>Recent</h4>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="data">
+                    <h4>Most Viewed</h4>
+                        <p>dolor sit amet.</p>
+                </div>
+                </div>
+            </div>
+        
+            <div class="social_media">
+                <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
 
 </body>
 </html>

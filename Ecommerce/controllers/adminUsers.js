@@ -52,7 +52,7 @@ const adminController = {
             phone: req.body.phone,
             idCountry: req.body.country,
             idState: req.body.state,
-            file: req.file.filename,
+            // file: req.file.filename,
             idRoles: req.body.roles,
         }).catch(e =>{
             console.error(e)
@@ -101,18 +101,18 @@ const adminController = {
         .then(()=> res.redirect('/users/usersList'))
         .catch(error =>res.send(error))
     },
-    // delete: (req,res) =>{
-    //     db.User.findAll({
-    //         where: {
-    //             id : req.params.id
-    //         }
-    //     })  
-    //     .then(resultado =>{
-    //         console.log(resultado)
-    //         res.render('users/userDelete', {resultado});
-    //     })
-    //     .catch(error => res.send(error))
-    // },
+    delete: (req,res) =>{
+        db.User.findAll({
+            where: {
+                id : req.params.id
+            }
+        })  
+        .then(resultado =>{
+            console.log(resultado)
+            res.render('more/deleteUser', {resultado});
+        })
+        .catch(error => res.send(error))
+    },
     destroy: (req,res) =>{
         db.User.destroy({
             where: {
@@ -121,7 +121,10 @@ const adminController = {
         })
         .then(()=>  res.redirect('/users/usersList'))
         .catch(error => res.send(error))
-    }
+    },
+    profile: (req, res) => {
+        res.render('users/profile', {user: req.session.userLogged});
+	},
 }
 
 module.exports = adminController

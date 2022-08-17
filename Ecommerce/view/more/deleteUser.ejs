@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../css/error.css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet">
+    <title>ELIMINANDO</title>
+
+</head>
+<body>
+	<% for(let dato of resultado) { %> 
+		<div class="popup">
+				<div class="upper">Esta SEGURO que quiere eliminar → "<%= dato.fullName %>" ?</div>
+				<div class="stroke"></div>
+				<div class="lower">
+				<form method="POST" action="/users/delete/<%=dato.id %>?_method=DELETE">
+					<button class="button"><i class="icon-large icon-ok"></i>SI</button>
+				</form>
+				<a href="/users/usersList"><button class="button"></buttonclass><i class="icon-large icon-remove"></i>Volver hacia Atras</button></a>
+				</div>
+		</div>
+	<% } %>
+</body>
+
+</html>

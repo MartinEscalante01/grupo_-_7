@@ -299,3 +299,12 @@ img{
 		width: 100%;
 	}
 }
+
+.ms-choice > span {
+  position: initial;
+  background-color: #303245;
+}
+
+.ms-choice > span.placeholder{
+  background-color: #303245;
+}

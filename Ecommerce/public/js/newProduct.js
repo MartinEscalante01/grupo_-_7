@@ -50,7 +50,7 @@ inputs.forEach((input) => {
 
 form.addEventListener('submit', (e) => {
 	if(campos.name && campos.description ){
-		/*
+		
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
 		setTimeout(() => {
 			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
@@ -58,7 +58,7 @@ form.addEventListener('submit', (e) => {
 
 		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
 			icono.classList.remove('formulario__grupo-correcto');
-		}); */
+		});
 		
 	} else {
 		e.preventDefault();
@@ -66,24 +66,16 @@ form.addEventListener('submit', (e) => {
 	}
 });
 
-// Obtener referencia al input y a la imagen
+    // Initialize multiple select on your regular select
+    $("#my-select").multipleSelect({
+        filter: true
+    });
 
-const $seleccionArchivos = document.querySelector("#seleccionArchivos"),
-  $imagenPrevisualizacion = document.querySelector("#imagenPrevisualizacion");
+	$(function() {
+        $('#ms').change(function() {
+            console.log($(this).val());
+        }).multipleSelect({
+            width: '100%'
+        });
+    });
 
-// Escuchar cuando cambie
-$seleccionArchivos.addEventListener("change", () => {
-  // Los archivos seleccionados, pueden ser muchos o uno
-  const archivos = $seleccionArchivos.files;
-  // Si no hay archivos salimos de la función y quitamos la imagen
-  if (!archivos || !archivos.length) {
-    $imagenPrevisualizacion.src = "";
-    return;
-  }
-  // Ahora tomamos el primer archivo, el cual vamos a previsualizar
-  const primerArchivo = archivos[0];
-  // Lo convertimos a un objeto de tipo objectURL
-  const objectURL = URL.createObjectURL(primerArchivo);
-  // Y a la fuente de la imagen le ponemos el objectURL
-  $imagenPrevisualizacion.src = objectURL;
-});

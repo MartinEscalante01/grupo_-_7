@@ -32,7 +32,7 @@ router.get('/login', userController.login);
 router.post('/login', guestMiddleware, userController.processLogin);
 
 // Perfil de Usuario
-router.get('/profile', authMiddleware, userController.profile); 
+router.get('/profile', authMiddleware, adminController.profile); 
 
 // Logout
 router.get('/logout', userController.logout);
@@ -44,11 +44,11 @@ router.get('/usersList', adminController.index);
 router.get('/detail/:id', adminController.show);
 
 // Vista - Eliminar Usuario
-// router.get('/delete/:userId', adminController.delete);
+router.get('/delete/:id', adminController.delete);
 
 // Procesar - Eliminar Usuario
 
-router.get('/delete/:id', adminController.destroy);
+router.delete('/delete/:id', adminController.destroy);
 
 
 module.exports = router;

@@ -53,27 +53,6 @@
             </select>
         </div>
             
-            <!-- Grupo: Size -->
-            <div class="input-container ic2">
-            <select id="ms" value="<%= productos.sizes.sizes %>" class="input" name="size" id="my-select" multiple="multiple">
-                <div class="cut"></div>
-                <% sizes.forEach(size => { %>
-                <option value="<%=size.id %>"><%=size.sizes %></option>
-                <% }); %>
-            </select>
-            </div>
-
-            <!-- Grupo: Size -->
-            <div class="input-container ic2">
-                <select id="ms" class="input" name="size" id="my-select" multiple="multiple">
-                    <div class="cut"></div>
-                    <option value="#" selected disabled>Seleccione su talle...</option>
-                    <% sizes.forEach(size => { %>
-                    <option value="<%=size.id %>"><%=size.sizes %></option>
-                    <% }); %>
-                </select>
-            </div>
-            
             <!-- Grupo: date -->
             <div class="input-container ic2">
                 <div class="cut"></div>

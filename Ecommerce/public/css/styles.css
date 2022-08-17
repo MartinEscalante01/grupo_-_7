@@ -561,3 +561,11 @@ h3 {
     width: 20%;
 }
 /* Terminado Desktop */
+
+.tituloProductos{
+    text-align: center;
+    margin: 20px;
+    font-size: 30px;
+    text-transform: uppercase;
+
+}

@@ -108,7 +108,7 @@ input, select {
     overflow: hidden;
     width: 768px;
     max-width: 100%;
-    min-height: 780px;
+    min-height: 1000px;
 }
 
 .form-container {

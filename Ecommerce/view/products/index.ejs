@@ -158,18 +158,17 @@
                     <div class="cards">
                         <a href="/productDetail/<%= dato.id %>"><img src="../img/productsImages/<%= dato.file %>" class="imgRecomendado"></a>
                         <span class="prices">
-                            <div>  $ <%= dato.price %></div>
-                            <span class="oldprice">$ <%= dato.price * 1.2 %></span>
-                            <span class="saving"> 20% OFF </span>
+                            <h4><%= dato.name %></h4>
+                            <p>  $ <%= dato.price %></p>
                         </span>
                     </div>
                     <% } %>
             </section>
             <div style="margin: 20px;">
-                <h3><a href=""style="text-decoration:none;">Ver mas</a></h3>
+                <h3><a href="/catalogo"style="text-decoration:none; color:rgb(255,133,71)">Ver mas</a></h3>
             </div>
         </div>
-                
+        
         
         <hr class="separador"> 
     </main>

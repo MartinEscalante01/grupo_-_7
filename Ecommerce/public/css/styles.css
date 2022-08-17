@@ -223,11 +223,11 @@ h3 {
 .prices{
     font-size: 15px;
     display: flex;
-    align-items: center;
     justify-content: flex-start;
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 10px;
     line-height: 1.5;
+    text-align:left;
 }
 
 .saving{
@@ -549,5 +549,15 @@ h3 {
     }
     */
 }
-
+.productos-cardsList{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+.productos-cardsList .cards{
+    width: 20%;
+}
 /* Terminado Desktop */

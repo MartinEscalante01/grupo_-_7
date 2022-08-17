@@ -20,16 +20,18 @@
             <img src="img/image.png"  class="copete">
             </div>
         </section>
-
+        <div>
+            <h2 >Todos nuestros productos</h2>
+        </div>
         <hr class="separador"> 
-                <section class="productos-cards">
+                <section class="productos-cardsList">
+                        
                         <% for (let dato of recomendaciones){ %>
                             <div class="cards">
                                 <a href="/productDetail/<%= dato.id %>"><img src="../img/productsImages/<%= dato.file %>" class="imgRecomendado"></a>
                                 <span class="prices">
-                                    <div>  $ <%= dato.price %></div>
-                                    <span class="oldprice">$ <%= dato.price * 1.2 %></span>
-                                    <span class="saving"> 20% OFF </span>
+                                    <h4><%= dato.name %></h4>
+                                    <p>$<%= dato.price %></p>
                                 </span>
                             </div>
                             <% } %>

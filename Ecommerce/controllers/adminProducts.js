@@ -42,18 +42,12 @@ const adminProducts = {
         return res.render('products/carrito')
     },
     show: (req,res) =>{
-        db.Producto.findAll(
-            {include : [
-                {association: "genders"},
-                {association: "brands"},
-                {association: "categories"},
-                {association: "sizes"},
-            ]}
-        )   
-        .then(productos =>{
-            res.render('products/productsListUser', { productos })
-        })
-        .catch(error => res.send(error))
+        const product = productos.find(producto => producto.id == req.params.id)
+        const recomendaciones = []
+        for (let index = 0; index <=5; index++) {
+            recomendaciones.push(productos[index])
+        }
+        return res.render('products/index', {  product,recomendaciones  })
     },
     create: (req, res) =>{
         db.Producto.findAll()

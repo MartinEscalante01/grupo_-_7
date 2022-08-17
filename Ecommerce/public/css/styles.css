@@ -9,6 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cambay&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
 
 
@@ -277,7 +278,7 @@ h3 {
     padding-bottom: 10px;
 }
 
-.novedad {
+/* .novedad {
     display: flex;
     background-color: white;
     padding: 0 10px;
@@ -289,18 +290,43 @@ h3 {
     line-height: 20px;
 }
 
+
 .novedad h2{
     display: flex;
     font-size: 16px;
     justify-content: center;
     padding: 10px;
     font-style: italic;
+} */
+
+
+.descuentos{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(72,209,204);
+    padding: 2rem;
+}
+.descuentos h3{
+    color: rgb(255,255,255);
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
 }
 
-.imgNovedad {
+.descuentos p {
+    color: rgb(255,255,255);
+    font-weight: 600;
+}
+.descuentos a {
+    color: rgb(255,255,255);
+    font-weight: 400;
+    font-size: 12px;
+}
+
+/* .imgNovedad {
     height: 50%;
     width: 100%;
-}
+} */
 
 
 /*Mobile*/
@@ -368,7 +394,7 @@ h3 {
         
     }
     
-    .novedad {
+    /* .novedad {
     height: auto;
     width: 50%;
     margin: 10px;
@@ -382,15 +408,34 @@ h3 {
 
     .novedad h2{ 
     font-size: 20px;
-    }
+    } */
 
-    .imgNovedad {
+    /* .imgNovedad {
     margin-left: 5%;
     width: 90%;
-    }
+    } */
+
+    
        
 }
 /* Terminado Tablet */
+@media (max-width:768px){
+    .preFooter{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cajas{
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        justify-content: center;
+        margin: 10px;
+    }
+
+}
+
+
 
 /* Desktop */
 @media (min-width:1024px){
@@ -469,13 +514,12 @@ h3 {
     font-size: 20px;
     }
 
-    .imgNovedad {
+    /* .imgNovedad {
     height:30vht;
     margin-left: 8%;
     width: 80%;
     }
-    
-   
+    */
 }
 
 /* Terminado Desktop */

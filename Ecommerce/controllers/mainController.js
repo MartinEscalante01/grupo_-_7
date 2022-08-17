@@ -7,7 +7,7 @@ const controller = {
     home : (req,res) => {
         const product = productos.find(producto => producto.id == req.params.id)
         const recomendaciones = []
-        for (let index = 0; index < productos.length; index++) {
+        for (let index = 0; index <=5; index++) {
             recomendaciones.push(productos[index])
         }
         return res.render('products/index', {  product,recomendaciones  })

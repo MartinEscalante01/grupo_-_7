@@ -66,6 +66,79 @@ a {
    
 }
 
+.imagenesBack1{
+    background-image: url("../img/adiKid.jpg");
+    height: 80vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-blend-mode: soft-light;
+    background-color: rgb(75, 75, 75);
+    
+}
+.imagenesBack2{
+    background-image: url("../img/adiWoman.jpg");
+    height: 80vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-blend-mode: soft-light;
+    background-color: rgb(75, 75, 75);
+    
+}
+
+.imagenesBack3{
+    background-image: url("../img/deporte.jpg");
+    height: 80vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-blend-mode: soft-light;
+    background-color: rgb(75, 75, 75);
+    
+}
+
+.texto{
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    height: 70vh;
+    align-items: center !important;
+}
+
+/* PREFOOTER */
+.preFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(237, 231, 231);
+    padding: 2rem;
+}
+
+.cajas{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    justify-content: center;
+}
+
+.cajasIconos{
+    display: flex;
+    align-items: center;
+}
+
+.infoCajas{
+    display: flex;
+    flex-direction: column;
+    width: 62%;
+}
+
+.cajasIconos span i{
+    font-size: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
 .glassHomeImg {
     display: flex;
@@ -100,23 +173,32 @@ h3 {
     
 }
 
+.productosIndex{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* cards */
 .productos-cards{
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-evenly;
+    width: 80%;
+    justify-content: center;
     flex-direction: row;
     
 }
 .cards {
-    width: 170px;
+    width: 30%;
     height: auto;
     display: flex;
     flex-direction: column;
     margin: 10px;
     padding-right: 14px;
-    box-shadow: 1px 5px 8px lightslategrey; 
+    box-shadow: 1px 5px 8px lightslategrey;
+    flex: 1 1 1;
 }
 
 .cards div:nth-child(1){
@@ -128,6 +210,12 @@ h3 {
 .cards img{
     width: 70%;
     margin: 28px;
+}
+.cards a{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
 }
 
 .prices{
